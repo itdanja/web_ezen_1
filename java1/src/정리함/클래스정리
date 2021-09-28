@@ -1,0 +1,17 @@
+
+
+객체 : 설계도 기반으로 생성된 메모리 공간
+
+클래스 : 설계도  
+	1. System : 시스템 클래스 
+		.out.print()
+		.out.println()
+		.out.printf()
+		
+	2. Scanner : 입력 클래스 
+		Scanner 입력객체 = new Scanner(System.in)
+			입력객체.next 
+			입력객체.nextLine
+			입력객체.nextInt
+			
+	3. String : 문자열 클래스 
