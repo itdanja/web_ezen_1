@@ -24,6 +24,7 @@ public class Day02_5 {
 		System.out.println( 이름 == 이름2 );
 		System.out.println( 이름.equals(이름2) );
 		
+		//
 		
 	}
 	
