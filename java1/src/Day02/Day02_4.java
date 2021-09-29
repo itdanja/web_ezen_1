@@ -129,6 +129,22 @@ public class Day02_4 {
 			// 3. --x 		=> 9 -> 8
 			// 4. 15 + 8 	=> 23
 		
+	// p. 102 확인문제
+		// 1. 3
+		// 2.   ++10  +  20--		=> 11 + 20 => 31
+		// 3.   점수>90  => !false => true  => 가 
+		// 4-1. 몫 :  연필수 / 학생수 => pencils / students 
+		// 4-2. 나머지 : 연필수 % 학생수 =>  pencils % students 
+		// 5.   356 -> 356 - 56[ 356 % 300 ] 
+				// value - ( value % 300 ) 
+		// 6. 윗변 * 아래변 * 높이 / 2
+		//	( (double)( lengthTop * lengthBottom ) ) * height / 2 
+		//	( (double) lenthTop + lengthBottom ) / 2 * height 
+		// 7.  t && t =>  t
+			// f || f =>  f		//   != 같지않다 
+				
+		
+		
 			
 	
 	
