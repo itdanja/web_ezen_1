@@ -63,7 +63,7 @@ public class Day02_4 {
 	//문제5 : 하나의 정수를 입력받아 7의 배수 이면서 짝수 인지 확인 [ true , false ]
 			System.out.print("문제5 정수 입력 : ");		int 문제5 = 입력객체.nextInt();
 			System.out.println(" 7의 배수 이면서 짝수 인지 : " + (문제5%7==0 && 문제5%2==0) );
-		*/		
+				
 	//문제6 : 두개의 정수를 입력받아 더 큰지 출력  [ true , false ]
 			System.out.print("문제6 정수1 입력 : "); 	int 문제6_1 = 입력객체.nextInt();
 			System.out.print("문제6 정수2 입력 : "); 	int 문제6_2 = 입력객체.nextInt();
@@ -85,15 +85,24 @@ public class Day02_4 {
 									// 형식문자 : %f [ 실수 ] 
 										// %.숫자f [ 숫자 : 소수점 자리수 ]
 										// %.2f [ 소수점 2자리수 ]
-			
+		*/
+		
 	//문제9 : 사다리꼴 넓이 구하기[윗변과 밑변 높이를 입력받아 출력하기]
 		//사다리꼴 계산식 = > (윗변 * 밑변) * 높이 / 2
-	
+		System.out.print("문제9 윗변 입력 : "); 	double 윗변 = 입력객체.nextDouble();
+		System.out.print("문제9 밑변 입력 : "); 	double 밑변 = 입력객체.nextDouble();
+		System.out.print("문제9 높이 입력 : "); 	double 높이 = 입력객체.nextDouble();
+		System.out.printf(" 사다리꼴 계산식 : %.3f \n" , (윗변*밑변) * 높이 / 2 );
+		
 	//문제10: 키를 정수를 입력받아 표준체중 출력하기
 		//표준체중 계산식 = > (키 - 100) * 0.9
-	
+		System.out.print("문제10 키 입력 : ");  	double 키 = 입력객체.nextDouble();
+		System.out.println(" 표준체중 계산식 : " + ( 키-100) * 0.9 );
+		
 	//문제11: 키와 몸무게를 입력받아 BMI 출력하기
 		//BMI 계산식 = > 몸무게 / ((키 / 100) * (키 / 100))
+		System.out.print(" 문제11 몸무게 입력 : ");	double 몸무게 = 입력객체.nextDouble();
+		System.out.printf(" BMI : %.1f \n" , ( 몸무게 / ( (키/100) * ( 키 / 100 ) ) ) ) ;
 	
 	//문제12: inch 를 입력받아 cm 로 변환하기
 	
