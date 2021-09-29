@@ -85,8 +85,7 @@ public class Day02_4 {
 									// 형식문자 : %f [ 실수 ] 
 										// %.숫자f [ 숫자 : 소수점 자리수 ]
 										// %.2f [ 소수점 2자리수 ]
-		*/
-		
+	
 	//문제9 : 사다리꼴 넓이 구하기[윗변과 밑변 높이를 입력받아 출력하기]
 		//사다리꼴 계산식 = > (윗변 * 밑변) * 높이 / 2
 		System.out.print("문제9 윗변 입력 : "); 	double 윗변 = 입력객체.nextDouble();
@@ -104,18 +103,33 @@ public class Day02_4 {
 		System.out.print(" 문제11 몸무게 입력 : ");	double 몸무게 = 입력객체.nextDouble();
 		System.out.printf(" BMI : %.1f \n" , ( 몸무게 / ( (키/100) * ( 키 / 100 ) ) ) ) ;
 	
-	//문제12: inch 를 입력받아 cm 로 변환하기
-	
+		 */
+		
+	//문제12: inch 를 입력받아 cm 로 변환하기 [ 1 inch -> 2.54cm ] 
+		System.out.println(" 문제12 inch 입력 : ");	double inch = 입력객체.nextDouble();
+		System.out.println(" 입력한 inch의 cm로 변환 : " + (inch*2.54) );
+		
 	//문제13:  중간고사, 기말고사, 수행평가를 입력받아 반영비율별 계산하기
 		//소수 둘째 자리 까지 점수 출력하기
 		//중간고사 반영비율 => 30 %
 		//기말고사 반영비율 => 30 %
 		//수행평가 반영비율 => 40 %
-	
+		System.out.print(" 문제13 중간고사 입력 : "); 	double 중간고사 = 입력객체.nextDouble();
+		System.out.print(" 문제13 기말고사 입력 : ");	double 기말고사 = 입력객체.nextDouble();
+		System.out.print(" 문제13 수행평가 입력 : ");	double 수행평가 = 입력객체.nextDouble();
+		중간고사 *= 0.3; 기말고사 *=0.3 ; 수행평가 *=0.4;
+		System.out.printf(" 반영비율별 점수 : %.2f \n" , (중간고사+기말고사+수행평가) );
+		
 	//문제14 :  연산 순서 나열 하고 x와 y값 예측하기
 	 	//int x = 10;
 		//int y = x-- + 5 + --x;
 		//printf(" x의 값 : %d , y의값 :  %d ", x, y)
+			// 1. x-- + 5  	=> 10 + 5
+			// 2. x-- 		=> 10 -> 9
+			// 3. --x 		=> 9 -> 8
+			// 4. 15 + 8 	=> 23
+		
+			
 	
 	
 	
