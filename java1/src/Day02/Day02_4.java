@@ -14,13 +14,14 @@ public class Day02_4 {
 	 */
 		//1. 입력객체 선언 = Scanner 클래스를 이용한 객체 선언 
 		Scanner 입력객체 = new Scanner(System.in);
+	/*
 		//2. 입력객체에 저장된 값을 변수로 옮기기 
 		System.out.print(" 기본급 : "); 	int 기본급 = 입력객체.nextInt();
-		System.out.print(" 수당 : ");	int 수당 = 입력객체.nextInt();
+		System.out.print(" 수당 : ");		int 수당 = 입력객체.nextInt();
 		// 3. 계산  // 100% -> 1		10% -> 0.1		1% -> 0.01
 		int 세금 = (int)(기본급 * 0.1); // int * double
 		System.out.println(" 실수령액 : " + (기본급+수당-세금));
-	
+	*/
 	// 문제2 : 지폐 개수 세기 
 	/*
 	 * [조건] : 십만원 단위의 금액을 입렫받아 
@@ -31,6 +32,7 @@ public class Day02_4 {
 	 * 		천원 : 6장 
 	 * 		백원 : 7개
 	 */
+		/*
 		// 1. 지폐 입력받기 
 		System.out.print(" 금액 : "); int 금액 = 입력객체.nextInt();
 			// 1. 십만원 권 
@@ -45,15 +47,23 @@ public class Day02_4 {
 				금액 -= (금액/1000) * 1000; // 천원 단위 제거 
 			// 4. 백원 
 			System.out.println("백원 : " + (금액/100) + "개");
-				
-
-	
+		*/
 	//문제3 : 하나의 정수를 입력받아 7의 배수인지 출력[ true , false ]
-	
+			System.out.print("문제3 정수 입력 : ");		int 문제3 = 입력객체.nextInt();
+			// * 배수 찾기 
+				// 값 % 수 == 0   나머지가 0 이면 값은 그 수 의 배수 
+			System.out.println(" 7의 배수인지 : " + ( 문제3%7 == 0 ) );
+
 	//문제4 : 하나의 정수를 입력받아 홀수 인지 확인 [ true , false ]
+			System.out.print("문제4 정수 입력 : ");		int 문제4 = 입력객체.nextInt();
+			// * 홀수 찾기 
+				// 값 % 2 == 1	나누기 2를 했을때 나머지가 0 이면 값은 짝수 1이면 홀수 
+			System.out.println(" 홀수 인지 : " + (문제4%2 == 1 ) );
 	
 	//문제5 : 하나의 정수를 입력받아 7의 배수 이면서 짝수 인지 확인 [ true , false ]
-
+			System.out.print("문제5 정수 입력 : ");		int 문제5 = 입력객체.nextInt();
+			System.out.println(" 7의 배수 이면서 짝수 인지 : " + (문제5%7==0 && 문제5%2==0) );
+					
 	//문제6 : 두개의 정수를 입력받아 더 큰지 출력  [ true , false ]
 	
 	//문제7 : 반지름을 입력받아 원 넓이 출력하기 
