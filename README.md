@@ -35,22 +35,22 @@
 |22일차[10/29]|JAVA2| DB / JAVAFX |
 |23일차[11/01]|JAVA2| DB / JAVAFX |
 |24일차[11/02]|JAVA2| 입출력/네트워킹 |
-|25일차[11/02]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|26일차[11/02]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|27일차[11/02]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|28일차[11/02]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|29일차[11/02]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|30일차[11/02]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|31일차[11/02]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 / 평가 |
-|32일차[11/02]|JAVA2| HTML |
-|33일차[11/02]|JAVA2| HTML |
-|34일차[11/02]|JAVA2| CSS |
-|35일차[11/02]|JAVA2| CSS |
-|36일차[11/02]|JAVA2| JS |
-|37일차[11/02]|JAVA2| JS / 평가 |
-|38일차[11/02]|JAVA2| HTML·CSS·JS |
-|39일차[11/02]|JAVA2| HTML·CSS·JS |
-|40일차[11/02]|JAVA2| HTML·CSS·JS |
+|25일차[11/03]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
+|26일차[11/04]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
+|27일차[11/05]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
+|28일차[11/08]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
+|29일차[11/09]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
+|30일차[11/10]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
+|31일차[11/11]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 / 평가 |
+|32일차[11/12]|Front| HTML |
+|33일차[11/15]|Front| HTML |
+|34일차[11/16]|Front| CSS |
+|35일차[11/17]|Front| CSS |
+|36일차[11/18]|Front| JS |
+|37일차[11/19]|Front| JS / 평가 |
+|38일차[11/22]|Front| HTML·CSS·JS |
+|39일차[11/21]|Front| HTML·CSS·JS |
+|40일차[11/22]|Front| HTML·CSS·JS |
 
 
 
