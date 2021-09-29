@@ -98,6 +98,7 @@ public class Day02_2 {
 		// p.49~51 : 타입변환
 			// 1. 자동 타입변환 [ 크기순 : 작은상자에서 큰상자로 이동 가능 ]
 				// byte -> short(char) -> int -> long -> float -> double
+						
 				// 작은상자에서 큰상자로 이동 가능 // 큰상자에서 작은상자로 이동 불가 
 		byte bytevalue = 10;
 		int intvalue = bytevalue; // 자동 형변환 [가능 ] byte -> int  
@@ -108,9 +109,25 @@ public class Day02_2 {
 			// p.54
 		byte bytevalue2 = (byte)intvalue;
 		
+		// 연습문제
+			// 1 : 4
+			// 2 : 1 4 5
+			// 3 : byte			short		int		long
+			//					char
+			//								float	double
+			//		boolean
 		
-		
-		
+			// 4 :	타입 : int , double
+			//		변수이름 : age , price 
+			//		리터럴 : 10 , 3.14
+			// 5 : 3
+			// 6 : 4
+			// 7 : 3
+			// 8 : 1 [ 연산시 기본타입 : int ]
+				//1. byte + byte => int => byte [x]
+				//2. int + byte => int => int
+				//3. int + float => int => float
+				//4. int + double => int => double		
 	}
 	
 		
