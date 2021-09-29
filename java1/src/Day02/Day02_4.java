@@ -1,13 +1,25 @@
 package Day02;
 
+import java.util.Scanner;
+
 public class Day02_4 {
-	
+
+	public static void main(String[] args) {
+
 	// 문제1 : 급여 명세서 
 	/*
 	 * [조건] 입력받기 : 기본급 , 수당 
 	 * [출력] 실수령액 = 기본급 + 수당 - 세금[ 기본급10% ]
-	 * 
+	 *
 	 */
+		//1. 입력객체 선언 = Scanner 클래스를 이용한 객체 선언 
+		Scanner 입력객체 = new Scanner(System.in);
+		//2. 입력객체에 저장된 값을 변수로 옮기기 
+		System.out.print(" 기본급 : "); 	int 기본급 = 입력객체.nextInt();
+		System.out.print(" 수당 : ");	int 수당 = 입력객체.nextInt();
+		// 3. 계산  // 100% -> 1		10% -> 0.1		1% -> 0.01
+		int 세금 = (int)(기본급 * 0.1); // int * double
+		System.out.println(" 실수령액 : " + (기본급+수당-세금));
 	
 	// 문제2 : 지폐 개수 세기 
 	/*
@@ -19,6 +31,22 @@ public class Day02_4 {
 	 * 		천원 : 6장 
 	 * 		백원 : 7개
 	 */
+		// 1. 지폐 입력받기 
+		System.out.print(" 금액 : "); int 금액 = 입력객체.nextInt();
+			// 1. 십만원 권 
+			System.out.println("십만원 : " + (금액/100000) +"장");
+				// 금액 = 금액 - (금액/100000) * 100000 ;
+				금액 -= (금액/100000) * 100000 ; // 십만원 단위 제거 
+			// 2. 만원 권 
+			System.out.println("만원 : " + (금액/10000) + "장 ");
+				금액 -= (금액/10000) * 10000 ; // 만원 단위 제거 
+			// 3. 천원 권 
+			System.out.println("천원 : " + (금액/1000) + "장");
+				금액 -= (금액/1000) * 1000; // 천원 단위 제거 
+			// 4. 백원 
+			System.out.println("백원 : " + (금액/100) + "개");
+				
+
 	
 	//문제3 : 하나의 정수를 입력받아 7의 배수인지 출력[ true , false ]
 	
@@ -64,7 +92,7 @@ public class Day02_4 {
 	
 	
 	
-	
+	}
 	
 
 }
