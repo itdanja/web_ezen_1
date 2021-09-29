@@ -47,7 +47,7 @@ public class Day02_4 {
 				금액 -= (금액/1000) * 1000; // 천원 단위 제거 
 			// 4. 백원 
 			System.out.println("백원 : " + (금액/100) + "개");
-		*/
+		
 	//문제3 : 하나의 정수를 입력받아 7의 배수인지 출력[ true , false ]
 			System.out.print("문제3 정수 입력 : ");		int 문제3 = 입력객체.nextInt();
 			// * 배수 찾기 
@@ -63,15 +63,29 @@ public class Day02_4 {
 	//문제5 : 하나의 정수를 입력받아 7의 배수 이면서 짝수 인지 확인 [ true , false ]
 			System.out.print("문제5 정수 입력 : ");		int 문제5 = 입력객체.nextInt();
 			System.out.println(" 7의 배수 이면서 짝수 인지 : " + (문제5%7==0 && 문제5%2==0) );
-					
+		*/		
 	//문제6 : 두개의 정수를 입력받아 더 큰지 출력  [ true , false ]
-	
+			System.out.print("문제6 정수1 입력 : "); 	int 문제6_1 = 입력객체.nextInt();
+			System.out.print("문제6 정수2 입력 : "); 	int 문제6_2 = 입력객체.nextInt();
+			System.out.println(" 정수1 > 정수2 크다 : " + (문제6_1 > 문제6_2) );
+			
 	//문제7 : 반지름을 입력받아 원 넓이 출력하기 
 		// 원 넓이 공식 => 반지름 * 반지름 * 원주율[3.14]
-	
+			System.out.println("문제7 반지름 입력 : ");	double 반지름 = 입력객체.nextDouble();
+			System.out.println(" 원 넓이는 : " + (반지름*반지름*3.14) );
+			
 	//문제8 : 두 실수를 입력받아 앞실수의 값이 뒤의 값의 몇% 인지 출력하기
 		// 예) 54.5   84.3 이면    64.285714%
-	
+			System.out.print("문제8 실수1 입력 : ");	double 문제8_1 = 입력객체.nextDouble();
+			System.out.print("문제8 실수2 입력 : ");	double 문제8_2 = 입력객체.nextDouble();
+			double 비율 = (문제8_1/문제8_2) * 100 ;
+			System.out.println(" 실수1의 실수2의 백분율 : " + 비율 + "%");
+			// 소수점 단위를 형식 변경 
+			System.out.printf(" 실수1의 실수2의 백분율 : %.2f%%" , 비율 );
+									// 형식문자 : %f [ 실수 ] 
+										// %.숫자f [ 숫자 : 소수점 자리수 ]
+										// %.2f [ 소수점 2자리수 ]
+			
 	//문제9 : 사다리꼴 넓이 구하기[윗변과 밑변 높이를 입력받아 출력하기]
 		//사다리꼴 계산식 = > (윗변 * 밑변) * 높이 / 2
 	
