@@ -20,13 +20,18 @@ public class Day03_8 {
 			System.out.print("선택> ");	int 선택 = scanner.nextInt();
 			
 			if( 선택 == 1 ) {
-				System.out.println("예금액>");
+				System.out.print("예금액>"); 		예금액 += scanner.nextInt();
+				System.out.println(" [[ 알림 ]] 예금 완료 ");
 			}
 			else if( 선택 == 2 ) { 
-				System.out.println("출금액>");
+				System.out.print("출금액>"); 	int 출금액 = scanner.nextInt();
+				
+				if( 예금액 < 출금액 )  { System.out.println(" [[ 알림 ]] 잔고가 부족합니다 "); }
+				else  { 예금액-= 출금액; System.out.println(" [[ 알림 ]] 출금 완료 "); }
+				
 			}
 			else if( 선택 == 3 ) {
-				System.out.println("잔고>");
+				System.out.println("잔고>"+예금액);
 			}
 			else if( 선택 == 4 ) {  // 만약에 4를 입력했을때 
 				실행=false;	// 실행변수를 false 대입하여 무한루프[while] 종료
