@@ -66,6 +66,41 @@ public class Day03_1 { // c s
 		if( 3 > 2 ) System.out.println("예5) 3이 2보다 크다 ");
 		else System.out.println("true가 없다 ");
 		
+		// p.109 예 
+		int score = 93;
+		// 점수가 90보다 크기 떄문에 실행
+		if( score >= 90 ) { System.out.println("점수가 90보다 큽니다"); System.out.println("등급은 A 입니다"); }
+		// 점수가 90보다 미만 아니기 때문에 실행x
+		if( score < 90 ) { System.out.println("점수가 90보다 작습니다"); System.out.println("등급은 B 입니다 "); }
+		
+		// p.111 예
+		int score2 = 85;
+		if( score2>=90) { System.out.println("점수가 90보다 큽니다"); System.out.println("등급은 A 입니다 "); }
+		else { System.out.println("점수가 90보다 작습니다"); System.out.println("등급은 B 입니다"); }
+		
+		// P.112 예
+		int score3 = 75;
+		if( score3>=90) { System.out.println("점수가 100~90 입니다 "); System.out.println("등급은 A 입니다 "); }
+		else if( score3 >=80 ) { System.out.println("점수가 80~89 입니다 "); System.out.println("등급은 B 입니다 "); }
+		else if( score3 >=70 ) { System.out.println("점수가 70~79 입니다 "); System.out.println("등급은 C 입니다 "); }
+		else { System.out.println("점수가 70 미만 입니다"); System.out.println("등급은 D 입니다 "); }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	} // m e
 	
 	
