@@ -63,7 +63,28 @@ public class Day03_5 {
 			//줄바꿈
 			System.out.println();
 		}
+	System.out.println("\n ----------------------------");
+		// 문제7)	
+		System.out.print("문제7) 줄 수 : "); int line7 = scanner.nextInt();
+		for( int i = 1 ; i<=line7 ; i++ ) {
+			//공백찍기
+			for( int b = 1 ; b<=line7-i ; b++ ) { System.out.print(" ");}
+			//별찍기 
+			for( int s = 1 ; s<=i*2-1 ; s++ ) {System.out.print("*");}
+			//줄바꿈
+			System.out.println();
+		}
 		
+		// 문제8)	
+		System.out.print("문제8) 줄 수 : "); int line8 = scanner.nextInt();
+		for( int i = 1 ; i<=line8 ; i++ ) {
+			//공백찍기
+			for( int b = 1 ; b<=line8-i ; b++ ) { System.out.print(" ");}
+			//별찍기 
+			for( int s = 1 ; s<=i*2-1 ; s++ ) {System.out.print(i);}
+			//줄바꿈
+			System.out.println();
+		}
 		
 		
 		
