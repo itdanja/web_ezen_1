@@ -85,7 +85,13 @@ public class Day03_5 {
 			//줄바꿈
 			System.out.println();
 		}
-		
+		// 문제8)	
+		System.out.print("문제9) 줄 수 : "); int line9 = scanner.nextInt();
+		for( int i = 1 ; i<=line9 ; i++ ) {
+			for( int b = 1 ; b<=i-1 ; b++ ) {System.out.print(" ");}
+			for( int s = 1 ; s<=line9*2-(i*2-1); s++ ) {System.out.print("*");}
+			System.out.println();
+		}
 		
 		
 		
