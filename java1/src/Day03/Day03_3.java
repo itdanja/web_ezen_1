@@ -1,5 +1,7 @@
 package Day03;
 
+import java.util.Scanner;
+
 public class Day03_3 {
 	
 	// if( 논리제어 ) switch(데이터제어)
@@ -61,6 +63,20 @@ public class Day03_3 {
 		}
 		
 		// 문제1 : [switch] 국어,영어,수학 점수 입력받아 평균이 90점 이상이면 "A등급" 80점이상이면 "B" 나머지 탈락 
+		Scanner 입력객체 = new Scanner(System.in);
+		System.out.print(" 국어 : ");	int 국어 = 입력객체.nextInt();
+		System.out.print(" 영어 : ");	int 영어 = 입력객체.nextInt();
+		System.out.print(" 수학 : ");	int 수학 = 입력객체.nextInt();
+		int 평균 = ( 국어 +영어 + 수학 ) / 3 ;
+		
+		switch( 평균/10 ) { // 1의 자리를 생략 
+			case 10 :
+			case 9:	System.out.println(" A등급 "); break;
+			case 8: System.out.println(" B등급 "); break;
+			default : System.out.println(" 탈락 ");
+		}
+		
+		
 		
 		
 		
