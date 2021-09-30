@@ -52,7 +52,17 @@ public class Day03_5 {
 			// 줄바꿈
 			System.out.println();
 		}
-		
+	System.out.println("\n ----------------------------");	
+		// 문제6)	
+		System.out.print("문제6) 줄 수 : "); int line6 = scanner.nextInt();
+		for( int i =1 ; i<=line6 ; i++ ) {
+			//공백찍기
+			for( int b = 1 ; b<=i-1 ; b++ ) { System.out.print(" ");}
+			//별찍기
+			for( int s = 1 ; s<=line6-i+1 ; s++ ) {System.out.print("*");}
+			//줄바꿈
+			System.out.println();
+		}
 		
 		
 		
