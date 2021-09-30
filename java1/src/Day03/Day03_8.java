@@ -19,11 +19,22 @@ public class Day03_8 {
 			System.out.println("--------------------------------");
 			System.out.print("선택> ");	int 선택 = scanner.nextInt();
 			
-			if( 선택 == 4 ) {  // 만약에 4를 입력했을때 
+			if( 선택 == 1 ) {
+				System.out.println("예금액>");
+			}
+			else if( 선택 == 2 ) { 
+				System.out.println("출금액>");
+			}
+			else if( 선택 == 3 ) {
+				System.out.println("잔고>");
+			}
+			else if( 선택 == 4 ) {  // 만약에 4를 입력했을때 
 				실행=false;	// 실행변수를 false 대입하여 무한루프[while] 종료
 				System.out.println("     [[이용해주셔서 감사합니다]]"); 
 			}
-			
+			else {
+				System.out.println(" [[경고]] : 알수 없는 번호 입니다 ");
+			}
 		}
 		
 	}
