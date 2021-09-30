@@ -8,7 +8,7 @@ public class Day03_2 {
 		
 		// 입력객체
 		Scanner 입력객체 = new Scanner(System.in);
-		
+	/*	
 		// 문제1 : 2개의 정수를 입력받아 더 큰수 출력 
 		System.out.print("문제1 정수1 : ");	int 정수1 = 입력객체.nextInt();
 		System.out.print("문제1 정수2 : ");	int 정수2 = 입력객체.nextInt();
@@ -60,6 +60,7 @@ public class Day03_2 {
 		System.out.printf(" 오름차순 : %d  %d  %d  %d  \n" , 정수10 , 정수11 , 정수12 , 정수13 );
 
 		///////////////////////////////// 작으면 뒤로 가기 => 내림차순 ////////////////////	
+		// 문제5 : 4개의 정수를 입력받아 내림차순으로 출력 
 		if( 정수10 < 정수11 ) { temp = 정수10; 정수10 = 정수11; 정수11 = temp; }
 		if( 정수10 < 정수12 ) { temp = 정수10; 정수10 = 정수12; 정수12 = temp; }
 		if( 정수10 < 정수13 ) { temp = 정수10; 정수10 = 정수13; 정수13 = temp; }
@@ -67,13 +68,26 @@ public class Day03_2 {
 		if( 정수11 < 정수13 ) { temp = 정수11; 정수11 = 정수13; 정수13 = temp; }
 		if( 정수12 < 정수13 ) { temp = 정수12; 정수12 = 정수13; 정수13 = temp; }
 		System.out.printf(" 내림차순 : %d  %d  %d  %d  \n" , 정수10 , 정수11 , 정수12 , 정수13 );
-		
-		
-		// 문제5 : 4개의 정수를 입력받아 내림차순으로 출력 
+	 */	
 		// 문제6 : 로그인페이지
-			// [ 입력 ] : 아이디와 비밀번호를 입력박기 
+			// [ 입력 ] : 아이디와 비밀번호를 입력받기
 			// [ 조건 ] : 회원아이디가 admin 이고 비밀번호가 1234 일 경우에는 로그인 성공 아니면 로그인 실패 출력
+	
+		System.out.println("==========로그인페이지==========");
+		System.out.print(" 아이디 : ");		String 아이디 = 입력객체.next();
+		System.out.print(" 비밀번호 : ");		int 비밀번호 = 입력객체.nextInt();
 		
+		if( 아이디.equals("admin") ) {
+			// String 비교시 equals메소드 사용 	// 아이디가 admin 이면 
+			if( 비밀번호 == 1234 ) {
+				System.out.println(" >>>>>> 로그인 성공 >>>>>>");
+			}else {
+				System.out.println(" [로그인실패] 패스워드가 다릅니다");
+			}
+		}
+		else {
+			System.out.println(" [로그인실패] 존재하지 않는 아이디 입니다");
+		}
 	}
 	
 }
