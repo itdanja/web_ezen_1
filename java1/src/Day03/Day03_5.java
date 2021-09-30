@@ -74,7 +74,7 @@ public class Day03_5 {
 			//줄바꿈
 			System.out.println();
 		}
-		
+	System.out.println("\n ----------------------------");	
 		// 문제8)	
 		System.out.print("문제8) 줄 수 : "); int line8 = scanner.nextInt();
 		for( int i = 1 ; i<=line8 ; i++ ) {
@@ -85,7 +85,8 @@ public class Day03_5 {
 			//줄바꿈
 			System.out.println();
 		}
-		// 문제8)	
+	System.out.println("\n ----------------------------");
+		// 문제9)	
 		System.out.print("문제9) 줄 수 : "); int line9 = scanner.nextInt();
 		for( int i = 1 ; i<=line9 ; i++ ) {
 			for( int b = 1 ; b<=i-1 ; b++ ) {System.out.print(" ");}
