@@ -17,9 +17,13 @@
 			입력객체.nextInt
 			
 	3. String : 문자열 클래스 
-		.equals( 비교문자 ) : 문자 비교 
+		.equals( 비교문자 ) : 문자 비교 => 동일하면 true 동일하지 않으면 false
+	
+	Random
 	
 	Arrays
+	
+		
 	
 형식문자 [ printf ]  
 	%d : 정수 
