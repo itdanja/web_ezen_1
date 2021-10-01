@@ -14,7 +14,7 @@ public class Day04_7_로또판별기 {
 		// 1. 사용자로부터 6개 수를 입력받아 배열에 저장 
 		for( int i = 0 ; i<6 ; i++) {
 			System.out.print(i+"번째 번호[1~45] 선택 : "); 
-			number[i] = scanner.nextInt(); // 입력받은 값을 해당 인덱스 배열에 저장 
+			number[i] = scanner.nextInt(); // 입력받은 값을 i번째 인덱스 배열에 값 저장 
 			// 중복체크!!!!!!!
 			
 		}
