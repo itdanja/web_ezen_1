@@ -20,11 +20,11 @@ public class Day04_3_키오스크 {
 		
 		// 1. 무한루프 
 		while(true) {
-			if( 콜라재고 == 0 ) { System.out.println("1.콜라[매진] 2.환타[200] 3.사이다[100] 4.결제");  }
-			else { System.out.println("1.콜라[300] 2.환타[200] 3.사이다[100] 4.결제"); }
+			System.out.println("-------------------- 메뉴 ------------------- ");
+			System.out.println("1.콜라[300] 2.환타[200] 3.사이다[100] 4.결제");
 			System.out.print(">>>>>> 선택 : "); int ch = scanner.nextInt();
 			
-			if( ch == 1 ) { 
+			if( ch == 1 ) {  // 1번 콜라를 선택했을때 
 				// 재고가 없을경우 구매 불가
 				if( 콜라재고 == 0 ) { System.out.println(" [[ 콜라 재고가 없습니다 : 제품 준비중 ]] "); }
 				else {
@@ -33,11 +33,60 @@ public class Day04_3_키오스크 {
 					콜라재고--;
 				}
 			}
+			if( ch == 2 ) {  // 2번 환타를 선택했을때 
+				// 재고가 없을경우 구매 불가
+				if( 환타재고 == 0 ) { System.out.println(" [[ 환타 재고가 없습니다 : 제품 준비중 ]] "); }
+				else {
+					System.out.println(" [[ 환타 담았습니다 ]] "); 
+					환타구매수++;
+					환타재고--;
+				}
+			}
+			if( ch == 3 ) {  // 3번 사이다를 선택했을때 
+				// 재고가 없을경우 구매 불가
+				if( 사이다재고 == 0 ) { System.out.println(" [[ 사이다 재고가 없습니다 : 제품 준비중 ]] "); }
+				else {
+					System.out.println(" [[ 사이다 담았습니다 ]] "); 
+					사이다구매수++;
+					사이다재고--;
+				}
+			}
 			///////////////////////////// 장바구니 목록 ////////////////////////////
+			System.out.println(" ------------- 장바구니 ---------------- ");
 			System.out.println(" 제품명\t제품수량\t결제액");
 			if( 콜라구매수 > 0 ) { System.out.println(" 콜라\t"+콜라구매수+"\t"+콜라구매수*300); }
-			System.out.println(" >>>>>> 총 결제액 " + (콜라구매수*300) );
-
+			if( 환타구매수 > 0 ) { System.out.println(" 환타\t"+환타구매수+"\t"+환타구매수*200); }
+			if( 사이다구매수 > 0 ) { System.out.println(" 사이다\t"+사이다구매수+"\t"+사이다구매수*100); }
+			System.out.println(" >>>>>> 총 결제액 " + ( (콜라구매수*300) + (환타구매수*200) + (사이다구매수*100) ) );
+			System.out.println(" --------------------------------------\n");
+			
+			if( ch == 4 ) { 
+				if( 콜라구매수 ==0 && 환타구매수 ==0 && 사이다구매수 ==0 ) { System.out.println("[알림] 결제할 제품이 없습니다 ");}
+				else{
+					System.out.print(" >>>>> 결제 하시겠습니까? [y] [n] : "); String ch2 = scanner.next();
+					if( ch2.equals("y") ) {
+						
+						System.out.print(" >>>>> 금액 투여 : "); int money = scanner.nextInt();
+						int totalpay = (콜라구매수*300) + (환타구매수*200) + (사이다구매수*100) ;
+						if( money < totalpay ) { 
+							System.out.println(" [알림] 금액이 부족합니다 ");
+						}
+						else {
+							System.out.println(" [결제완료] : 잔돈 : " + ( money - totalpay ));
+							// 장바구니 초기화 
+							콜라구매수 = 0 ; 환타구매수 = 0 ; 사이다구매수 = 0 ;
+						}
+						
+					}else if( ch2.equals("n") ) {
+						// 장바구니 초기화 
+						콜라구매수 = 0 ; 환타구매수 = 0 ; 사이다구매수 = 0 ;
+					}else {
+						System.out.println("[알림] :  알수 없는 행동 입니다 ");
+					}
+				}
+			}
+			
+			
 		} // while end 
 	} // main end 
 	
