@@ -80,6 +80,7 @@ public class Day04_3_키오스크 {
 								}
 							}
 							break;
+							
 						}else if( ch2.equals("n") ) {
 							// 장바구니 초기화 
 							콜라구매수 = 0 ; 환타구매수 = 0 ; 사이다구매수 = 0 ;
