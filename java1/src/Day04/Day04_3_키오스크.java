@@ -63,25 +63,30 @@ public class Day04_3_키오스크 {
 			if( ch == 4 ) { 
 				if( 콜라구매수 ==0 && 환타구매수 ==0 && 사이다구매수 ==0 ) { System.out.println("[알림] 결제할 제품이 없습니다 ");}
 				else{
-					System.out.print(" >>>>> 결제 하시겠습니까? [y] [n] : "); String ch2 = scanner.next();
-					if( ch2.equals("y") ) {
-						
-						System.out.print(" >>>>> 금액 투여 : "); int money = scanner.nextInt();
-						int totalpay = (콜라구매수*300) + (환타구매수*200) + (사이다구매수*100) ;
-						if( money < totalpay ) { 
-							System.out.println(" [알림] 금액이 부족합니다 ");
-						}
-						else {
-							System.out.println(" [결제완료] : 잔돈 : " + ( money - totalpay ));
+					while(true) {
+						System.out.print(" >>>>> 결제 하시겠습니까? [y] [n] : "); String ch2 = scanner.next();
+						if( ch2.equals("y") ) {
+							
+							while(true) {
+								System.out.print(" >>>>> 금액 투여 : "); int money = scanner.nextInt();
+								int totalpay = (콜라구매수*300) + (환타구매수*200) + (사이다구매수*100) ;
+								if( money < totalpay ) { 
+									System.out.println(" [알림] 금액이 부족합니다 ");
+								}
+								else {
+									System.out.println(" [결제완료] : 잔돈 : " + ( money - totalpay ));
+									// 장바구니 초기화 
+									콜라구매수 = 0 ; 환타구매수 = 0 ; 사이다구매수 = 0 ; break;
+								}
+							}
+							break;
+						}else if( ch2.equals("n") ) {
 							// 장바구니 초기화 
 							콜라구매수 = 0 ; 환타구매수 = 0 ; 사이다구매수 = 0 ;
+							break;
+						}else {
+							System.out.println("[알림] :  알수 없는 행동 입니다 ");
 						}
-						
-					}else if( ch2.equals("n") ) {
-						// 장바구니 초기화 
-						콜라구매수 = 0 ; 환타구매수 = 0 ; 사이다구매수 = 0 ;
-					}else {
-						System.out.println("[알림] :  알수 없는 행동 입니다 ");
 					}
 				}
 			}
