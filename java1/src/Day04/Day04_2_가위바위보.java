@@ -19,13 +19,27 @@ public class Day04_2_가위바위보 {
 		// 1. 필요 변수 개수 // 2. 키보드로 입력 // 3. 난수 생성 // 4. 제어[승리자 판단] 
 		int 플레이어;
 		int 컴퓨터;
+		int 게임수 = 0; // 게임수를 저장하는 변수 [ while문의 반복횟수 ]
 		
 		while(true) {
+			
 			// 1.사용자로부터 입력받기
 			System.out.println(" --------------[[ 가위바위보 게임 ]] ----------- ");
 			System.out.print(" >>>>>>>  가위[0] 바위[1] 보[2] 종료[3] 중 선택 : ");
 			플레이어 = scanner.nextInt();
-			
+				// 4. 3번 입력시 게임 종료 
+				if( 플레이어 == 3 ) {
+					System.out.println(" >>>>>>> [게임종료] : 게임횟수 :  " + 게임수);
+					System.out.println(" >>>>>>> [ 최종승리자 ] : "  );
+					break; // 가장 가까운 반목문 탈출
+				}
+				
+				// 5. 0~3 외 숫자 입력시 
+				if( 플레이어 < 0 || 플레이어 > 3 ) {
+					System.out.println("  >>>>>>> [알수없는 번호 입니다 : 다시 입력 ] ");
+					continue; // 가장 가까운 반목문 이동 
+				}
+				
 			// 2. 컴퓨터로부터 난수 생성 
 			Random random = new Random(); // 난수 객체
 			컴퓨터 = random.nextInt(3); // 0~2 사이 난수 
@@ -42,12 +56,11 @@ public class Day04_2_가위바위보 {
 			else { // 컴퓨터 승리
 				System.out.println(" >>>>>>>> 컴퓨터 승리");
 			}
-		}
-		
-
-	}
-	
-}
+			게임수++; // 게임수 증가 
+			
+		} // while end 
+	} // main end 
+} // class end 
 
 
 
