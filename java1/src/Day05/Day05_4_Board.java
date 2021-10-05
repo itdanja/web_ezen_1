@@ -5,6 +5,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+	// 1. 서로 다른 자료형을 동일한 배열에 저장할수 없음 
+		// 서로 다른 자료형 => 하나의 자료형 만들기 => 설계 => 클래스 
+			// 자료형 설계 
+
+	// 2. 배열선언과 동시에 메모리 할당 => 프로그램 실행시 메모리 변경 불가 
+	
 public class Day05_4_Board {
 	// 문제1: 게시판 프로그램  
 		// 0. 2차원 배열 사용  // 게시물번호는 인덱스 번호
@@ -89,7 +95,6 @@ public class Day05_4_Board {
 						"\t작성일 : "+ boards[ch2][3]+ "\t조회수 : "+boards[ch2][4] );
 				System.out.println(" >>> 내용 : " + boards[ch2][1] );
 				System.out.println("-----------------------------------------------");
-				
 			}
 		}
 		
