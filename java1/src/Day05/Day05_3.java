@@ -38,7 +38,7 @@ public class Day05_3 {
 		 *	// 행 반복문
 		 *	for( int i = 0 ; i < array.length ; i++ ) {
 		 *		// 열 반복문 
-		 *		for( int j = 0 ; j< array[j].length ; j++ ){
+		 *		for( int j = 0 ; j< array[i].length ; j++ ){
 		 *			// 해당 인덱스 값 가져와서 sum 누적합계 더하기  
 		 *			sum += array[i][j];
 		 *		}
