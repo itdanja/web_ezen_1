@@ -23,8 +23,5 @@ public class Member {
 	public void 회원수정() {
 		
 	}
-	
-	
-	
 
 }

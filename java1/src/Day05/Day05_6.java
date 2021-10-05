@@ -33,7 +33,6 @@ public class Day05_6 {
 		System.out.println(" 객체내 필드 => 비밀번호 : "+ 객체1.비밀번호 );
 		System.out.println(" 객체내 필드 => 이름 : " + 객체1.이름);
 		System.out.println(" 객체내 필드 => 연락처 : " + 객체1.연락처 );
-		
-		
+	
 	}
 }
