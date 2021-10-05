@@ -1,5 +1,7 @@
 package Day05;
 
+import java.util.Scanner;
+
 public class Day05_3 {
 
 	// p.181 확인문제
@@ -50,7 +52,55 @@ public class Day05_3 {
 	
 		// 9. 
 	
-	
+		public static void main(String[] args) {
+			
+			boolean run = true; // while 무한루프 제어 변수 
+			Scanner scanner = new Scanner(System.in); // 입력객체 
+			int studentNum = 0; // 학생수 => 배열의 길이
+			int[] scores = null; // 학생점수 배열 [ 초기값은 null 공백 ] 
+			
+			while(run) { // 무한루프 [ 5번입력하면 무한루프 종료 ] 
+			
+				System.out.println("-----------------------------------------------");
+				System.out.println("1.학생수 | 2.점수입력 | 3.점수리스트 | 4.분석 | 5.종료");
+				System.out.println("-----------------------------------------------");
+				System.out.print("선택 : ");
+				
+				int selectNo = scanner.nextInt();
+				if( selectNo == 1 ) {
+					System.out.print("학생수 : ");	studentNum = scanner.nextInt();
+					scores = new int[studentNum]; // 입력받은 정수만큼 배열길이 할당 
+				} 
+				else if( selectNo == 2 ) { 
+					// 배열내 할당된 모든 인덱스에 값 넣기 => for 
+					for( int i = 0 ; i<studentNum ; i++  ) {
+						System.out.print("scores[" + i + "] : ");
+						scores[i] = scanner.nextInt(); // 입력받은 값을 i번째에 저장 
+					}
+				} 
+				else if( selectNo == 3 ) {
+					for( int i = 0 ; i<studentNum; i++ ) {
+						System.out.println("scores[" + i + "] : " + scores[i] ); // i번째 인덱스 값 출력 
+					}
+				} 
+				else if( selectNo == 4 ) {
+					int max = 0;  int sum = 0 ; double avg = 0.0;
+					
+					for( int i = 0 ; i< studentNum ; i++ ) {
+						if( scores[i] > max ) max = scores[i]; // i번째 인덱스 값이 max 보다 크면 max에 i번째 인덱스 값 넣기 
+						sum += scores[i]; // i번째 인덱스 값을 sum 에 누적합계 
+					}
+					avg = (double)sum / studentNum ;
+					System.out.println("최고 점수 : " + max);
+					System.out.println("평균 점수 : " + avg);
+				}
+				else if( selectNo == 5 ) { 
+					run = false;
+				} 
+			}
+			System.out.println("프로그램 종료");
+			
+		}
 	
 	
 	
@@ -58,3 +108,13 @@ public class Day05_3 {
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
