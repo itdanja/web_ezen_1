@@ -28,6 +28,18 @@
 		.sort( 배열명 ) : 해당 배열을 오름차순 
 		.sort( 배열명, Collections.reverseOrder() ) : 내림차순 
 		
+	6. Date
+		Date 객체명 = new Date() : 현재 시스템내 날짜/시간 객체 
+		
+		*SimpleDateFormat : 날짜 형식 클래스 
+			SimpleDateFormat dateFormat = new SimpleDateFormat( "MM-dd" );
+			dateFormat.format(날짜객체);
+		
+	7. Integer : 정수 클래스 
+		Integer.parseInt("문자열")   : String -> int형
+		Integer.toString(정수) 		: int -> String  
+			* 숫자+"" 				: int+"" -> String
+		
 형식문자 [ printf ]  
 	%d : 정수 	%숫자d [ 숫자만큼 자릿수 포함 ]		%2d [ 정수가 2칸 차지 ] 
 	%f : 실수 	%.2f [ 소수점 2자리 표현 ]

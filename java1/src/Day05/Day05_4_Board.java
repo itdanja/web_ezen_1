@@ -32,8 +32,6 @@ public class Day05_4_Board {
 		 *	>> 제목 : 안녕  
 		 *	>> 작성자 : 김현수 	작성일 : 10-5		조회수 : 3
 		 * 	>> 내용 : 안녕하세요 자바 입니다 
-		 * 	
-		 * 	>> 선택 : 1. 뒤로가기	
 		 * 
 		 */
 	
@@ -64,11 +62,10 @@ public class Day05_4_Board {
 				System.out.print(" 내용 : ");	String contents = scanner.nextLine();
 				System.out.print(" 작성자 : ");	String writer = scanner.nextLine();
 				// 현재 날짜 클래스
-				Date now = new Date();
-					// 날짜 형식 클래스
+				Date now = new Date(); // 현재 시스템의 날짜/시간 객체
+					// 날짜 형식 클래스 [ 날짜 형식 변경하기 ] 
 					SimpleDateFormat dateFormat = new SimpleDateFormat( "MM-dd" );
 					String date = dateFormat.format(now);
-					
 				// 조회수
 				String count = "1";
 				// 모든 변수를 빈공간 배열에 저장 
@@ -78,6 +75,21 @@ public class Day05_4_Board {
 						boards[i][3] = date; boards[i][4] = count; break;
 					}
 				}				
+			}
+			
+			if( ch == 2 ) { 
+				System.out.print(" >>> 게시물 번호 선택 : "); 	int ch2 = scanner.nextInt();
+					// 해당 게시물의 조회수 1 증가
+				int count = Integer.parseInt( boards[ch2][4] ); //  [ 조회수(String) -> int 변환 ] 
+				boards[ch2][4] = Integer.toString(++count);	// 조회수 증가후 -> String 변환 
+						
+				System.out.println("--------------- 게시물 상세페이지 -----------------");
+				System.out.println(" >>> 제목 : " + boards[ch2][0]);
+				System.out.println(" >>> 작성자 :"+ boards[ch2][2] +
+						"\t작성일 : "+ boards[ch2][3]+ "\t조회수 : "+boards[ch2][4] );
+				System.out.println(" >>> 내용 : " + boards[ch2][1] );
+				System.out.println("-----------------------------------------------");
+				
 			}
 		}
 		
