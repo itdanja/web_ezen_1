@@ -11,6 +11,8 @@ public class Day05_2_회원제방문록 {
 		
 		// 1. 회원 100명[id,pw] 저장하는 방법 선언 
 		String[][] 회원목록 = new String[100][2]; // 100행 * 2열 => 200칸 
+		// 1. 방문록 100개[contents , writer ] 저장하는 방법 선언 
+		String[][] 방문록 = new String[100][2];
 		
 		// 2. 메뉴 => 메뉴는 계속 반복실행  : 무한루프 [ while ] 
 		while(true) {
@@ -56,9 +58,7 @@ public class Day05_2_회원제방문록 {
 					
 					boolean logincheck = true;
 					for( int i = 0 ; i<회원목록.length ; i++ ) {
-						if( 회원목록[i][0] != null && 
-								회원목록[i][0].equals(logid) && 
-								회원목록[i][1].equals(logpw) ) {
+						if( 회원목록[i][0] != null && 회원목록[i][0].equals(logid) && 회원목록[i][1].equals(logpw) ) {
 							System.out.println("[[ 알림 ]] : 로그인 성공 ");
 								////////////////////////////////로그인 성공시 메뉴/////////////////////////////////////////
 								while(true) { // 회원메뉴 무한루프
@@ -67,10 +67,26 @@ public class Day05_2_회원제방문록 {
 									int ch2 = scanner.nextInt();
 										
 									if( ch2 == 1  ) { 
-										System.out.print("방문록 내용 : ");
+											scanner.nextLine(); // nextLine 오류 해결 
+										System.out.print(">>>> 방문 내용 : "); String contents = scanner.nextLine();
+										// 방문록 배열내 빈공간을 찾아서 내용과 로그인된 아이디를 저장 
+										for( int j = 0 ; j < 방문록.length ; j++ ) {
+											if( 방문록[j][0] == null ) { // i번째 인덱스의 값이 공백[null] 이면 
+												방문록[j][0] = contents ; 	방문록[j][1] = logid;
+												System.out.println(">>>> 방문록 등록");
+												break;
+											}
+										}
 									}
 									else if( ch2 == 2 ){
-										System.out.print("---------- 방문록 목록");
+										System.out.println("---------- 방문록 목록 -------------");
+										System.out.printf("%10s \t %s \n" , "작성자" , "내용");
+										// 배열내 공백을 제외한 모든 내용 출력
+										for( int j = 0 ; j<방문록.length ; j++ ) {
+											if( 방문록[j][0] == null ) { break; }
+											System.out.printf("%10s \t %s \n" , 방문록[j][1] , 방문록[j][0]);
+										}
+										
 									}
 									else if( ch2 == 3 ) {
 										System.out.println("[[ 알림 ]] : 로그아웃 되었습니다 ");
@@ -85,7 +101,6 @@ public class Day05_2_회원제방문록 {
 					}
 					// 로그인 실패시 
 					if( logincheck ) System.out.println("[[ 알림 ]] : 로그인 실패 ( 동일한 회원정보가 없습니다 )");
-	
 					break;
 					
 				default :
