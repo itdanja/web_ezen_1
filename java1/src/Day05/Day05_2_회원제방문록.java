@@ -86,7 +86,6 @@ public class Day05_2_회원제방문록 {
 											if( 방문록[j][0] == null ) { break; }
 											System.out.printf("%10s \t %s \n" , 방문록[j][1] , 방문록[j][0]);
 										}
-										
 									}
 									else if( ch2 == 3 ) {
 										System.out.println("[[ 알림 ]] : 로그아웃 되었습니다 ");
