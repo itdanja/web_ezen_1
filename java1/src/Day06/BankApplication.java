@@ -122,7 +122,7 @@ public class BankApplication {  // p.277 확인문제20
 		System.out.println("출금");
 		System.out.println("--------------");
 		
-		System.out.println(">>> 계좌번호 : ");	String ano = scanner.next();
+		System.out.println(">>> 계좌번호 : ");		String ano = scanner.next();
 		System.out.println(">>> 출금액 : ");	 	int balance = scanner.nextInt();
 		
 		// 2. 입력받은 계좌번호 존재하는지 체크하는 메소드 호출 
