@@ -2,7 +2,7 @@ package Day06;
 
 import java.util.Scanner;
 
-public class BankApplication {
+public class BankApplication {  // p.277 확인문제20
 
 	// 접근제한자 
 		// public : 프로젝트내 모든곳에서 호출 가능
@@ -32,7 +32,7 @@ public class BankApplication {
 			if( selectNo == 1 ) { createAccount();} 
 			else if( selectNo == 2 ) { accountList(); }
 			else if( selectNo == 3 ) { deposit(); }
-			else if( selectNo == 4 ) {}
+			else if( selectNo == 4 ) { withdraw(); }
 			else if( selectNo == 5 ) { run = false;}
 		}
 		System.out.println("프로그램 종료");
@@ -81,7 +81,6 @@ public class BankApplication {
 	// Account 배열에서 ano와 동일한 Account객체찾기 메소드 [ 인수o( String ano ) 반환o ( Account 객체 ) ] 
 	private static Account findAccount( String ano ) {
 		Account account = null; // 임시객체
-		
 		for( int i = 0 ; i<accountArray.length ; i++ ) {
 			if( accountArray[i] != null ) { // i번째 인덱스가 공백이 아니면서 
 				 
@@ -101,31 +100,42 @@ public class BankApplication {
 		System.out.println("예금");
 		System.out.println("--------------");
 		// 1. 입력받기 
-		System.out.println(">>> 계좌번호 : ");		String ano = scanner.next();
+		System.out.println(">>> 계좌번호 : ");	String ano = scanner.next();
 		System.out.println(">>> 예금액 : ");	 	int balance = scanner.nextInt();
 		// 2. 입력받은 계좌번호 존재하는지 체크하는 메소드 호출 
-		Account account = findAccount(ano);
-			// findAccount 반환 : 찾은 객체 혹은 null 
-		
+		Account account = findAccount(ano); // findAccount 반환 : 찾은 객체 혹은 null 
 		// 3. 
 		if( account == null ) { // 반환이 null 일경우 
 			System.out.println("결과 : 계좌가 존재하지 않습니다. ");
 			return; // 현재 메소드 강제 종료 
 		}
-		
-		// 4. 
-		account.setBalance( account.getBalance() + balance  );
-								// 기존예금액  + 입력받은 입금액 
-			// set메소드 : 필드에 값 대입 메소드 
-			// get메소드 : 필드의 값 호출 메소드 
+		// 4.  // 기존예금액  + 입력받은 입금액 
+		account.setBalance(  account.getBalance() + balance ) ;	
+			// account.balance = account.getBalance() + balance ; // private 필드 에서는 불가 
+			// set메소드 : 필드에 값 대입 메소드  // get메소드 : 필드의 값 호출 메소드 
 		System.out.println("결과 : 예금이 성공되었습니다. ");
-		
 	}
 	// 출금하기 [ 인수x 반환x ] 
 	private static void withdraw() {
 		// 1. 입력받기 
+		System.out.println("--------------");
+		System.out.println("출금");
+		System.out.println("--------------");
+		
+		System.out.println(">>> 계좌번호 : ");	String ano = scanner.next();
+		System.out.println(">>> 출금액 : ");	 	int balance = scanner.nextInt();
+		
 		// 2. 입력받은 계좌번호 존재하는지 체크하는 메소드 호출 
-		Account account = findAccount(null);
+		Account account = findAccount( ano );
+		// 3.
+		if( account == null ) { System.out.println("결과 : 계좌가 존재하지 않습니다. "); return; }
+		if( account.getBalance() < balance  ) {
+			// 출금액이 기존예금액 보다 크면 출금불가 
+			System.out.println("예금액보다 많은 금액을 출금할 수 없습니다. "); return; 
+		}		
+		// 4.  기존예금액 - 출금액  
+		account.setBalance( account.getBalance() - balance );
+		System.out.println("결과 : 출금이 성공되었습니다. ");	
 	}
 
 	
