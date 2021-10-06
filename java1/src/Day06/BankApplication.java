@@ -80,6 +80,7 @@ public class BankApplication {  // p.277 확인문제20
 	}
 	// Account 배열에서 ano와 동일한 Account객체찾기 메소드 [ 인수o( String ano ) 반환o ( Account 객체 ) ] 
 	private static Account findAccount( String ano ) {
+		
 		Account account = null; // 임시객체
 		for( int i = 0 ; i<accountArray.length ; i++ ) {
 			if( accountArray[i] != null ) { // i번째 인덱스가 공백이 아니면서 
@@ -126,7 +127,7 @@ public class BankApplication {  // p.277 확인문제20
 		System.out.println(">>> 출금액 : ");	 	int balance = scanner.nextInt();
 		
 		// 2. 입력받은 계좌번호 존재하는지 체크하는 메소드 호출 
-		Account account = findAccount( ano );
+		Account account = findAccount( ano ); // ??? 
 		// 3.
 		if( account == null ) { System.out.println("결과 : 계좌가 존재하지 않습니다. "); return; }
 		if( account.getBalance() < balance  ) {
@@ -136,9 +137,12 @@ public class BankApplication {  // p.277 확인문제20
 		// 4.  기존예금액 - 출금액  
 		account.setBalance( account.getBalance() - balance );
 		System.out.println("결과 : 출금이 성공되었습니다. ");	
+		
 	}
-
-	
+		// 객체명 , 배열명 => 주소값 
+	// 객체 ==  [ 주소비교 ] 
+		// String == [ x ] 
+			// 객체명.equals
 	
 	
 	

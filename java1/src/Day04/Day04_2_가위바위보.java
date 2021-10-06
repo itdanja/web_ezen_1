@@ -20,7 +20,7 @@ public class Day04_2_가위바위보 {
 		int 플레이어;
 		int 컴퓨터;
 		int 게임수 = 0; // 게임수를 저장하는 변수 [ while문의 반복횟수 ]
-		int 플레이어승리수 =0 ; int 컴퓨터승리수 = 0 ;
+		int 플레이어승리수 = 0 ; int 컴퓨터승리수 = 0 ;
 		
 		while(true) {
 			
@@ -39,7 +39,6 @@ public class Day04_2_가위바위보 {
 						System.out.println(" >>>>>>> [ 최종승리자 ] : 무승부 "  );
 					}
 					break; // 가장 가까운 반목문 탈출
-				
 				}	
 				// 5. 0~3 외 숫자 입력시 
 				if( 플레이어 < 0 || 플레이어 > 3 ) {
@@ -49,7 +48,7 @@ public class Day04_2_가위바위보 {
 				
 			// 2. 컴퓨터로부터 난수 생성 
 			Random random = new Random(); // 난수 객체
-			컴퓨터 = random.nextInt(3); // 0~2 사이 난수 
+			컴퓨터 = random.nextInt(2); // 0~2 사이 난수 
 			System.out.println(" >>>>>>> 컴퓨터가 낸 수 : " + 컴퓨터);
 			
 			// 3. 플레이어 승리자 판단 [ 플레이어=가위 && 컴퓨터==보 이거나 바위,가위 이거나 보,바위  ]

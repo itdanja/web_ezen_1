@@ -45,7 +45,7 @@ public class Day05_4_Board {
 		
 		// 0. 설정 
 		String[][] boards = new String[100][5]; // 게시물 100를 저장할수 있는 배열 선언 [ 게시물당 5열 ] 
-		Scanner scanner = new Scanner(System.in); // 입력객체
+		Scanner scanner = new Scanner(System.in); // 입력객체 
 		
 		// 1. 무한루프 
 		while(true) {
@@ -58,6 +58,7 @@ public class Day05_4_Board {
 							i , boards[i][0] , boards[i][2],boards[i][3],boards[i][4]);
 				}
 			}
+			
 			System.out.println("==========================================================================");
 			System.out.print(" 1.글쓰기 2.글상세보기  >>선택 : "); int ch = scanner.nextInt();
 			
