@@ -67,7 +67,7 @@ public class Book {
 		return;
 	}
 		// 4. 도서대여 메소드 [ 도서코드를 입력받아 대여여부가 TRUE이면 대여하기 ]  
-	public boolean book_rental() {
+	public boolean book_rental( String loginid ) {
 		System.out.println("------------------도서 대여 페이지 ----------------");
 		System.out.println(" 대여할 도서코드 : ");	String b_ISBN = BookApplication.scanner.next();
 			// ISBN 존재여부 체크 
@@ -83,6 +83,8 @@ public class Book {
 						// 1. 대여성공시 대여여부 true => false
 						BookApplication.books[i].setB_rental(false);
 						// 2. 대여성공시 대여회원에 현재 로그인된 아이디 대입 
+						BookApplication.books[i].setM_id(loginid);
+						
 						return true;
 					}
 					else { System.out.println(" [[ 알림 ]] : 현재 대여중인 도서 입니다. 대여불가!!!"); return false; }
@@ -95,8 +97,28 @@ public class Book {
 		return false;
 	}
 		// 5. 도서반납 메소드 
-	public boolean book_return() {
+	public boolean book_return( String loginid ) {
 	
+		System.out.println("------------------도서 반납 페이지 ----------------");
+		System.out.println(" 반납 도서코드 : ");	String b_ISBN = BookApplication.scanner.next();
+		
+		// 1.대여중인 책들 찾기 
+		for( int i = 0 ; i< BookApplication.books.length ; i++) {
+			if( BookApplication.books[i] !=null && !BookApplication.books[i].getB_rental() ) {
+				// ! : 부정 ( true => false )
+				// 2.입력받은 도서코드 
+				if( BookApplication.books[i].getB_ISBN().equals(b_ISBN) ) {
+					// 3.로그인된 회원 == 대여회원
+					if( BookApplication.books[i].getM_id().equals( loginid ) ) {
+						System.out.println(" [[ 알림 ]] : 도서 반납 성공 !!! ");
+						BookApplication.books[i].setM_id(null); // 1.반납성공시 대여회원 => null
+						BookApplication.books[i].setB_rental(true); // 2.대여여부 => true
+						return true;
+					}
+				}
+			}
+		}
+		System.out.println(" [[ 알림 ]] : 회원님이 대여중인 도서가 아닙니다");
 		return true;
 	}
 	

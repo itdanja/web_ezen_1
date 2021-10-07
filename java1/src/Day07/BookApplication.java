@@ -40,7 +40,7 @@ public class BookApplication { // 실행 클래스
 				// 2. 관리자메뉴
 				else if( loginid.equals("admin")) { admin_menu(); }
 				// 3.  일반회원메뉴
-				else { member_menu(); }
+				else { member_menu( loginid ); }
 					
 			}
 			if( ch == 2 ) {
@@ -68,15 +68,15 @@ public class BookApplication { // 실행 클래스
 		}
 	}
 	// 2. 로그인시 메뉴 메소드  
-	public static void member_menu() {
+	public static void member_menu( String loginid ) {
 		Book book = new Book(); // Book 임시객체 : 메소드 호출용
 		while(true) {
 			System.out.println(" ---------- Menu ----------");
 			System.out.println(" 1.도서목록 | 2.대여 | 3.반납 | 4.로그아웃 ");
 			System.out.print("선택 : ");	int ch = scanner.nextInt();
 			if( ch == 1 ) { book.book_list(); }
-			if( ch == 2 ) { book.book_rental(); } 
-			if( ch == 3 ) { book.book_return(); }
+			if( ch == 2 ) { book.book_rental( loginid ); } 
+			if( ch == 3 ) { book.book_return( loginid ); }
 			if( ch == 4 ) { System.out.println(" [[ 알림 ]] : 로그아웃 되었습니다 "); return; }
 		}
 	}
