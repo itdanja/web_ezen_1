@@ -44,9 +44,21 @@ public class BookApplication { // 실행 클래스
 			}
 			if( ch == 3 ) {
 				// 아이디찾기 메소드 호출 
+			 	String findid = Member.findid();
+			 	if( findid == null ) {
+			 		 System.out.println(" [[ 알림 ]] : 동일한 회원정보가 없습니다");
+			 	}else {
+			 		System.out.println(" [[ 회원님의 아이디는 "+findid+" ]] ");
+			 	}
 			}
 			if( ch == 4 ) {
 				// 비밀번호찾기 메소드 호출 
+			 	String findpw = Member.findpw();
+			 	if( findpw == null ) {
+			 		 System.out.println(" [[ 알림 ]] : 동일한 회원정보가 없습니다");
+			 	}else {
+			 		System.out.println(" [[ 회원님의 비밀번호는 "+findpw+" ]] ");
+			 	}
 			}
 		}
 	}

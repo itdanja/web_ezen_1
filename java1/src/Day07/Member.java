@@ -80,11 +80,35 @@ public class Member { // 회원 클래스 설계
 		return null; // 로그인 실패  // 반환값 : 로그인 성공시 => 성공한 아이디 / 실패시 null
 	}
 		// 4. 아이디찾기 메소드 ( 이름 , 연락처 입력받아 => 아이디 알려주기 ) 
-	public String findid() {
+	public static String findid() {
+		// 1. 입력받기 
+		System.out.println("------------------아이디찾기 페이지 ----------------");
+		System.out.println(" 성명 : "); String m_name = BookApplication.scanner.next();
+		System.out.println(" 연락처 : "); String m_phone = BookApplication.scanner.next();
+		// 2. 배열내 동일한 정보의 객체 찾기 
+		for( int i = 0 ; i<BookApplication.members.length ; i++ ) {
+			if(BookApplication.members[i] != null && 
+					BookApplication.members[i].getM_name().equals(m_name) && 
+					BookApplication.members[i].getM_phone().equals(m_phone) ){
+				return BookApplication.members[i].getM_id(); // 아이디 찾기 성공 
+			}
+		}
 		return null; 	// 반환값 : 찾았을경우 => 아이디 / 실패시 null
 	}
 		// 5. 비밀번호찾기 메소드 ( 아이디 , 연락처 입력받아 => 비밀번호 알려주기 )
-	public String findpw() {
+	public static String findpw() {
+		// 1. 입력받기 
+		System.out.println("------------------아이디찾기 페이지 ----------------");
+		System.out.println(" 아이디 : "); String m_id = BookApplication.scanner.next();
+		System.out.println(" 연락처 : "); String m_phone = BookApplication.scanner.next();
+		// 2. 배열내 동일한 정보의 객체 찾기 
+		for( int i = 0 ; i<BookApplication.members.length ; i++ ) {
+			if(BookApplication.members[i] != null && 
+					BookApplication.members[i].getM_id().equals(m_id) && 
+					BookApplication.members[i].getM_phone().equals(m_phone) ){
+				return BookApplication.members[i].getM_pw(); // 아이디 찾기 성공 
+			}
+		}
 		return null;	 // 반환값 : 찾았을경우 => 비밀번호 / 실패시 null
 	}
 
