@@ -52,11 +52,11 @@ public class BookApplication { // 실행 클래스
 	}
 	// 2. 로그인시 메뉴 메소드  
 	public static void member_menu() {
-		
+		System.out.println(" ---------- Menu ----------");
 	}
 	// 3. 관리자 메뉴 메소드 
 	public static void admin_menu() {
-		
+		System.out.println(" ---------- Admin Menu ----------");
 	}
 	
 	

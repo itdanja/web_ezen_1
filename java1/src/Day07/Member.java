@@ -65,7 +65,18 @@ public class Member { // 회원 클래스 설계
 	
 		// 3. 로그인 메소드 [ 입력받은 아이디와 비밀번호가 배열내 존재하면 로그인 성공 아니면 실패 ]
 	public static String login() {
-		
+		// 1. 아이디 , 비밀번호 입력받기
+		System.out.println("------------------로그인 페이지 ----------------");
+		System.out.println(" 아이디 : "); String m_id = BookApplication.scanner.next();
+		System.out.println(" 비밀번호 : "); String m_pw = BookApplication.scanner.next();
+		// 2. 배열내 존재하면 로그인 성공 
+		for( int i = 0 ; i<BookApplication.members.length ; i++ ) {
+			if(BookApplication.members[i] != null && 
+					BookApplication.members[i].getM_id().equals(m_id) && 
+					BookApplication.members[i].getM_pw().equals(m_pw) ) {
+				return m_id; // 로그인 성공시 성공한 아이디 반환
+			}
+		}
 		return null; // 로그인 실패  // 반환값 : 로그인 성공시 => 성공한 아이디 / 실패시 null
 	}
 		// 4. 아이디찾기 메소드 ( 이름 , 연락처 입력받아 => 아이디 알려주기 ) 
