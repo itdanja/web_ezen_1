@@ -28,6 +28,8 @@ public class BookApplication { // 실행 클래스
 				// 회원가입 메소드 호출 
 					// 1. 다른클래스 메소드 호출 방법 
 						// 1. 객체생성후 객체로 부터 멤버 접근 
+							//Member member = new Member();
+							//member.login()
 						// 2. 해당 메소드 static
 				Member.signup();
 			}
