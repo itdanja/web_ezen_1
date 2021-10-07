@@ -36,8 +36,8 @@ public class Book {
 	public boolean book_return() {
 		return true;
 	}
-		// 6. ISBN 체크 메소드 
-	public boolean bookcheck() {
+		// 6. ISBN 체크 메소드 [ 체크할 대상을 인수로 받아서 배열내 존재하면 true 아니면 false ]
+	public boolean bookcheck( String check_isbn ) {
 		return true;
 	}
 	
