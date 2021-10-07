@@ -45,30 +45,43 @@ public class BookApplication { // 실행 클래스
 			if( ch == 3 ) {
 				// 아이디찾기 메소드 호출 
 			 	String findid = Member.findid();
-			 	if( findid == null ) {
-			 		 System.out.println(" [[ 알림 ]] : 동일한 회원정보가 없습니다");
-			 	}else {
-			 		System.out.println(" [[ 회원님의 아이디는 "+findid+" ]] ");
-			 	}
+			 	if( findid == null ) { System.out.println(" [[ 알림 ]] : 동일한 회원정보가 없습니다");}
+			 	else {System.out.println(" [[ 회원님의 아이디는 "+findid+" ]] ");}
 			}
 			if( ch == 4 ) {
 				// 비밀번호찾기 메소드 호출 
 			 	String findpw = Member.findpw();
-			 	if( findpw == null ) {
-			 		 System.out.println(" [[ 알림 ]] : 동일한 회원정보가 없습니다");
-			 	}else {
-			 		System.out.println(" [[ 회원님의 비밀번호는 "+findpw+" ]] ");
-			 	}
+			 	if( findpw == null ) { System.out.println(" [[ 알림 ]] : 동일한 회원정보가 없습니다");}
+			 	else {System.out.println(" [[ 회원님의 비밀번호는 "+findpw+" ]] ");}
+			 	
 			}
 		}
 	}
 	// 2. 로그인시 메뉴 메소드  
 	public static void member_menu() {
-		System.out.println(" ---------- Menu ----------");
+		Book book = new Book(); // Book 임시객체 : 메소드 호출용
+		while(true) {
+			System.out.println(" ---------- Menu ----------");
+			System.out.println(" 1.도서목록 | 2.대여 | 3.반납 | 4.로그아웃 ");
+			System.out.print("선택 : ");	int ch = scanner.nextInt();
+			if( ch == 1 ) { book.book_list(); }
+			if( ch == 2 ) { book.book_rental(); } 
+			if( ch == 3 ) { book.book_return(); }
+			if( ch == 4 ) { System.out.println(" [[ 알림 ]] : 로그아웃 되었습니다 "); return; }
+		}
 	}
+	
 	// 3. 관리자 메뉴 메소드 
 	public static void admin_menu() {
-		System.out.println(" ---------- Admin Menu ----------");
+		Book book = new Book(); // Book 임시객체 : 메소드 호출용 
+		while(true) {
+			System.out.println(" ---------- Admin Menu ----------");
+			System.out.println(" 1.도서등록 | 2.도서목록 | 3.로그아웃 ");
+			System.out.print("선택 : ");	int ch = scanner.nextInt();
+			if( ch == 1 ) { book.book_add(); }
+			if( ch == 2 ) { book.book_list(); } 
+			if( ch == 3 ) { System.out.println(" [[ 알림 ]] : 로그아웃 되었습니다 "); return; }
+		}
 	}
 	
 	
