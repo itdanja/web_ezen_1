@@ -40,7 +40,6 @@ public class Book {
 	public boolean bookcheck( String check_isbn ) {
 		return true;
 	}
-	
 		// 1. 필드가 private 사용시 => get ,set 메소드 
 	public String getB_ISBN() {
 		return b_ISBN;
