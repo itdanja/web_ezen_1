@@ -21,12 +21,8 @@ public class Member { // 회원 클래스 설계
 
 	// 3. 메소드 [ 동작 ]
 		// 2. 회원가입 메소드 [ 입력받은 정보로 객체 생성해서 배열에 저장 ]
-	public boolean signup() {
+	public static boolean signup() {
 		// public : main이 속한 클래스 ( 외부클래스 ) 로 호출 하기 위해
-		
-		
-		
-		
 		
 		return true; // 회원가입 성공  	// 반환값 : 회원가입성공/실패 => TRUE / FALSE
 	}
