@@ -64,7 +64,7 @@ public class Member { // 회원 클래스 설계
 	
 	
 		// 3. 로그인 메소드 [ 입력받은 아이디와 비밀번호가 배열내 존재하면 로그인 성공 아니면 실패 ]
-	public String login() {
+	public static String login() {
 		
 		return null; // 로그인 실패  // 반환값 : 로그인 성공시 => 성공한 아이디 / 실패시 null
 	}

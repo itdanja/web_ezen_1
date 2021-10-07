@@ -23,6 +23,15 @@ public class BookApplication { // 실행 클래스
 			System.out.print(" >>> 선택 : ");	int ch = scanner.nextInt();
 			if( ch == 1 ) {
 				// 로그인 메소드 호출
+				String loginid = Member.login();
+					// login 메소드의 반환값에 따른 제어
+				// 1. 로그인 실패
+				if( loginid ==null ) { System.out.println(" [[ 알림 ]] : 동일한 회원정보가 없습니다");}
+				// 2. 관리자메뉴
+				else if( loginid.equals("admin")) { admin_menu(); }
+				// 3.  일반회원메뉴
+				else { member_menu(); }
+					
 			}
 			if( ch == 2 ) {
 				// 회원가입 메소드 호출 
@@ -42,7 +51,7 @@ public class BookApplication { // 실행 클래스
 		}
 	}
 	// 2. 로그인시 메뉴 메소드  
-	public static void login_menu() {
+	public static void member_menu() {
 		
 	}
 	// 3. 관리자 메뉴 메소드 
