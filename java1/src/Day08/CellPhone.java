@@ -6,10 +6,15 @@ public class CellPhone {
 		String model;
 		String color;
 	//2.생성자 
+	public CellPhone(String model, String color) {
+		this.model = model;
+		this.color = color;
+	}
 	
 	//3.메소드 :  접근제한자[생략=>default] 반환타입 메소드( 인수1 , 인수2 인수3 ){ 실행코드} 
 	void powerOn() {System.out.println("전원을 켭니다");}
-		// void : 반환이 없다 [ return 없음 ]
+		
+	// void : 반환이 없다 [ return 없음 ]
 	void powerOff() {System.out.println("전원을 끕니다");}
 	void bell() {System.out.println("벨리 울립니다");}
 	

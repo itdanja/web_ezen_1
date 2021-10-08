@@ -8,10 +8,15 @@ public class DmbCellPhone extends CellPhone  {
 	int channel;
 	// 2. 생성자 
 	public DmbCellPhone( String model , String color , int channel ) {
-		// this : 현재 클래스내 멤버 
-		this.model = model;	// 부모클래스내 멤버 사용 
-		this.color = color;	// 부모클래스내 멤버 사용 
-		this.channel = channel; // 본인클래스 멤버 사용
+	// this : 현재 클래스내 멤버 
+		// 부모 클래스가 생성자 없을때 
+	//		this.model = model;	// 부모클래스내 멤버 사용 
+	//		this.color = color;	// 부모클래스내 멤버 사용 
+	//		this.channel = channel; // 본인클래스 멤버 사용
+	//	
+		// 부모 클래스가 생성자 있을때 => super() 키워드를 이용한 부모클래스 생성자호출 
+		super(model, color); // super( ) : 부모클래스내 생성자 호출 
+		this.channel = channel;
 	}
 	// 3. 메소드 
 	void turnOnDmb() {System.out.println("채널 : " + channel +"번 DMB 방송 수신을 시작합니다");}
