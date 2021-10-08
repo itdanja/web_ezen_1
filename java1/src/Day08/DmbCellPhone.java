@@ -18,6 +18,7 @@ public class DmbCellPhone extends CellPhone  {
 		super(model, color); // super( ) : 부모클래스내 생성자 호출 
 		this.channel = channel;
 	}
+
 	// 3. 메소드 
 	void turnOnDmb() {System.out.println("채널 : " + channel +"번 DMB 방송 수신을 시작합니다");}
 	void changeChannelDmb( int channl ) {
@@ -27,4 +28,21 @@ public class DmbCellPhone extends CellPhone  {
 		System.out.println("채널 : "+channl +"번으로 바꿉니다");
 	}
 	void turnOffDmb() {System.out.println("DMB방송 수신을 멈춥니다");}
+	
+	// 오버라이딩 [ 부모클래스내 메소드 재정의 ] :자동완성 
+	
+	@Override // 재정의=>코드변경 // @ : 어노테이션
+	void powerOn() {
+		// super.powerOn(); // 부모메소드 호출 
+		System.out.println("@전원 메소드 재정의 : DMB폰 켭니다" );
+	}
+	
 }
+
+
+
+
+
+
+
+

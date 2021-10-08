@@ -1,6 +1,6 @@
 package Day08;
 
-public class CellPhone {
+public  class CellPhone {
 
 	//1.필드 
 		String model;
@@ -10,6 +10,7 @@ public class CellPhone {
 		this.model = model;
 		this.color = color;
 	}
+
 	
 	//3.메소드 :  접근제한자[생략=>default] 반환타입 메소드( 인수1 , 인수2 인수3 ){ 실행코드} 
 	void powerOn() {System.out.println("전원을 켭니다");}
