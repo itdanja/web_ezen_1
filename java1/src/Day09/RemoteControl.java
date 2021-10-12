@@ -19,6 +19,7 @@ public interface RemoteControl {
 		if( mute ) {System.out.println("무음 처리 합니다 ");}
 		else {System.out.println("무음 해제합니다.");}
 	}
+	
 	// 4. 정적메소드 [ 객체 선언없이 사용되는 메소드 ] 
 	static void changeBattery() {
 		System.out.println("건전지를 교환합니다. ");
