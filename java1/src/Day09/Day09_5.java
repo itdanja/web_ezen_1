@@ -9,8 +9,10 @@ public class Day09_5 {
 				// 필드(속성) : 계좌번호 , 예금액 
 		// 2. 국민은행[서브클래스]
 		// 3. 신한은행[서브클래스]
+	
+	public static Bank[] banklist = new Bank[100];
+	
 	public static void main(String[] args) {
-		
 		// 1. 인터페이스 생성 
 		ATM atm;
 		// 2. 인터페이스 클래스 연결 
@@ -20,5 +22,21 @@ public class Day09_5 {
 		atm.예금();
 		atm.출금();
 		atm.잔고();
+		
+		// 4. 인터페이스내 클래스 변경
+		atm = new 신한은행();
+		atm.계좌등록();
+		
+		// 5. 동일한 슈퍼클래스로부터 서로 다른 서브클래스를 배열로 사용 
+			// 슈퍼클래스로 배열 선언 
+		Bank account1 = new Bank();	
+		banklist[0] = account1;
+		
+		국민은행 account2 = new 국민은행();
+		banklist[1] = account2;
+		
+		신한은행 account3 = new 신한은행();
+		banklist[2] = account3;
+		
 	}
 }
