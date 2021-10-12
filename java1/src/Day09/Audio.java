@@ -24,7 +24,7 @@ public class Audio implements RemoteControl {
 		}else {
 			this.volume = volume;
 		}
-		System.out.println("ÇöÀç audio º¼·ý : "+volume);
+		System.out.println("ÇöÀç audio º¼·ý : "+ this.volume);
 	}
 	
 	
