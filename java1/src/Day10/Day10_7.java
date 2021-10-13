@@ -23,6 +23,7 @@ public class Day10_7 {
 			// 예외 던지기 
 				// 목적 : 메소드내에서 발생한 예외를 호출한곳으로 이동 [ 예외 통일성 ] 
 		
+			// 사용자정의 예외 
 		
 		// 예1 p.423 : NullPointerException 예외
 		try {
