@@ -15,6 +15,7 @@ public class Day10_3 {
 		// A.B b2 = new A.B(); // 정적 클래스 
 			b.field1 = 3;
 			b.method1();
+	
 		
 		// 3. 정적 멤버 클래스 객체 생성 
 		A.C c = new A.C(); 

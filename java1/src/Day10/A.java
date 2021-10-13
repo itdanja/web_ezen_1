@@ -3,6 +3,7 @@ package Day10;
 public class A {
 
 	// 필드 
+	int 필드 = 0;
 
 	// 생성자 : 현재 클래스명과 이름이 동일하면 생성자 // 동일하지 않으면 메소드 
 	A(){
@@ -40,7 +41,7 @@ public class A {
 			// 2. 생성자 
 			public D() {System.out.println(" D 객체가 생성됨");}
 			// 3. 메소드 
-			void method1() {}	
+			void method1() { System.out.println( 필드 );}	
 		}
 		// 메소드내 지역변수 
 		D d = new D();
