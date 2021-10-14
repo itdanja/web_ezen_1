@@ -31,6 +31,51 @@ public class Day11_2 {
 		System.out.println(obj3.toString());
 		String 문자열 = "유재석";
 		System.out.println( 문자열.toString() );
+			
+			// 3. clone() : 객체 복제 
+				// 1. 얕은 복제 : 배열 객체는 복제 불가 [ 주소만 복사 ]
+				// 2. 깊은 복제 : 배열 객체도 복제 가능 
+		// 1. 객체 생성 
+		Member2 original = new Member2("blue", "홍길동", "12345", 25, true);
+		
+		// 2. 객체 복제 
+		Member2 cloned = original.getMember2();
+		cloned.password="67890";
+		
+		System.out.println("---------------복제된 객체 정보 ");
+		cloned.toString();
+		
+		System.out.println("---------------원본 객체 정보 ");
+		original.toString();
+		
+			// 3_1 깊은 복제 
+		// 1. 객체 생성 
+		Member3 original2 = new Member3("홍길동", 25, 
+				new int[] {90,90}, new Car("소나타"));
+		// 2. 깊은 복제 
+		Member3 cloned2 = original2.getMember3();
+		cloned2.scores[0] = 100;
+		cloned2.car.model ="그랜저";
+		
+		System.out.println(" ----- 원본 객체 ");
+		original2.toString();
+		System.out.println(" ----- 깊은 복제 객체");
+		cloned2.toString();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 
