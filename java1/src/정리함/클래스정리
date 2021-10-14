@@ -18,8 +18,20 @@
 			입력객체.nextInt
 			
 	3. String : 문자열 클래스 
-		.equals( 비교문자 ) : 문자 비교 => 동일하면 true 동일하지 않으면 false
-	
+		1. new String(바이트열) : 바이트열 를 문자열 변환
+		2. charAt(인덱스) : 문자 추출
+		3. equals(비교대상문자열) : 문자열 비교 
+		4. getBytes() : 문자열을 바이트열로 변환 
+		5. indexOf(검색문자열) : 문자열 찾기 [ 인수 : 찾을문자열   반환: 찾은 인덱스위치 ]
+		6. contains(검색문자열) : 문자열 포함여부 [ 인수: 찾을문자열   반환 : true / false ]
+		7. length() : 문자열의 길이 
+		8. replace("교체할문자열","새로운문자열") : 문자열 대치
+		9. substring() : 문자열 잘라내기
+		10. split(분리기준) : 문자열 분리 
+		11. toLowerCase() : 소문자로 변환    toUpperCase() : 대문자로 변환
+		12. trim() : 문자열 앞뒤 공백 제거 [ 사이공백제거 불가 ]
+		13. valueOf() : 기본타입을 문자열 변환 
+		
 	4. Random : 난수 클래스 
 		.nextInt(숫자) : 0~숫자 전까지의 난수 생성 
 		.nextInt(숫자)+1 : 1~숫자 까지의 난수 생성 

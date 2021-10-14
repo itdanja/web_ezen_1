@@ -83,12 +83,55 @@ public class Day11_4 {
 			}else {
 				System.out.println("자바와 관련없는 책입니다.");
 			}
+			// 6. contains() : 문자열 포함여부 [ 인수: 찾을문자열   반환 : true / false ]
+			System.out.println( subject.contains("자바"));
+			
 		// p.505
-			// 6. length() : 문자열의 길이 
+			// 7. length() : 문자열의 길이 
 			System.out.println( subject.length() ); //8칸 : 인덱스0~7
+		
+		// p.506
+			// 8. replace("교체할문자열","새로운문자열") : 문자열 대치
+			String oldstr ="자바는 객체지향언어입니다. 자바는 풍부한 API를 지원합니다";
+			String newstr =oldstr.replace("자바", "java");
+			System.out.println(newstr);
+		
+		// p.507
+			// 9. substring() : 문자열 잘라내기
+			String ssn2 ="880815-1234567";
+			System.out.println( ssn2.substring(0,6) ); // 시작인덱스 , 끝인덱스
+			System.out.println( ssn2.substring(7) ); // 시작인덱스 ~~
 			
-					
+			// 10. split(분리기준) : 문자열 분리 
+			String[] ssn3 =  ssn2.split("-");
+							// "-" 기준으로 분해 => 2개의 문자열
+			System.out.println( ssn3[0] );
+			System.out.println( ssn3[1]);
+		
+		// p.508
+			// 11. toLowerCase() : 소문자로 변환    toUpperCase() : 대문자로 변환
+			String str3 = "Java Programming";
+			System.out.println( str3.toLowerCase() );
+			System.out.println( str3.toUpperCase() );
+		
+		// p.509
+			// 12. trim() : 문자열 앞뒤 공백 제거 [ 사이공백제거 불가 ]
+			String str4 = "     자바          프로그래밍      ";
+			System.out.println( str4.trim() );
+		
+		// p.510
+			// 13. valueOf() : 기본타입을 문자열 변환 
+			String str5 = String.valueOf(10);	// 정수형[int] => 문자열 		"10"
+			String str6 = String.valueOf(10.5);	// 실수형[double] => 문자열	"10.5"
+			String str7 = String.valueOf(true); // 논리 => 문자열				"true"
 			
+			System.out.println(" 문자열 3개 : "+ str5 +"  "+ str6 +"  "+ str7 );
+		
+			
+		
+		
+			
+		
 			
 			
 			
