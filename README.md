@@ -17,15 +17,15 @@
 |8일차[10/08]|JAVA1| 상속 · mini Console project |
 |9일차[10/12]|JAVA1| 상속 · 인터페이스  |
 |10일차[10/13]|JAVA1| 중첩클래스/인터페이스 · 예외처리 |
-|11일차[10/14]|JAVA1| 기본API클래스 · 파일처리 |
-|12일차[10/15]|JAVA2| 멀티스레드 |
-|13일차[10/18]|JAVA2| 제네릭 / 람다식 |
-|14일차[10/19]|JAVA2| 컬렉션 프레임워크 |
-|15일차[10/20]|JAVA2| Console 프로젝트 |
-|16일차[10/21]|JAVA2| Console 프로젝트 |
-|17일차[10/22]|JAVA2| Console 프로젝트 / 평가  |
-|18일차[10/25]|JAVA2| Console 프로젝트 |
-|19일차[10/26]|JAVA2| JAVAFX |
+|11일차[10/14]|JAVA1| 기본API클래스 |
+|12일차[10/15]|JAVA2| 기본API클래스 · 파일처리 |
+|13일차[10/18]|JAVA2| 멀티스레드 |
+|14일차[10/19]|JAVA2| 제네릭 · 람다식 |
+|15일차[10/20]|JAVA2| 컬렉션 프레임워크 |
+|16일차[10/21]|JAVA2| Member Board Programming |
+|17일차[10/22]|JAVA2| Console Project · 평가  |
+|18일차[10/25]|JAVA2| Console Project |
+|19일차[10/26]|JAVA2| Console Project |
 |20일차[10/27]|JAVA2| JAVAFX |
 
     * 스트림과 병렬 처리
