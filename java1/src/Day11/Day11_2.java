@@ -64,7 +64,7 @@ public class Day11_2 {
 		cloned2.toString();
 		
 			// finalize() : 객체 소멸자 
-		cloned2 = null; // 해당 객체가 null
+		cloned2 = null; // 해당 객체가 nulls
 		System.gc(); // 자동실행
 			// null 객체는 힙 메모리
 				// 스택 : 변수명,주소값  
