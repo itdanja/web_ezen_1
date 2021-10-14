@@ -59,9 +59,20 @@ public class Day11_2 {
 		
 		System.out.println(" ----- 원본 객체 ");
 		original2.toString();
+		
 		System.out.println(" ----- 깊은 복제 객체");
 		cloned2.toString();
 		
+			// finalize() : 객체 소멸자 
+		cloned2 = null; // 해당 객체가 null
+		System.gc(); // 자동실행
+			// null 객체는 힙 메모리
+				// 스택 : 변수명,주소값  
+				// 힙 : 값 
+					// int 변수명 = 10;
+						// 스택 : 변수명 , 변수의 힙 주소값
+						// 힙 : [주소를 가지고있는 메모리] : 값
+		cloned2 = original2.getMember3(); // 메모리 할당 
 		
 		
 		

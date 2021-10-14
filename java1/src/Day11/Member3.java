@@ -29,7 +29,6 @@ public class Member3 implements Cloneable {
 		
 		return cloned;
 	}
-	
 	public Member3 getMember3( ) {
 		Member3 cloned = null; // ºó º¯¼ö »ý¼º
 		try {
@@ -45,9 +44,14 @@ public class Member3 implements Cloneable {
 		System.out.println(" age: " + this.age);
 		System.out.println(" array : " + this.scores );
 		System.out.println(" car : " + this.car.model);
-	
 		return "";
 	}
+	
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println(" ****°´Ã¼°¡ ¼Ò¸ê µË´Ï´Ù*****");
+	}
+	
 	
 	
 	
