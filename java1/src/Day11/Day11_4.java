@@ -60,6 +60,36 @@ public class Day11_4 {
 			// equals 가능 
 			if( strVar1.equals(strVar2)){System.out.println(" 2.같다 ");}
 			else {System.out.println(" 2.다르다");}
+		
+		// p.502
+			// 4. getBytes() : 문자열을 바이트열로 변환 
+			String str = "안녕하세요"; // 한글 1개당 2바이트 // 영문 1개당 1바이트 
+			
+			byte[] bytes3 = str.getBytes(); // String을 바이트로 변환후 배열에 대입
+			System.out.println( bytes3.length ); // 한글 글자수*2 = 10바이트
+			// 바이트 ---> 문자열 
+			System.out.println( new String(bytes3) );
+				// 인코딩 종류
+					// 1.UTF-8 : 전세계 공용어 
+					// 2.EUC-KR[ CP949 ] : 영문 , 한글
+		// P.504
+			// 5. indexOf() : 문자열 찾기 [ 인수 : 찾을문자열   반환: 찾은 인덱스위치 ]
+			String subject = "자바 프로그래밍";
+			System.out.println( subject.indexOf("프로그래밍") );
+			
+			if( subject.indexOf("자바") != -1 ) {
+									// 인덱스가 -1 : 인덱스가 없다 // 찾을문자가 존재하지 않음
+				System.out.println("자바와 관련된 책입니다");
+			}else {
+				System.out.println("자바와 관련없는 책입니다.");
+			}
+		// p.505
+			// 6. length() : 문자열의 길이 
+			System.out.println( subject.length() ); //8칸 : 인덱스0~7
+			
+					
+			
+			
 			
 			
 		
