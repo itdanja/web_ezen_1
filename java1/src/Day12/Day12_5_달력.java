@@ -4,7 +4,13 @@ import java.util.Calendar;
 import java.util.Scanner;
 
 public class Day12_5_달력 {
-
+	/*
+	별도 문제 : 달력 범위 출력 
+	[조건] : 시작날짜와 끝날짜를 입력받아 달력 출력하기 
+		// 1. 시작 날짜부터 끝날짜까지의 모든 달력 출력 
+		// 2. 2021 08 ~ 2022 10
+	 */
+	
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
