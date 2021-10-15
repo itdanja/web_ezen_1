@@ -37,8 +37,18 @@
 		.nextInt(숫자)+1 : 1~숫자 까지의 난수 생성 
 		
 	5. Arrays : 배열관련 메소드 제공 클래스
-		.sort( 배열명 ) : 해당 배열을 오름차순 
-		.sort( 배열명, Collections.reverseOrder() ) : 내림차순 
+		1. Arrays.copyOf( 원본배열 , 복사길이 ) : 배열 복사 
+		2. Arrays.toString(배열) : 인덱스 순으로 데이터 출력
+		3. Arrays.copyOfRange(원본배열 , 시작인덱스 , 끝인덱스 )
+		4. System.arraycopy( 원본배열 , 시작인덱스 , 타켓배열 , 타겟지작인덱스 , 복사개수 )
+		5. Arrays.equals( 배열1 , 배열2 ) : 1차원 배열 비교 
+		6. Arrays.deepEquals( 배열1 , 배열2 ) : 2차원 배열 비교 
+		7. Arrays.sort( 배열명 ) : 해당 배열내 오름차순 정렬 
+		8. Arrays.sort( 배열명 , Collections.reverseOrder()  ) : 배열내 내림차순
+			* 주의 : 해당 배열이 기본자료형일 경우 불가
+		9.Arrays.binarySearch( 배열명 , 데이터 ) : 해당 데이터의 인덱스 번호
+			* 주의 : 오름차순(sort) 정렬후 사용
+		 
 		
 	6. Date
 		Date 객체명 = new Date() : 현재 시스템내 날짜/시간 객체 
