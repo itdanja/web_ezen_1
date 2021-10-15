@@ -3,6 +3,7 @@ package Day12;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.Scanner;
 
 public class Day12_6_file {
 	
@@ -40,6 +41,18 @@ public class Day12_6_file {
 			// 바이트 -> 문자열 변환 
 		String strread = new String( 바이트배열 );
 		System.out.println(" 현재 파일의 내용은 : " + strread );
+		
+		///////////////////// 
+		// 키보드에 입력된 변수를 메모장 누적 저장 
+		Scanner scanner = new Scanner(System.in);
+		
+		while(true) {
+			System.out.println("메모장 입력할 데이터 : ");
+			String outstr = scanner.next();
+			outstr = outstr +"\n";
+			fileOutputStream.write( outstr.getBytes() );
+		}
+		
 	}
 }
 
