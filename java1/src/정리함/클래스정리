@@ -49,19 +49,34 @@
 		9.Arrays.binarySearch( 배열명 , 데이터 ) : 해당 데이터의 인덱스 번호
 			* 주의 : 오름차순(sort) 정렬후 사용
 		 
-		
-	6. Date
+	6. Date 클래스
 		Date 객체명 = new Date() : 현재 시스템내 날짜/시간 객체 
-		
 		*SimpleDateFormat : 날짜 형식 클래스 
 			SimpleDateFormat dateFormat = new SimpleDateFormat( "MM-dd" );
 			dateFormat.format(날짜객체);
+			
+	7. Calendar 클래스
+		* Calendar now = Calendar.getInstance(); 
+		* now.get( Calendar.필드명 ) : 해당필드의 정보 얻기
 		
-	7. Integer : 정수 클래스 
+	8. ZonedDateTime 클래스 : 협정시계
+		* ZonedDateTime.now( ZoneId.of(대륙명/도시명) );
+		
+	8. Integer : 정수 클래스 
 		Integer.parseInt("문자열")   : String -> int형
 		Integer.toString(정수) 		: int -> String  
 			* 숫자+"" 				: int+"" -> String
-		
+			
+	8. Math : 수학 클래스 
+		1. Math.abs()
+		2. Math.ceil()
+		3. Math.floor()
+		4. Math.max()
+		5. Math.min()
+		6. Math.ramdom() 
+		7. Math.rint() 
+		8. Math.round() : 소수점 첫째자리 반올림
+			* 소수점 셋째자리 반올림 [ 자릿수 올리고 반올림 자릿수 내림 ]
 형식문자 [ printf ]  
 	%d : 정수 	%숫자d [ 숫자만큼 자릿수 포함 ]		%2d [ 정수가 2칸 차지 ] 
 	%f : 실수 	%.2f [ 소수점 2자리 표현 ]
