@@ -33,6 +33,7 @@ public class Member {
 	public void signup() {
 		//0.입력객체 가져오기 
 		Scanner scanner = Day12_7_Memberfile.scanner;
+	
 		// 1. 입력
 		System.out.println(" *** 회원가입 페이지 *** ");
 		System.out.println(" 아이디 : ");		String id = scanner.next();
@@ -41,19 +42,30 @@ public class Member {
 		System.out.println(" 연락처 : ");		String phone = scanner.next();
 		// 2. 객체 생성 
 		Member member = new Member(id, password, name, phone);
+			
+			//* 배열에 저장 
+			for( int i = 0 ; i<Day12_7_Memberfile.members.length ; i++ ) {
+				if( Day12_7_Memberfile.members[i] == null) {
+					Day12_7_Memberfile.members[i] = member; break;
+				}
+			}
 		// 3. 파일 저장 
 			// 1. 회원별[\n] 필드별[ , ] 파일 저장
-		//1. 파일출력 객체 
+			// * 배열내 모든 객체를 파일 처리 
 		try {
-			FileOutputStream fileOutputStream = 
-					new FileOutputStream("C:/Users/505-t/git/web_ezen_1/java1/src/Day12/memberlist.txt" );
-			// 2. 객체 내보내기 [ 필드 구분  ( \n: 회원구분  , : 필드구분 ]
-				String outstring = member.id+","+member.password+","+member.name+","+member.phone+"\n";
-				fileOutputStream.write( outstring.getBytes() ); // 바이트열 변환후 쓰기 
+
+			//1. 파일출력 객체
+				FileOutputStream fileOutputStream = 
+						new FileOutputStream("C:/Users/505-t/git/web_ezen_1/java1/src/Day12/memberlist.txt" , true ); // true 이어쓰기
+				// 2. 객체 내보내기 [ 필드 구분  ( \n: 회원구분  , : 필드구분 ]
+					String outstring = member.id+","+member.password+","+member.name+","+member.phone+"\n";
+					fileOutputStream.write( outstring.getBytes() ); // 바이트열 변환후 쓰기 
+			
 		}
 		catch (Exception e) {
 			System.out.println(" [알림] : 회원 DB 저장 실패 : " + e);
 		}
+		
 	}
 	
 	public String getId() {

@@ -17,6 +17,8 @@ public class Day12_7_Memberfile {
 	// 0.설정 [ main 메소드 밖에 선언하는 이유 : 다른 클래스나 메소드가 접근할수 있도록 ] 
 	public static Scanner scanner = new Scanner(System.in);
 		// [ static 사용하는이유 : main 메소드처럼 메모리 우선 할당 ] 
+	public static Member[] members = new Member[100];
+	
 	
 	public static void main(String[] args) {
 		
