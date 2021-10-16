@@ -26,7 +26,7 @@
 |17일차[10/22]|JAVA2| Console Project · 평가  |
 |18일차[10/25]|JAVA2| Console Project |
 |19일차[10/26]|JAVA2| Console Project |
-|20일차[10/27]|JAVA2| JAVAFX |
+|20일차[10/27]|JAVA2| Console Project |
 
     * 스트림과 병렬 처리
 
