@@ -9,7 +9,6 @@ public class BeepTask implements Runnable {
 	public void run() { // 멀티 스레드 시작 메소드
 		
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
-		
 		for( int i = 0 ; i<5 ; i++ ) { // 
 			toolkit.beep(); // 비프음 소리 메소드
 			
