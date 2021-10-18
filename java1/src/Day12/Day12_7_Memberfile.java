@@ -22,6 +22,7 @@ public class Day12_7_Memberfile {
 	
 	public static void main(String[] args) {
 		
+		// 파일에 저장된 회원 가져오기 => 배열에 저장 
 		while(true) {
 			Member temp = new Member();
 			temp.signup();
