@@ -29,8 +29,9 @@ public class Day13_2 {
 		// 스레드 동기화 메소드 
 			// 동기화 : 여러 스레드가 동일한 메소드 접근할때 
 			//        먼저 접근한 메소드부터 처리 나머지는 대기 
-		
+		// 1. 객체 
 		Calculator calculator = new Calculator();
+		
 		User1 user1 = new User1();
 		user1.setCalculator(calculator);
 		user1.start();
