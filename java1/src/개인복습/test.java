@@ -1,4 +1,4 @@
-package 테스트;
+package 개인복습;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
