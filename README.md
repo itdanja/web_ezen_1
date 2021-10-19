@@ -18,51 +18,52 @@
 |9일차[10/12]|JAVA1| 상속 · 인터페이스  |
 |10일차[10/13]|JAVA1| 중첩클래스/인터페이스 · 예외처리 |
 |11일차[10/14]|JAVA1| 기본API클래스 |
-|12일차[10/15]|JAVA2| 기본API클래스 · 파일처리 |
-|13일차[10/18]|JAVA2| 멀티스레드 |
-|14일차[10/19]|JAVA2| 제네릭 · 람다식 |
-|15일차[10/20]|JAVA2| 컬렉션 프레임워크 |
-|16일차[10/21]|JAVA2| Member Board Programming |
-|17일차[10/22]|JAVA2| Console Project · 평가  |
-|18일차[10/25]|JAVA2| Console Project |
-|19일차[10/26]|JAVA2| Console Project |
-|20일차[10/27]|JAVA2| Console Project |
+|12일차[10/15]|JAVA1| 기본API클래스 · 파일처리 |
+|13일차[10/18]|JAVA1| 멀티스레드 · Team Console Project 설계[1] |
+|14일차[10/19]|JAVA1| 제네릭 · Team Console Project 설계[1] |
+|15일차[10/20]|JAVA1| 컬렉션 프레임워크 · 람다식 · Team Console Project 설계 |
+|16일차[10/21]|JAVA1| 람다식 · (JAVA1 정리)Member Board Programming |
+|17일차[10/22]|JAVA1| 평가 · (JAVA1 정리)Member Board Programming · Team Console Project  |
+|18일차[10/25]|JAVA1| Team Console Project |
+|19일차[10/26]|JAVA1| Team Console Project |
+|20일차[10/27]|JAVA1| Team Console Project · Team Console Project 발표 |
 
     * 스트림과 병렬 처리
+    * 입출력 및 네트워킹
 
 ### 2개월차 진도
 |일차|목차|주요내용|
 |------|---|---|
-|21일차[10/28]|JAVA2| DB / JAVAFX |
-|22일차[10/29]|JAVA2| DB / JAVAFX |
-|23일차[11/01]|JAVA2| DB / JAVAFX |
-|24일차[11/02]|JAVA2| 네트워크 |
-|25일차[11/03]|JAVA2| DB / JAVAFX |
-|26일차[11/04]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|27일차[11/05]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|28일차[11/08]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|29일차[11/09]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|30일차[11/10]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 |
-|31일차[11/11]|JAVA2| DB / JAVAFX / JAVAFX 프로젝트 / 평가 |
-|32일차[11/12]|Front| JAVAFX 프로젝트 |
-|33일차[11/15]|Front| HTML |
-|34일차[11/16]|Front| CSS |
-|35일차[11/17]|Front| CSS |
-|36일차[11/18]|Front| JS |
-|37일차[11/19]|Front| JS / 평가 |
-|38일차[11/22]|Front| HTML·CSS·JS |
-|39일차[11/21]|Front| HTML·CSS·JS |
-|40일차[11/22]|Front| HTML·CSS·JS |
+|21일차[10/28]|JAVA2| JAVAFX · 파일처리|
+|22일차[10/29]|JAVA2| JAVAFX · DB |
+|23일차[11/01]|JAVA2| JAVAFX · DB ( 회원가입 · 로그인 · 아이디찾기 · 비밀번호찾기 ) |
+|24일차[11/02]|JAVA2| JAVAFX · DB ( 메인페이지 ) |
+|25일차[11/03]|JAVA2| JAVAFX · DB ( 회원관리 ) |
+|26일차[11/04]|JAVA2| JAVAFX · DB ( 게시판 CRUD ) · JAVAFX 프로젝트 |
+|27일차[11/05]|JAVA2| JAVAFX · DB ( 제품 CRUD ) · JAVAFX 프로젝트 |
+|28일차[11/08]|JAVA2| JAVAFX · DB ( Chatting ) · JAVAFX 프로젝트 |
+|29일차[11/09]|JAVA2| JAVAFX · DB · JAVAFX 프로젝트 |
+|30일차[11/10]|JAVA2| JAVAFX · DB · JAVAFX 프로젝트 |
+|31일차[11/11]|JAVA2| JAVAFX · DB · JAVAFX 프로젝트 · 평가 |
+|32일차[11/12]|JAVA2| JAVAFX 프로젝트 |
+|33일차[11/15]|JAVA2| |
+|34일차[11/16]|JAVA2| |
+|35일차[11/17]|JAVA2| |
+|36일차[11/18]|JAVA2| HTML |
+|37일차[11/19]|JAVA2| CSS |
+|38일차[11/22]|JAVA2| JS |
+|39일차[11/21]|JAVA2| HTML · CSS · JS |
+|40일차[11/22]|JAVA2| HTML · CSS · JS |
 
-### 3개월차 진도 [ JSP ] 
+### 3개월차 진도 [ HTML · CSS · JS · Servlet · JSP ] 
 |일차|목차|주요내용|
 |------|---|---|
-|41일차[10/28]|Jsp| DB · bootstrap · jsp |
-|42일차[10/29]|Jsp| DB · bootstrap · jsp |
-|43일차[11/01]|Jsp| DB · bootstrap · jsp |
-|44일차[11/02]|Jsp| DB · bootstrap · jsp |
-|45일차[11/03]|Jsp| DB · bootstrap · jsp |
-|46일차[11/04]|Jsp| DB · bootstrap · jsp · Jsp project |
+|41일차[10/28]|Jsp| Servlet |
+|42일차[10/29]|Jsp| jsp(메인페이지) |
+|43일차[11/01]|Jsp| jsp(로그인 · 회원가입) |
+|44일차[11/02]|Jsp| jsp() |
+|45일차[11/03]|Jsp|  |
+|46일차[11/04]|Jsp|  |
 |47일차[11/05]|Jsp| DB · bootstrap · jsp · Jsp project |
 |48일차[11/08]|Jsp| DB · bootstrap · jsp · Jsp project |
 |49일차[11/09]|Jsp| DB · bootstrap · jsp · Jsp project |
