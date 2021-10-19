@@ -11,7 +11,7 @@
 |2일차[09/29]|JAVA1| 변수 · 연산자 |
 |3일차[09/30]|JAVA1| 제어문 |
 |4일차[10/01]|JAVA1| 반복문 |
-|5일차[10/05]|JAVA1| 참조타입[배열] |
+|5일차[10/05]|JAVA1| 참조타팁(배열 · 객체) |
 |6일차[10/06]|JAVA1| 클래스 |
 |7일차[10/07]|JAVA1| 클래스 |
 |8일차[10/08]|JAVA1| 상속 · mini Console project |
@@ -31,57 +31,101 @@
     * 스트림과 병렬 처리
     * 입출력 및 네트워킹
 
-### 2개월차 진도
+### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
 |일차|목차|주요내용|
 |------|---|---|
-|21일차[10/28]|JAVA2| JAVAFX · 파일처리|
-|22일차[10/29]|JAVA2| JAVAFX · DB |
-|23일차[11/01]|JAVA2| JAVAFX · DB ( 회원가입 · 로그인 · 아이디찾기 · 비밀번호찾기 ) |
-|24일차[11/02]|JAVA2| JAVAFX · DB ( 메인페이지 ) |
-|25일차[11/03]|JAVA2| JAVAFX · DB ( 회원관리 ) |
-|26일차[11/04]|JAVA2| JAVAFX · DB ( 게시판 CRUD ) · JAVAFX 프로젝트 |
-|27일차[11/05]|JAVA2| JAVAFX · DB ( 제품 CRUD ) · JAVAFX 프로젝트 |
-|28일차[11/08]|JAVA2| JAVAFX · DB ( Chatting ) · JAVAFX 프로젝트 |
-|29일차[11/09]|JAVA2| JAVAFX · DB · JAVAFX 프로젝트 |
-|30일차[11/10]|JAVA2| JAVAFX · DB · JAVAFX 프로젝트 |
-|31일차[11/11]|JAVA2| JAVAFX · DB · JAVAFX 프로젝트 · 평가 |
-|32일차[11/12]|JAVA2| JAVAFX 프로젝트 |
-|33일차[11/15]|JAVA2| |
-|34일차[11/16]|JAVA2| |
-|35일차[11/17]|JAVA2| |
-|36일차[11/18]|JAVA2| HTML |
-|37일차[11/19]|JAVA2| CSS |
-|38일차[11/22]|JAVA2| JS |
-|39일차[11/21]|JAVA2| HTML · CSS · JS |
-|40일차[11/22]|JAVA2| HTML · CSS · JS |
+|21일차[10/28]|JAVA2| JAVAFX · Scene Builder · 파일처리|
+|22일차[10/29]|JAVA2| JAVAFX · DB ( 회원가입 · 로그인 ) |
+|23일차[11/01]|JAVA2| JAVAFX · DB ( 아이디찾기 · 비밀번호찾기 · 메인페이지 · 로그아웃 ) · SMTP API |
+|24일차[11/02]|JAVA2| JAVAFX · DB ( 회원관리 CRUD ) · 평가 |
+|25일차[11/03]|JAVA2| JAVAFX · DB ( 게시판 CRUD ) |
+|26일차[11/04]|JAVA2| JAVAFX · DB ( 제품 CRUD ) |
+|27일차[11/05]|JAVA2| JAVAFX · DB ( Chatting ) |
+|28일차[11/08]|JAVA2| JAVAFX · DB · Team javafx Project |
+|29일차[11/09]|JAVA2| Team javafx Project |
+|30일차[11/10]|JAVA2| Team javafx Project |
+|31일차[11/11]|JAVA2| HTML · 평가 |
+|32일차[11/12]|JAVA2| HTML |
+|33일차[11/15]|JAVA2| CSS |
+|34일차[11/16]|JAVA2| CSS |
+|35일차[11/17]|JAVA2| layout |
+|36일차[11/18]|JAVA2| layout |
+|37일차[11/19]|JAVA2| 반응형 웹 · 평가 |
+|38일차[11/22]|JAVA2| 반응형 웹 |
+|39일차[11/21]|JAVA2| Js |
+|40일차[11/22]|JAVA2| Js · Team javafx Project 발표 |
 
-### 3개월차 진도 [ HTML · CSS · JS · Servlet · JSP ] 
+### 3개월차 진도 [ Bootstrap · Servlet · JSP · Datavbase · Front ] 
 |일차|목차|주요내용|
 |------|---|---|
-|41일차[10/28]|Jsp| Servlet |
-|42일차[10/29]|Jsp| jsp(메인페이지) |
-|43일차[11/01]|Jsp| jsp(로그인 · 회원가입) |
-|44일차[11/02]|Jsp| jsp() |
-|45일차[11/03]|Jsp|  |
-|46일차[11/04]|Jsp|  |
-|47일차[11/05]|Jsp| DB · bootstrap · jsp · Jsp project |
-|48일차[11/08]|Jsp| DB · bootstrap · jsp · Jsp project |
-|49일차[11/09]|Jsp| DB · bootstrap · jsp · Jsp project |
-|50일차[11/10]|Jsp| DB · bootstrap · jsp · Jsp project |
-|51일차[11/11]|Jsp| DB · bootstrap · jsp · Jsp project |
-|52일차[11/12]|Jsp| DB · bootstrap · jsp · Jsp project |
-|53일차[11/15]|Jsp| DB · bootstrap · jsp · Jsp project |
-|54일차[11/16]|Jsp| DB · bootstrap · jsp · Jsp project |
-|55일차[11/17]|Jsp| DB · bootstrap · jsp · Jsp project |
-|56일차[11/18]|Jsp| DB · bootstrap · jsp · Jsp project |
-|57일차[11/19]|Jsp| DB · bootstrap · jsp · Jsp project |
-|58일차[11/22]|Jsp| DB · bootstrap · jsp · Jsp project |
-|59일차[11/21]|Jsp| DB · bootstrap · jsp · Jsp project |
-|60일차[11/22]|Jsp| DB · bootstrap · jsp · Jsp project |
+|41일차[10/28]|Jsp| Bootstrap · index · header · footer |
+|42일차[10/29]|Jsp| JSP · DB ( 회원가입 ) |
+|43일차[11/01]|Jsp| JSP · DB ( 로그인 · 회원정보  ) |
+|44일차[11/02]|Jsp| JSP · DB ( 관리자 ) · 평가 |
+|45일차[11/03]|Jsp| JSP · DB ( 게시판 쓰기·출력 ) · 첨부파일  |
+|46일차[11/04]|Jsp| JSP · DB ( 게시판 수정·삭제·검색·페이징 )  |
+|47일차[11/05]|Jsp| JSP · DB ( 제품등록 · 출력 ) |
+|48일차[11/08]|Jsp| JSP · DB ( 제품수정 · 삭제 ) |
+|49일차[11/09]|Jsp| JSP · DB ( 상세페이지 ) |
+|50일차[11/10]|Jsp| JSP · DB ( 장바구니 · 결제 ) |
+|51일차[11/11]|Jsp| JSP · DB ( 관리자 · 회원정보 ) · Team jsp Project 설계 |
+|52일차[11/12]|Jsp| JSP · DB (  ) · Team jsp Project 설계 · 평가 |
+|53일차[11/15]|Jsp| JSP · DB (  ) · Team jsp Project |
+|54일차[11/16]|Jsp| JSP · DB (  ) · Team jsp Project |
+|55일차[11/17]|Jsp| JSP · DB (  ) · Team jsp Project |
+|56일차[11/18]|Jsp| JSP · DB (  ) · Team jsp Project |
+|57일차[11/19]|Jsp| JSP · DB (  ) · Team jsp Project · 평가 |
+|58일차[11/22]|Jsp| JSP · DB (  ) · Team jsp Project |
+|59일차[11/21]|Jsp| JSP · DB (  ) · Team jsp Project |
+|60일차[11/22]|Jsp| JSP · DB (  ) · Team jsp Project · Team jsp Project 발표 |
 
-### 4개월차 진도 [ Spring ] 
+### 4개월차 진도 [ Spring · JPA ] 
+|일차|목차|주요내용|
+|------|---|---|
+|61일차[10/28]|Spring|  |
+|62일차[10/29]|Spring|  |
+|63일차[11/01]|Spring| |
+|64일차[11/02]|Spring| |
+|65일차[11/03]|Spring|  |
+|66일차[11/04]|Spring|  |
+|67일차[11/05]|Spring|  |
+|68일차[11/08]|Spring|  |
+|69일차[11/09]|Spring|  |
+|70일차[11/10]|Spring|  |
+|71일차[11/11]|Spring|  |
+|72일차[11/12]|Spring|  |
+|73일차[11/15]|Spring|  |
+|74일차[11/16]|Spring|  |
+|75일차[11/17]|Spring|  |
+|76일차[11/18]|Spring|  |
+|77일차[11/19]|Spring|  |
+|78일차[11/22]|Spring| |
+|79일차[11/21]|Spring| |
+|80일차[11/22]|Spring|  |
 
-### 5개월차 진도 [ Spring project ] 
+### 5개월차 진도 [ Spring Project · AWS ] 
+|일차|목차|주요내용|
+|------|---|---|
+|81일차[10/28]|Project|  |
+|82일차[10/29]|Project|  |
+|83일차[11/01]|Project| |
+|84일차[11/02]|Project|  |
+|85일차[11/03]|Project|  |
+|86일차[11/04]|Project|  |
+|87일차[11/05]|Project| |
+|88일차[11/08]|Project|  |
+|89일차[11/09]|Project|  |
+|90일차[11/10]|Project|  |
+|91일차[11/11]|Project|  |
+|92일차[11/12]|Project|  |
+|93일차[11/15]|Project| |
+|94일차[11/16]|Project|  |
+|95일차[11/17]|Project| |
+|96일차[11/18]|Project| |
+|97일차[11/19]|Project|  |
+|98일차[11/22]|Project|  |
+|99일차[11/21]|Project|  |
+|100일차[11/22]|Project|  |
 
 
 
