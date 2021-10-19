@@ -21,7 +21,6 @@ public class Day14_4_회원제_List {
 		try {
 			FileInputStream fileInputStream = 
 				new FileInputStream("C:/Users/505-t/git/web_ezen_1/java1/src/Day14/userlist.txt");
-			
 			// 1. 파일내 모든 글자 가져오기  [ 스트림 단위 : 바이트 ]
 				// 1. 바이트배열 선언
 				byte[] bytes = new byte[1024]; // 1bit -> 8bit -> 1byte -> 1024byte -> 1kbyte
@@ -35,7 +34,6 @@ public class Day14_4_회원제_List {
 				String[] usernum =  inString.split("\n");
 								// split( 기준 ) 분리 => 배열 
 			// 3. 필드 구분하기 
-				
 				for( String temp : usernum ) {
 					String[] userdata =  temp.split(",");
 					if( userdata.length == 1 ) break;
@@ -106,7 +104,37 @@ public class Day14_4_회원제_List {
 				for( User temp : users ) {
 					if( temp.getId().equals(id) && temp.getPassword().equals(password) ) {
 						System.out.println(" [[ 로그인 성공 ]]"); 
-						logincheck = false; break;
+						logincheck = false; 
+
+						////////////////////////로그인 성공시 //////////////////////////////
+						while(true) { // 회원메뉴 무한루프
+							System.out.println("1.회원정보 2.회원수정 3.회원탈퇴 4.로그아웃 ");
+							int ch2 = scanner.nextInt();
+							
+							if( ch2 == 1) {
+								System.out.println(" 아이디 : " + temp.getId() );
+								System.out.println(" 성명 : " + temp.getName() );
+							}
+							else if( ch2 == 2) {
+								// 1. 수정할 정보 입력 
+								System.out.println(" 수정할 성명 : " ); String newname = scanner.next();
+								// 2. set 메소드를 통한 필드 값 변경 
+								temp.setName(newname);
+								// 파일 업데이트 처리 
+								
+							}
+							else if( ch2 == 3 ) {
+								// 1. 리스트에서 객체 삭제 
+								users.remove(temp); 
+								System.out.println(" [[ 회원탈퇴 : 로그아웃 ]]");
+								// 파일 업데이트 처리 
+								
+								break;
+							}
+							else if( ch2 == 4) { System.out.println(" [[ 로그아웃 ]] "); break;}
+						}
+						
+						break;
 					}
 				}
 				if( logincheck ) { System.out.println(" [[ 동일한 회원정보가 없습니다 ]]  "); }
