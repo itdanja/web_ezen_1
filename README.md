@@ -40,8 +40,8 @@
 |24일차[11/02]|JAVA2| JAVAFX · DB ( 회원관리 CRUD ) · 평가 |
 |25일차[11/03]|JAVA2| JAVAFX · DB ( 게시판 CRUD ) |
 |26일차[11/04]|JAVA2| JAVAFX · DB ( 제품 CRUD ) |
-|27일차[11/05]|JAVA2| JAVAFX · DB ( Chatting ) |
-|28일차[11/08]|JAVA2| JAVAFX · DB · Team javafx Project |
+|27일차[11/05]|JAVA2| JAVAFX · DB ( 제품 통계 ) · Team javafx Project 설계 |
+|28일차[11/08]|JAVA2| JAVAFX · DB ( Chatting ) · Team javafx Project 설계 |
 |29일차[11/09]|JAVA2| Team javafx Project |
 |30일차[11/10]|JAVA2| Team javafx Project |
 |31일차[11/11]|JAVA2| HTML · 평가 |
