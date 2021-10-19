@@ -12,7 +12,8 @@ public class Day14_2 {
 		
 		// 19번줄 
 		Course<Person> personCourse = new Course<>("일반인과정", 5);
-			personCourse.add( new Person("일반인"));
+		
+			personCourse.add( new Person("일반인") );
 			personCourse.add( new Worker("직장인"));
 			personCourse.add( new Student("학생"));
 			personCourse.add( new HighStudent("고등학생"));
@@ -80,7 +81,6 @@ public class Day14_2 {
 		System.out.println( course.getName()+" 수강생명단 : " +
 				Arrays.toString( course.getStudents() ));
 	}
-	
 	
 	
 	

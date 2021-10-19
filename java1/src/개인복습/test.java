@@ -7,110 +7,170 @@ import java.util.Scanner;
 
 public class test {
 	
-	
-
 	public static void main(String[] args) {
 
+		// while 밖에 사용하는 이유?? :  while 안에서 선언시 선언이 반복된다 x
+		Scanner scanner = new Scanner(System.in);
+		String[][] 회원목록 = new String[100][2];
+		String[][] 방문록 = new String[100][3];
+		
+		while(true) {
+			
+			System.out.println("==========회원방문록=============");
+			System.out.println(" 1.회원가입 2.로그인 >>>>>선택 :");int ch = scanner.nextInt();
+			
+			switch(ch) { // 어떤 변수의 값에 따라서 문장을 실행할수있도록 도와주는 제어문~!  
+					// if  switch 차이 
+						// if( TRUE/FALSE )		// if(  age>11 )	// if ( >= <= > == != )
+						// switch( 검색대상 )  	// case 검색값  break;
+			case 1 :
+
+				System.out.printf("===========회원가입===========\n\n");
 	
+				System.out.println("ID :"); String id = scanner.next();
+	
+				System.out.println("PW :"); String pw = scanner.next();
 
-	String[][]boards =new String[100][5]; //배열설정 100개의 세로와 5개의 가로칸
+				boolean idcheck = true; // boolean 은  참 거짓을 판단한다
+	
+				for (int i = 0; i < 회원목록.length; i++) {
+	
+					if (회원목록[i][0] !=null && 회원목록[i][0].equals(id)) {//회원목록에 존재하지않거나  회원목록에있는 아이디가 동일하면 걸리는것
+	
+						System.out.println("동일한 ID 가 존재합니다");
+	
+						idcheck =false;
+	
+						break;// 아이디중복체크를 알리고 멈춤
+	
+					}
+	
+				}
 
-	Scanner scanner=new Scanner(System.in); //입력객체
+					if(idcheck) {// if 가 두번들어간거 형식상 왜 문제가없는 지 물어보기
 
-	while(true) {//무한 으로 돌리는것
+						for (int i = 0; i < 회원목록.length; i++) {
 
-		System.out.printf("=========계시판=============\n");
+							if (회원목록[i][0]==null) { 회원목록[i][0]=id ;회원목록[i][1]=pw;
 
-		System.out.printf(" %2s \t %10s \t %5s \t %5s %3s\n","번호","제목","작성자","날짜","조회수");
+							System.out.println("회원가입이 완료되었습니다");
 
-		// 메뉴판 만들고 printf 로하는이유는 서식을 사용하기위함 %5s: 만큼 칸만들기 \n:한줄내리기 \t : 들여쓰기
+							break;
 
-		for (int i = 0; i < boards.length; i++) {// 배열선언 i는 배열보다작게 1증가
+								
 
-			if (boards[i][0]!=null) System.out.printf(" %2s \t %10s \t %5s \t %5s %3s\n",
+							}
 
-				i , boards[i][0] , boards[i][2],boards[i][3],boards[i][4]);
+							
 
-				//  외웠는데 왜 이렇게 되는 지설명 듣기
+						}
 
+					}
+
+					break;// 여기 왜 들어갔는지 물어보기!!
+						// 안쓰면 case1 실행후 -> case2 
+					
+
+		case 2 :
+
+			System.out.println("=========로그인=========");
+
+			System.out.println("ID 입력 :");String id2 =scanner.next();
+
+			System.out.println("PW 입력 :");String pw2 = scanner.next();
+
+			
+
+			boolean id2check=true;
+
+			for (int i = 0; i < 회원목록.length; i++) {
+
+				if (회원목록[i][0] !=null&&회원목록[i][0].equals(id2)&&회원목록[i][1].equals(pw2)) {// 위에 입력한 아이디 비번이 같으면 로그인성공
+
+					System.out.println("로그인성공");
+
+					id2check = false;
+
+					while(true) {
+
+					System.out.println("1. 방문록 작성 2. 방문록상세 보기");
+					int ch3 = scanner.nextInt();
+
+
+					if (ch3==1) {
+
+						System.out.println("=======방문록 작성하기===========");
+
+						scanner.nextLine();
+
+						System.out.println("제목 :");String title = scanner.nextLine();
+
+						System.out.println("작성자 :");String writer = scanner.nextLine();
+
+						System.out.println("내용 :");String contents = scanner.nextLine();
+
+					
+
+					for (int j = 0; j < 방문록.length; j++) {
+
+						if (방문록[j][0]==null) {
+
+							방문록[j][0]=title;방문록[j][1]=writer;방문록[j][2]=contents;
+
+							break;
+
+						}
+
+						}
+					}
+					
+					
+					if(ch3==2) {
+
+						System.out.println("=====방문록 상세 보기========");
+						System.out.println("제목\t작성자\t내용");
+						
+						for( int j = 0 ; j<방문록.length; j++ ) {
+							if( 방문록[j][0] !=null ) {
+								System.out.println(방문록[j][0] +"\t"+ 방문록[j][1] +"\t"+ 방문록[j][2] );
+							}
+						}
+					}
+					// 글작성후 상세 보기에 서 막힘,,
+
+
+							
+
+				}
+			}
+			if( id2check ) {
+				System.out.println("로그인 실패 [ 올바른 정보가 없습니다]");
 			}
 
-	 	System.out.println("==============================");
+							
 
-	 	System.out.println("1.글쓰기2.글상세보기 >>>선택 :"); int ch = scanner.nextInt();//입력할수있게 만들기
-
-	 	if(ch==1) {//1선택
-
-	 		System.out.println("==================글쓰기==========");
-
-	 		scanner.nextLine();// 오류날수있는 부분 처리
-
-	 		System.out.println("1.제목 :");  String title = scanner.nextLine();// 
-
-	 		System.out.println("2.작성자 :");String writer = scanner.nextLine();
-
-	 		System.out.println("3.내용 :");String content = scanner.nextLine();
-
-	 		
-
-	 		Date now = new Date();//날짜 입력할수있게 선언
-
-	 		SimpleDateFormat dateFormat = new SimpleDateFormat("mm_dd");
-
-	 		String date = dateFormat.format(now);
-
-	 		
-
-	 		String count = "1";// 조회수 입력할수있게 선언
-
-	 		for (int i = 0; i < boards.length; i++) {
-
-	 			if (boards[i][0]==null) {
-
-	 				boards[i][0]=title;boards[i][1]=writer;boards[i][2]=content;
-
-	 				boards[i][3]=date;boards[i][4]=count;break;// break안누르면 100개한번에나옴
+					
 
 				}
 
+				
+
 			}
 
-	
+		
 
-	 	}
+			
 
-	 	if (ch==2) {System.out.println("글 목록 선택하기 >>>:"); 
-	 	
-	 			int ch2 = scanner.nextInt();// 2번눌렀을떄 
+			
 
-	 			int count = Integer.parseInt(boards[ch2][4]);// 조회수 할수있게 저장??
+			
 
-	 			boards[ch2][4]= Integer.toString(++count);
-
-	 			System.out.println("=============계시물 상세 페이지=============");
-
-	 			System.out.println("제목 :"+boards[ch2][0]);
-
-	 			System.out.println("작성자 :"+boards[ch2][1]);
-
-	 			System.out.println("내용 :"+boards[ch2][2]);
+			
 
 		}
 
-	 	
-
-	 	
-
 	}
-
-	
-
-	
-
-	
-
-	}
-
-	
-
 }
+
+			
+

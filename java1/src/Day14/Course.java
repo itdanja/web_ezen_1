@@ -5,6 +5,7 @@ public class Course<T> {
 	// 필드 
 	private String name;
 	private T[] students;
+	
 	// 생성자 
 	public Course( String name , int capacity ) {
 		this.name = name;

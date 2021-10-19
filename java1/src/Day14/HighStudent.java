@@ -1,6 +1,6 @@
 package Day14;
 
-public class HighStudent extends Student {
+public class HighStudent<T> extends Student<T> {
 	
 	public HighStudent( String name) {
 		super(name);

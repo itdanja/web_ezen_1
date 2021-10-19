@@ -1,11 +1,16 @@
 package Day14;
 
-public class Person {
+public class Person<T> {
 	//필드
 	private String name;
-
+	private int age;
+	
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	//생성자
-	public Person(String name) {
+	public Person(String name ) {
 		this.name = name;
 	}
 	//메소드 
@@ -22,5 +27,6 @@ public class Person {
 		// TODO Auto-generated method stub
 		return this.name;
 	}
+
 
 }
