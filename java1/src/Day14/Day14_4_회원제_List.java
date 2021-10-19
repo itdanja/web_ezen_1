@@ -38,6 +38,8 @@ public class Day14_4_회원제_List {
 					}
 				// 3. 리스트에 저장 [ 만약에 중복값이 없으면 ]
 				if( idcheck ) {users.add( user ); System.out.println(" [[ 회원가입 성공 ]]");}
+				// 4. 파일처리 
+				
 			}
 			else if( ch == 2  ) {
 				// 1. 입력받기 
@@ -53,7 +55,6 @@ public class Day14_4_회원제_List {
 					}
 				}
 				if( logincheck ) { System.out.println(" [[ 동일한 회원정보가 없습니다 ]]  "); }
-				
 			}
 		}
 	}
