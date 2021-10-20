@@ -40,7 +40,14 @@ public class Day15_1 {
 	
 		//3. Map : 키·값 한쌍으로 저장 // 키는 중복 저장 불가 
 			// 1. HashMap 2. Hashtable 3.TreeMap 4.Properties
-
+				// 1. map명.put( 키 , 값 )  : 키와 값으로 이루어진 엔트리 추가 
+				// 2. map명.containsKey( 키 ) : 키 존재 여부 확인 
+				// 3. map명.containsValue( 값 ) : 값 존재 여부 확인 
+				// 4. map명.entryset() :해당 엔트리 set에 저장 
+				// 5. map명.get( 키 ) : 해당 키의 값을 호출 
+				// 6. map명.isEmpty() : map이 비어 있는지 확인 
+				// 7. map명.keyset() : 해당 키를 set에 저장 
+				// 8. map명.size() : map내 키의 수 
 	
 	public static void main(String[] args) {
 		
