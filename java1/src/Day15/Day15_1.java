@@ -12,6 +12,7 @@ public class Day15_1 {
 		//1. List : 순서(인덱스)를 유지하고 저장 // 배열과 유사 // 중복 저장 가능 
 			// 1. ArrayList 2.Vector 3.LinkedList
 				// 1. 리스트명.add(객체명) : 해당 객체를 리스트에 저장 
+						// * 리스트명.add( 인덱스 , 객체명) : 해당 인덱스에 객체를 저장 
 				// 2. 리스트명.contains(객체명) : 해당 객체가 리스트에 존재 여부 ( true , false )
 				// 3. 리스트명.indexOf( 객체명 ) : 해당 객체의 인덱스 번호 
 				// 4. 리스트명.get(인덱스) : 해당 인덱스의 객체 호출 
@@ -26,6 +27,16 @@ public class Day15_1 {
 	
 		//2. Set : 순서를 유지하지 않고 저장 // 중복 저장 불가 
 			// 1. HashSet 2.TreeSet
+				// 1. set명.add(객체명) : 해당 객체를 set에 저장 
+				// 2. set명.contains( 객체명 ) : 해당 객체가 set에 존재 여부 확인 ( true , false )
+				// 3. set명.isEmpty() : set가 비어 있는지 확인 ( true , false )
+				// *4. set명.iterator() : 저장된 객체를 하나씩 가져오는 반복자 리턴 
+						// 1. hashNext() : 다음 객체가 존재하면 true 없으면 false
+						// 2. next() : 객체 가져오기 
+						// 3. remove() : 객체 삭제
+				// 5. set명.size() : set내 객체수 
+				// 6. set명.clear() : set 초기화 
+				// 7. set명.remove( 객체 ) : 해당 인덱스 객체 삭제 
 	
 		//3. Map : 키·값 한쌍으로 저장 // 키는 중복 저장 불가 
 			// 1. HashMap 2. Hashtable 3.TreeMap 4.Properties
@@ -76,7 +87,7 @@ public class Day15_1 {
 		startTime = System.nanoTime();
 		//1. arraylist에 i를 0번 인덱스에 10000 개 삽입
 		for( int i = 0 ; i<10000 ;i++) {
-			list1.add(0 , String.valueOf(i) );
+			list1.add( 0 , String.valueOf(i) );
 		}
 		endTime = System.nanoTime();
 		System.out.println(" arraylist 10000개 삽입 시간 : " + (endTime-startTime) + "ns");
