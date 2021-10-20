@@ -17,7 +17,7 @@ public class Day01_6 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print(" 작성자 : ");	String writer = scanner.next();
 			scanner.nextLine(); 
-		System.out.print(" 내용 : ");	String contents = scanner.nextLine();// 공백 포함 o 
+		System.out.print(" 내용 : ");	String contents = scanner.nextLine();//a 공백 포함 o 
 			// scanner.nextLine(); // next 다음으로 nextLine 사용시 문제 발생 
 				// 해결방법 : next 와 nextLine 사이에 nextLine() 추가 
 		
