@@ -48,6 +48,10 @@ public class Day15_1 {
 				// 6. map명.isEmpty() : map이 비어 있는지 확인 
 				// 7. map명.keyset() : 해당 키를 set에 저장 
 				// 8. map명.size() : map내 키의 수 
+			// 2. 차이
+				// HashMap : 단일스레드[동기화x]
+				// Hashtable : 멀티스레드[동기화o]
+	
 	
 	public static void main(String[] args) {
 		

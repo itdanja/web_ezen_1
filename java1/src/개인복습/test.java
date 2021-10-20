@@ -9,145 +9,39 @@ public class test {
 	
 	public static void main(String[] args) {
 
-		// while 밖에 사용하는 이유?? :  while 안에서 선언시 선언이 반복된다 x
-		Scanner scanner = new Scanner(System.in);
-		String[][] 회원목록 = new String[100][2];
-		String[][] 방문록 = new String[100][3];
 		
+
+		Scanner scanner= new Scanner(System.in);
+
+		String[][] 학생목록 = new String[100][8]; // 무한 대 대입,,
+
+		
+
+		
+
 		while(true) {
-			
-			System.out.println("==========회원방문록=============");
-			System.out.println(" 1.회원가입 2.로그인 >>>>>선택 :");int ch = scanner.nextInt();
-			
-			switch(ch) { // 어떤 변수의 값에 따라서 문장을 실행할수있도록 도와주는 제어문~!  
-					// if  switch 차이 
-						// if( TRUE/FALSE )		// if(  age>11 )	// if ( >= <= > == != )
-						// switch( 검색대상 )  	// case 검색값  break;
-			case 1 :
 
-				System.out.printf("===========회원가입===========\n\n");
-	
-				System.out.println("ID :"); String id = scanner.next();
-	
-				System.out.println("PW :"); String pw = scanner.next();
+				System.out.printf("\n\n-------------------------------------------------\n\n");
 
-				boolean idcheck = true; // boolean 은  참 거짓을 판단한다
-	
-				for (int i = 0; i < 회원목록.length; i++) {
-	
-					if (회원목록[i][0] !=null && 회원목록[i][0].equals(id)) {//회원목록에 존재하지않거나  회원목록에있는 아이디가 동일하면 걸리는것
-	
-						System.out.println("동일한 ID 가 존재합니다");
-	
-						idcheck =false;
-	
-						break;// 아이디중복체크를 알리고 멈춤
-	
-					}
-	
-				}
+				System.out.printf("\n\t\t\t성적표\n");
 
-					if(idcheck) {// if 가 두번들어간거 형식상 왜 문제가없는 지 물어보기
+				System.out.println("\n-------------------------------------------------\n");
 
-						for (int i = 0; i < 회원목록.length; i++) {
+				System.out.printf(" %2s \t %4s  %3s  %3s %3s %3s%3s\n","번호","이름","국어","영어","총점","평균","석차");
 
-							if (회원목록[i][0]==null) { 회원목록[i][0]=id ;회원목록[i][1]=pw;
+				System.out.println("\n-------------------------------------------------\n");
 
-							System.out.println("회원가입이 완료되었습니다");
+				for (int i = 0; i < 학생목록.length; i++) {
 
-							break;
+					if (학생목록[i][0] !=null) {
 
-								
+						System.out.printf(" %2s \t %4s  %3s  %3s %3s %3s%3s\n",
 
-							}
+								i,학생목록[i][0],학생목록[i][1],학생목록[i][2],학생목록[i][3],학생목록[i][4],학생목록[i][5]);
 
-							
-
-						}
-
-					}
-
-					break;// 여기 왜 들어갔는지 물어보기!!
-						// 안쓰면 case1 실행후 -> case2 
-					
-
-		case 2 :
-
-			System.out.println("=========로그인=========");
-
-			System.out.println("ID 입력 :");String id2 =scanner.next();
-
-			System.out.println("PW 입력 :");String pw2 = scanner.next();
-
-			
-
-			boolean id2check=true;
-
-			for (int i = 0; i < 회원목록.length; i++) {
-
-				if (회원목록[i][0] !=null&&회원목록[i][0].equals(id2)&&회원목록[i][1].equals(pw2)) {// 위에 입력한 아이디 비번이 같으면 로그인성공
-
-					System.out.println("로그인성공");
-
-					id2check = false;
-
-					while(true) {
-
-					System.out.println("1. 방문록 작성 2. 방문록상세 보기");
-					int ch3 = scanner.nextInt();
-
-
-					if (ch3==1) {
-
-						System.out.println("=======방문록 작성하기===========");
-
-						scanner.nextLine();
-
-						System.out.println("제목 :");String title = scanner.nextLine();
-
-						System.out.println("작성자 :");String writer = scanner.nextLine();
-
-						System.out.println("내용 :");String contents = scanner.nextLine();
-
-					
-
-					for (int j = 0; j < 방문록.length; j++) {
-
-						if (방문록[j][0]==null) {
-
-							방문록[j][0]=title;방문록[j][1]=writer;방문록[j][2]=contents;
-
-							break;
-
-						}
-
-						}
-					}
-					
-					
-					if(ch3==2) {
-
-						System.out.println("=====방문록 상세 보기========");
-						System.out.println("제목\t작성자\t내용");
 						
-						for( int j = 0 ; j<방문록.length; j++ ) {
-							if( 방문록[j][0] !=null ) {
-								System.out.println(방문록[j][0] +"\t"+ 방문록[j][1] +"\t"+ 방문록[j][2] );
-							}
-						}
+
 					}
-					// 글작성후 상세 보기에 서 막힘,,
-
-
-							
-
-				}
-			}
-			if( id2check ) {
-				System.out.println("로그인 실패 [ 올바른 정보가 없습니다]");
-			}
-
-							
 
 					
 
@@ -155,21 +49,57 @@ public class test {
 
 				
 
-			}
+				System.out.println("1.성적등록하기 >>>>선택:");int ch =scanner.nextInt(); // 선택문 넣어 서 해두 되는건지
 
-		
+				
 
-			
+				if(ch==1) {
 
-			
+					scanner.nextLine();
 
-			
+					System.out.println("이름 :"); String name=scanner.nextLine();
 
-			
+					System.out.println("국어점수:"); String Kor =scanner.nextLine();
+
+					System.out.println("영어점수 :"); String Eng =scanner.nextLine();
+
+					System.out.println("수학점수 :"); String Math =scanner.nextLine();
+
+					
+
+					int total = ( Integer.parseInt(Kor) + Integer.parseInt(Eng) + Integer.parseInt(Math) ) ;
+
+					System.out.println("총합 :"+total);
+
+					float ave = ( total )/3; 	// 질문 총점 평균 어떻게 대입해서 한번에 출력할것인지 
+
+
+					for (int j = 0; j < 학생목록.length; j++) {
+
+						if (학생목록[j][0] ==null) {
+
+							학생목록[j][0] = name; 학생목록[j][1] = Kor;학생목록[j][2] = Eng;
+
+							학생목록[j][3] = Math; 학생목록[j][4]= String.valueOf(total);
+
+							break;
+
+						}
+
+						
+
+					}
+
+					
+
+					
+
+				}
+
 
 		}
 
-	}
+		}
 }
 
 			
