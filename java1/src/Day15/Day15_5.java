@@ -57,8 +57,6 @@ public class Day15_5 {
 			System.out.println( "Á¦°Å :" +coinbox2.poll() );
 		}
 		
-		
-		
 	}
 
 }

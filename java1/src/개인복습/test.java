@@ -3,103 +3,79 @@ package 개인복습;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class test {
 	
-	public static void main(String[] args) {
-
-		
-
-		Scanner scanner= new Scanner(System.in);
-
-		String[][] 학생목록 = new String[100][8]; // 무한 대 대입,,
-
-		
-
-		
-
-		while(true) {
-
-				System.out.printf("\n\n-------------------------------------------------\n\n");
-
-				System.out.printf("\n\t\t\t성적표\n");
-
-				System.out.println("\n-------------------------------------------------\n");
-
-				System.out.printf(" %2s \t %4s  %3s  %3s %3s %3s%3s\n","번호","이름","국어","영어","총점","평균","석차");
-
-				System.out.println("\n-------------------------------------------------\n");
-
-				for (int i = 0; i < 학생목록.length; i++) {
-
-					if (학생목록[i][0] !=null) {
-
-						System.out.printf(" %2s \t %4s  %3s  %3s %3s %3s%3s\n",
-
-								i,학생목록[i][0],학생목록[i][1],학생목록[i][2],학생목록[i][3],학생목록[i][4],학생목록[i][5]);
-
-						
-
-					}
-
-					
-
-				}
-
+	/* 지하철 관제	
+	 * [조건1] 역4( 종점여 ->용산 ->서울 ->구로 ->종점역)
+	 * [조건2] 전철3개 객체 [종점역에 3개 전철 대기]
+	 * [조건3] 출발 신호를 받아서 해당역에서 출발해서 다음으로 도착
+	 * [조건4] 역당 소요시간 2초
+	 * 
+	 * 출발신호 메뉴
+	 * 1.종점 2.용산 3.서울 4.구로
+	 * 
+	 * 예시 : 1번 선택시 종점역에 먼저 들어온 전철을 다음역으로 이동
+	 * 예시 : 만일 해당역에 전철이 없으면 없다 출력
+	 */
+		public static void main(String[] args) throws Exception {
+			
+			Scanner scanner = new Scanner(System.in);
+			Queue<String> 종점역 = new LinkedList<String>();
+			Queue<String> 용산역 = new LinkedList<String>();
+			Queue<String> 서울역 = new LinkedList<String>();
+			Queue<String> 구로역 = new LinkedList<String>();
+			
+			종점역.offer("1번전철");
+			종점역.offer("2번전철");
+			종점역.offer("3번전철");
+			
+			while(true) {
+				System.out.println(종점역);
+				System.out.println(용산역);
+				System.out.println(서울역);
+				System.out.println(구로역);
+				System.out.println("1.종점 2.용산 3.서울 4.구로");
+				int ch = scanner.nextInt();
 				
-
-				System.out.println("1.성적등록하기 >>>>선택:");int ch =scanner.nextInt(); // 선택문 넣어 서 해두 되는건지
-
-				
-
 				if(ch==1) {
-
-					scanner.nextLine();
-
-					System.out.println("이름 :"); String name=scanner.nextLine();
-
-					System.out.println("국어점수:"); String Kor =scanner.nextLine();
-
-					System.out.println("영어점수 :"); String Eng =scanner.nextLine();
-
-					System.out.println("수학점수 :"); String Math =scanner.nextLine();
-
-					
-
-					int total = ( Integer.parseInt(Kor) + Integer.parseInt(Eng) + Integer.parseInt(Math) ) ;
-
-					System.out.println("총합 :"+total);
-
-					float ave = ( total )/3; 	// 질문 총점 평균 어떻게 대입해서 한번에 출력할것인지 
-
-
-					for (int j = 0; j < 학생목록.length; j++) {
-
-						if (학생목록[j][0] ==null) {
-
-							학생목록[j][0] = name; 학생목록[j][1] = Kor;학생목록[j][2] = Eng;
-
-							학생목록[j][3] = Math; 학생목록[j][4]= String.valueOf(total);
-
-							break;
-
-						}
-
-						
-
+					System.out.println(종점역);
+					if(!종점역.isEmpty()) {
+						Thread.sleep(2000);	
+						System.out.println("출발 : "+종점역.peek());
+						용산역.offer( 종점역.poll() );
 					}
-
-					
-
-					
-
 				}
-
-
+				if(ch==2) {
+					System.out.println(용산역);
+					if(!용산역.isEmpty()) {
+					Thread.sleep(2000);
+					System.out.println("출발 : "+용산역.peek());
+					서울역.offer(용산역.poll());
+					}
+				}
+				if(ch==3) {
+					System.out.println(서울역);
+					if(!서울역.isEmpty()) {
+					Thread.sleep(2000);	
+					System.out.println("출발 : "+서울역.peek());	
+					구로역.offer(서울역.poll());
+					}
+				}
+				if(ch==4) {
+					System.out.println(구로역);
+					if(!구로역.isEmpty()) {
+					Thread.sleep(2000);	
+					System.out.println("출발 : "+구로역.peek());	
+					종점역.offer(구로역.poll());
+					}
+				}
+			}
 		}
-
-		}
+	
 }
 
 			
