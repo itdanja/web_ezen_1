@@ -21,6 +21,7 @@ public class Member {
 		this.email = email;
 		this.point = point;
 	}
+	
 	// 3. 메소드 [ get , set 사용하는 이유 ?? 
 	public String getId() {
 		return id;

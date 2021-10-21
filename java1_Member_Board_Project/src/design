@@ -19,10 +19,9 @@ Member Board Project
 		* File 
 			필드 : filepath 
 			메소드 : save , load 
-
 		* MemberController 
 			필드 : Arraylist<Member> memberlist 
-			메소드 : login , signup , forgotid , forgotpassword , logout , info , update , delete
+			메소드 : login , signup , forgotid , forgotpassword , info , update , delete
 
 	[ 코드 ]
 		1. JAVA 프로젝트 생성 [ JDK1.8 ]
