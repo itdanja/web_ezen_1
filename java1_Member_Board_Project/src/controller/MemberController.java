@@ -11,8 +11,36 @@ public class MemberController {
 
 	//2. 메소드 
 	// 1. 회원가입 
-	public boolean signup( Member member) {
+	public static boolean signup( Member member) {
 		// 반환타입 : 
+		// 1. 유효성검사 
+		if( member.getId().length()<4 ){ 
+			System.out.println(" [알림] : ID는 4글자이상 가능 합니다"); 
+			return false; 
+		}
+		if( member.getPassword().length() != 4 ) { 
+			System.out.println(" [알림] : Password는 4글자만 입니다"); 
+			return false;  
+		}
+		if( member.getName().length() < 2 ) { 
+			System.out.println(" [알림] : Name는 2글자이상 가능 입니다"); 
+			return false; 
+		}
+		if( !member.getEmail().contains("@") ) { 
+			System.out.println(" [알림] : Email @ 포함 가능 합니다"); 
+			return false; 
+		}
+		// 2. ID 중복체크 [ 리스트내 동일한 아이디가 있는지 확인 ]
+		for( Member temp : memberlist ) {
+			if( temp.getId().equals( member.getId()) ) {
+				System.out.println(" [알림] : 이미 사용중인 아이디 입니다");
+				return false;
+			}
+		}
+		// 3. 리스트 저장 
+		memberlist.add(member);
+		// 4. 파일 처리 
+		
 		return true; // 회원가입 성공시 
 	}
 	// 2. 로그인 
