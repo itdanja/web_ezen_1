@@ -33,6 +33,19 @@ public class Application {
 				
 				if( ch == 1 ) {
 					System.out.println("++++++++++++ 로그인 페이지 ++++++++++++");
+					System.out.print(" Id : "); 		String id = scanner.next();
+					System.out.print(" Password : "); 	String password = scanner.next();
+					
+					boolean result  =  MemberController.login(id, password);
+					
+					if( result ) {// 로그인 성공시 
+						System.out.println(" [알림] : 로그인 성공 ");
+						membermenu(id); // 회원메뉴 메소드 호출 ( 로그인 성공한 아이디를 인수로 전달 )
+						
+					}else {
+						System.out.println(" [알림] : 로그인 실패 ( 동일한 회원정보가 없습니다 ) ");
+					}
+					
 				}
 				else if( ch == 2 ){
 					System.out.println("++++++++++++ 회원가입 페이지 ++++++++++++");

@@ -49,8 +49,14 @@ public class MemberController {
 		
 	}
 	// 2. 로그인 
-	public boolean login( String id , String password ) {
-		return true; // 로그인 성공시 
+	public static boolean login( String id , String password ) {
+		for( Member member : memberlist ) {
+			if( member.getId().equals(id) && 
+					member.getPassword().equals(password) ) {
+				return true; // 로그인 성공시 
+			}
+		}
+		return false; // 로그인 실패시
 	}
 	// 3. 아이디찾기[ 이름 , 이메일 인수로 받아 해당 메일에 아이디 전송 ]
 	public boolean forgotid( String name , String email ) {
