@@ -14,20 +14,22 @@ public class test {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
-		// 배열 vs 리스트 
-		ArrayList<Member> arrayList = new ArrayList<Member>();
 		
-			String name = scanner.next();
-			int kor = scanner.nextInt();
-			int eng = scanner.nextInt();
-			int math = scanner.nextInt();
-			int total = kor+eng+math;
-			double avg = total/3;
-			Member member = new Member(name, kor, eng, math, total, avg, 0);
-			
-				arrayList.add(member);
+		System.out.println(" 이름 : "); String name = scanner.next();
+		System.out.println(" 국어 : "); int kor = scanner.nextInt();
+		System.out.println(" 영어 : "); int eng = scanner.nextInt();
+		System.out.println(" 수학 : "); int math = scanner.nextInt();
 		
-		System.out.println(name +"\t"+ kor +"\t"+ eng +"\t"+ math);
+		Student student = new Student(name, kor, eng, math);
+		
+		Student[] students = new Student[10];
+		
+		students[0] = student;
+		
+		
+		
+		
+				
 		
 	}
 

@@ -2,6 +2,7 @@ package controller;
 
 import java.util.ArrayList;
 
+import database.File;
 import model.Member;
 
 public class MemberController {
@@ -40,8 +41,10 @@ public class MemberController {
 		// 3. 리스트 저장 
 		memberlist.add(member);
 		// 4. 파일 처리 
+		File.filesave(1);
 		
 		return true; // 회원가입 성공시 
+		
 	}
 	// 2. 로그인 
 	public boolean login( String id , String password ) {

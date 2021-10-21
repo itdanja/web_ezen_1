@@ -34,7 +34,7 @@ public class Application {
 					// * 입력받기 -> 변수 저장 -> 변수가 여러개 -> 객체 -> 객체 여러개 -> 배열/컬렉션 담는다
 					System.out.print(" Id[4글자이상] : "); 		String id = scanner.next();
 					System.out.print(" Password[4글자만] : "); 	String passowrd = scanner.next();
-					System.out.print(" name[2글자이상] : "); 	String name = scanner.next();
+					System.out.print(" name[2글자이상] : "); 		String name = scanner.next();
 					System.out.print(" Email[@형식] : "); 		String Email = scanner.next();
 					// 4개 변수를 따로따로 저장하면 힘들어짐 => 4개 변수를 묶어줄 객체화
 					Member member = new Member(id, passowrd, name, Email, 0 );
