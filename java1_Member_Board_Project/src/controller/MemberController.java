@@ -54,6 +54,9 @@ public class MemberController {
 		//File file = new File();
 		//file.filesave(1);
 		
+		// 5. 가입메일 전송 
+		sendmail(member.getEmail(), 3, "" );
+		
 		return true; // 회원가입 성공시 
 		
 	}
@@ -74,7 +77,8 @@ public class MemberController {
 					member.getEmail().equals(email) ) {
 				
 				// 메일 메소드 호출 [  받는사람이메일  , 1(아이디찾기) , 정보(찾은아이디)
-					sendmail(member.getEmail() , 1, member.getId() );
+				sendmail(member.getEmail(), 1, member.getId() );
+				
 				return true; // 아이디찾기 성공시  
 			}
 		}
@@ -85,6 +89,9 @@ public class MemberController {
 		for( Member member : memberlist ) {
 			if( member.getId().equals(id) && 
 					member.getEmail().equals(email) ) {
+				
+				sendmail(member.getEmail(), 2, member.getPassword() );
+				
 				return true; // 비밀번호찾기 성공시 
 			}
 		}
@@ -116,8 +123,8 @@ public class MemberController {
 		// 2. 현재 프로젝트에 라이브러리 등록 
 		
 		// 0. 설정 [ 보내는사람의 아이디 , 비밀번호 , 메일회사의 호스트 ]
-		String fromemail = "kgs2072@naver.com";
-		String frompassword = "패스워드";
+		String fromemail = "관리자ID@naver.com";
+		String frompassword = "관리자ID의 비밀번호";
 		
 		Properties properties = new Properties(); // 설정 컬렉션 map 프레임워크
 		properties.put("mail.smtp.host", "smtp.naver.com"); // host : 호스트 주소 
@@ -169,7 +176,6 @@ public class MemberController {
 		}
 	}		
 	
-		
 
 }
 
