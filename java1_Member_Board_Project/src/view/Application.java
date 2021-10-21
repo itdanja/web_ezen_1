@@ -3,6 +3,7 @@ package view;
 import java.util.Scanner;
 
 import controller.MemberController;
+import database.File;
 import model.Member;
 
 public class Application {
@@ -13,6 +14,10 @@ public class Application {
 		// static : 
 	
 	public static void main(String[] args) {
+		// 0.프로그램 파일 로딩 
+		File.fileload(1);
+		
+		// 1. 프로그램 시작 
 		mainmenu(); // 메인 메뉴 메소드 호출
 	}
 	

@@ -42,6 +42,8 @@ public class MemberController {
 		memberlist.add(member);
 		// 4. 파일 처리 
 		File.filesave(1);
+		//File file = new File();
+		//file.filesave(1);
 		
 		return true; // 회원가입 성공시 
 		

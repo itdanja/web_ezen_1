@@ -1,5 +1,6 @@
 package database;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 import controller.MemberController;
@@ -37,6 +38,9 @@ public class File {
 				
 				return true; // 파일처리 성공
 			}
+			if( type == 2 ) {}
+			if( type == 3 ) {}
+			
 	
 		}catch (Exception e) {
 			System.out.println(" [알림] : 파일 저장 오류 발생 [ 관리자에게 문의 ]");
@@ -45,10 +49,51 @@ public class File {
 	}
 	
 	// 불러오기 메소드
-	public boolean fileload( int type ) {
-		return true; // 파일 블러오기 성공시
+	public static boolean fileload( int type ) {
+		try { // 예외처리 하는이유 ?? 
+			FileInputStream fileInputStream = null;
+			if( type == 1 ) {
+				// 1. 입력스트림 경로 설정 
+				fileInputStream = new FileInputStream(memberpath);
+				// 2. 스트림(단위:바이트) 바이트배열 선언 
+				byte[] bytes = new byte[10000]; // 10kb 정도
+				// 3. 입력스트림에서 바이트 읽어와서 배열에 저장 
+				fileInputStream.read( bytes );
+				// 4. 바이트배열 -> 문자열 변환
+				String instring = new String(bytes);
+				// 5. 회원 분리하기 \n
+				String[] members = instring.split("\n"); // \n 구분시 공백회원 추가 
+				// 6. 반복문을 이용한 회원별 필드 분리하기 ,
+				for( int i = 0 ; i<members.length-1 ;i++ ) { // -1 : 공백회원 제외
+					// 7. 회원별 필드 분리 	
+					String[] field = members[i].split(",");
+					// 8. 분리된 필드를 객체화 [ point필드는 int형으로 변환 : String -> Int ( Integer.parseInt )  ] 
+					Member member = new Member( field[0] , field[1] ,  
+									field[2], field[3],  
+									Integer.parseInt(field[4] ));
+					// 9. 각 객체를 리스트에 저장
+					MemberController.memberlist.add(member);
+				}
+				fileInputStream.close(); // 스트림 닫기 
+				return true; // 파일 불러오기 성공
+			}
+			if( type == 2 ) {}
+			if( type == 3 ) {}
+		}
+		catch (Exception e) {
+			System.out.println(" [알림] : 파일 불러오기 오류 발생 [ 관리자에게 문의 ]");
+		}
+		return false; // 파일 블러오기 실패시
 	}
 	
 
 	
 }
+
+
+
+
+
+
+
+
