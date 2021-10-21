@@ -6,5 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/505-t/git/web_ezen_1/java1/src/라이브러리/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/505-t/git/web_ezen_1/java1/src/라이브러리/mail-1.4.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

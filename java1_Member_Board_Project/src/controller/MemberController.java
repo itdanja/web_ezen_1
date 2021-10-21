@@ -1,6 +1,15 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 import database.File;
 import model.Member;
@@ -63,6 +72,9 @@ public class MemberController {
 		for( Member member : memberlist ) {
 			if( member.getName().equals(name) &&
 					member.getEmail().equals(email) ) {
+				
+				// 메일 메소드 호출 [  받는사람이메일  , 1(아이디찾기) , 정보(찾은아이디)
+					sendmail(member.getEmail() , 1, member.getId() );
 				return true; // 아이디찾기 성공시  
 			}
 		}
@@ -91,4 +103,99 @@ public class MemberController {
 	public boolean delete( String loginid ) {
 		return true;
 	}
+	
+	// 8. 메일전송 메소드 
+	public static void sendmail( String tomail , int type , String contents ) {
+							// tomail : 받는사람 이메일 	// type : 아이디찾기(1),비밀번호찾기(2),가입메일(3)
+							// contents : 메일에 넣을 정보
+		
+		// SMTP : 간이 우편 전송 프로토콜
+			// 프로토콜 : 통신 규약 [ 약속 ] 
+		
+		// 1. API 라이브러리 다운 [ activation.jar , mail.jar ] 
+		// 2. 현재 프로젝트에 라이브러리 등록 
+		
+		// 0. 설정 [ 보내는사람의 아이디 , 비밀번호 , 메일회사의 호스트 ]
+		String fromemail = "kgs2072@naver.com";
+		String frompassword = "패스워드";
+		
+		Properties properties = new Properties(); // 설정 컬렉션 map 프레임워크
+		properties.put("mail.smtp.host", "smtp.naver.com"); // host : 호스트 주소 
+		properties.put("mail.smtp.port" , 587 ); // port : 호스트의 접속하는 번호 
+		properties.put("mail.smtp.auth" , true ); // auth : 회원인증 
+		
+		// 1. 인증 
+		//Session session = Session.getDefaultInstance( properties , new Authenticator() {  코드  } );
+		
+		Session session = Session.getDefaultInstance( properties , new Authenticator() {
+			
+			// 익명 구현 객체 : 일회성 객체
+			@Override //패스워드 인증 메소드 
+			protected PasswordAuthentication getPasswordAuthentication() { 	
+				return new PasswordAuthentication(fromemail, frompassword);		
+			}									// 인증할 이메일 , 인증할 패스워드 
+		}); // 인증 끝 
+		
+		try {
+			// 2. 메일 보내기 
+				// 1. 보내는사람의 인증정보 
+			MimeMessage message = new MimeMessage(session);
+				// 2. 보내는사람 메일주소 설정 
+			message.setFrom( new InternetAddress(fromemail) );
+				// 3. 받는 사람 메일주소 설정
+			message.addRecipient( Message.RecipientType.TO , new InternetAddress(tomail) );
+			
+			// * type 구분 
+			if( type == 1 ) {
+				// 4. 메일 제목 
+				message.setSubject("java console( forgot ID ) ");
+				// 5. 메일 내용
+				message.setText(" 회원님의 아이디 : " + contents );
+			}
+			if( type == 2 ) {
+				message.setSubject("java console( forgot Password ) ");
+				message.setText(" 회원님의 비밀번호 : " + contents );
+			}
+			if( type == 3 ) {
+				message.setSubject("java console( Member Signup ) ");
+				message.setText(" java console에 가입해주셔서 감사합니다 ~~ ");
+			}
+				// 6. 메일 전송 
+			Transport.send(message);
+			
+		}
+		catch (Exception e) {
+			System.err.println(" [알림] : 메일전송 실패 [ 관리자에게 문의 ]"+e);
+		}
+	}		
+	
+		
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
