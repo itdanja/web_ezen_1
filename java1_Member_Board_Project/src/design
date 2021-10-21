@@ -1,0 +1,31 @@
+Member Board Project
+	1. 패키지 구성 
+		* MVC 패턴 
+			M (model) : data
+			V ( view ) : front
+			C ( control ) : m <--제어--> v
+			* database : DB , File
+	2. 클래스 구성 
+		*  Data : file
+		*  M : Member , Board , Reply 
+		*  C : MemberController , BoardController , ReplyControoler 
+		*  V : Application( mainmenu , membermenu , boardmenu )
+
+	3. 클래스 설계 [ 필드 , 생성자 , 메소드 ] 
+		* Member
+			필드 : 	id , password , name , email , point
+			생성자 : 	빈생성자 , 전체생성자
+			메소드 : 	get , set 
+		* File 
+			필드 : filepath 
+			메소드 : save , load 
+
+		* MemberController 
+			필드 : Arraylist<Member> memberlist 
+			메소드 : login , signup , forgotid , forgotpassword , logout , info , update , delete
+
+	[ 코드 ]
+		1. JAVA 프로젝트 생성 [ JDK1.8 ]
+		2. 패키지 구성 
+		3. 뼈대[ 클래스 선언 · 멤버 선언 ]
+		 
