@@ -59,12 +59,24 @@ public class MemberController {
 		return false; // 로그인 실패시
 	}
 	// 3. 아이디찾기[ 이름 , 이메일 인수로 받아 해당 메일에 아이디 전송 ]
-	public boolean forgotid( String name , String email ) {
-		return true; // 아이디찾기 성공시  
+	public static boolean forgotid( String name , String email ) {
+		for( Member member : memberlist ) {
+			if( member.getName().equals(name) &&
+					member.getEmail().equals(email) ) {
+				return true; // 아이디찾기 성공시  
+			}
+		}
+		return false; // 아이디찾기 실패  
 	}
 	// 4. 비밀번호찾기[ 아이디 , 이메일 인수로 받아 해당 메일에 비밀번호 전송 ] 
-	public boolean forgotpassword( String id , String email ) {
-		return true; // 비밀번호찾기 성공시 
+	public static boolean forgotpassword( String id , String email ) {
+		for( Member member : memberlist ) {
+			if( member.getId().equals(id) && 
+					member.getEmail().equals(email) ) {
+				return true; // 비밀번호찾기 성공시 
+			}
+		}
+		return false; // 비밀번호찾기 실패시 
 	}
 	// 5. 회원정보[ 아이디를 인수로 받아 해당 아이디의 모든 정보 반환 ] 
 	public Member info( String loginid ) {

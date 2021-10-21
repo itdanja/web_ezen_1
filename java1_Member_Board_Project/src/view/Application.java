@@ -39,11 +39,11 @@ public class Application {
 					boolean result  =  MemberController.login(id, password);
 					
 					if( result ) {// 로그인 성공시 
-						System.out.println(" [알림] : 로그인 성공 ");
+						System.err.println(" [알림] : 로그인 성공 ");
 						membermenu(id); // 회원메뉴 메소드 호출 ( 로그인 성공한 아이디를 인수로 전달 )
 						
 					}else {
-						System.out.println(" [알림] : 로그인 실패 ( 동일한 회원정보가 없습니다 ) ");
+						System.err.println(" [알림] : 로그인 실패 ( 동일한 회원정보가 없습니다 ) ");
 					}
 					
 				}
@@ -60,17 +60,39 @@ public class Application {
 					// Controller 전달 [ 다른 클래스내 메소드 호출하는 방법 :  1.    2. 
 					boolean result =  MemberController.signup(member);
 					if(result) {
-						System.out.println(" [알림] : 회원가입 성공 ");
+						System.err.println(" [알림] : 회원가입 성공 ");
 					}else {
-						System.out.println(" [알림] : 회원가입 실패 ");
+						System.err.println(" [알림] : 회원가입 실패 ");
 					}
 					System.out.println("+++++++++++++++++++++++++++++++++++++++");
 				}
 				else if( ch == 3 ){
 					System.out.println("++++++++++++ 아이디찾기 페이지 ++++++++++++");
+					System.out.print(" Name : "); 	String name = scanner.next();
+					System.out.print(" Email : "); 	String email = scanner.next();
+					
+					boolean result = MemberController.forgotid(name, email);
+					
+					if( result ) {
+						System.err.println(" [알림] : 회원님의 아이디를 이메일로 전송했습니다 ");
+					}else {
+						System.err.println(" [알림] : 동일한 회원정보가 없습니다" );
+					}
+					System.out.println("+++++++++++++++++++++++++++++++++++++++");
 				}
 				else if( ch == 4 ){
 					System.out.println("++++++++++++ 비밀번호찾기 페이지 ++++++++++++");
+					System.out.print(" Id : "); 	String id = scanner.next();
+					System.out.print(" Email : "); 	String email = scanner.next();
+					
+					boolean result = MemberController.forgotpassword(id, email);
+					
+					if( result ) {
+						System.err.println(" [알림] : 회원님의 비밀번호를 이메일로 전송했습니다 ");
+					}else {
+						System.err.println(" [알림] : 동일한 회원정보가 없습니다" );
+					}
+					System.out.println("+++++++++++++++++++++++++++++++++++++++");
 				}
 				else {
 					System.err.println(" [알림] : 알수없는 행동 입니다 [ 관리자에게 문의 ]");
