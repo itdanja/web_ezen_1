@@ -33,13 +33,14 @@ public class Board {
 		this.view = 1;
 		this.replylist = new ArrayList<>(); 
 	}
-	
+	// 파일로드시 사용되는 생성자 
 	public Board(String title, String contents, String writer, String date, int view) {
 		this.title = title;
 		this.contents = contents;
 		this.writer = writer;
 		this.date = date;
 		this.view = view;
+		this.replylist = new ArrayList<>();
 	}
 	
 	

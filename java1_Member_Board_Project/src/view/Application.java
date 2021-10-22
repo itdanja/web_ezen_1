@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import controller.BoardController;
 import controller.MemberController;
+import controller.ReplyController;
 import database.File;
 import model.Board;
 import model.Member;
@@ -186,15 +187,33 @@ public class Application {
 						System.out.println(" 조회수 : " + board.getView() );
 						System.out.println("-------------------댓글-------------------");
 						System.out.println("작성자\t댓글내용\t\t작성일");
+						// 댓글출력
 						for( Reply reply : board.getReplylist() ) {
-							System.out.println("작성자\t댓글내용\t\t작성일");
+							System.out.println(reply.getWriter()+"\t"+
+											reply.getContents()+"\t\t"+reply.getDate());
 						}
 						System.out.println("+++++++++++++++++++++++++++++++++++++++");
 						
-						System.out.println("1.댓글쓰기 "); int ch2 = scanner.nextInt();
-						if( ch2 == 1 ) {
-							// 댓글쓰기
+						System.out.print("1.댓글쓰기 2.뒤로가기 "); 
+						if( board.getWriter().equals(id) ) { // 게시물작성자 == 로그인된id
+							System.out.print("  3.게시물 삭제 4.게시물 수정");
 						}
+						int ch2 = scanner.nextInt();
+						if( ch2 == 1 ) { // 댓글쓰기
+							scanner.nextLine();
+							System.out.println( "\n내용 : " ); 	String contents = scanner.nextLine();
+							Reply reply = new Reply(contents, id );
+							boolean result = ReplyController.add(index-1, reply);
+							
+							if( result ) {
+								System.out.println(" [알림] 댓글 등록 ");
+							}else {
+								System.err.println(" [알림] 해당 게시물번호가 존재하지 않습니다;");
+							}
+						}
+						if( ch2 == 2 ) { return; }
+						if( ch2 == 3 ) {}
+						if( ch2 == 4 ) {}
 						
 					}
 					
