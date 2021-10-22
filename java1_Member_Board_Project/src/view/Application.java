@@ -8,6 +8,7 @@ import controller.MemberController;
 import database.File;
 import model.Board;
 import model.Member;
+import model.Reply;
 
 public class Application {
 
@@ -171,6 +172,31 @@ public class Application {
 					System.out.println("+++++++++++++++++++++++++++++++++++++++");
 				}
 				if( ch == 2 ) {
+					
+					System.out.print(" *** 게시물번호 : "); int index = scanner.nextInt();
+					Board board = BoardController.detail(index-1);
+					if( board == null ) {
+						System.err.println(" [알림] : 선택한 게시물 번호가 존재하지 않습니다");
+					}else {
+						System.out.println("\n+++++++++++++ 게시물 상세 ++++++++++++++");
+						System.out.println(" 제목 : " + board.getTitle() );
+						System.out.println(" 내용 : " + board.getContents() );
+						System.out.println(" 작성자 : " + board.getWriter() );
+						System.out.println(" 작성일 : " + board.getDate() );
+						System.out.println(" 조회수 : " + board.getView() );
+						System.out.println("-------------------댓글-------------------");
+						System.out.println("작성자\t댓글내용\t\t작성일");
+						for( Reply reply : board.getReplylist() ) {
+							System.out.println("작성자\t댓글내용\t\t작성일");
+						}
+						System.out.println("+++++++++++++++++++++++++++++++++++++++");
+						
+						System.out.println("1.댓글쓰기 "); int ch2 = scanner.nextInt();
+						if( ch2 == 1 ) {
+							// 댓글쓰기
+						}
+						
+					}
 					
 				}
 				if( ch == 3 ) {

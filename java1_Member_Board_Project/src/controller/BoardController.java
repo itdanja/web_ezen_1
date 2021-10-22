@@ -27,8 +27,13 @@ public class BoardController {
 	// 게시물 상세페이지[조회] 메소드 
 	public static Board detail( int index ) {
 		
-		Board board = null;
-		return board; // 검색한 게시물 반환
+		try {
+			Board board = boardlist.get(index);
+			return board; // 검색한 게시물 반환
+		}
+		catch (Exception e) {
+			return null; // 검색한 게시물 없을경우
+		}
 	}
 	// 게시물 삭제 메소드 
 	public static boolean delete( int index ) {
