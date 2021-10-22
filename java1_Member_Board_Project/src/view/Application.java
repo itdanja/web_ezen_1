@@ -19,6 +19,7 @@ public class Application {
 		
 		// 1. 프로그램 시작 
 		mainmenu(); // 메인 메뉴 메소드 호출
+	
 	}
 	
 	// 1. 메인 메뉴 메소드 
@@ -107,11 +108,72 @@ public class Application {
 	}
 	// 2. 회원 메뉴 메소드
 	public static void membermenu( String id ) {
-								// 인수 : 
-		
+		while(true) { // 무한루프 
+			try {
+				System.out.println("\n+++++++++++++ 회원 페이지 ++++++++++++++");
+				System.out.println("1.회원정보 2.커뮤니티 3.로그아웃 ");
+				System.out.println("+++++++++++++++++++++++++++++++++++++++");
+				System.out.print("\t 선택 : ");		int ch = scanner.nextInt();
+				if( ch == 1 ) {
+					System.out.println("\n+++++++++++++ 회원정보 페이지 ++++++++++++++");
+					
+					System.out.println("+++++++++++++++++++++++++++++++++++++++");
+				}
+				if( ch == 2 ) {
+					boardmenu(id); // 게시판 메소드 호출 
+				}
+				if( ch == 3 ) {
+					System.out.println(" [알림] : 로그아웃 되었습니다 ");
+					//break; // 가장 가까운 반복문 탈출 
+					return; // 현재 메소드 리턴[반환] 끝내기 
+				}
+			}
+			catch (Exception e) {
+				System.err.println(" [알림] : 메뉴 페이지 오류 [ 관리자문의 ] ");
+				scanner = new Scanner(System.in);
+			}
+		}
 	}
 	// 3. 게시판 메뉴 메소드 
 	public static void boardmenu( String id ) {
-				
+		while(true) { // 무한루프 
+			
+			try {
+				System.out.println("\n+++++++++++++ 게시판 페이지 ++++++++++++++");
+				System.out.println("1.게시물 상세보기 2.뒤로가기 ");
+				System.out.println("+++++++++++++++++++++++++++++++++++++++");
+				System.out.print("\t 선택 : ");		int ch = scanner.nextInt();
+				if( ch == 1 ) {
+					System.out.println("\n+++++++++++++ 게시물 보기 ++++++++++++++");
+					
+					System.out.println("+++++++++++++++++++++++++++++++++++++++");
+				}
+				if( ch == 2 ) {
+					return; // 현재 메소드 리턴[반환] 끝내기 
+				}
+			}
+			catch (Exception e) {
+				System.err.println(" [알림] : 메뉴 페이지 오류 [ 관리자문의 ] ");
+				scanner = new Scanner(System.in);
+			}
+		}		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -22,9 +22,24 @@ Member Board Project
 		* MemberController 
 			필드 : Arraylist<Member> memberlist 
 			메소드 : login , signup , forgotid , forgotpassword , info , update , delete
+		
+		* Board
+			필드 : title , contents , writer , date , view , Arraylist<Reply>
+			
+		* Reply 
+			필드 : contents , writer , date 
+			
+		* BoardController 
+			메소드 : add , detail , update , delete
+		
+		* ReplyController
+			메소드 : add
+
 
 	[ 코드 ]
 		1. JAVA 프로젝트 생성 [ JDK1.8 ]
 		2. 패키지 구성 
 		3. 뼈대[ 클래스 선언 · 멤버 선언 ]
+		
+		
 		 
