@@ -3,7 +3,9 @@ package database;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
+import controller.BoardController;
 import controller.MemberController;
+import model.Board;
 import model.Member;
 
 public class File {
@@ -14,6 +16,12 @@ public class File {
 			"C:/Users/505-t/git/web_ezen_1/"
 			+ "java1_Member_Board_Project/"
 			+ "src/database/memberlist.txt";
+		// 2. 게시물를 저장하는 파일의 경로 
+	private static String boardpath = 
+			"C:/Users/505-t/git/web_ezen_1/"
+			+ "java1_Member_Board_Project/"
+			+ "src/database/boardlist.txt";
+	
 	
 	// 저장 메소드 
 	public static boolean filesave( int type ) {
@@ -38,7 +46,20 @@ public class File {
 				
 				return true; // 파일처리 성공
 			}
-			if( type == 2 ) {}
+			if( type == 2 ) {
+				
+				fileOutputStream = new FileOutputStream( boardpath );
+				for( Board board : BoardController.boardlist ) {
+					String outstring = board.getTitle()+","+board.getContents()+","+
+										board.getWriter()+","+board.getDate()+","+
+										board.getView()+"\n";
+					fileOutputStream.write( outstring.getBytes() );
+				}
+				fileOutputStream.flush();
+				fileOutputStream.close(); 
+				return true;
+		
+			}
 			if( type == 3 ) {}
 			
 	

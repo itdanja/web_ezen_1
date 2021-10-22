@@ -2,6 +2,7 @@ package controller;
 
 import java.util.ArrayList;
 
+import database.File;
 import model.Board;
 
 public class BoardController {
@@ -19,6 +20,7 @@ public class BoardController {
 		// 3. 리스트저장
 		boardlist.add(board);
 		// 4. 파일처리 
+		File.filesave(2); // 2:게시물저장
 		
 		return true; // 등록 성공시 
 	}
