@@ -1,9 +1,12 @@
 package view;
 
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
+import controller.BoardController;
 import controller.MemberController;
 import database.File;
+import model.Board;
 import model.Member;
 
 public class Application {
@@ -137,18 +140,42 @@ public class Application {
 	// 3. 게시판 메뉴 메소드 
 	public static void boardmenu( String id ) {
 		while(true) { // 무한루프 
-			
 			try {
 				System.out.println("\n+++++++++++++ 게시판 페이지 ++++++++++++++");
-				System.out.println("1.게시물 상세보기 2.뒤로가기 ");
+				System.out.println("\n번호\t타이틀\t\t작성자\t작성일\t조회수");
+				// 게시물 출력 
+				int i = 1; // for 반복횟수 i => 게시물번호
+				for( Board board : BoardController.boardlist ) {
+			
+					SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd");
+					String date = simpleDateFormat.format( board.getDate() );
+					
+					System.out.println( i +"\t"+ board.getTitle() +
+										"\t\t"+board.getWriter() + "\t" + date +
+										"\t"+board.getView() );
+					i++;
+				}
+				System.out.println("+++++++++++++++++++++++++++++++++++++++");
+				System.out.println("+++++++++++++++++++++++++++++++++++++++");
+				System.out.println("1.등록 2.상세보기 3.뒤로가기 ");
 				System.out.println("+++++++++++++++++++++++++++++++++++++++");
 				System.out.print("\t 선택 : ");		int ch = scanner.nextInt();
 				if( ch == 1 ) {
-					System.out.println("\n+++++++++++++ 게시물 보기 ++++++++++++++");
-					
+					System.out.println("\n+++++++++++++ 게시물 등록 ++++++++++++++");
+						// 입력받기 -> 변수 저장 -> 객체 -> 리스트 -> 파일
+							scanner.nextLine(); // next 다음에 nextLine 오는경우 오류 발생
+						System.out.print(" 제목 : ");	String title = scanner.nextLine();
+						System.out.print(" 내용 : ");	String contents = scanner.nextLine();
+						// 객체화 
+						Board board = new Board(title , contents , id );
+						BoardController.add( board );
+						
 					System.out.println("+++++++++++++++++++++++++++++++++++++++");
 				}
 				if( ch == 2 ) {
+					
+				}
+				if( ch == 3 ) {
 					return; // 현재 메소드 리턴[반환] 끝내기 
 				}
 			}
