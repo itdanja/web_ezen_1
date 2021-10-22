@@ -2,6 +2,7 @@ package database;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.Date;
 
 import controller.BoardController;
 import controller.MemberController;
@@ -98,7 +99,24 @@ public class File {
 				fileInputStream.close(); // 스트림 닫기 
 				return true; // 파일 불러오기 성공
 			}
-			if( type == 2 ) {}
+			if( type == 2 ) {
+			
+				fileInputStream = new FileInputStream(boardpath); // 1. 파일경로 
+				byte[] bytes = new byte[10000]; // 10kb 정도 // 2. 파일용량 
+				fileInputStream.read( bytes );	// 3. 파일 읽기 
+				String instring = new String(bytes); // 4. 문자열 변환 
+				String[] boards = instring.split("\n"); // 5. 게시물 \n 구분 
+				
+				for( int i = 0 ; i<boards.length-1 ;i++ ) { //6.  -1 : 마지막 게시물 제외
+					String[] field = boards[i].split(",");
+					Board board = new Board( field[0] , field[1] , field[2], 
+									field[3]  , Integer.parseInt(field[4]));
+					BoardController.boardlist.add(board);
+				}
+				
+				fileInputStream.close(); // 스트림 닫기 
+				return true; // 파일 불러오기 성공
+			}
 			if( type == 3 ) {}
 		}
 		catch (Exception e) {

@@ -10,7 +10,7 @@ public class Board {
 	private String title;
 	private String contents;
 	private String writer;
-	private Date date;
+	private String date;
 	private int view;
 	// 하나의 게시물의 여러개 댓글 저장하기 위한 
 	private ArrayList<Reply> replylist;  // 댓글 리스트 메모리할당
@@ -27,12 +27,22 @@ public class Board {
 		this.writer = writer;
 		
 		Date date = new Date(); // 현재시간 클래스
-		this.date = date;
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd");
+		this.date =simpleDateFormat.format(date );
 		
 		this.view = 1;
 		this.replylist = new ArrayList<>(); 
-		
 	}
+	
+	public Board(String title, String contents, String writer, String date, int view) {
+		this.title = title;
+		this.contents = contents;
+		this.writer = writer;
+		this.date = date;
+		this.view = view;
+	}
+	
+	
 	public String getTitle() {
 		return title;
 	}
@@ -51,10 +61,10 @@ public class Board {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public int getView() {

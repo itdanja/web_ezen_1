@@ -18,7 +18,8 @@ public class Application {
 	
 	public static void main(String[] args) {
 		// 0.프로그램 파일 로딩 
-		File.fileload(1);
+		File.fileload(1);	// 회원 파일 불러오기 
+		File.fileload(2); 	// 게시물 파일 불러오기 
 		
 		// 1. 프로그램 시작 
 		mainmenu(); // 메인 메뉴 메소드 호출
@@ -147,11 +148,8 @@ public class Application {
 				int i = 1; // for 반복횟수 i => 게시물번호
 				for( Board board : BoardController.boardlist ) {
 			
-					SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd");
-					String date = simpleDateFormat.format( board.getDate() );
-					
 					System.out.println( i +"\t"+ board.getTitle() +
-										"\t\t"+board.getWriter() + "\t" + date +
+										"\t\t"+board.getWriter() + "\t" + board.getDate() +
 										"\t"+board.getView() );
 					i++;
 				}
