@@ -30,6 +30,8 @@
 
     * 스트림과 병렬 처리
     * 입출력 및 네트워킹
+    * JAVA theorem
+    ** 1 : JVM , Momory
 
 ### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
 |일차|목차|주요내용|
