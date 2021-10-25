@@ -30,13 +30,16 @@
 
     * 스트림과 병렬 처리
     * 입출력 및 네트워킹
+
     * JAVA theorem
-    ** 1 : JVM , Momory
-    ** 2 : 
-   ***1. 입출력 , 형식문자 , 제어문자
-	2. 변수 , 기본자료형[ 타입변환 ]
-	3. 배열 
-	4. 연산자 , 제어문[ if , switch ] , 반복문 [ for  , while ] , for활용***
+    ** 1. : JVM , Momory
+    ** 2. 
+    *** 1. : 입출력 , 형식문자 , 제어문자
+    *** 2. : 변수 , 기본자료형[ 타입변환 ]
+    *** 3. : 배열
+    *** 4. : 연산자 , 제어문[ if , switch ] , 반복문 [ for  , while ] , for활용
+    
+
 
 
 ### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
