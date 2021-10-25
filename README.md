@@ -24,14 +24,20 @@
 |15일차[10/20]|JAVA1| 컬렉션 프레임워크 · 람다식 · Team Console Project 설계 |
 |16일차[10/21]|JAVA1| 람다식 · (JAVA1 정리)Member Board Programming |
 |17일차[10/22]|JAVA1| 평가 · (JAVA1 정리)Member Board Programming · Team Console Project  |
-|18일차[10/25]|JAVA1| Team Console Project |
-|19일차[10/26]|JAVA1| Team Console Project |
-|20일차[10/27]|JAVA1| Team Console Project · Team Console Project 발표 |
+|18일차[10/25]|JAVA1| JAVA1 정리 · Team Console Project |
+|19일차[10/26]|JAVA1| JAVA1 정리 · Team Console Project |
+|20일차[10/27]|JAVA1| JAVA1 정리 · Team Console Project · Team Console Project 발표 |
 
     * 스트림과 병렬 처리
     * 입출력 및 네트워킹
     * JAVA theorem
     ** 1 : JVM , Momory
+    ** 2 : 
+   ***1. 입출력 , 형식문자 , 제어문자
+	2. 변수 , 기본자료형[ 타입변환 ]
+	3. 배열 
+	4. 연산자 , 제어문[ if , switch ] , 반복문 [ for  , while ] , for활용***
+
 
 ### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
 |일차|목차|주요내용|
