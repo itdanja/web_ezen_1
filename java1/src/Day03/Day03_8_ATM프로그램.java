@@ -2,7 +2,7 @@ package Day03;
 
 import java.util.Scanner;
 
-public class Day03_8 {
+public class Day03_8_ATM프로그램 {
 	
 	// 확인문제7 :  ATM 프로그램
 	public static void main(String[] args) {

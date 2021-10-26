@@ -19,6 +19,9 @@ public class Application {
 		// static : 
 	
 	public static void main(String[] args) {
+		
+		
+		
 		// 0.프로그램 파일 로딩 
 		File.fileload(1);	// 회원 파일 불러오기 
 		File.fileload(2); 	// 게시물 파일 불러오기 
