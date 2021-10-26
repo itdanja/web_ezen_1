@@ -19,41 +19,69 @@
 |10일차[10/13]|JAVA1| 중첩클래스/인터페이스 · 예외처리 |
 |11일차[10/14]|JAVA1| 기본API클래스 |
 |12일차[10/15]|JAVA1| 기본API클래스 · 파일처리 |
-|13일차[10/18]|JAVA1| 멀티스레드 · Team Console Project 설계[1] |
-|14일차[10/19]|JAVA1| 제네릭 · Team Console Project 설계[1] |
-|15일차[10/20]|JAVA1| 컬렉션 프레임워크 · 람다식 · Team Console Project 설계 |
-|16일차[10/21]|JAVA1| 람다식 · (JAVA1 정리)Member Board Programming |
-|17일차[10/22]|JAVA1| 평가 · (JAVA1 정리)Member Board Programming · Team Console Project  |
-|18일차[10/25]|JAVA1| Team Console Project |
-|19일차[10/26]|JAVA1| Team Console Project |
-|20일차[10/27]|JAVA1| Team Console Project · Team Console Project 발표 |
+|13일차[10/18]|JAVA1| 멀티스레드 · Team Console Project 설계 |
+|14일차[10/19]|JAVA1| 제네릭 · Team Console Project 설계 |
+|15일차[10/20]|JAVA1| 컬렉션 프레임워크 · Team Console Project 설계 |
+|16일차[10/21]|JAVA1| (JAVA1 정리) Member Board Programming · Team Console Project 설계 |
+|17일차[10/22]|JAVA1| 평가[프로그래밍언어활용] · (JAVA1 정리) Member Board Programming · SMTP API  · Team Console Project  |
+|18일차[10/25]|JAVA1| JAVA1정리_1 · Team Console Project |
+|19일차[10/26]|JAVA1| JAVA1정리_2 · Team Console Project |
+|20일차[10/27]|JAVA1| JAVA1정리_3 · Team Console Project · Team Console Project 발표 |
 
+    * 람다식
     * 스트림과 병렬 처리
     * 입출력 및 네트워킹
+    
+    * JAVA theorem
+    ** 1. : JVM , Momory
+    ** 2. 
+    *** 1. : 입출력 , 형식문자 , 제어문자
+    *** 2. : 변수 , 기본자료형[ 타입변환 ]
+    *** 3. : 배열
+    *** 4. : 연산자 , 제어문[ if , switch ] , 반복문 [ for  , while ] , for활용
+    ** 3.
+    *** 1. : 클래스 [ 필드 , 생성자 , 메소드 ]
+    *** 2. : 상속
+    ** 4.
+    *** 1. : 인터페이스 
+    ** 5.
+    *** 1. : 예외처리
+    *** 2. : 멀티스레드
+    ** 6.
+    *** 1. : 제네릭
+    *** 2. : 컬렉션 프레임워크
+    ** 7.
+    *** 1. : 람다식
+    ** 8.
+    *** 1. : 스트림과 병렬처리
+    ** 9.
+    *** 1. : 입출력 및 네트워킹
+    ** 10.
+    *** 1. : 입출력 및 네트워킹
 
 ### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
 |일차|목차|주요내용|
 |------|---|---|
-|21일차[10/28]|JAVA2| JAVAFX · Scene Builder · 파일처리|
-|22일차[10/29]|JAVA2| JAVAFX · DB ( 회원가입 · 로그인 ) |
-|23일차[11/01]|JAVA2| JAVAFX · DB ( 아이디찾기 · 비밀번호찾기 · 메인페이지 · 로그아웃 ) · SMTP API |
-|24일차[11/02]|JAVA2| JAVAFX · DB ( 회원관리 CRUD ) · 평가 |
-|25일차[11/03]|JAVA2| JAVAFX · DB ( 게시판 CRUD ) |
-|26일차[11/04]|JAVA2| JAVAFX · DB ( 제품 CRUD ) |
-|27일차[11/05]|JAVA2| JAVAFX · DB ( 제품 통계 ) · Team javafx Project 설계 |
-|28일차[11/08]|JAVA2| JAVAFX · DB ( Chatting ) · Team javafx Project 설계 |
-|29일차[11/09]|JAVA2| Team javafx Project |
-|30일차[11/10]|JAVA2| Team javafx Project |
-|31일차[11/11]|JAVA2| HTML · 평가 |
-|32일차[11/12]|JAVA2| HTML |
-|33일차[11/15]|JAVA2| CSS |
-|34일차[11/16]|JAVA2| CSS |
-|35일차[11/17]|JAVA2| layout |
-|36일차[11/18]|JAVA2| layout |
-|37일차[11/19]|JAVA2| 반응형 웹 · 평가 |
-|38일차[11/22]|JAVA2| 반응형 웹 |
-|39일차[11/21]|JAVA2| Js |
-|40일차[11/22]|JAVA2| Js · Team javafx Project 발표 |
+|21일차[10/28]|JAVA2| JAVA1정리_4 · JAVAFX/Scene Builder |
+|22일차[10/29]|JAVA2| JAVA1정리_5 · Datebase · JAVAFX/Scene Builder( 회원가입 · 로그인 ) |
+|23일차[11/01]|JAVA2| JAVA1정리_6 · Datebase · JAVAFX/Scene Builder( 아이디찾기 · 비밀번호찾기 · 메인페이지 · 로그아웃 ) · SMTP API |
+|24일차[11/02]|JAVA2| JAVA1정리_7 · Datebase · JAVAFX/Scene Builder( 회원관리 CRUD ) · 평가[응용 SW기초기술 활용] |
+|25일차[11/03]|JAVA2| JAVA1정리_8 · Datebase · JAVAFX/Scene Builder( 게시판 CRUD ) |
+|26일차[11/04]|JAVA2| JAVA1정리_9 · Datebase · JAVAFX/Scene Builder( 제품 CRUD ) |
+|27일차[11/05]|JAVA2| JAVA1정리_10 ·Datebase · JAVAFX/Scene Builder( 제품 통계 )|
+|28일차[11/08]|JAVA2| Datebase · JAVAFX/Scene Builder( Chatting ) |
+|29일차[11/09]|JAVA2| Datebase · JAVAFX/Scene Builder|
+|30일차[11/10]|JAVA2| Datebase · JAVAFX/Scene Builder|
+|31일차[11/11]|JAVA2| 평가[SQL 활용] · Team javafx Project 설계   |
+|32일차[11/12]|JAVA2 · Front | HTML · Datebase · Team javafx Project  |
+|33일차[11/15]|JAVA2 · Front | HTML · Datebase · Team javafx Project  |
+|34일차[11/16]|JAVA2 · Front | CSS · Datebase · Team javafx Project  |
+|35일차[11/17]|JAVA2 · Front | CSS · Datebase · Team javafx Project |
+|36일차[11/18]|JAVA2 · Front | CSS · Datebase · Team javafx Project |
+|37일차[11/19]|JAVA2 · Front | 평가[요구사항확인] · JS · Datebase · Team javafx Project |
+|38일차[11/22]|JAVA2 · Front | JS · Datebase · Team javafx Project |
+|39일차[11/21]|JAVA2 · Front | layout · Datebase · Team javafx Project |
+|40일차[11/22]|JAVA2 · Front | layout · Datebase · Team javafx Project 발표 |
 
 ### 3개월차 진도 [ Bootstrap · Servlet · JSP · Datavbase · Front ] 
 |일차|목차|주요내용|
