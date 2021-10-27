@@ -20,6 +20,8 @@ public class Application {
 	
 	public static void main(String[] args) {
 		
+		String 문자열 = new String("강호동");
+		
 		
 		
 		// 0.프로그램 파일 로딩 

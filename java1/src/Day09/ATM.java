@@ -10,4 +10,5 @@ public interface ATM {
 	// 3. 디폴트 메소드 
 	default void 실행() {System.out.println(" ATM 실행 합니다 ");}
 	// 4. 정적 메소드 
+	
 }

@@ -10,6 +10,8 @@ public class Day04_6_틱택토게임 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
+		String 이름 = null;
+		
 		// 1. 게임판 생성 [9칸 생성 ]
 		// String 객체 9개를 저장하는 배열 선언 
 		String[] 게임판 = {   "[ ]" , "[ ]" , "[ ]" ,
