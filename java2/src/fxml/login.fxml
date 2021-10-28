@@ -46,7 +46,7 @@
                         <Font name="Yj GABI Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="btnfindpassword" layoutX="183.0" layoutY="324.0" onMouseDragged="#findpassword" text="비밀번호 찾기">
+                  <Label fx:id="btnfindpassword" layoutX="183.0" layoutY="324.0" onMouseClicked="#findpassword" text="비밀번호 찾기">
                      <font>
                         <Font name="Yj GABI Bold" size="15.0" />
                      </font>
