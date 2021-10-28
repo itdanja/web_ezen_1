@@ -5,8 +5,9 @@ public  class CellPhone {
 	//1.필드 
 		String model;
 		String color;
+		
 	//2.생성자 
-	public CellPhone(String model, String color) {
+	public CellPhone(String model , String color) {
 		this.model = model;
 		this.color = color;
 	}

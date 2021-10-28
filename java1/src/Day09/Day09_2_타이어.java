@@ -1,6 +1,6 @@
 package Day09;
 
-public class Day09_2 {
+public class Day09_2_Å¸ÀÌ¾î {
 
 	public static void main(String[] args) {
 		

@@ -42,7 +42,6 @@ public class Day08_1 {
 	
 	public static void main(String[] args) {
 		
-		
 		// 서브클래스 이용한 객체 생성 
 		DmbCellPhone dmbCellPhone = new DmbCellPhone("자바폰", "검정", 10);
 		System.out.println("모델 : " + dmbCellPhone.model );	// 부모 필드 접근  // private 변수가 아닐경우 멤버 접근 가능 
