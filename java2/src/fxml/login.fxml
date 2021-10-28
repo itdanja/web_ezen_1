@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:controller="controller.LoginController" fx:id="mainboardpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="loginpane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="600.0" fitWidth="984.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -51,7 +51,7 @@
                         <Font name="Yj GABI Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="260.0" layoutY="28.0" text="회원가입">
+                  <Label fx:id="btnsignup" layoutX="260.0" layoutY="28.0" onMouseClicked="#signup" text="회원가입">
                      <font>
                         <Font name="Yj GABI Bold" size="15.0" />
                      </font>
