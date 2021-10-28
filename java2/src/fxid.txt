@@ -1,0 +1,25 @@
+로그인페이지.fxml
+	fx:id 정하기 	
+		BoarderPane : mainboardpane
+		AnchorPane : loginpane
+		회원가입 		Label 		: btnsignup
+					On mouse clicked : signup
+		아이디입력창 : 	TextField		: txtid
+		비밀번호입력창 : 	PasswordField 	: txtpassword
+		로그인버튼	button 		:  btnlogin
+					On Action : login
+		경고메시지	Label 		:  lblconfirm
+		아이디찾기	Label 		: btnfindid
+					On mouse clicked : findid
+		비밀번호찾기	Label 		: btnfindpassword
+					On mouse clicked : findpassword
+	
+	LoginController 
+		fx:controller="패키지명.컨트롤명"
+회원가입페이지.fxml
+	fx:id 정하기 
+		AnchorPane : signuppane
+		Lable뒤로가기 : btnback
+			On mouse clicked : back
+
+	
