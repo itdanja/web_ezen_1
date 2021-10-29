@@ -1,25 +1,47 @@
-ë¡œê·¸ì¸í˜ì´ì§€.fxml
-	fx:id ì •í•˜ê¸° 	
-		BoarderPane : mainboardpane
-		AnchorPane : loginpane
-		íšŒì›ê°€ì… 		Label 		: btnsignup
-					On mouse clicked : signup
-		ì•„ì´ë””ì…ë ¥ì°½ : 	TextField		: txtid
-		ë¹„ë°€ë²ˆí˜¸ì…ë ¥ì°½ : 	PasswordField 	: txtpassword
-		ë¡œê·¸ì¸ë²„íŠ¼	button 		:  btnlogin
-					On Action : login
-		ê²½ê³ ë©”ì‹œì§€	Label 		:  lblconfirm
-		ì•„ì´ë””ì°¾ê¸°	Label 		: btnfindid
-					On mouse clicked : findid
-		ë¹„ë°€ë²ˆí˜¸ì°¾ê¸°	Label 		: btnfindpassword
-					On mouse clicked : findpassword
+LoginController 
+	fx:controller="ÆĞÅ°Áö¸í.ÄÁÆ®·Ñ¸í"
+
+·Î±×ÀÎÆäÀÌÁö.fxml
+	fx:id Á¤ÇÏ±â 	
+		BoarderPane 				: mainboardpane
+		AnchorPane 					: loginpane
+		È¸¿ø°¡ÀÔLabel 					: btnsignup
+						On mouse clicked : signup
+		¾ÆÀÌµğÀÔ·ÂÃ¢ : TextField		: txtid
+		ºñ¹Ğ¹øÈ£ÀÔ·ÂÃ¢ : PasswordField 	: txtpassword
+		·Î±×ÀÎ¹öÆ°	button 				:  btnlogin
+						On Action : login
+		°æ°í¸Ş½ÃÁö	Label 				:  lblconfirm
+		¾ÆÀÌµğÃ£±â	Label 				: btnfindid
+						On mouse clicked : findid
+		ºñ¹Ğ¹øÈ£Ã£±âLabel 				: btnfindpassword
+						On mouse clicked : findpassword
+
+È¸¿ø°¡ÀÔÆäÀÌÁö.fxml
+	AnchorPane : signuppane
+	LableµÚ·Î°¡±â : btnback		On mouse clicked : back
+	¾ÆÀÌµğÀÔ·ÂÃ¢ : txtid
+	ºñ¹Ğ¹øÈ£ÀÔ·ÂÃ¢ : txtpassword
+	ºñ¹Ğ¹øÈ£È®ÀÎÀÔ·ÂÃ¢ : txtpasswordconfirm
+	ÀÌ¸§ÀÔ·ÂÃ¢ : txtname
+	ÀÌ¸ŞÀÏÀÔ·ÂÃ¢ : txtemail
+	È¸¿ø°¡ÀÔ¹öÆ° : btnsignup 		On Action : signup
+	°æ°í¸Ş½ÃÁö : lblconfirm
+
+¾ÆÀÌµğÃ£±âÆäÀÌÁö.fxml
+	AnchorPane : findidpane
+	LableµÚ·Î°¡±â : btnback		On mouse clicked : back
+	ÀÌ¸§ÀÔ·ÂÃ¢ : txtname
+	ÀÌ¸ŞÀÏÀÔ·ÂÃ¢ : txtemail
+	¾ÆÀÌµğÃ£±â¹öÆ° : btnfindid		On Action : findid
+	°æ°í¸Ş½ÃÁö : lblconfirm
+
+
 	
-	LoginController 
-		fx:controller="íŒ¨í‚¤ì§€ëª….ì»¨íŠ¸ë¡¤ëª…"
-íšŒì›ê°€ì…í˜ì´ì§€.fxml
-	fx:id ì •í•˜ê¸° 
-		AnchorPane : signuppane
-		Lableë’¤ë¡œê°€ê¸° : btnback
-			On mouse clicked : back
+
+
+
+
+
 
 	

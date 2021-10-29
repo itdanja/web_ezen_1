@@ -65,12 +65,12 @@ public class LoginController implements Initializable {
 
     @FXML
     void findid(MouseEvent event) {
-
+    	loadpage("findid");
     }
 
     @FXML
     void findpassword(MouseEvent event) {
-
+    	loadpage("findpassword");
     }
 
     @FXML
@@ -78,7 +78,7 @@ public class LoginController implements Initializable {
     	
     	// 1. Dao객체 login메소드 호출 [ login 메소드의 아이디와 비밀번호 넣기 ] 
     	boolean result =  MemberDao.getMemberDao()
-    						.login(txtid.getText(), txtpassword.getText());
+    					.login(txtid.getText(), txtpassword.getText());
  
     	if( result ) {
     		lblconfirm.setText(" 로그인 성공 ");
@@ -86,7 +86,6 @@ public class LoginController implements Initializable {
     		lblconfirm.setText(" 로그인 실패 : 동일한 회원정보가 없습니다");
     	}
     	// 아니면 실패 
-    	
     }
 
 
