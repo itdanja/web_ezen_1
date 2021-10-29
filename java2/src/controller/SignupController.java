@@ -1,8 +1,12 @@
 package controller;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import domain.Member;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -12,7 +16,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
-public class SignupController {
+public class SignupController implements Initializable {
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		lblconfirm.setText("");
+	}
 
     @FXML
     private Label btnback;
@@ -76,7 +85,6 @@ public class SignupController {
     	// 3. 객체화 
     	Member member = new Member(txtid.getText(), txtpassword.getText(),
     								txtname.getText(), txtemail.getText() );
-    	
     	// 4. 파일 혹은 DB 처리
     	
     	lblconfirm.setText("가입해주셔서 감사합니다");
