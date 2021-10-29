@@ -3,6 +3,7 @@ package controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import dao.MemberDao;
 import domain.Member;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -86,16 +87,20 @@ public class SignupController implements Initializable {
     	Member member = new Member(txtid.getText(), txtpassword.getText(),
     								txtname.getText(), txtemail.getText() );
     	// 4. 파일 혹은 DB 처리
+    	boolean result =  MemberDao.getMemberDao().signup(member); // DB 메소드 호출
+    	if( result ) { // DB 성공시 
+	    	lblconfirm.setText("가입해주셔서 감사합니다");
+	    	// 5. 메시지창 띄우고 페이지 전환
+	    		Alert alert = new Alert( AlertType.INFORMATION ); // 1. 메시지 객체 생성 
+	    		alert.setContentText("  회원가입 성공  "); // 2. 메시지 내용 
+	    		alert.setHeaderText(" Nike community 가입을 축하합니다. * 포인트 1000 지급 *"); // 3. 메시지 제목 
+	    		alert.setTitle("알림");
+	    		alert.showAndWait(); // 4. 메시지를 띄우고 버튼 입력시까지 대기 
+	    		LoginController.getinstance().loadpage("login"); // 로그인fxml 파일로 이동 
+    	}else { // DB 실패시
+    		lblconfirm.setText("회원가입 실패 [ 관리자에게문의 : DB 오류 ]");
+    	}
     	
-    	lblconfirm.setText("가입해주셔서 감사합니다");
-    	// 5. 메시지창 띄우고 페이지 전환
-    		Alert alert = new Alert( AlertType.INFORMATION ); // 1. 메시지 객체 생성 
-    		alert.setContentText("  회원가입 성공  "); // 2. 메시지 내용 
-    		alert.setHeaderText(" Nike community 가입을 축하합니다. * 포인트 1000 지급 *"); // 3. 메시지 제목 
-    		alert.setTitle("알림");
-    		alert.showAndWait(); // 4. 메시지를 띄우고 버튼 입력시까지 대기 
-    		LoginController.getinstance().loadpage("login"); // 로그인fxml 파일로 이동 
-   
     }
 
     @FXML
