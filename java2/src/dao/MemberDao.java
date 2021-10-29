@@ -3,6 +3,7 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import domain.Member;
 
@@ -12,7 +13,10 @@ public class MemberDao {
 		// 1. Connection : DB연결 인터페이스 [ DriverManager 클래스 ] 
 		
 	// 1. 필드 
-		private Connection connection ; // 연결 인터페이스 선언 
+		private Connection connection ; // DB 연결 인터페이스 선언 
+		private PreparedStatement preparedStatement; // sql 연결 인터페이스 선언 
+		private ResultSet resultSet; // 쿼리(검색결과) 연결 인터페이스 선언
+		
 		// 현재클래스내 객체 만들기 
 		private static MemberDao memberDao = new MemberDao();
 	// 2. 생성자 
@@ -36,10 +40,10 @@ public class MemberDao {
 	public boolean signup( Member member ) {
 		// 1. SQL 작성 [ SQL : DB 조작어 DML ]
 		String sql = "insert into member(m_id, m_password,m_name,m_email,m_point)"
-						+ " values( ? , ? , ? , ? , ?)";
+					+ " values( ? , ? , ? , ? , ?)";
 		try {
 			// 2. SQL ---> DB 연결 [ PreparedStatement 인터페이스 : 연결된 DB에 SQL 조작 ]
-				PreparedStatement preparedStatement = connection.prepareStatement(sql);
+				preparedStatement = connection.prepareStatement(sql);
 			// 3. SQL 설정 [ ? 에 데이터 넣기 ] : 
 				preparedStatement.setString( 1 , member.getM_id() );		// 첫번째 ? 에 데이터 넣기 
 				preparedStatement.setString( 2 , member.getM_password() );	// 두번째 ? 에 데이터 넣기 
@@ -55,6 +59,28 @@ public class MemberDao {
 		return false;
 	}
 		// 2. 로그인 메소드 
+	public boolean login( String id , String password ) {
+		
+		// 1. SQL 작성
+		String sql = "select * from member where m_id=? and m_password=?";
+		// 2. SQL -> DB 연결 [ 무조건 예외발생 ] 
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+		// 3. SQL 설정  [ 현재 메소드로 들어온 인수를 ? 대입 ]
+			preparedStatement.setString( 1 , id );
+			preparedStatement.setString( 2 , password );
+		// 4. SQL 실행 [ Querey : 쿼리 ( 검색 결과 )
+			resultSet = preparedStatement.executeQuery();
+		// 5. SQL 결과 [ 검색결과 연결 ] 
+			if( resultSet.next() ) { // 쿼리결과에 다음내용이 있으면 true 	
+				return true; // 로그인 성공 
+			}
+			else {
+				return false; // 로그인 실패 
+			}
+		}catch (Exception e) {}
+		return false ; // DB 오류 
+	}
 		
 		// 3. 아이디찾기 메소드 
 		
