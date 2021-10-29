@@ -35,6 +35,14 @@ LoginController
 	이메일입력창 : txtemail
 	아이디찾기버튼 : btnfindid		On Action : findid
 	경고메시지 : lblconfirm
+	
+아이디찾기페이지.fxml
+	AnchorPane : findpasswordpane
+	Lable뒤로가기 : btnback		On mouse clicked : back
+	아이디입력창 : txtid
+	이메일입력창 : txtemail
+	아이디찾기버튼 : btnfindpassword		On Action : findpassword
+	경고메시지 : lblconfirm
 
 
 	

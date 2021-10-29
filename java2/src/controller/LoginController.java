@@ -76,6 +76,7 @@ public class LoginController implements Initializable {
     @FXML
     void login(ActionEvent event) {
     	
+    	
     	// 1. Dao객체 login메소드 호출 [ login 메소드의 아이디와 비밀번호 넣기 ] 
     	boolean result =  MemberDao.getMemberDao()
     					.login(txtid.getText(), txtpassword.getText());

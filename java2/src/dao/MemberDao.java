@@ -81,11 +81,51 @@ public class MemberDao {
 		}catch (Exception e) {}
 		return false ; // DB 오류 
 	}
-		
 		// 3. 아이디찾기 메소드 
+	public String findid( String name, String email ) {
+		// 1. SQL 작성 
+		String sql = "select m_id from member where m_name=? and m_email = ?";
+		// 2. SQL -> DB 연결 
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			// 3. SQL 설정 
+			preparedStatement.setString(1, name);
+			preparedStatement.setString(2, email);
+			// 4. SQL 실행 
+		 	resultSet = preparedStatement.executeQuery();
+			// 5. SQL 결과 
+			if( resultSet.next() ) { // 검색결과가 있으면
+				return resultSet.getString(1); // 쿼리(검색결과)내 첫번째 필드를 반환 
+			}else {
+				return null; // 검색결과가 없으면 null 반환 
+			}
+		}
+		catch (Exception e) {}
+		return null; // db 오류 
+	}
 		
 		// 4. 패스워드찾기 메소드 
-		
+	public String findpassword( String id, String email ) {
+		// 1. SQL 작성 
+		String sql = "select m_password from member where m_id=? and m_email = ?";
+		// 2. SQL -> DB 연결 
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			// 3. SQL 설정 
+			preparedStatement.setString(1, id);
+			preparedStatement.setString(2, email);
+			// 4. SQL 실행 
+		 	resultSet = preparedStatement.executeQuery();
+			// 5. SQL 결과 
+			if( resultSet.next() ) { // 검색결과가 있으면
+				return resultSet.getString(1); // 쿼리(검색결과)내 첫번째 필드를 반환 
+			}else {
+				return null; // 검색결과가 없으면 null 반환 
+			}
+		}
+		catch (Exception e) {}
+		return null; // db 오류 
+	}		
 		// 5. 회원수정 메소드 
 		
 		// 6. 회원탈퇴 메소드 
