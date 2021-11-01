@@ -24,9 +24,9 @@
 |15일차[10/20]|JAVA1| 컬렉션 프레임워크 · Team Console Project 설계 |
 |16일차[10/21]|JAVA1| (JAVA1 정리) Member Board Programming · Team Console Project 설계 |
 |17일차[10/22]|JAVA1| 평가[프로그래밍언어활용] · (JAVA1 정리) Member Board Programming · SMTP API  · Team Console Project  |
-|18일차[10/25]|JAVA1| JAVA1정리_1 · Team Console Project |
-|19일차[10/26]|JAVA1| JAVA1정리_2 · Team Console Project |
-|20일차[10/27]|JAVA1| JAVA1정리_3 · Team Console Project · Team Console Project 발표 |
+|18일차[10/25]|JAVA1| JAVA1정리 · Team Console Project |
+|19일차[10/26]|JAVA1| JAVA1정리 · Team Console Project |
+|20일차[10/27]|JAVA1| JAVA1정리 · Team Console Project · Team Console Project 발표 |
 
     * JAVA theorem
     ** 1. : JVM , Momory
@@ -48,13 +48,13 @@
 ### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
 |일차|목차|주요내용|
 |------|---|---|
-|21일차[10/28]|JAVA2| JAVA1정리_4 · JAVAFX/Scene Builder |
-|22일차[10/29]|JAVA2| JAVA1정리_5 · Datebase · JAVAFX/Scene Builder( 회원가입 · 로그인 ) |
-|23일차[11/01]|JAVA2| JAVA1정리_6 · Datebase · JAVAFX/Scene Builder( 아이디찾기 · 비밀번호찾기 · 메인페이지 · 로그아웃 ) · SMTP API |
-|24일차[11/02]|JAVA2| JAVA1정리_7 · Datebase · JAVAFX/Scene Builder( 회원관리 CRUD ) · 평가[응용 SW기초기술 활용] |
-|25일차[11/03]|JAVA2| JAVA1정리_8 · Datebase · JAVAFX/Scene Builder( 게시판 CRUD ) |
-|26일차[11/04]|JAVA2| JAVA1정리_9 · Datebase · JAVAFX/Scene Builder( 제품 CRUD ) |
-|27일차[11/05]|JAVA2| JAVA1정리_10 ·Datebase · JAVAFX/Scene Builder( 제품 통계 )|
+|21일차[10/28]|JAVA2| JAVA1정리 · JAVAFX/Scene Builder( 회원가입 · 로그인 ) |
+|22일차[10/29]|JAVA2| Datebase · JAVAFX/Scene Builder( 회원가입 · 로그인 · 아이디찾기 · 비밀번호찾기 ) · SMTP API |
+|23일차[11/01]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 메인페이지 · 로그아웃 · 회원정보 )  |
+|24일차[11/02]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 회원관리 CRUD ) · 평가[응용 SW기초기술 활용] |
+|25일차[11/03]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 게시판 CRUD ) |
+|26일차[11/04]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 제품 CRUD ) |
+|27일차[11/05]|JAVA2| JAVA1정리 ·Datebase · JAVAFX/Scene Builder( 제품 통계 )|
 |28일차[11/08]|JAVA2| Datebase · JAVAFX/Scene Builder( Chatting ) |
 |29일차[11/09]|JAVA2| Datebase · JAVAFX/Scene Builder|
 |30일차[11/10]|JAVA2| Datebase · JAVAFX/Scene Builder|
