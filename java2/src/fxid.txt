@@ -45,6 +45,22 @@ LoginController
 	경고메시지 : lblconfirm
 
 
+메인페이지.fxml
+	BoarderPane : mianpageborderpane
+	AnchorPane : lp
+	AnchorPane : cp
+	로그인된아이디 : lblloginid
+	홈버튼 : btnhome			home
+	제품버튼 : btnproduct		product
+	게시판버튼 : btncommunity	community
+	채팅버튼 : btnchatting		chatting
+	회원정보버튼 : btnmyinfo	myinfo
+	로그아웃버튼 : btnlogout	logout
+	
+	
+	
+
+
 	
 
 

@@ -82,15 +82,16 @@ public class Member {
 	public static void sendmail(String tomail , String msg , int type ) {
 								// 받는사람 // 메일 내용 // 메일 타입
 		// 보내는 사람 정보
-		String fromemail = "kgs2072@naver.com";
+		String fromemail = "아이디";
 		String frompassword = "패스워드";
 		
 		// 네이버,구글,카카오 호스트 설정 
 		Properties properties = new Properties();
+		properties.put("mail.smtp.starttls.enable","true" );
 		properties.put("mail.smtp.host", "smtp.naver.com"); // host : 호스트 주소 
 		properties.put("mail.smtp.port", 587 );		// post : 호스트의 접속하는 번호 
-		properties.put("mail.smtp.auth", true );	// auth : 인증 
-		
+		properties.put("mail.smtp.auth", "true" );	// auth : 인증 
+
 		// 인증 
 		Session session = Session.getDefaultInstance(properties , new Authenticator() {
 			// 익명 구현 객체 
@@ -106,16 +107,13 @@ public class Member {
 			message.setFrom( new InternetAddress(fromemail) );
 			message.addRecipient( Message.RecipientType.TO, new InternetAddress(tomail));
 			
-			if( type == 2 ) { // 비밀번호 찾기 타입 
+			
 				message.setSubject("Nike community 회원님의 패스워드 결과 ");
 				message.setText(" 회원님의 비밀번호 : "+ msg );
-			}
+			
 			Transport.send(message);
 		}
-		catch (Exception e) {}
-		
-		
-		
+		catch (Exception e) { }
 		
 	}
 	

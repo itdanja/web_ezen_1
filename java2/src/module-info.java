@@ -9,7 +9,9 @@ module java2 {
 	opens Day02 to javafx.graphics, javafx.fxml;
 	
 	opens app to javafx.graphics, javafx.fxml;
-	opens controller to javafx.graphics, javafx.fxml;
+	opens controller to javafx.graphics, javafx.fxml , mail , activation;
 	opens dao to java.sql;
 	opens domain to mail , activation;
+	
+	
 }

@@ -12,7 +12,7 @@ public class MemberDao {
 	// JDBC 주요 인터페이스 , 클래스 
 		// 1. Connection : DB연결 인터페이스 [ DriverManager 클래스 ] 
 		
-	// 1. 필드 
+	// 1. 필드 \
 		private Connection connection ; // DB 연결 인터페이스 선언 
 		private PreparedStatement preparedStatement; // sql 연결 인터페이스 선언 
 		private ResultSet resultSet; // 쿼리(검색결과) 연결 인터페이스 선언

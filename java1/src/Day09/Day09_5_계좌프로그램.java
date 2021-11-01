@@ -1,6 +1,6 @@
 package Day09;
 
-public class Day09_5 {
+public class Day09_5_계좌프로그램 {
 	
 	// 계좌 프로그램 [ 상속 , 인터페이스 ]
 		// ATM [인터페이스] 
