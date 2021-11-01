@@ -28,36 +28,22 @@
 |19일차[10/26]|JAVA1| JAVA1정리_2 · Team Console Project |
 |20일차[10/27]|JAVA1| JAVA1정리_3 · Team Console Project · Team Console Project 발표 |
 
-    * 람다식
-    * 스트림과 병렬 처리
-    * 입출력 및 네트워킹
-    
     * JAVA theorem
     ** 1. : JVM , Momory
-    ** 2. 
-    *** 1. : 입출력 , 형식문자 , 제어문자
-    *** 2. : 변수 , 기본자료형[ 타입변환 ]
-    *** 3. : 배열
-    *** 4. : 연산자 , 제어문[ if , switch ] , 반복문 [ for  , while ] , for활용
-    ** 3.
-    *** 1. : 클래스 [ 필드 , 생성자 , 메소드 ]
-    *** 2. : 상속
-    ** 4.
-    *** 1. : 인터페이스 
-    ** 5.
-    *** 1. : 예외처리
-    *** 2. : 멀티스레드
-    ** 6.
-    *** 1. : 제네릭
-    *** 2. : 컬렉션 프레임워크
-    ** 7.
-    *** 1. : 람다식
-    ** 8.
-    *** 1. : 스트림과 병렬처리
-    ** 9.
-    *** 1. : 입출력 및 네트워킹
-    ** 10.
-    *** 1. : 입출력 및 네트워킹
+    ** 2. : 입출력 , 형식문자 , 제어문자
+    ** 3. : 변수 , 기본자료형[ 타입변환 ]
+    ** 4. : 배열
+    ** 5. : 연산자 , 제어문[ if , switch ] , 반복문 [ for  , while ] , for활용
+    ** 6. : 클래스 [ 필드 , 생성자 , 메소드 ]
+    ** 7. : 상속
+    ** 8. : 인터페이스 
+    ** 9. : 예외처리
+    ** 10. : 멀티스레드
+    ** 11. : 제네릭
+    ** 12. : 컬렉션 프레임워크
+    ** 13. : 람다식
+    ** 14. : 스트림과 병렬처리
+    ** 15. : 입출력 및 네트워킹
 
 ### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
 |일차|목차|주요내용|
@@ -82,6 +68,21 @@
 |38일차[11/22]|JAVA2 · Front | JS · Datebase · Team javafx Project |
 |39일차[11/21]|JAVA2 · Front | layout · Datebase · Team javafx Project |
 |40일차[11/22]|JAVA2 · Front | layout · Datebase · Team javafx Project 발표 |
+
+ * JAVA FX
+ ** 1일차 : 
+   -작성한 파일 : appstart , login.fxml , signup.fxml , logincontroller , signupcontroller
+   -작업한 내용 : 1.java 실행 2.login·signup 디자인 3.login·signup pageload
+   
+ ** 2일차 :
+   -작성한 파일 : logincontroller , signupcontroller , findid.fxml , findpassword.fxml , findidcontroller , findpasswordcontroller , MemberDao
+   -작업한 내용 : 1.DB설치 2.DAO 3.아이디찾기 4.비밀번호찾기 5.smtp api
+   -작업한 DB : 1.signup 2.login 3.findid 4.findpassword
+   
+ ** 3일차 : mainpage.fxml , myinfo.fxml , home.fxml , mainpagecontroller , myinfocontroller
+   -작업한 내용 : 1.mainpage · myinfo 디자인 2.mainpage pageload 3.logout · loginid 4.회원탈퇴
+   -작업한 DB : 1.getmember 2.delete
+
 
 ### 3개월차 진도 [ Bootstrap · Servlet · JSP · Datavbase · Front ] 
 |일차|목차|주요내용|
