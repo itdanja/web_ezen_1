@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:controller="controller.MainpageController" fx:id="mianpageborderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="mainpageborderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainpageController">
    <left>
       <AnchorPane fx:id="lp" prefHeight="600.0" prefWidth="246.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
@@ -111,14 +111,6 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane fx:id="cp" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="307.0" fitWidth="734.0" layoutX="6.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@mainpage_img.JPG" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
+      <AnchorPane fx:id="cp" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

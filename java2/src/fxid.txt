@@ -46,7 +46,7 @@ LoginController
 
 
 메인페이지.fxml
-	BoarderPane : mianpageborderpane
+	BoarderPane : mainpageborderpane
 	AnchorPane : lp
 	AnchorPane : cp
 	로그인된아이디 : lblloginid
