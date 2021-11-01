@@ -69,7 +69,7 @@
 |39일차[11/21]|JAVA2 · Front | layout · Datebase · Team javafx Project |
 |40일차[11/22]|JAVA2 · Front | layout · Datebase · Team javafx Project 발표 |
 
-   * JAVA FX
+   #### JAVA FX
    ** 1일차 : 
    *** -작성한 파일 : appstart , login.fxml , signup.fxml , logincontroller , signupcontroller
    ***  -작업한 내용 : 1.java 실행 2.login·signup 디자인 3.login·signup pageload
