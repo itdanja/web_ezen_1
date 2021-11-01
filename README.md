@@ -69,7 +69,7 @@
 |39일차[11/21]|JAVA2 · Front | layout · Datebase · Team javafx Project |
 |40일차[11/22]|JAVA2 · Front | layout · Datebase · Team javafx Project 발표 |
 
-'''
+```
    * JAVA FX
    ** 1일차
    *** -작성한 파일 : appstart , login.fxml , signup.fxml , logincontroller , signupcontroller
@@ -84,7 +84,7 @@
    *** -작성한 파일 : mainpage.fxml , myinfo.fxml , home.fxml , mainpagecontroller , myinfocontroller
    *** -작업한 내용 : 1.mainpage · myinfo 디자인 2.mainpage pageload 3.logout · loginid 4.회원탈퇴
    *** -작업한 DB : 1.getmember 2.delete
-'''
+```
 
 ### 3개월차 진도 [ Bootstrap · Servlet · JSP · Datavbase · Front ] 
 |일차|목차|주요내용|
