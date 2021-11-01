@@ -10,40 +10,39 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyinfoController">
    <children>
-      <Label layoutX="56.0" layoutY="226.0" prefHeight="34.0" prefWidth="60.0" text="ID">
+      <Label layoutX="56.0" layoutY="204.0" prefHeight="34.0" prefWidth="60.0" text="ID">
          <font>
             <Font name="Impact" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="144.0" layoutY="224.0" prefHeight="34.0" prefWidth="136.0" text="Id">
+      <Label fx:id="lblid" layoutX="144.0" layoutY="202.0" prefHeight="34.0" prefWidth="136.0" text="Id">
          <font>
             <Font name="Impact" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="56.0" layoutY="274.0" prefHeight="34.0" prefWidth="60.0" text="NAME">
+      <Label layoutX="56.0" layoutY="252.0" prefHeight="34.0" prefWidth="60.0" text="NAME">
          <font>
             <Font name="Impact" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="144.0" layoutY="272.0" prefHeight="34.0" prefWidth="136.0" text="Name">
+      <Label fx:id="lblname" layoutX="144.0" layoutY="250.0" prefHeight="34.0" prefWidth="136.0" text="Name">
          <font>
             <Font name="Impact" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="56.0" layoutY="318.0" prefHeight="34.0" prefWidth="60.0" text="EMAIL">
+      <Label layoutX="56.0" layoutY="296.0" prefHeight="34.0" prefWidth="60.0" text="EMAIL">
          <font>
             <Font name="Impact" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="144.0" layoutY="316.0" prefHeight="34.0" prefWidth="136.0" text="email">
+      <Label fx:id="lblemail" layoutX="144.0" layoutY="294.0" prefHeight="34.0" prefWidth="136.0" text="email">
          <font>
             <Font name="Impact" size="13.0" />
          </font>
       </Label>
-      <Button layoutX="56.0" layoutY="407.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="243.0" style="-fx-background-color: #ffffff;" text="UPDATE">
+      <Button fx:id="btnupdate" layoutX="56.0" layoutY="407.0" mnemonicParsing="false" onAction="#update" prefHeight="52.0" prefWidth="243.0" style="-fx-background-color: #ffffff;" text="UPDATE">
          <font>
             <Font name="Impact" size="13.0" />
          </font>
@@ -55,7 +54,7 @@
             </InnerShadow>
          </effect>
       </Button>
-      <Button layoutX="56.0" layoutY="481.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="243.0" style="-fx-background-color: #ffffff;" text="DELETE">
+      <Button fx:id="btndelete" layoutX="56.0" layoutY="481.0" mnemonicParsing="false" onAction="#delete" prefHeight="52.0" prefWidth="243.0" style="-fx-background-color: #ffffff;" text="DELETE">
          <font>
             <Font name="Impact" size="13.0" />
          </font>
@@ -103,6 +102,16 @@
       <Label layoutX="55.0" layoutY="83.0" prefHeight="34.0" prefWidth="157.0" text="infomation" textFill="#e81789">
          <font>
             <Font name="Impact" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="337.0" prefHeight="34.0" prefWidth="60.0" text="Point" textFill="RED">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblpoint" layoutX="143.0" layoutY="335.0" prefHeight="34.0" prefWidth="136.0" text="point" textFill="RED">
+         <font>
+            <Font name="Impact" size="13.0" />
          </font>
       </Label>
    </children>

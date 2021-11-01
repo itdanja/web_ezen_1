@@ -58,6 +58,36 @@ LoginController
 	로그아웃버튼 : btnlogout	logout
 	
 	
+회원정보.fxml
+	아이디 : lblid
+	이름 : lblname
+	이메일 : lblemail
+	수정 버튼 : btnupdate		update
+	탈퇴 버튼 : btndelete		delete
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
 

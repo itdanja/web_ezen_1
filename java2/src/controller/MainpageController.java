@@ -71,6 +71,10 @@ public class MainpageController implements Initializable {
     	return instance;
     }
     
+    public String getloginid() {
+    	return lblloginid.getText();
+    }
+    
     // 가운데 pane 변경하는 메소드 
     public void loadpage( String page ) {
     	try {
