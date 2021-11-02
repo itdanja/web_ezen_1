@@ -85,6 +85,14 @@ LoginController
 	등록버튼 : btnwrite			write
 	취소버튼 : btncancel			cancel
 	
+게시물상세페이지.fxml 
+	제목입력창 : txttitle
+	내용입력창 : txtcontents
+		댓글등록버튼 : btnreplywrite			replywrite
+	취소버튼 : btncancel			cancel
+		삭제버튼 : btndelete		delete
+		수정버튼 : btnupdate		update
+		테이블뷰 : replylist
 	
 	
 	

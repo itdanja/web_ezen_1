@@ -42,21 +42,18 @@ public class BoardlistController implements Initializable {
 		
 		// 3. 테이블뷰에 리스트 설정
 		boardlist.setItems(boards);
-		
 		// 4. 클릭한 아이템을 가지고 페이지 전환
 		//boardlist.setOnMouseClicked( e -> { 정의 return } );
 				//  인수 -> 정의 : 익명메소드 [ 1회성 메소드 ]
 		boardlist.setOnMouseClicked( e -> { 
-			
 			if( e.getButton().equals( MouseButton.PRIMARY ) ) { // 해당 이벤트가 클릭이면 
-				Board board = boardlist.getSelectionModel().getSelectedItem();
+				board = boardlist.getSelectionModel().getSelectedItem();
 								// 테이블뷰에 선택된 모델의 아이템[ 객체 ]
-				System.out.println( board.toString() );
-				// 페이지 전환
 				MainpageController.getinstance().loadpage("boardview");
 			}
 		} ) ;		
 	}
+	public static Board board;
 	
     @FXML
     private TableView<Board> boardlist;

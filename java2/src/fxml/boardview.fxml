@@ -2,26 +2,34 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:controller="controller.BoardwriteController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BoardviewController">
    <children>
-      <TextField fx:id="txttitle" layoutX="76.0" layoutY="141.0" prefHeight="40.0" prefWidth="608.0" promptText="제목 입력해주세요" />
-      <TextArea fx:id="txtcontents" layoutX="76.0" layoutY="203.0" prefHeight="247.0" prefWidth="608.0" promptText="내용 입력해주세요" />
-      <Button fx:id="btnwrite" layoutX="76.0" layoutY="466.0" mnemonicParsing="false" onAction="#write" prefHeight="49.0" prefWidth="608.0" style="-fx-background-color: #ffffff;" text="REGISTER">
+      <TextField fx:id="txttitle" disable="true" layoutX="76.0" layoutY="141.0" prefHeight="40.0" prefWidth="608.0" />
+      <TextArea fx:id="txtcontents" disable="true" layoutX="76.0" layoutY="203.0" prefHeight="163.0" prefWidth="608.0" />
+      <Button fx:id="btnupdate" layoutX="611.0" layoutY="111.0" mnemonicParsing="false" onAction="#update" prefHeight="22.0" prefWidth="73.0" style="-fx-background-color: #ffffff;" text="UPDATE">
          <effect>
-            <InnerShadow />
+            <InnerShadow>
+               <color>
+                  <Color red="1.0" />
+               </color></InnerShadow>
          </effect>
       </Button>
-      <Button fx:id="btncancel" layoutX="76.0" layoutY="524.0" mnemonicParsing="false" onAction="#cancel" prefHeight="49.0" prefWidth="608.0" style="-fx-background-color: #ffffff;" text="CANCEL">
+      <Button fx:id="btncancel" layoutX="76.0" layoutY="544.0" mnemonicParsing="false" onAction="#cancel" prefHeight="49.0" prefWidth="608.0" style="-fx-background-color: #ffffff;" text="CANCEL">
          <effect>
-            <InnerShadow />
+            <InnerShadow>
+               <color>
+                  <Color red="1.0" />
+               </color></InnerShadow>
          </effect>
       </Button>
       <Line endX="100.0" layoutX="171.0" layoutY="104.0" startX="-100.0" />
@@ -30,10 +38,37 @@
             <Font name="Impact" size="33.0" />
          </font>
       </Label>
-      <Label layoutX="238.0" layoutY="45.0" prefHeight="34.0" prefWidth="157.0" text="write">
+      <Label layoutX="238.0" layoutY="45.0" prefHeight="34.0" prefWidth="157.0" text="view">
          <font>
             <Font name="Impact" size="33.0" />
          </font>
       </Label>
+      <Button fx:id="btndelete" layoutX="534.0" layoutY="111.0" mnemonicParsing="false" onAction="#delete" prefHeight="16.0" prefWidth="73.0" style="-fx-background-color: #ffffff;" text="DELETE">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <TableView fx:id="replylist" layoutX="76.0" layoutY="409.0" prefHeight="126.0" prefWidth="608.0">
+        <columns>
+          <TableColumn prefWidth="56.0" text="No." />
+          <TableColumn prefWidth="97.0" text="write" />
+            <TableColumn prefWidth="329.0" text="Contents" />
+            <TableColumn prefWidth="122.0" text="date" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnreplywrite" layoutX="599.0" layoutY="376.0" mnemonicParsing="false" onAction="#replywrite" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="Reply write">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <Label layoutX="77.0" layoutY="391.0" prefHeight="14.0" prefWidth="49.0" text="* Reply" />
    </children>
 </AnchorPane>
