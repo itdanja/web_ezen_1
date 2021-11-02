@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import domain.Board;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 
 public class BoardDao {
@@ -49,9 +51,9 @@ public class BoardDao {
 		return false;
 	}
 		// 2. 게시물 전체조회 메소드 
-		public ArrayList<Board> boardlist(){
+		public ObservableList<Board> boardlist(){
 			// 0. 리스트 선언 
-			ArrayList< Board > arrayList = new ArrayList<>();
+			ObservableList<Board> boards = FXCollections.observableArrayList();
 			// 1. 조건 없이 모두 가져오기 
 			String sql = "select * from board";
 			try {
@@ -68,11 +70,11 @@ public class BoardDao {
 							resultSet.getString(5), 
 							resultSet.getInt(6) );
 					// 객체를 리스트에 담기 
-					arrayList.add(board);
+					boards.add(board);
 				}
-				return arrayList;
+				return boards;
 			}
-			catch (Exception e) {} return arrayList;
+			catch (Exception e) {} return boards;
 			
 			
 			

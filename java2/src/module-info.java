@@ -11,7 +11,7 @@ module java2 {
 	opens app to javafx.graphics, javafx.fxml;
 	opens controller to javafx.graphics, javafx.fxml , mail , activation;
 	opens dao to java.sql;
-	opens domain to mail , activation;
+	opens domain to mail , activation , javafx.base;
 	
 	
 }
