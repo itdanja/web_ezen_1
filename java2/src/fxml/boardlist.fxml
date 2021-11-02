@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="controller.BoardlistController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BoardlistController">
    <children>
       <Button fx:id="btnwrite" layoutX="599.0" layoutY="117.0" mnemonicParsing="false" onAction="#write" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="REGISTER">
          <effect>
@@ -27,13 +27,13 @@
             <Font name="Impact" size="33.0" />
          </font>
       </Label>
-      <TableView fx:id="boardlist" layoutX="71.0" layoutY="154.0" prefHeight="388.0" prefWidth="649.0" style="-fx-background-color: #ffffff;">
+      <TableView fx:id="boardlist" layoutX="71.0" layoutY="154.0" prefHeight="388.0" prefWidth="649.0">
         <columns>
-          <TableColumn prefWidth="59.0" style="-fx-background-color: #f2f2f2;" text="No." />
-          <TableColumn prefWidth="307.0" style="-fx-background-color: #f2f2f2;" text="Ttile" />
-            <TableColumn prefWidth="122.0" style="-fx-background-color: #f2f2f2;" text="Writer" />
-            <TableColumn prefWidth="110.0" style="-fx-background-color: #f2f2f2;" text="Date" />
-            <TableColumn prefWidth="50.0" style="-fx-background-color: #f2f2f2;" text="View" />
+          <TableColumn prefWidth="59.0" text="No." />
+          <TableColumn prefWidth="307.0" text="Ttile" />
+            <TableColumn prefWidth="122.0" text="Writer" />
+            <TableColumn prefWidth="110.0" text="Date" />
+            <TableColumn prefWidth="48.0" text="View" />
         </columns>
       </TableView>
    </children>
