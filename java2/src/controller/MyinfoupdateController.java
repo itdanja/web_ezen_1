@@ -8,9 +8,11 @@ import domain.Member;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 
 public class MyinfoupdateController implements Initializable {
 	
@@ -32,7 +34,15 @@ public class MyinfoupdateController implements Initializable {
 
     @FXML
     void update(ActionEvent event) {
-
+    		
+    	boolean result = MemberDao.getMemberDao().update(lblid.getText(),  txtname.getText(), txtemail.getText() );
+    	if( result ) { 
+    		Alert alert = new Alert(AlertType.INFORMATION); alert.setHeaderText("회원정보 수정 완료"); alert.showAndWait(); 
+    		MainpageController.getinstance().loadpage("myinfo");
+    	}
+    	else { 
+    		Alert alert = new Alert(AlertType.INFORMATION); alert.setHeaderText("회원정보 수정 오류[관리자에게문의]"); alert.showAndWait();  
+    	}
     }
 
     @FXML

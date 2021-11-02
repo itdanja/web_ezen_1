@@ -127,7 +127,20 @@ public class MemberDao {
 		return null; // db 오류 
 	}		
 		// 5. 회원수정 메소드 
-		
+	public boolean update( String id , String name , String email ) { 
+		String sql = "update member set m_name=? , m_email=? where m_id = ? ";
+					// update 테이블명 set 변경필드=값 , 변경필드2=값2 where 조건 
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, name );
+			preparedStatement.setString(2, email );
+			preparedStatement.setString(3, id );
+			preparedStatement.executeUpdate();
+			return true;
+		}
+		catch (Exception e) {} return false;
+	}
+	
 		// 6. 회원탈퇴 메소드 
 	public boolean delete( String loginid ) {
 		
