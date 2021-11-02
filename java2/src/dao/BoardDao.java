@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import domain.Board;
 
@@ -47,7 +48,35 @@ public class BoardDao {
 		}catch (Exception e) {}
 		return false;
 	}
-		// 2. 게시물 조회 메소드 
+		// 2. 게시물 전체조회 메소드 
+		public ArrayList<Board> boardlist(){
+			// 0. 리스트 선언 
+			ArrayList< Board > arrayList = new ArrayList<>();
+			// 1. 조건 없이 모두 가져오기 
+			String sql = "select * from board";
+			try {
+				preparedStatement = connection.prepareStatement(sql);
+				resultSet =  preparedStatement.executeQuery();
+				// 2. 검색된[쿼리] 레코드의 하나씩 객체화 
+				while( resultSet.next() ) {
+						// 쿼리결과내 레코드가 없을때 까지 반복하면서 객체화
+					Board board = new Board(
+							resultSet.getInt(1), 
+							resultSet.getString(2),
+							resultSet.getString(3), 
+							resultSet.getString(4), 
+							resultSet.getString(5), 
+							resultSet.getInt(6) );
+					// 객체를 리스트에 담기 
+					arrayList.add(board);
+				}
+				return arrayList;
+			}
+			catch (Exception e) {} return arrayList;
+			
+			
+			
+		}
 	
 		// 3. 게시물 삭제 메소드 
 	
