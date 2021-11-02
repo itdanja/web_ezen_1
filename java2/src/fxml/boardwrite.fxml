@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:controller="controller.BoardwriteController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txttitle" layoutX="76.0" layoutY="141.0" prefHeight="40.0" prefWidth="608.0" promptText="제목 입력해주세요" />
+      <TextArea fx:id="txtcontents" layoutX="76.0" layoutY="203.0" prefHeight="247.0" prefWidth="608.0" promptText="내용 입력해주세요" />
+      <Button fx:id="btnwrite" layoutX="76.0" layoutY="466.0" mnemonicParsing="false" onAction="#write" prefHeight="49.0" prefWidth="608.0" style="-fx-background-color: #ffffff;" text="REGISTER">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btncancel" layoutX="76.0" layoutY="524.0" mnemonicParsing="false" onAction="#cancel" prefHeight="49.0" prefWidth="608.0" style="-fx-background-color: #ffffff;" text="CANCEL">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Line endX="100.0" layoutX="171.0" layoutY="104.0" startX="-100.0" />
+      <Label layoutX="70.0" layoutY="45.0" prefHeight="34.0" prefWidth="157.0" text="Community" textFill="#e81789">
+         <font>
+            <Font name="Impact" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="238.0" layoutY="45.0" prefHeight="34.0" prefWidth="157.0" text="write">
+         <font>
+            <Font name="Impact" size="33.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

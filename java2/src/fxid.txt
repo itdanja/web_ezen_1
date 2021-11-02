@@ -75,6 +75,15 @@ LoginController
 		취소 버튼 : btncancel		cancel
 	
 	
+게시판목록.fxml
+	테이블뷰 : boardlist
+	등록버튼 : btnwrite		write
+
+게시물쓰기.fxml 
+	제목입력창 : txttitle
+	내용입력창 : txtcontents
+	등록버튼 : btnwrite			write
+	취소버튼 : btncancel			cancel
 	
 	
 	

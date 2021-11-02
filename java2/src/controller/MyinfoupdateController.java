@@ -36,6 +36,7 @@ public class MyinfoupdateController implements Initializable {
     void update(ActionEvent event) {
     		
     	boolean result = MemberDao.getMemberDao().update(lblid.getText(),  txtname.getText(), txtemail.getText() );
+    	
     	if( result ) { 
     		Alert alert = new Alert(AlertType.INFORMATION); alert.setHeaderText("회원정보 수정 완료"); alert.showAndWait(); 
     		MainpageController.getinstance().loadpage("myinfo");
