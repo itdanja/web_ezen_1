@@ -175,6 +175,35 @@ public class MemberDao {
 			catch (Exception e) {}
 		return null;// db 오류
 	}
+		// 8.아이디 체크 메소드 
+	public boolean idcheck( String id) {
+		String sql = "select m_id from member where m_id=?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, id);
+			resultSet = preparedStatement.executeQuery();
+			if( resultSet.next() ) { return true; } // 현재 아이디가 존재하면
+			else { return false; } // 현재 아이디가 존재하지 않으면
+		}
+		catch (Exception e) {}
+		return true; // DB 오류 
+	}
+		// 9.포인트 증감 메소드 
+	public boolean pointupdate( String id , int point ) {
+		
+		String sql = "update member set m_point = m_point + ? where m_id = ? ";
+					// update 테이블명 set 변경할필드명 = 변경할값 where 조건
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1 , point);
+			preparedStatement.setString(2, id );
+			preparedStatement.executeUpdate();
+			return true;
+		}
+		catch (Exception e) {}
+		return false;
+	}
+	
 		
 		
 	

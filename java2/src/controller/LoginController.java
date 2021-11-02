@@ -88,10 +88,10 @@ public class LoginController implements Initializable {
     	// 1. Dao객체 login메소드 호출 [ login 메소드의 아이디와 비밀번호 넣기 ] 
     	boolean result =  MemberDao.getMemberDao()
     					.login(txtid.getText(), txtpassword.getText());
- 
     	if( result ) {
     		lblconfirm.setText(" 로그인 성공 ");
-    		
+    		MemberDao.getMemberDao().pointupdate(txtid.getText(), 10); // 로그인 성공시 포인트 + 10
+    	
     		// 기존 스테이지 끄기 
     		btnlogin.getScene().getWindow().hide(); // 해당 버튼의 씬 윈도우 숨기기
     		
