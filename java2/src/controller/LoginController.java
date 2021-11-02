@@ -18,6 +18,7 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class LoginController implements Initializable {
@@ -100,6 +101,10 @@ public class LoginController implements Initializable {
     		try {
     			Parent parent = FXMLLoader.load( getClass().getResource("/fxml/mainpage.fxml"));
     			Scene scene = new Scene( parent );
+    			// 폰트 로드 
+    				//Font.loadFont( getClass().getResourceAsStream("/app/강한육군 Bold.ttf"), 14);
+    			// 외부 스타일시트 적용 
+    				//scene.getStylesheets().add(getClass().getResource("/app/application.css").toExternalForm());
     			stage.setScene(scene);
 	    			stage.setResizable(false); // 스테이지 크기 고정 
 	    			stage.setTitle("Nike"); // 스테이지 이름 
