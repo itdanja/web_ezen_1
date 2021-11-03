@@ -26,7 +26,7 @@ public class BoardlistController implements Initializable {
 		ObservableList<Board> boards =  BoardDao.getboardDao().boardlist();
 		// 2. 테이블뷰의 필드 가져오기  
 		TableColumn tc = boardlist.getColumns().get(0);// 테이블뷰의 첫번째 필드 
-		tc.setCellValueFactory( new PropertyValueFactory<>("b_no")); // 객체내 필드명 [ 리스트내 객체화 클래스내 필드명 동일 ] 
+		tc.setCellValueFactory( new PropertyValueFactory<>("b_no")); // 객체내 필드명 [ 리스트4내 객체화 클래스내 필드명 동일 ] 
 										
 			tc = boardlist.getColumns().get(1); // 테이블뷰의 두번째 필드 
 			tc.setCellValueFactory( new PropertyValueFactory<>("b_title"));
@@ -40,8 +40,9 @@ public class BoardlistController implements Initializable {
 			tc = boardlist.getColumns().get(4); // 테이블뷰의 다섯번째 필드 
 			tc.setCellValueFactory( new PropertyValueFactory<>("b_view") );
 		
-		// 3. 테이블뷰에 리스트 설정
-		boardlist.setItems(boards);
+		// 3. 테이블뷰에 리스트 넣기
+		boardlist.setItems( boards );
+		
 		// 4. 클릭한 아이템을 가지고 페이지 전환
 		//boardlist.setOnMouseClicked( e -> { 정의 return } );
 				//  인수 -> 정의 : 익명메소드 [ 1회성 메소드 ]
@@ -53,7 +54,7 @@ public class BoardlistController implements Initializable {
 			}
 		} ) ;		
 	}
-	public static Board board;
+	public static Board board; 
 	
     @FXML
     private TableView<Board> boardlist;

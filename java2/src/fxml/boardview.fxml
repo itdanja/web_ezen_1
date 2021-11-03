@@ -14,9 +14,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BoardviewController">
    <children>
-      <TextField fx:id="txttitle" disable="true" layoutX="76.0" layoutY="141.0" prefHeight="40.0" prefWidth="608.0" />
-      <TextArea fx:id="txtcontents" disable="true" layoutX="76.0" layoutY="203.0" prefHeight="163.0" prefWidth="608.0" />
-      <Button fx:id="btnupdate" layoutX="611.0" layoutY="111.0" mnemonicParsing="false" onAction="#update" prefHeight="22.0" prefWidth="73.0" style="-fx-background-color: #ffffff;" text="UPDATE">
+      <TextField fx:id="txttitle" editable="false" layoutX="76.0" layoutY="155.0" prefHeight="40.0" prefWidth="608.0" />
+      <TextArea fx:id="txtcontents" editable="false" layoutX="76.0" layoutY="203.0" prefHeight="163.0" prefWidth="608.0" />
+      <Button fx:id="btnupdate" layoutX="611.0" layoutY="94.0" mnemonicParsing="false" onAction="#update" prefHeight="22.0" prefWidth="73.0" style="-fx-background-color: #ffffff;" text="UPDATE">
          <effect>
             <InnerShadow>
                <color>
@@ -43,7 +43,7 @@
             <Font name="Impact" size="33.0" />
          </font>
       </Label>
-      <Button fx:id="btndelete" layoutX="534.0" layoutY="111.0" mnemonicParsing="false" onAction="#delete" prefHeight="16.0" prefWidth="73.0" style="-fx-background-color: #ffffff;" text="DELETE">
+      <Button fx:id="btndelete" layoutX="534.0" layoutY="94.0" mnemonicParsing="false" onAction="#delete" prefHeight="16.0" prefWidth="73.0" style="-fx-background-color: #ffffff;" text="DELETE">
          <effect>
             <InnerShadow>
                <color>
@@ -70,5 +70,8 @@
          </effect>
       </Button>
       <Label layoutX="77.0" layoutY="391.0" prefHeight="14.0" prefWidth="49.0" text="* Reply" />
+      <Label fx:id="lblwriter" layoutX="317.0" layoutY="125.0" prefHeight="22.0" prefWidth="116.0" text="작성자" />
+      <Label fx:id="lbldate" layoutX="441.0" layoutY="125.0" prefHeight="22.0" prefWidth="116.0" text="작성일" />
+      <Label fx:id="lblview" layoutX="571.0" layoutY="125.0" prefHeight="22.0" prefWidth="116.0" text="조회수" />
    </children>
 </AnchorPane>
