@@ -6,14 +6,18 @@ import java.util.ResourceBundle;
 
 import dao.BoardDao;
 import domain.Board;
+import domain.Reply;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -24,6 +28,8 @@ public class BoardviewController implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		// 댓글 리스트 로드 
+		replytableload();
 	
 			// 조회수 증가
 			BoardDao.getboardDao().viewupdate( board.getB_no() );
@@ -47,6 +53,10 @@ public class BoardviewController implements Initializable {
 	//		txttitle.setEditable(false);
 	//		txtcontents.setEditable(false);
 	}
+	
+    @FXML
+    private TextArea txtreply;
+    
     @FXML
     private Label lbldate;
 
@@ -70,8 +80,29 @@ public class BoardviewController implements Initializable {
     private Button btnupdate;
 
     @FXML
-    private TableView<?> replylist;
+    private TableView<Reply> replylist;
 
+    // 테이블 값 로드 메소드 [ 새로 고침을 하기위해서 메소드화 ] 
+    public void replytableload() {
+    	
+    	ObservableList< Reply > replys = BoardDao.getboardDao().replylist( board.getB_no() );
+    	
+    	TableColumn tc = replylist.getColumns().get(0); // 테이블내 첫번째 열 
+    	tc.setCellValueFactory( new PropertyValueFactory<>("r_no")); // 리스트내 댓글번호
+    	
+    	tc = replylist.getColumns().get(1); // 테이블내 두번째 열 
+    	tc.setCellValueFactory( new PropertyValueFactory<>("r_write")); // 리스트내 댓글작성자 
+    	
+    	tc = replylist.getColumns().get(2); // 테이블내 세번째 열 
+    	tc.setCellValueFactory( new PropertyValueFactory<>("r_contents"));  // 리스트내 댓글내용
+    	
+    	
+    	tc = replylist.getColumns().get(3); // 테이블내 네번째 열 
+    	tc.setCellValueFactory( new PropertyValueFactory<>("r_date"));   // 리스트내 댓글작성일 
+    	
+    	replylist.setItems(replys);
+    }
+    
     @FXML
     private TextArea txtcontents;
 
@@ -99,7 +130,21 @@ public class BoardviewController implements Initializable {
 
     @FXML
     void replywrite(ActionEvent event) {
-
+    	Reply reply = new Reply( 
+    			txtreply.getText() , 
+    			MainpageController.getinstance().getloginid()  , 
+    			board.getB_no()  
+    			); 
+    	boolean result =  BoardDao.getboardDao().replywrite( reply );
+    	if( result  ) { 
+    		Alert alert = new Alert( AlertType.INFORMATION); 
+    		alert.setHeaderText("댓글 등록");
+    		alert.showAndWait();
+    		// 댓글 리스트 로드
+    		replytableload();
+    		// 댓글 입력창 초기화
+    		txtreply.setText("");
+    	}
     }
 
     boolean upcheck = true;  // 업데이트 버튼 스위치 변수 
