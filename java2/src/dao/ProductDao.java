@@ -85,7 +85,23 @@ public class ProductDao {
 		catch (Exception e) {} return false;
 	}
 		// 4. 제품 수정 
-	
+	public boolean update( Product product  ) {
+		
+		String sql = "update product set p_name=? , p_img=? , "
+				+ "p_contents=? , p_category=? , p_price=? where p_no=?";
+		try {
+			preparedStatement =connection.prepareStatement(sql);
+			preparedStatement.setString(1, product.getP_name());
+			preparedStatement.setString(2, product.getP_img() );
+			preparedStatement.setString(3, product.getP_contents() );
+			preparedStatement.setString(4, product.getP_category() );
+			preparedStatement.setInt(5, product.getP_price());
+			preparedStatement.setInt(6, product.getP_no() );
+			preparedStatement.executeUpdate();
+			return true;
+		}catch (Exception e) {} return false;
+		
+	}
 
 }
 

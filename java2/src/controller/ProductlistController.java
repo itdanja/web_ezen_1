@@ -78,7 +78,7 @@ public class ProductlistController implements Initializable { // 화면 로드[열림]
 			} );
 	}
 	
-	private Product product;
+	public static Product product;
 	
 	@FXML
     private Button btndelete;
@@ -131,7 +131,7 @@ public class ProductlistController implements Initializable { // 화면 로드[열림]
 
     @FXML
     void update(ActionEvent event) {
-
+    	MainpageController.getinstance().loadpage("productupdate");
     }
 
 }

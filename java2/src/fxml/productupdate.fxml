@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="controller.ProdcutregisterController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductupdateController">
    <children>
       <Line endX="100.0" layoutX="181.0" layoutY="114.0" startX="-100.0" />
       <Label layoutX="80.0" layoutY="55.0" prefHeight="34.0" prefWidth="157.0" text="Product" textFill="#e81789">
@@ -19,7 +19,7 @@
             <Font name="Impact" size="33.0" />
          </font>
       </Label>
-      <Label layoutX="201.0" layoutY="55.0" prefHeight="34.0" prefWidth="157.0" text="register">
+      <Label layoutX="201.0" layoutY="55.0" prefHeight="34.0" prefWidth="157.0" text="update">
          <font>
             <Font name="Impact" size="33.0" />
          </font>
@@ -42,7 +42,7 @@
       <Label layoutX="80.0" layoutY="422.0" prefHeight="36.0" prefWidth="63.0" text="이미지등록" />
       <Label fx:id="lblimgpath" layoutX="155.0" layoutY="462.0" prefHeight="25.0" prefWidth="237.0" text="이미지경로" />
       <Button fx:id="btnimgadd" layoutX="154.0" layoutY="425.0" mnemonicParsing="false" onAction="#imgadd" prefHeight="25.0" prefWidth="237.0" text="이미지 등록" />
-      <Button fx:id="btnregister" layoutX="154.0" layoutY="504.0" mnemonicParsing="false" onAction="#register" prefHeight="36.0" prefWidth="530.0" text="등록" />
+      <Button fx:id="btnupdate" layoutX="154.0" layoutY="504.0" mnemonicParsing="false" onAction="#update" prefHeight="36.0" prefWidth="530.0" text="수정" />
       <Button fx:id="btncancel" layoutX="155.0" layoutY="550.0" mnemonicParsing="false" onAction="#cancel" prefHeight="36.0" prefWidth="530.0" text="취소" />
       <AnchorPane layoutX="448.0" layoutY="146.0" prefHeight="261.0" prefWidth="266.0" style="-fx-border-color: #000000; -fx-border-radius: 10;">
          <children>
