@@ -93,11 +93,34 @@ LoginController
 		삭제버튼 : btndelete		delete
 		수정버튼 : btnupdate		update
 		테이블뷰 : replylist
+
+
+
+제품리스트페이지.fxml
+	제품테이블뷰 : productlist
+	수정버튼 : btnupdate		update
+	삭제버튼 : btndelete		delete
+	등록버튼 : btnregister		register
+	이미지 : 	pimg
+	제품명 : 	lblpname
+	제품설명 :	lblpcontents
+	제품가격 :	lblpprice
+	등록id : 	lblmid
+
+제품등록페이지.fxml
+	제품이미지 	: pimg
+	이미지등록버튼 : btnimgadd		imgadd
+	이미지경로		: lblimgpath
 	
-	
-	
-	
-	
+	제품등록버튼 	: tnregister	register
+	취소버튼 		: btncancel		cancel
+	제품명입력창 	: txtpname
+	제품설명입력창 : txtpcontents
+	제품가격입력창 : txtprice
+	단추1		: opt_1
+	단추2 		: opt_2
+	단추3		: opt_3
+	단추4 		: opt_4
 	
 	
 	
