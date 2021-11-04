@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import domain.Product;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class ProductDao {
 	
@@ -46,7 +48,31 @@ public class ProductDao {
 		catch (Exception e) {} return false;
 	}
 		// 2. 제품 목록 
-	
+	public ObservableList<Product> productlist(){
+		// 1. 리스트선언 
+		ObservableList<Product> products = FXCollections.observableArrayList();
+		String sql = "select * from product order by p_no desc"; // 다 가져오기 
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			while( resultSet.next() ) { // 검색결과 레코드가 없을때까지 레코드 하나씩 반환
+				// 해당 레코드를 객체화
+				Product product = new Product( resultSet.getInt(1) , 
+						resultSet.getString(2), 
+						resultSet.getString(3),
+						resultSet.getString(4),
+						resultSet.getString(5),
+						resultSet.getInt(6), 
+						resultSet.getInt(7), 
+						resultSet.getString(8),
+						resultSet.getInt(9));
+				// 객체 리스트 저장 
+				products.add(product);
+			}
+			return products;
+		}catch (Exception e) {} return products;
+		
+	}
 		// 3. 제품 삭제 
 	
 		// 4. 제품 수정 
@@ -57,3 +83,13 @@ public class ProductDao {
 	
 
 }
+
+
+
+
+
+
+
+
+
+

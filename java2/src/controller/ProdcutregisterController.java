@@ -7,6 +7,8 @@ import dao.ProductDao;
 import domain.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -83,7 +85,14 @@ public class ProdcutregisterController {
     	// 객체화 [ 상태 초기값 = 1 ]  
     	Product product = new Product(pname, pimage, pcontents, pcategory, pprice, 1, m_no);
     	// DB처리 
-    	ProductDao.getProductDao().register(product);
+    	boolean result =  ProductDao.getProductDao().register(product);
+    	
+    	Alert alert = new Alert( AlertType.INFORMATION );
+    	if( result ) {
+    		alert.setHeaderText("제품 등록 성공"); alert.showAndWait();	// 메시지창 띄우기 
+    		MainpageController.getinstance().loadpage("productlist"); // 페이지 전환 
+    	}
+    	
     }
     // 파일 경로 찾기 
     private String pimage; // 파일경로 저장할 변수 
