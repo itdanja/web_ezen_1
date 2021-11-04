@@ -80,7 +80,7 @@ public class ProdcutregisterController {
     		if( opt_4.isSelected() ) { pcategory="ACC";}
     		// 로그인된 id의 회원번호 검색 db처리
     		int m_no = MemberDao.getMemberDao().
-    				bnocheck( MainpageController.getinstance().getloginid() );
+    				mnocheck( MainpageController.getinstance().getloginid() );
 
     	// 객체화 [ 상태 초기값 = 1 ]  
     	Product product = new Product(pname, pimage, pcontents, pcategory, pprice, 1, m_no);

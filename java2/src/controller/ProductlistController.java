@@ -3,6 +3,7 @@ package controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import dao.MemberDao;
 import dao.ProductDao;
 import domain.Product;
 import javafx.collections.ObservableList;
@@ -14,7 +15,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 
 public class ProductlistController implements Initializable { // 화면 로드[열림] 되었을때 초기값 인터페이스 
 	
@@ -37,6 +40,30 @@ public class ProductlistController implements Initializable { // 화면 로드[열림]
 			tc.setCellValueFactory( new PropertyValueFactory<>("p_activation"));
 		tc = productlist.getColumns().get(4);
 			tc.setCellValueFactory( new PropertyValueFactory<>("p_date"));
+			
+		// 테이블뷰에서 클릭했을때 아이템 가져오기 
+			// 1. 테이블뷰에 클릭 이벤트 
+			//productlist.setOnMouseClicked( e -> { 정의 } );
+			productlist.setOnMouseClicked( e -> { 
+				// 2. 클릭 이벤트가 마우스 클릭과 같으면 
+				if( e.getButton().equals( MouseButton.PRIMARY ) ) {
+					// 3.테이블뷰에서 클릭한 모델의 아이템[ 객체 ]
+					Product product = productlist.getSelectionModel().getSelectedItem();
+					// 4. 선택된 객체내 이미지경로 가져오기 
+					Image image = new Image( product.getP_img() );
+					pimg.setImage( image );
+					// 5. 그외
+					lblpname.setText( product.getP_name() );
+					lblpcontents.setText( product.getP_contents() );
+						// 천단위 쉼표 문자열 만들기 [ String.format("%,d", 값 )  ]
+					lblpprice.setText( String.format("%,d" , product.getP_price()  ) );
+					lblmid.setText( 
+							MemberDao.getMemberDao().midcheck( product.getM_no()) 
+							);
+					
+				}
+		
+			} );
 			
 		
 	}
