@@ -2,6 +2,8 @@ package controller;
 
 import java.io.File;
 
+import dao.MemberDao;
+import dao.ProductDao;
 import domain.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -75,9 +77,13 @@ public class ProdcutregisterController {
     		if( opt_3.isSelected() ) { pcategory="가방";}
     		if( opt_4.isSelected() ) { pcategory="ACC";}
     		// 로그인된 id의 회원번호 검색 db처리
-    		int m_no = 0;
+    		int m_no = MemberDao.getMemberDao().
+    				bnocheck( MainpageController.getinstance().getloginid() );
+
     	// 객체화 [ 상태 초기값 = 1 ]  
     	Product product = new Product(pname, pimage, pcontents, pcategory, pprice, 1, m_no);
+    	// DB처리 
+    	ProductDao.getProductDao().register(product);
     }
     // 파일 경로 찾기 
     private String pimage; // 파일경로 저장할 변수 
