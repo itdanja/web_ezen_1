@@ -95,6 +95,7 @@ public class BoardDao {
 	}
 		// 4. 게시물 수정 메소드 
 	public boolean update( int b_no ,  String b_title , String b_contents ) {
+		
 		String sql = "update board set b_title = ? , b_contents = ? where b_no = ? ";
 		try {
 			preparedStatement = connection.prepareStatement(sql);
@@ -149,11 +150,13 @@ public class BoardDao {
 			resultSet =  preparedStatement.executeQuery();
 			
 			while( resultSet.next() ) { // 다음 레코드가 없을때까지 
+				// 댓글 레코드[한줄]씩 객체화 
 				Reply reply = new Reply( resultSet.getInt(1) , 
 						resultSet.getString(2),
 						resultSet.getString(3), 
 						resultSet.getString(4), 
 						resultSet.getInt(5) );
+				// 리스트에 저장 
 				replys.add(reply);
 			}
 			return replys;

@@ -28,7 +28,7 @@ public class BoardviewController implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// 댓글 리스트 로드 
+		// 댓글 테이블 로드
 		replytableload();
 	
 			// 조회수 증가
@@ -135,12 +135,14 @@ public class BoardviewController implements Initializable {
     			MainpageController.getinstance().getloginid()  , 
     			board.getB_no()  
     			); 
+    	// DB 처리 
     	boolean result =  BoardDao.getboardDao().replywrite( reply );
+    	
     	if( result  ) { 
     		Alert alert = new Alert( AlertType.INFORMATION); 
     		alert.setHeaderText("댓글 등록");
     		alert.showAndWait();
-    		// 댓글 리스트 로드
+    		// 댓글 테이블 로드
     		replytableload();
     		// 댓글 입력창 초기화
     		txtreply.setText("");
@@ -154,8 +156,8 @@ public class BoardviewController implements Initializable {
     	if(upcheck ) {
 	    	alert.setHeaderText("내용 수정후 다시 버튼 클릭시 수정 완료 됩니다");
 	    	alert.showAndWait();
-	    	txttitle.setEditable(true);
-	    	txtcontents.setEditable(true);
+	    	txttitle.setEditable(true);		// 수정가능 
+	    	txtcontents.setEditable(true); 	// 수정가능 
 	    	upcheck = false;
     	}
     	else {
@@ -163,8 +165,8 @@ public class BoardviewController implements Initializable {
     		alert.setHeaderText("게시물이 수정 되었습니다.");
 	    	alert.showAndWait();
 	    	upcheck = true;
-	    	txttitle.setEditable(false);
-	    	txtcontents.setEditable(false);
+	    	txttitle.setEditable(false); 	// 수정불가능
+	    	txtcontents.setEditable(false);	// 수정불가능
     	}
     		
     }

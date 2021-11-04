@@ -1,11 +1,12 @@
 package domain;
 
 public class Reply {
-	private int r_no;
-	private String r_contents;
-	private String r_write;
-	private String r_date;
-	private int b_no;
+		
+	private int r_no;			// ´ñ±Û ¹øÈ£ 
+	private String r_contents;	// ´ñ±Û ³»¿ë 
+	private String r_write;		// ´ñ±Û ÀÛ¼ºÀÚ 
+	private String r_date;		// ´ñ±Û ÀÛ¼ºÀÏ 
+	private int b_no;			// °Ô½Ã¹° ¹øÈ£ 
 	   
 	public Reply() { }
 
