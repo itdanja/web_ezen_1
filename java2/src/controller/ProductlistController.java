@@ -1,6 +1,7 @@
 package controller;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import dao.MemberDao;
@@ -10,7 +11,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -23,7 +27,9 @@ public class ProductlistController implements Initializable { // 화면 로드[열림]
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+		// 버튼 숨기기 
+		btndelete.setVisible(false);
+		btnupdate.setVisible(false);
 		
 		//1. DB에서 제품목록 가져오기
 		ObservableList<Product> products = ProductDao.getProductDao().productlist();
@@ -48,7 +54,7 @@ public class ProductlistController implements Initializable { // 화면 로드[열림]
 				// 2. 클릭 이벤트가 마우스 클릭과 같으면 
 				if( e.getButton().equals( MouseButton.PRIMARY ) ) {
 					// 3.테이블뷰에서 클릭한 모델의 아이템[ 객체 ]
-					Product product = productlist.getSelectionModel().getSelectedItem();
+					product = productlist.getSelectionModel().getSelectedItem();
 					// 4. 선택된 객체내 이미지경로 가져오기 
 					Image image = new Image( product.getP_img() );
 					pimg.setImage( image );
@@ -57,16 +63,22 @@ public class ProductlistController implements Initializable { // 화면 로드[열림]
 					lblpcontents.setText( product.getP_contents() );
 						// 천단위 쉼표 문자열 만들기 [ String.format("%,d", 값 )  ]
 					lblpprice.setText( String.format("%,d" , product.getP_price()  ) );
-					lblmid.setText( 
-							MemberDao.getMemberDao().midcheck( product.getM_no()) 
-							);
-					
+						// 회원번호 -> 회원id 
+					String writer = MemberDao.getMemberDao().midcheck( product.getM_no() );
+					lblmid.setText( writer );
+					if( MainpageController.getinstance().getloginid().equals(  writer )) {
+						// 로그인 아이디가 등록한 아이디와 동일하면 
+						btndelete.setVisible(true);
+						btnupdate.setVisible(true);
+					}else {
+						btndelete.setVisible(false);
+						btnupdate.setVisible(false);
+					}
 				}
-		
 			} );
-			
-		
 	}
+	
+	private Product product;
 	
 	@FXML
     private Button btndelete;
@@ -97,7 +109,19 @@ public class ProductlistController implements Initializable { // 화면 로드[열림]
 
     @FXML
     void delete(ActionEvent event) {
-
+    	
+    	Alert alert = new Alert( AlertType.CONFIRMATION );
+    	alert.setHeaderText(" 제품을 삭제 하시겠습니까?" );
+    	Optional<ButtonType> optional = alert.showAndWait();
+    	if( optional.get() == ButtonType.OK ) {
+    		// DB 처리 
+    		ProductDao.getProductDao().delete( product.getP_no() );
+    		
+    		Alert alert2 = new Alert( AlertType.INFORMATION );
+    		alert2.setHeaderText(" 삭제 되었습니다 "); alert2.showAndWait();
+    		MainpageController.getinstance().loadpage("productlist");
+    	}
+    	
     }
 
     @FXML
@@ -111,3 +135,19 @@ public class ProductlistController implements Initializable { // 화면 로드[열림]
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

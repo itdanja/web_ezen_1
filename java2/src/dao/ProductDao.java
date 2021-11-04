@@ -73,16 +73,38 @@ public class ProductDao {
 		}catch (Exception e) {} return products;
 		
 	}
-		// 3. 力前 昏力 
-	
+		// 3. 力前 昏力 [ 力前锅龋狼 秦寸窍绰 力前 昏力 ] 
+	public boolean delete( int p_no ) {
+		String sql = "delete from product where p_no =? ";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, p_no);
+			preparedStatement.executeUpdate();
+			return true;
+		}
+		catch (Exception e) {} return false;
+	}
 		// 4. 力前 荐沥 
-	
-	
-	
-	
 	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

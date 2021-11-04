@@ -121,6 +121,22 @@ LoginController
 	단추2 		: opt_2
 	단추3		: opt_3
 	단추4 		: opt_4
+
+제품수정페이지.fxml
+	제품이미지 	: pimg
+	이미지등록버튼 : btnimgadd		imgadd
+	이미지경로		: lblimgpath
+	
+		제품수정버튼 	: btnupdate	update
+	취소버튼 		: btncancel		cancel
+	제품명입력창 	: txtpname
+	제품설명입력창 : txtpcontents
+	제품가격입력창 : txtprice
+	단추1		: opt_1
+	단추2 		: opt_2
+	단추3		: opt_3
+	단추4 		: opt_4	
+
 	
 	
 	
