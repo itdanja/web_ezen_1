@@ -30,7 +30,6 @@ public class ProductlistController implements Initializable { // 화면 로드[열림]
 
     @FXML
     void activation(ActionEvent event) {
-    
     	btnactivation.setText(product.getActivation());	// 1. 선택 제품의 상태가 버튼 텍스트에 표시 
     	int pa = product.getP_activation();				// 2. 선택 제품의 상태를 가져오기 
     	int ch = pa + 1;								// 3. 상태 변경 [ 1-> 2 , 2->3 , 3-> 1 ]
@@ -51,7 +50,6 @@ public class ProductlistController implements Initializable { // 화면 로드[열림]
     		producttableload();
     		btnactivation.setText("거래완료");
     	}
-    	
     }
     
     public void producttableload() {
