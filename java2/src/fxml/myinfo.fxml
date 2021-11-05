@@ -66,7 +66,7 @@
             </InnerShadow>
          </effect>
       </Button>
-      <TableView layoutX="342.0" layoutY="90.0" prefHeight="224.0" prefWidth="398.0" style="-fx-border-color: #ffffff;">
+      <TableView fx:id="myboardlist" layoutX="342.0" layoutY="90.0" prefHeight="224.0" prefWidth="398.0" style="-fx-border-color: #ffffff;">
         <columns>
           <TableColumn prefWidth="49.0" style="-fx-background-color: #ffffff;" text="num" />
           <TableColumn prefWidth="149.0" style="-fx-background-color: #ffffff;" text="Title" />
@@ -74,13 +74,13 @@
             <TableColumn prefWidth="49.0" style="-fx-background-color: #ffffff;" text="View" />
         </columns>
       </TableView>
-      <TableView layoutX="342.0" layoutY="352.0" prefHeight="224.0" prefWidth="398.0" style="-fx-border-color: #ffffff;">
+      <TableView fx:id="myproductlist" layoutX="342.0" layoutY="352.0" prefHeight="224.0" prefWidth="398.0" style="-fx-border-color: #ffffff;">
          <columns>
-            <TableColumn prefWidth="40.0" style="-fx-background-color: #ffffff;" text="num" />
             <TableColumn prefWidth="119.0" style="-fx-background-color: #ffffff;" text="Name" />
-            <TableColumn prefWidth="66.0" style="-fx-background-color: #ffffff;" text="Brand" />
-            <TableColumn prefWidth="76.0" style="-fx-background-color: #ffffff;" text="Category" />
-            <TableColumn prefWidth="95.0" style="-fx-background-color: #ffffff;" text="Price" />
+            <TableColumn prefWidth="64.0" style="-fx-background-color: #ffffff;" text="Category" />
+            <TableColumn prefWidth="77.0" style="-fx-background-color: #ffffff;" text="Price" />
+            <TableColumn prefWidth="72.0" style="-fx-background-color: #ffffff;" text="Activation" />
+            <TableColumn prefWidth="72.0" style="-fx-background-color: #ffffff;" text="Date" />
          </columns>
       </TableView>
       <Label layoutX="342.0" layoutY="69.0" text="- My community">

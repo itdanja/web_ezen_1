@@ -65,6 +65,9 @@ LoginController
 	포인트 : lblpoint
 	수정 버튼 : btnupdate		update
 	탈퇴 버튼 : btndelete		delete
+	
+	myboardlist
+	myproductlist
 
 회원수정.fxml
 	아이디 : lblid

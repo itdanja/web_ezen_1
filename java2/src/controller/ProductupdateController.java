@@ -43,10 +43,12 @@ public class ProductupdateController implements Initializable {
 		if( product.getP_category().equals("신발") ) {opt_2.setSelected(true);}
 		if( product.getP_category().equals("가방") ) {opt_3.setSelected(true);}
 		if( product.getP_category().equals("ACC") ) {opt_4.setSelected(true);}
-		
+
 	}
 	
+	
 
+		
     @FXML
     private Button btncancel;
 
@@ -126,6 +128,7 @@ public class ProductupdateController implements Initializable {
     	
     	// DB 넣기 
     	boolean result =  ProductDao.getProductDao().update(product2);
+    	
     	if( result ) {
     		Alert alert = new Alert(AlertType.INFORMATION);
     		alert.setHeaderText("제품수정 완료"); alert.showAndWait();

@@ -111,8 +111,8 @@ public class ProdcutregisterController {
     	lblimgpath.setText("파일 경로 : " + file.getPath() );
     		//
     	pimage = file.toURI().toString(); // 파일의 실제[real] 경로
-			//	    	System.out.println( "URL 경로 : " + file.getPath() );
-			//	    	System.out.println( "URI 경로  : " + pimage );
+				    	System.out.println( "URL 경로 : " + file.getPath() );
+				    	System.out.println( "URI 경로  : " + pimage );
     	Image image = new Image( pimage );
     	pimg.setImage(image);
     }
