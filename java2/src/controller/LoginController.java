@@ -43,6 +43,7 @@ public class LoginController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		lblconfirm.setText(""); // 경고메시지는 공백 설정
+	
 	}
 	
     @FXML
