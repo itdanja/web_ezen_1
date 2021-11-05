@@ -109,6 +109,8 @@ LoginController
 	제품설명 :	lblpcontents
 	제품가격 :	lblpprice
 	등록id : 	lblmid
+	
+	상태버튼 : btnactivation		activation
 
 제품등록페이지.fxml
 	제품이미지 	: pimg

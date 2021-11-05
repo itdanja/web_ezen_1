@@ -68,7 +68,7 @@ public class MyinfoController implements Initializable {
 				tc = myproductlist.getColumns().get(2);
 					tc.setCellValueFactory( new PropertyValueFactory<>("p_price") );
 				tc = myproductlist.getColumns().get(3);
-					tc.setCellValueFactory( new PropertyValueFactory<>("p_activation") );
+					tc.setCellValueFactory( new PropertyValueFactory<>("activation") );
 				tc = myproductlist.getColumns().get(4);
 					tc.setCellValueFactory( new PropertyValueFactory<>("p_date") );
 					

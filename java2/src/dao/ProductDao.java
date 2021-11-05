@@ -130,6 +130,20 @@ public class ProductDao {
 		}catch (Exception e) {} return products;
 		
 	}
+	
+	// 6. 제품상태 활성화 변경 
+	public boolean activationupdate( int p_activation , int p_no ) {
+		
+		String sql = "update product set p_activation = ? where p_no=?";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt( 1 , p_activation );
+			preparedStatement.setInt( 2 , p_no );
+			preparedStatement.executeUpdate();
+			return true;
+		}catch (Exception e) {} return false;
+		
+	}
 
 }
 
