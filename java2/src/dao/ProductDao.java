@@ -103,7 +103,7 @@ public class ProductDao {
 		
 	}
 	
-	// 5.
+	// 5. 로그인 회원이 등록한 제품 리스트
 	public ObservableList<Product> myproductlist( int m_no ){
 		// 1. 리스트선언 
 		ObservableList<Product> products = FXCollections.observableArrayList();

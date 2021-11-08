@@ -13,7 +13,6 @@ public class Appstart extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 		
-		
 		Parent parent = FXMLLoader.load( getClass().getResource("/fxml/login.fxml"));
 		Scene scene = new Scene( parent );
 		// 폰트 로드 

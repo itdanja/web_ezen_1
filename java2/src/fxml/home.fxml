@@ -1,15 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="controller.HomeController" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="307.0" fitWidth="734.0" layoutX="6.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@mainpage_img.JPG" />
-         </image>
-      </ImageView>
+      <Circle fill="#fc9972" layoutX="125.0" layoutY="110.0" radius="56.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label alignment="CENTER" layoutX="83.0" layoutY="75.0" prefHeight="41.0" prefWidth="91.0" text="Total Member">
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Label>
+      <Label  fx:id="lbltotalmember"  layoutX="99.0" layoutY="107.0" prefHeight="41.0" prefWidth="55.0" text="999" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="30.0" />
+         </font>
+      </Label>
+      <Circle fill="#fc9972" layoutX="376.0" layoutY="110.0" radius="56.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label alignment="CENTER" layoutX="333.0" layoutY="75.0" prefHeight="41.0" prefWidth="91.0" text="Total Board">
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="107.0" prefHeight="41.0" prefWidth="55.0" text="999" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="30.0" />
+         </font>
+      </Label>
+      <Circle fill="#fc9972" layoutX="622.0" layoutY="110.0" radius="56.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label alignment="CENTER" layoutX="580.0" layoutY="75.0" prefHeight="41.0" prefWidth="91.0" text="Total Prodcut">
+         <font>
+            <Font name="Impact" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="596.0" layoutY="107.0" prefHeight="41.0" prefWidth="55.0" text="999" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="30.0" />
+         </font>
+      </Label>
+      <Accordion layoutX="47.0" layoutY="186.0" prefHeight="359.0" prefWidth="675.0">
+        <panes>
+          <TitledPane animated="false" text="제품 등록 추세">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <LineChart layoutX="296.0" layoutY="17.0" prefHeight="250.0" prefWidth="350.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Label layoutX="63.0" layoutY="130.0" text="증가" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="143.0" layoutY="130.0" text="감소" textFill="#4400ff">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="63.0" layoutY="99.0" prefHeight="31.0" prefWidth="122.0" text="전일 대비" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="제품 카테고리">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <BarChart layoutX="300.0" layoutY="14.0" prefHeight="250.0" prefWidth="350.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                        <Label layoutX="63.0" layoutY="108.0" prefHeight="22.0" prefWidth="126.0" text="가장 많은 카테고리" />
+                        <Label layoutX="63.0" layoutY="135.0" prefHeight="43.0" prefWidth="161.0" text="신발" textFill="#ff0101">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="제품 상태 현황">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <PieChart layoutX="301.0" layoutY="21.0" prefHeight="250.0" prefWidth="350.0" />
+                        <Label layoutX="68.0" layoutY="86.0" text="제품 상태 현황 ( 수  )" />
+                        <Label layoutX="68.0" layoutY="106.0" prefHeight="22.0" prefWidth="171.0" text="판매중 : ">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="68.0" layoutY="145.0" prefHeight="22.0" prefWidth="171.0" text="거래중 : ">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="68.0" layoutY="187.0" prefHeight="22.0" prefWidth="171.0" text="거래완료 : ">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
    </children>
 </AnchorPane>
