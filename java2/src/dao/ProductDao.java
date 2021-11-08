@@ -4,8 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import domain.Product;
+import domain.ProductDate;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -155,6 +157,24 @@ public class ProductDao {
 			}
 		}catch (Exception e) {}
 		return 0;
+	}
+	
+	// 8. 날짜별 제품수 반환 
+	public ArrayList<ProductDate> productdatelist(){
+		ArrayList< ProductDate > productDates = new ArrayList<>();
+		String sql = "select substring_index(p_date,' ' , 1 ) , "+ 
+						"count(*) from product group by substring_index( p_date,' ' , 1 )";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet =  preparedStatement.executeQuery();
+			while( resultSet.next() ) {
+				ProductDate date = new ProductDate( resultSet.getString(1), resultSet.getInt(2) );
+				productDates.add(date);
+			}
+			return productDates;
+		}catch (Exception e) {} return productDates;
+		
+		
 	}
 
 }
