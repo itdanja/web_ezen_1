@@ -142,7 +142,19 @@ public class ProductDao {
 			preparedStatement.executeUpdate();
 			return true;
 		}catch (Exception e) {} return false;
-		
+	}
+	
+	// 7.전체 제품 수 반환
+	public int productcount() {
+		String sql = "select count(*) from product";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			if( resultSet.next() ) {
+				return resultSet.getInt(1);
+			}
+		}catch (Exception e) {}
+		return 0;
 	}
 
 }

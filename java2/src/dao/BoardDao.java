@@ -189,6 +189,19 @@ public class BoardDao {
 			}
 			catch (Exception e) {} return boards;
 		}
+		
+	// 10. 전체 게시물 수 반환
+	public int boardcount() {
+		String sql = "select count(*) from board";
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			if( resultSet.next() ) {
+				return resultSet.getInt(1);
+			}
+		}catch (Exception e) {}
+		return 0;
+	}
 	
 
 		
