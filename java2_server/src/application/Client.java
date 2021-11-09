@@ -4,6 +4,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
+import javafx.application.Platform;
+
 public class Client {
 	
 	// 1. 소켓 
@@ -11,12 +13,13 @@ public class Client {
 	
 	// 2. 생성자
 	public Client( Socket socket) {
-		this.socket = socket; 	// 외부로 들어온 소켓이 내부소켓 설정 
+		this.socket = socket; 	// 외부로 들어온 소켓으로 클라이언 객체 생성 
 		receive();				// 접속과 동시에 받기 실행 
 	}
 	
 	// 3. 서버로 메시지 받는 메소드 
 	public void receive() {
+		
 		// 멀티스레드 
 		Runnable runnable = new Runnable() {
 			@Override

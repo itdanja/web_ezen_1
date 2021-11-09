@@ -41,7 +41,7 @@ public class ServerController implements Initializable {
 		}
 		catch (Exception e) {}
 	
-		Runnable runnable = new Runnable() { // 실시간으로 클라이언트 요청 대기 
+		Runnable runnable = new Runnable() { // 실시간으로 클라이언트 접속 요청 대기 
 			
 			@Override
 			public void run() {
@@ -56,7 +56,6 @@ public class ServerController implements Initializable {
 		};
 		threadpool = Executors.newCachedThreadPool(); // 서버가 실행되면 스레드풀 메모리 초기화 
 		threadpool.submit( runnable );				// 클라이언트 요청 스레드를 스레드풀에 추가 
-	
 	}
 	// 3. 서버중지 메소드 
 	public void serverstop() {

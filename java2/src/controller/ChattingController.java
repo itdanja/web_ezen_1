@@ -15,30 +15,35 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class ChattingController implements Initializable {
-	
-	// 1. 클라이언트 소켓 선언 
-	Socket socket;
-	// 2. 클라이언트 시작 메소드
-	public void clientstart( ) {
+
+	Socket socket; 	// 1. 클라이언트 소켓 선언 
+
+	public void clientstart( ) { 	// 2. 클라이언트 시작 메소드
 		// 멀티스레드 [ 스레드풀 x ]
 		Thread thread = new Thread() {
-			
 				@Override
 				public void run() {
 					// 접속하기 
 					try {
 						socket = new Socket("127.0.0.1" , 1234 );	// 서버소켓에 바인딩된 ip와 port
-						receive();
+						send( loginid + " 님 입장 했습니다 \n");
+						receive();	// 접속과 동시에 받기 메소드 실행 
 					}catch (Exception e) {}
 				}
 		};
 		thread.start(); // run 메소드 실행[ 스레드풀이 아닌경우 직접 실행 ]
 	}
 	// 3. 클라이언트 종료 메소드 
-	public void clientstop( ) {  try{ socket.close(); }catch (Exception e) { }  }
+	public void clientstop( ) {  
+		try{ 
+			socket.close(); 
+		}catch (Exception e) {
+			
+		}  
+	}
 	
 	// 4. 메시지 보내기 메소드 
-	public void send( String msg ) {
+	public void send( String msg ) { // 입력버튼을 눌렀을때 혹은 텍스트입력창 에서 엔터를 했을때 실행 
 		// 멀티스레드 
 		Thread thread = new Thread() {
 			@Override
@@ -46,7 +51,7 @@ public class ChattingController implements Initializable {
 				try {
 					OutputStream outputStream = socket.getOutputStream();	// 1.출력 스트림
 					outputStream.write( msg.getBytes() );					// 2.인수로 받은 메시지를 바이트형 변환해서 내보내기
-					outputStream.flush();
+					outputStream.flush();	// 3. 스트림 초기화
 				}
 				catch (Exception e) {}
 			}
@@ -54,12 +59,12 @@ public class ChattingController implements Initializable {
 		thread.start();
 	}
 	// 5. 메시지 받는 메소드 
-	public void receive() {
-		while(true) {
+	public void receive() { // 접속시 실행 
+		while(true) {  // 무한루프 
 			try {
 				InputStream inputStream = socket.getInputStream();		// 1. 입력 스트림
 				byte[] bytes = new byte[1000];	// 바이트 배열 선언 
-				inputStream.read(bytes );								// 2. 입력스트림내 바이트를 읽어오기 
+				inputStream.read( bytes );								// 2. 입력스트림내 바이트를 읽어오기 
 				String msg = new String(bytes);							// 3. 바이트배열 ->> 문자열 변환 
 				Platform.runLater( () -> txtclient.appendText(msg) ); 	// 4. 받은 문자열을 메시지창에 띄우기 
 			}
