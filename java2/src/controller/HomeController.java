@@ -32,6 +32,7 @@ public class HomeController implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
 		// 전체 수 
 		lbltotalmember.setText( MemberDao.getMemberDao().membercount()+"" );	lbltotalmember.setAlignment(Pos.CENTER); // 정렬 
 		lbltotalboard.setText( BoardDao.getboardDao().boardcount()+"" );		lbltotalboard.setAlignment(Pos.CENTER);
@@ -47,6 +48,7 @@ public class HomeController implements Initializable {
 //		// 선차트에 날짜별 제품수 표시
 //		XYChart.Series series = new XYChart.Series<>();	// 1.계열 생성 
 //		series.setName("등록 수"); // 2. 계열 이름
+		
 //			ObservableList<Product> products = ProductDao.getProductDao().productlist(); // 모든 제품 리스트 
 //			ArrayList< ProductDate > dates = new ArrayList<>(); // 날짜별 개수를 저장하는 리스트 
 //	
@@ -115,6 +117,7 @@ public class HomeController implements Initializable {
 		//3. 계열에 값 넣기 
 			HashMap< String , Integer> hashMap = 
 					ProductDao.getProductDao().productcategorylist();
+			
 			// Map 컬렉션 < key , value > 
 			String maxcategorykey = " ";
 			int max =0;

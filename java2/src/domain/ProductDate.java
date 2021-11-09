@@ -1,6 +1,7 @@
 package domain;
 
 public class ProductDate {
+	
 	private String date; // xรเ
 	private int count;	// yรเ 
 	
