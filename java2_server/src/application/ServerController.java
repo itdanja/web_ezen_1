@@ -37,7 +37,7 @@ public class ServerController implements Initializable {
 			// 1. 서버소켓에 메모리 할당 
 			serverSocket = new ServerSocket();
 			// 2. 서버소켓에 바인딩 [ ip , port 설정 ] 
-			serverSocket.bind( new InetSocketAddress("127.0.0.1" , 1234 ) );
+			serverSocket.bind( new InetSocketAddress( "127.0.0.1" , 1234 ) );
 		}
 		catch (Exception e) {}
 	
