@@ -99,7 +99,9 @@ public class MainpageController implements Initializable {
 
     @FXML
     void home(ActionEvent event) {
-    	loadpage("home");
+  
+    	loadpage("home" );
+    	
     }
     @FXML // 로그아웃 메소드 [ 현재 스테이지 닫고 -> login 스테이지 열기 ]  
     void logout(ActionEvent event) {
