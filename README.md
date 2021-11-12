@@ -11,7 +11,7 @@
 |2일차[09/29]|JAVA1| 변수 · 연산자 |
 |3일차[09/30]|JAVA1| 제어문 |
 |4일차[10/01]|JAVA1| 반복문 |
-|5일차[10/05]|JAVA1| 참조타팁(배열 · 객체) |
+|5일차[10/05]|JAVA1| 참조타입(배열 · 객체) |
 |6일차[10/06]|JAVA1| 클래스 |
 |7일차[10/07]|JAVA1| 클래스 |
 |8일차[10/08]|JAVA1| 상속 · mini Console project |
@@ -22,35 +22,32 @@
 |13일차[10/18]|JAVA1| 멀티스레드 · Team Console Project 설계 |
 |14일차[10/19]|JAVA1| 제네릭 · Team Console Project 설계 |
 |15일차[10/20]|JAVA1| 컬렉션 프레임워크 · Team Console Project 설계 |
-|16일차[10/21]|JAVA1| (JAVA1 정리) Member Board Programming · Team Console Project 설계 |
-|17일차[10/22]|JAVA1| 평가[프로그래밍언어활용] · (JAVA1 정리) Member Board Programming · SMTP API  · Team Console Project  |
-|18일차[10/25]|JAVA1| JAVA1정리 · Team Console Project |
-|19일차[10/26]|JAVA1| JAVA1정리 · Team Console Project |
-|20일차[10/27]|JAVA1| JAVA1정리 · Team Console Project · Team Console Project 발표 |
+|16일차[10/21]|JAVA1| Member Board Programming · Team Console Project |
+|17일차[10/22]|JAVA1| 평가[프로그래밍언어활용] · Member Board Programming · SMTP API  · Team Console Project  |
+|18일차[10/25]|JAVA1| JAVA1정리_1 · Team Console Project |
+|19일차[10/26]|JAVA1| JAVA1정리_2 · Team Console Project |
+|20일차[10/27]|JAVA1| JAVA1정리_3 · Team Console Project · Team Console Project 발표 |
 
     * JAVA theorem
     ** 1. : JVM , Momory
     ** 2. : 입출력 , 형식문자 , 제어문자
     ** 3. : 변수 , 기본자료형[ 타입변환 ]
-    ** 4. : 배열
-    ** 5. : 연산자 , 제어문[ if , switch ] , 반복문 [ for  , while ] , for활용
-    ** 6. : 클래스 [ 필드 , 생성자 , 메소드 ]
-    ** 7. : 상속
-    ** 8. : 인터페이스 
-    ** 9. : 예외처리
-    ** 10. : 멀티스레드
-    ** 11. : 제네릭
-    ** 12. : 컬렉션 프레임워크
-    ** 13. : 람다식
-    ** 14. : 스트림과 병렬처리
-    ** 15. : 입출력 및 네트워킹
+    ** 4. : 연산자 , 제어문[ if , switch ] , 반복문 [ for  , while ] , for활용 , 배열
+    ** 5. : 클래스 [ 필드 , 생성자 , 메소드 ] · 상속
+    ** 6. : 인터페이스 · 예외처리
+    ** 7. : 멀티스레드
+    ** 8. : 제네릭
+    ** 9. : 컬렉션 프레임워크
+    ** 10. : 람다식
+    ** 11. : 스트림과 병렬처리
+    ** 12. : 입출력 및 네트워킹
 
 ### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
 |일차|목차|주요내용|
 |------|---|---|
-|21일차[10/28]|JAVA2| JAVA1정리 · JAVAFX/Scene Builder( signup · login ) |
-|22일차[10/29]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( signup · login · findid · findpassword ) · SMTP API |
-|23일차[11/01]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( mainpage , logout , memberinfo )  |
+|21일차[10/28]|JAVA2| JAVA1정리_4 · JAVAFX/Scene Builder( signup · login ) |
+|22일차[10/29]|JAVA2| JAVA1정리_5 · Datebase · JAVAFX/Scene Builder( signup · login · findid · findpassword ) · SMTP API |
+|23일차[11/01]|JAVA2| JAVA1정리_6 · Datebase · JAVAFX/Scene Builder( mainpage , logout , memberinfo )  |
 |24일차[11/02]|JAVA2| Datebase · JAVAFX/Scene Builder( Member ) · 평가[응용 SW기초기술 활용] |
 |25일차[11/03]|JAVA2| Datebase · JAVAFX/Scene Builder( Board ) |
 |26일차[11/04]|JAVA2| Datebase · JAVAFX/Scene Builder( Product ) |
@@ -64,10 +61,10 @@
 |34일차[11/16]|JAVA2 · Front | CSS · Team javafx Project  |
 |35일차[11/17]|JAVA2 · Front | CSS · Team javafx Project |
 |36일차[11/18]|JAVA2 · Front | CSS · Team javafx Project |
-|37일차[11/19]|JAVA2 · Front | 평가[요구사항확인] · layout · Team javafx Project |
-|38일차[11/22]|JAVA2 · Front | layout · Team javafx Project  |
+|37일차[11/19]|JAVA2 · Front | 평가[요구사항확인] Team javafx Project |
+|38일차[11/22]|JAVA2 · Front | layout · Team javafx Project 발표  |
 |39일차[11/23]|JAVA2 · Front | js · Team javafx Project |
-|40일차[11/24]|JAVA2 · Front | js · Team javafx Project 발표  |
+|40일차[11/24]|JAVA2 · Front | js · Team javafx Project   |
 
 ```
    * JAVA FX
