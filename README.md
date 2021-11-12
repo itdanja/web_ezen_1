@@ -48,18 +48,18 @@
 ### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
 |일차|목차|주요내용|
 |------|---|---|
-|21일차[10/28]|JAVA2| JAVA1정리 · JAVAFX/Scene Builder( 회원가입 · 로그인 ) |
-|22일차[10/29]|JAVA2| Datebase · JAVAFX/Scene Builder( 회원가입 · 로그인 · 아이디찾기 · 비밀번호찾기 ) · SMTP API |
-|23일차[11/01]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 메인페이지 · 로그아웃 · 회원정보 )  |
-|24일차[11/02]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 회원관리 CRUD ) · 평가[응용 SW기초기술 활용] |
-|25일차[11/03]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 게시판 CRUD ) |
-|26일차[11/04]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 제품 CRUD ) |
-|27일차[11/05]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 제품 통계 )|
-|28일차[11/08]|JAVA2| Datebase · JAVAFX/Scene Builder( Chatting ) |
-|29일차[11/09]|JAVA2| Datebase · JAVAFX/Scene Builder|
-|30일차[11/10]|JAVA2| Datebase · JAVAFX/Scene Builder|
-|31일차[11/11]|JAVA2| 평가[SQL 활용] · Team javafx Project 설계   |
-|32일차[11/12]|JAVA2 · Front | HTML · Team javafx Project  |
+|21일차[10/28]|JAVA2| JAVA1정리 · JAVAFX/Scene Builder( signup · login ) |
+|22일차[10/29]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( signup · login · findid · findpassword ) · SMTP API |
+|23일차[11/01]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( mainpage , logout , memberinfo )  |
+|24일차[11/02]|JAVA2| Datebase · JAVAFX/Scene Builder( Member ) · 평가[응용 SW기초기술 활용] |
+|25일차[11/03]|JAVA2| Datebase · JAVAFX/Scene Builder( Board ) |
+|26일차[11/04]|JAVA2| Datebase · JAVAFX/Scene Builder( Product ) |
+|27일차[11/05]|JAVA2| Datebase · JAVAFX/Scene Builder( Product ) · Team javafx Project 설계 |
+|28일차[11/08]|JAVA2| Datebase · JAVAFX/Scene Builder( Chart ) · Team javafx Project 설계 |
+|29일차[11/09]|JAVA2| Datebase · JAVAFX/Scene Builder( Chatting ) · Team javafx Project 설계 |
+|30일차[11/10]|JAVA2| Datebase · JAVAFX/Scene Builder · Team javafx Project 설계 |
+|31일차[11/11]|JAVA2| 평가[SQL 활용] · Team javafx Project |
+|32일차[11/12]|JAVA2 · Front | HTML · Team javafx Project |
 |33일차[11/15]|JAVA2 · Front | HTML · Team javafx Project  |
 |34일차[11/16]|JAVA2 · Front | CSS · Team javafx Project  |
 |35일차[11/17]|JAVA2 · Front | CSS · Team javafx Project |
