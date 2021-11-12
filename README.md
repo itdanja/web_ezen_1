@@ -54,7 +54,7 @@
 |24일차[11/02]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 회원관리 CRUD ) · 평가[응용 SW기초기술 활용] |
 |25일차[11/03]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 게시판 CRUD ) |
 |26일차[11/04]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 제품 CRUD ) |
-|27일차[11/05]|JAVA2| JAVA1정리 ·Datebase · JAVAFX/Scene Builder( 제품 통계 )|
+|27일차[11/05]|JAVA2| JAVA1정리 · Datebase · JAVAFX/Scene Builder( 제품 통계 )|
 |28일차[11/08]|JAVA2| Datebase · JAVAFX/Scene Builder( Chatting ) |
 |29일차[11/09]|JAVA2| Datebase · JAVAFX/Scene Builder|
 |30일차[11/10]|JAVA2| Datebase · JAVAFX/Scene Builder|
