@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1> img src = "이미지파일경로.확장자명 </h1>
+		<p> % : 문서 사이즈 백분율 [ 자동크기 ]
+		<p> px : 모니터 사이즈의 상대크기[기본값] [ 픽셀 ]
+		<p> 이미지 경로
+			<p> 절대 경로[모든경로] :	C:\Users\505-t\git\web_ezen_1\front\src\main\webapp\HTML\강아지이미지_1.jpg
+			<p> 상대 경로 : [현재 위치 기준 ]
+				<p> / : 루트
+				<p> ./ : 현재 경로 
+				<p> ../ : 현재 폴더의 상단 폴더
+	<h1> 이미지 태그 </h1>
+	<img src="강아지이미지_1.jpg" title="동물가족" >
+		<!--  태그명 속성명 width="원본사이즈"-->
+	<img alt="" src="강아지이미지_1.jpg" width="300">
+	<img alt="" src="강아지이미지_1.jpg" width="150" height="150">
+	<br>
+	<img alt="" src="강아지이미지_1.jpg" width="300px;">
+	<br>
+	<img alt="" src="강아지이미지_1.jpg" width="50%">
+	<p> 절대경로[x] </p>
+	<br> <!-- 절대경로 -->
+		<!-- 실행x -->
+		<img alt="" src="C:\Users\505-t\git\web_ezen_1\front\src\main\webapp\HTML\강아지이미지_1.jpg">
+		<!-- 실행o -->
+		<img alt="" src="http://localhost:8080/front/%EA%B0%95%EC%95%84%EC%A7%80%EC%9D%B4%EB%AF%B8%EC%A7%80_1.jpg"> 
+	<p> 상대경로1 </p>
+	<br> <!-- 상대경로 -->
+	<img alt="" src="강아지이미지_1.jpg">
+	<p> 상대경로2[x] </p>
+	<br> <!-- 상대경로 -->
+	<img alt="" src="../webapp/강아지이미지_1.jpg">
+	<p> 상대경로3 : 상위폴더 이동 </p>
+	<br> <!-- 상대경로 -->
+	<img src="../강아지이미지_1.jpg">	<!-- ../ : 현재폴더 위로 이동 -->
+	<p> 상대경로4 : 하위폴더 이동 </p>
+	<br>
+	<img src="img/강아지이미지_1.jpg">
+	
+
+</body>
+</html>
