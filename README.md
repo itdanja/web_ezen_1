@@ -59,15 +59,15 @@
 |29일차[11/09]|JAVA2| Datebase · JAVAFX/Scene Builder|
 |30일차[11/10]|JAVA2| Datebase · JAVAFX/Scene Builder|
 |31일차[11/11]|JAVA2| 평가[SQL 활용] · Team javafx Project 설계   |
-|32일차[11/12]|JAVA2 · Front | HTML · Datebase · Team javafx Project  |
-|33일차[11/15]|JAVA2 · Front | HTML · Datebase · Team javafx Project  |
-|34일차[11/16]|JAVA2 · Front | CSS · Datebase · Team javafx Project  |
-|35일차[11/17]|JAVA2 · Front | CSS · Datebase · Team javafx Project |
-|36일차[11/18]|JAVA2 · Front | CSS · Datebase · Team javafx Project |
-|37일차[11/19]|JAVA2 · Front | 평가[요구사항확인] · JS · Datebase · Team javafx Project |
-|38일차[11/22]|JAVA2 · Front | JS · Datebase · Team javafx Project |
-|39일차[11/21]|JAVA2 · Front | layout · Datebase · Team javafx Project |
-|40일차[11/22]|JAVA2 · Front | layout · Datebase · Team javafx Project 발표 |
+|32일차[11/12]|JAVA2 · Front | HTML · Team javafx Project  |
+|33일차[11/15]|JAVA2 · Front | HTML · Team javafx Project  |
+|34일차[11/16]|JAVA2 · Front | CSS · Team javafx Project  |
+|35일차[11/17]|JAVA2 · Front | CSS · Team javafx Project |
+|36일차[11/18]|JAVA2 · Front | CSS · Team javafx Project |
+|37일차[11/19]|JAVA2 · Front | 평가[요구사항확인] · layout · Team javafx Project |
+|38일차[11/22]|JAVA2 · Front | layout · Team javafx Project  |
+|39일차[11/23]|JAVA2 · Front | js · Team javafx Project |
+|40일차[11/24]|JAVA2 · Front | js · Team javafx Project 발표  |
 
 ```
    * JAVA FX
@@ -84,55 +84,58 @@
    *** -작성한 파일 : mainpage.fxml , myinfo.fxml , home.fxml , mainpagecontroller , myinfocontroller
    *** -작업한 내용 : 1.mainpage · myinfo 디자인 2.mainpage pageload 3.logout · loginid 4.회원탈퇴
    *** -작업한 DB : 1.getmember 2.delete
+   
+   
+   
 ```
 
 ### 3개월차 진도 [ Bootstrap · Servlet · JSP · Datavbase · Front ] 
 |일차|목차|주요내용|
 |------|---|---|
-|41일차[10/28]|Jsp| Bootstrap · index · header · footer |
-|42일차[10/29]|Jsp| JSP · DB ( 회원가입 ) |
-|43일차[11/01]|Jsp| JSP · DB ( 로그인 · 회원정보  ) |
-|44일차[11/02]|Jsp| JSP · DB ( 관리자 ) · 평가 |
-|45일차[11/03]|Jsp| JSP · DB ( 게시판 쓰기·출력 ) · 첨부파일  |
-|46일차[11/04]|Jsp| JSP · DB ( 게시판 수정·삭제·검색·페이징 )  |
-|47일차[11/05]|Jsp| JSP · DB ( 제품등록 · 출력 ) |
-|48일차[11/08]|Jsp| JSP · DB ( 제품수정 · 삭제 ) |
-|49일차[11/09]|Jsp| JSP · DB ( 상세페이지 ) |
-|50일차[11/10]|Jsp| JSP · DB ( 장바구니 · 결제 ) |
-|51일차[11/11]|Jsp| JSP · DB ( 관리자 · 회원정보 ) · Team jsp Project 설계 |
-|52일차[11/12]|Jsp| JSP · DB (  ) · Team jsp Project 설계 · 평가 |
-|53일차[11/15]|Jsp| JSP · DB (  ) · Team jsp Project |
-|54일차[11/16]|Jsp| JSP · DB (  ) · Team jsp Project |
-|55일차[11/17]|Jsp| JSP · DB (  ) · Team jsp Project |
-|56일차[11/18]|Jsp| JSP · DB (  ) · Team jsp Project |
-|57일차[11/19]|Jsp| JSP · DB (  ) · Team jsp Project · 평가 |
-|58일차[11/22]|Jsp| JSP · DB (  ) · Team jsp Project |
-|59일차[11/21]|Jsp| JSP · DB (  ) · Team jsp Project |
-|60일차[11/22]|Jsp| JSP · DB (  ) · Team jsp Project · Team jsp Project 발표 |
+|41일차[11/25]|Jsp| Bootstrap(HTML·CSS·JS) : mainpage( header , main , footer |
+|42일차[11/26]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 회원가입 signup.jsp <------> signup.controller <-----> MemberDao |
+|43일차[11/29]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 로그인 · 회원정보 |
+|44일차[11/30]|Jsp| 평가[화면설계] Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 관리자 |
+|45일차[12/01]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 게시판 |
+|46일차[12/02]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 게시판 |
+|47일차[12/03]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 제품 |
+|48일차[12/06]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 제품 |
+|49일차[12/07]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 상세페이지 |
+|50일차[12/08]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 장바구니 · 결제 |
+|51일차[12/09]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 관리자 · 회원정보 |
+|52일차[12/10]|Jsp| 평가[화면구현] Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
+|53일차[12/13]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
+|54일차[12/14]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
+|55일차[12/15]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
+|56일차[12/16]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
+|57일차[12/17]|Jsp| 평가[UI테스트] Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
+|58일차[12/20]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
+|59일차[12/21]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
+|60일차[12/22]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project 발표
 
 ### 4개월차 진도 [ Spring · JPA ] 
 |일차|목차|주요내용|
 |------|---|---|
-|61일차[10/28]|Spring|  |
-|62일차[10/29]|Spring|  |
+|61일차[10/28]|Spring| |
+|62일차[10/29]|Spring| |
 |63일차[11/01]|Spring| |
 |64일차[11/02]|Spring| |
-|65일차[11/03]|Spring|  |
-|66일차[11/04]|Spring|  |
-|67일차[11/05]|Spring|  |
-|68일차[11/08]|Spring|  |
-|69일차[11/09]|Spring|  |
-|70일차[11/10]|Spring|  |
-|71일차[11/11]|Spring|  |
-|72일차[11/12]|Spring|  |
-|73일차[11/15]|Spring|  |
-|74일차[11/16]|Spring|  |
-|75일차[11/17]|Spring|  |
-|76일차[11/18]|Spring|  |
-|77일차[11/19]|Spring|  |
+|65일차[11/03]|Spring| |
+|66일차[11/04]|Spring| |
+|67일차[11/05]|Spring| |
+|68일차[11/08]|Spring| |
+|69일차[11/09]|Spring| |
+|70일차[11/10]|Spring| |
+|71일차[11/11]|Spring| |
+|72일차[11/12]|Spring| |
+|73일차[11/15]|Spring| |
+|74일차[11/16]|Spring| |
+|75일차[11/17]|Spring| |
+|76일차[11/18]|Spring| |
+|77일차[11/19]|Spring| |
 |78일차[11/22]|Spring| |
 |79일차[11/21]|Spring| |
-|80일차[11/22]|Spring|  |
+|80일차[11/22]|Spring| |
 
 ### 5개월차 진도 [ Spring Project · AWS ] 
 |일차|목차|주요내용|
