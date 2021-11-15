@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1> 폼 양식 : 사용자가 키보드로 데이터 입력하거나 마우스 선택할수 있는 서식 </h1>
+
+	<form action="0.HTML정리.html">
+			이름 : <input type="text" value="유재석" readonly="readonly"> <!-- 태크명 속성명=값 -->
+			아이디 : <input type="text" placeholder="아이디 입력" autofocus="autofocus">
+			회원등급 : <input type="text" value="일반" disabled="disabled">
+		<br> 비밀번호 : <input type="password">
+		<br> <input type="radio" name="email" checked="checked" > 예 
+			<input type="radio" name="email" > 아니요 
+			<!-- name 동일한경우 그룹[ 1개의 버튼만 선택가능 ] -->
+		<br>
+			<input type="checkbox" name="item1" checked="checked"> 뉴스
+			<input type="checkbox" name="item2"> 드라마
+			<!-- name 동일한경우에도 복수 선택 -->
+			<input type="checkbox" name="item3"> 스포츠
+		<br>
+			이메일 : <input type="text"> @ 
+			<select>
+				<option>직접 입력</option>
+				<option>naver.com</option>
+				<option>nate.com</option>
+			</select>
+		<br>
+			자기소개 <br> <textarea rows="6" cols="50"></textarea> <!-- row:행문자수 cols=열문자수 -->
+		<br>
+			<input type="file"> 
+		<br> <input type="button" value="버튼" >  <!-- 폼 이벤트 -->
+			<input type="submit" value="저장하기"> <!-- 폼 저장[전송 action="전송경로"] -->
+			<input type="reset" value="다시쓰기"> <!-- 폼 초기화 -->
+			
+	</form>
+
+</body>
+</html>
+
+
+
+
+
