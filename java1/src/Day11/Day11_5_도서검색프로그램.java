@@ -2,7 +2,7 @@ package Day11;
 
 import java.io.IOException;
 
-public class Day11_5 {
+public class Day11_5_도서검색프로그램 {
 	
 	// 1. 메뉴 => while 무한루프
 	// 2. 입력받기 : 1. Scanner 객체  2. System.in.read()
