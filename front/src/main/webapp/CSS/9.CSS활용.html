@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+	<style type="text/css">
+		
+		body {
+			background-image: url("패턴이미지.jpg"); 	/* 배경 이미지 */
+			background-repeat: no-repeat;			/* 자동 채우기 제거 */
+			background-position: right top;			/* 배경 위치 */
+		}
+		div{
+			border: solid 3px red; 
+			width: 700px; 
+			height: 700px; 
+		}
+		#t1{background-image: url("패턴이미지2.jpg");}
+		#t2{ background-color: white;  }
+		
+		#t2 table , th , td {  border: solid 2px black; }
+		#t2 table{ 
+			border-collapse: collapse; 		/* 테두리 병합 */
+			border-top: solid 3px orange; 
+			margin: 50px;		
+		} 
+		#t2 th{  padding: 10px; background-color: #eeeeee; }
+		#t2 td{  padding: 10px; text-align: center; }
+		#t2 .col1 { width: 100px; }
+		#t2 .col2 { width: 250px; }
+		
+	</style>
+
+</head>
+<body>
+	<h3> 배경 이미지 </h3>
+		<div id="t1">
+			안녕하세요
+		</div>
+	<h3> 테이블 </h3>
+		<div id="t2">
+			<table>
+				<tr> 
+					<th class="col1"> 종류 </th> 
+					<th class="col1"> 대인 </th> 
+					<th class="col1"> 소인 </th> 
+					<th class="col2"> 비고 </th>
+				</tr>
+				<tr>
+					<td> 주간권 </td> <td> 20,000원 </td> <td> 10,000원 </td>
+					<td rowspan="3">공원 입장 및 놀이공원 이용<br>(일부 놀이공원 별도 요금 ) </td>
+				</tr>
+				<tr>
+					<td> 야간권 </td> <td> 15,000원 </td> <td> 8,000원 </td>
+				</tr>
+				<tr>
+					<td> 2일권 </td> <td> 30,000원 </td> <td> 15,000원 </td>
+				</tr>
+			</table>
+		</div>
+		
+</body>
+</html>
+
+
+
+
+
+
+
+
+

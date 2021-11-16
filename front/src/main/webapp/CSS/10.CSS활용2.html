@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+	<style type="text/css">
+	
+		span{ color: red; border: solid 1px red;}
+		div{ background-color: #eeeeee; }
+	
+		#t1{ display: inline; }
+		#t2{ display: block; }
+		#t3{ display: inline-block; }
+		#t4{ display: none; }	/* 숨기기 */		
+		#a{
+			width: 100px; height: 100px;
+			margin: 20px;
+			background-color: orange;
+			display: inline;
+		}
+		#b{
+			width: 100px; height: 100px;
+			margin: 20px;
+			background-color: orange;
+			display: block;
+		}
+		#c{
+			width: 100px; height: 100px;
+			margin: 20px;
+			background-color: orange;
+			display: inline-block;
+		}
+		
+		
+	
+	</style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+	<h1> dispaly 속성 </h1>
+		<ol>
+			<li> inline : 수평 방향 [ 자동 줄바꿈x ]
+				<ol>
+					<li>  span , a , img 등 </li>
+					<li> 박스의 크기 적용X [width , height x] </li>
+					<li> 바깥여백 위/아래 적용X </li>
+				</ol>
+			 </li>
+			 
+			<li> block : 수평 전체 자치 [ 자동 줄바꿈 o ]
+				<ol>
+					<li> div , p , ul , li 등 </li>
+					<li> 박스의 크기 적용o </li>
+					<li> 모든 바깥여백 적용o </li>
+				</ol>
+			</li>
+			
+			<li> inline-block 
+				<ol>
+					<li> block 속성에 줄바꿈x </li>
+				</ol>
+			</li>
+		</ol>
+		
+		<div>
+			글자1 <span id = "t1"> 안녕하세요1 </span> 글자2 
+		</div>
+		
+		<div>
+			글자1 <span id = "t2"> 안녕하세요1 </span> 글자2 
+		</div>
+		
+		<div>
+			글자1 <span id = "t3"> 안녕하세요1 </span> 글자2 
+		</div>
+		<div>
+			글자1 <span id = "t4"> 안녕하세요1 </span> 글자2 
+		</div>
+		
+		글자1 <span id="a"> box </span> 글자2	<br>
+		글자1 <span id="b"> box </span> 글자2	<br>
+		글자1 <span id="c"> box </span> 글자2	<br>
+		
+</body>
+</html>
