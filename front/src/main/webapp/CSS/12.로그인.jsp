@@ -15,7 +15,6 @@
 
 </head>
 <body>
-
 	<!-- 메뉴바 파일 포함 -->
 	<%@ include file="12.메뉴바.jsp" %>
 	
@@ -26,7 +25,7 @@
 			<tr>
 				<td> 아이디 </td>
 				<td> <input type="text"> </td>
-				<td rowspan="2"> <button> 로그인 </button>
+				<td rowspan="2"> <button> 로그인 </button> </td>
 			</tr>
 			<tr>
 				<td> 비밀번호 </td>

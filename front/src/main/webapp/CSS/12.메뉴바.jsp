@@ -25,8 +25,8 @@
 </head>
 <body>
 	<ul id="menuul">	<!-- ul(unorder list) : 순서없는 목록  -->
-		<li class="menuli"> <a href="#"> 소개 </a> </li>	
-		<li class="menuli"> <a href="#"> 고객 센터 </a></li>
+		<li class="menuli"> <a href="12.소개.jsp"> 소개 </a> </li>	
+		<li class="menuli"> <a href="12.게시판.jsp"> 고객 센터 </a></li>
 		<li class="menuli"> <a href="12.로그인.jsp"> 로그인 </a> </li>
 		<li class="menuli"> <a href="#"> 회원가입 </a> </li>
 		<li class="menuli"> <a href="#"> 찾아 오시는 길 </a> </li>
