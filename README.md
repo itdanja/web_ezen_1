@@ -4,7 +4,8 @@
 ### ·과정 필수 
 ######   1.컴퓨터구조 도서  => 2.알고리즘 도서 => 3.백준 알고리즘 문제 풀이 => 4.코딩테스트 준비
 
-### 1개월차 진도
+<details>
+<summary>### 1개월차 진도</summary>
 |일차|목차|주요내용|
 |------|---|---|
 |1일차[09/28]|JAVA1| 출력 · 입력 |
@@ -41,6 +42,8 @@
     ** 10. : 람다식
     ** 11. : 스트림과 병렬처리
     ** 12. : 입출력 및 네트워킹
+  
+</details>
 
 ### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
 |일차|목차|주요내용|
@@ -66,25 +69,7 @@
 |39일차[11/23]|JAVA2 · Front | js · Team javafx Project |
 |40일차[11/24]|JAVA2 · Front | js · Team javafx Project   |
 
-```
-   * JAVA FX
-   ** 1일차
-   *** -작성한 파일 : appstart , login.fxml , signup.fxml , logincontroller , signupcontroller
-   *** -작업한 내용 : 1.java 실행 2.login·signup 디자인 3.login·signup pageload
 
-   ** 2일차
-   *** -작성한 파일 : logincontroller , signupcontroller , findid.fxml , findpassword.fxml , findidcontroller , findpasswordcontroller , MemberDao
-   *** -작업한 내용 : 1.DB설치 2.DAO 3.아이디찾기 4.비밀번호찾기 5.smtp api
-   *** -작업한 DB : 1.signup 2.login 3.findid 4.findpassword
-
-   ** 3일차
-   *** -작성한 파일 : mainpage.fxml , myinfo.fxml , home.fxml , mainpagecontroller , myinfocontroller
-   *** -작업한 내용 : 1.mainpage · myinfo 디자인 2.mainpage pageload 3.logout · loginid 4.회원탈퇴
-   *** -작업한 DB : 1.getmember 2.delete
-   
-   
-   
-```
 
 ### 3개월차 진도 [ Bootstrap · Servlet · JSP · Datavbase · Front ] 
 |일차|목차|주요내용|
