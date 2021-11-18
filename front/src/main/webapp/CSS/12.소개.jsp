@@ -17,27 +17,14 @@
 		}
 		.row1{ text-align: center;}	
 		.row1 img{ width: 200px; }
-		li{padding: 5px;}
+		#productul li{padding: 5px;}
 		.row2{ font-weight: bold;}
 		.row3{font-size: 10px;font-weight: bold;}
 		.row4{font-size: 10px;}
 		.row5{font-size: 10px;}
 		.row5 span{color: orange; font-weight: bold;}
 	</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 
 
 </head>
@@ -54,7 +41,7 @@
 				생일 등 특별한 날에 상큼한 파인애플과 함께...</li>
 		<li class="row5"> 리뷰 <span>130</span> · 평점 <span>4.9</span> </li>	<!--  · : alt+ 1 8 3 -->
 	</ul>
-
+	
 </body>
 </html>
 
