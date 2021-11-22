@@ -66,8 +66,8 @@
 |36일차[11/18]|JAVA2 · Front | CSS · Team javafx Project |
 |37일차[11/19]|JAVA2 · Front | 평가[요구사항확인] Team javafx Project |
 |38일차[11/22]|JAVA2 · Front | layout · Team javafx Project 발표  |
-|39일차[11/23]|JAVA2 · Front | js · Team javafx Project |
-|40일차[11/24]|JAVA2 · Front | js · Team javafx Project   |
+|39일차[11/23]|JAVA2 · Front | layout |
+|40일차[11/24]|JAVA2 · Front | layout  |
 
 
 
