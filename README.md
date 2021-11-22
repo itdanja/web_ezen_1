@@ -108,44 +108,44 @@
 |64일차[12/28]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
 |65일차[12/29]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
 |66일차[12/30]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
-|67일차[12/31]|Spring| jsp 프로젝트 발표 |
-|68일차[01/04]|Spring| |
-|69일차[01/05]|Spring| |
-|70일차[01/06]|Spring| |
-|71일차[01/07]|Spring| |
-|72일차[01/10]|Spring| |
-|73일차[01/11]|Spring| |
-|74일차[01/12]|Spring| |
-|75일차[01/13]|Spring| |
-|76일차[01/14]|Spring| |
-|77일차[01/17]|Spring| |
-|78일차[01/18]|Spring| |
-|79일차[01/19]|Spring| |
-|80일차[01/20]|Spring| |
+|67일차[12/31]|Spring| Team jsp Project 발표 |
+|68일차[01/04]|Spring| Spring |
+|69일차[01/05]|Spring| Spring |
+|70일차[01/06]|Spring| Spring |
+|71일차[01/07]|Spring| Spring |
+|72일차[01/10]|Spring| Spring |
+|73일차[01/11]|Spring| Spring |
+|74일차[01/12]|Spring| Spring |
+|75일차[01/13]|Spring| Spring |
+|76일차[01/14]|Spring| Spring |
+|77일차[01/17]|Spring| Spring · Team Spring Project( 주제 선정 )|
+|78일차[01/18]|Spring| Spring · Team Spring Project( 프론트 설계 )|
+|79일차[01/19]|Spring| Spring · Team Spring Project( DB 설계 )|
+|80일차[01/20]|Spring| Spring · Team Spring Project( 컨트롤러 설계 )|
 
 ### 5개월차 진도 [ Spring Project · AWS ] 
 |일차|목차|주요내용|
 |------|---|---|
-|81일차[01/21]|Project| |
-|82일차[01/24]|Project| |
-|83일차[01/25]|Project| |
-|84일차[01/26]|Project| |
-|85일차[01/27]|Project| |
-|86일차[01/28]|Project| |
-|87일차[11/05]|Project| |
-|88일차[11/08]|Project| |
-|89일차[11/09]|Project| |
-|90일차[11/10]|Project| |
-|91일차[11/11]|Project| |
-|92일차[11/12]|Project| |
-|93일차[11/15]|Project| |
-|94일차[11/16]|Project| |
-|95일차[11/17]|Project| |
-|96일차[11/18]|Project| |
-|97일차[11/19]|Project| |
-|98일차[11/22]|Project| |
-|99일차[11/21]|Project| |
-|100일차[02/23]|Project| |
+|81일차[01/21]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|82일차[01/24]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|83일차[01/25]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|84일차[01/26]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|85일차[01/27]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|86일차[02/03]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|87일차[02/04]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|88일차[02/07]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|89일차[02/08]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|90일차[02/09]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|91일차[02/10]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|92일차[02/11]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|93일차[02/14]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|94일차[02/15]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|95일차[02/16]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|96일차[02/17]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|97일차[02/18]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|98일차[02/22]|Project| Team Spring Project 발표|
+|99일차[02/21]|Project| Team Spring Project 보완|
+|100일차[02/23]|Project| 과정 정리 |
 
 
 
