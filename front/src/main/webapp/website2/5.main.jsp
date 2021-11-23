@@ -12,7 +12,7 @@
 			width: 400px;
 			float: left;
 		}
-		#main1 .title1{
+		#main1 .title1 , #main1 .title1 {
 			border-bottom: solid 1px black;
 			padding-bottom: 8px;
 		}
@@ -30,11 +30,18 @@
 			width : 400px;
 			float: right;
 		}
-	
-	
-	
-	
-	
+		#main2 .item1{
+			width: 195px;
+			float: right;
+			margin-top: 30px;
+		}
+		#main2 .subject{
+			margin-top: 10px; font-weight: bold; font-size: 15px;
+		}
+		#main2 .date{
+			margin-top: 5px;
+		}
+		
 	</style>
 
 
@@ -94,9 +101,52 @@
 		</div>
 		
 		<div id="main2"> <!-- 제품 구역 -->
-		
+			<h3 class="title1">제빵 클래스</h3>
+			<ul class="item1">
+				<li><img src="img/bread1.png"></li>
+				<li class="subject">도너츠 만들기[3] </li>
+				<li class="date">21.09.30</li>
+			</ul>
+			
+			<ul class="item1">
+				<li><img src="img/bread2.png"></li>
+				<li class="subject">도너츠 만들기[3] </li>
+				<li class="date">21.09.30</li>
+			</ul>
+			
+			<ul class="item1">
+				<li><img src="img/bread3.png"></li>
+				<li class="subject">도너츠 만들기[3] </li>
+				<li class="date">21.09.30</li>
+			</ul>
+			
+			<ul class="item1">
+				<li><img src="img/bread4.png"></li>
+				<li class="subject">도너츠 만들기[3] </li>
+				<li class="date">21.09.30</li>
+			</ul>
 		</div>
 	</section>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

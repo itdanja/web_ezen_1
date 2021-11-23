@@ -26,11 +26,8 @@
 		<%@include file="5.main.jsp" %>
 	</div>
 	
-	<footer>
-		<div class="box">
-			г╙ем
-		</div>	
-	</footer>
+	<%@include file="6.footer.jsp" %>
+	
 </body>
 </html>
 
