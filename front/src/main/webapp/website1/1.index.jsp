@@ -39,17 +39,6 @@
 
 	</style>
 
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body>
 
@@ -57,9 +46,9 @@
 				<!--  헤더 태그 [ div 사용 해도 무관 ] -->
 	<%@include file="2.header.jsp" %>
 	
-	<section id="main_img">			<!--  세션 태그 [ div 처럼 구역 나누기 ] -->
-		메인 이미지
-	</section>
+				<!--  세션 태그 [ div 처럼 구역 나누기 ] -->
+	<%@include file="3.mainimage.jsp" %>
+	
 	<section id="contents">			<!--  세션 태그 -->
 		<nav id="sub_menu">			<!--  메뉴 태그 [ div 사용 해도 무관 ] --> 
 			서브 메뉴 
