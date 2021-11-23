@@ -4,7 +4,7 @@
 ### ·과정 필수 
 ######   1.컴퓨터구조 도서  => 2.알고리즘 도서 => 3.백준 알고리즘 문제 풀이 => 4.코딩테스트 준비
 
-### 1개월차 진도
+### 1개월차 진도 [ JAVA ]
 |일차|목차|주요내용|
 |------|---|---|
 |1일차[09/28]|JAVA1| 출력 · 입력 |
@@ -41,6 +41,7 @@
     ** 10. : 람다식
     ** 11. : 스트림과 병렬처리
     ** 12. : 입출력 및 네트워킹
+  
 
 ### 2개월차 진도 [ JAVAFX · Scene Builder · Datavbase · Front (HTML · CSS · JS ) ]
 |일차|목차|주요내용|
@@ -60,103 +61,89 @@
 |33일차[11/15]|JAVA2 · Front | HTML · Team javafx Project  |
 |34일차[11/16]|JAVA2 · Front | CSS · Team javafx Project  |
 |35일차[11/17]|JAVA2 · Front | CSS · Team javafx Project |
-|36일차[11/18]|JAVA2 · Front | CSS · Team javafx Project |
+|36일차[11/18]|JAVA2 · Front | layout · Team javafx Project |
 |37일차[11/19]|JAVA2 · Front | 평가[요구사항확인] Team javafx Project |
-|38일차[11/22]|JAVA2 · Front | layout · Team javafx Project 발표  |
-|39일차[11/23]|JAVA2 · Front | js · Team javafx Project |
-|40일차[11/24]|JAVA2 · Front | js · Team javafx Project   |
+|38일차[11/22]|JAVA2 · Front | Team javafx Project 발표  |
+|39일차[11/23]|JAVA2 · Front | layout |
+|40일차[11/24]|JAVA2 · Front | layout |
 
-```
-   * JAVA FX
-   ** 1일차
-   *** -작성한 파일 : appstart , login.fxml , signup.fxml , logincontroller , signupcontroller
-   *** -작업한 내용 : 1.java 실행 2.login·signup 디자인 3.login·signup pageload
 
-   ** 2일차
-   *** -작성한 파일 : logincontroller , signupcontroller , findid.fxml , findpassword.fxml , findidcontroller , findpasswordcontroller , MemberDao
-   *** -작업한 내용 : 1.DB설치 2.DAO 3.아이디찾기 4.비밀번호찾기 5.smtp api
-   *** -작업한 DB : 1.signup 2.login 3.findid 4.findpassword
-
-   ** 3일차
-   *** -작성한 파일 : mainpage.fxml , myinfo.fxml , home.fxml , mainpagecontroller , myinfocontroller
-   *** -작업한 내용 : 1.mainpage · myinfo 디자인 2.mainpage pageload 3.logout · loginid 4.회원탈퇴
-   *** -작업한 DB : 1.getmember 2.delete
-   
-   
-   
-```
 
 ### 3개월차 진도 [ Bootstrap · Servlet · JSP · Datavbase · Front ] 
 |일차|목차|주요내용|
 |------|---|---|
-|41일차[11/25]|Jsp| Bootstrap(HTML·CSS·JS) : mainpage( header , main , footer |
-|42일차[11/26]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 회원가입 signup.jsp <------> signup.controller <-----> MemberDao |
-|43일차[11/29]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 로그인 · 회원정보 |
-|44일차[11/30]|Jsp| 평가[화면설계] Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 관리자 |
-|45일차[12/01]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 게시판 |
-|46일차[12/02]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 게시판 |
-|47일차[12/03]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 제품 |
-|48일차[12/06]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 제품 |
-|49일차[12/07]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 상세페이지 |
-|50일차[12/08]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 장바구니 · 결제 |
-|51일차[12/09]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) : 관리자 · 회원정보 |
-|52일차[12/10]|Jsp| 평가[화면구현] Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
-|53일차[12/13]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
-|54일차[12/14]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
-|55일차[12/15]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
-|56일차[12/16]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
-|57일차[12/17]|Jsp| 평가[UI테스트] Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
-|58일차[12/20]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
-|59일차[12/21]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project
-|60일차[12/22]|Jsp| Jsp · Datebase · Bootstrap(HTML·CSS·JS) · Team jsp Project 발표
+|41일차[11/25]|Jsp| Bootstrap(HTML·CSS·JS) |
+|42일차[11/26]|Jsp| Bootstrap(HTML·CSS·JS) |
+|43일차[11/29]|Jsp| jsp기본 |
+|44일차[11/30]|Jsp| jsp기본 |
+|45일차[12/01]|Jsp| Member |
+|46일차[12/02]|Jsp| Member |
+|47일차[12/03]|Jsp| Board |
+|48일차[12/06]|Jsp| Board |
+|49일차[12/07]|Jsp| Board |
+|50일차[12/08]|Jsp| Product |
+|51일차[12/09]|Jsp| Product |
+|52일차[12/10]|Jsp| Cart · Team jsp Project( 주제 선정 )|
+|53일차[12/13]|Jsp| payment · Team jsp Project( 프론트 설계 )|
+|54일차[12/14]|Jsp| info · Team jsp Project( DB 설계 )| 
+|55일차[12/15]|Jsp| info · Team jsp Project( 컨트롤러 설계 )|
+|56일차[12/16]|Jsp| Chart · Team jsp Project(프론트 구현) |
+|57일차[12/17]|Jsp| Chart · Team jsp Project(프론트 구현) |
+|58일차[12/20]|Jsp| chatting · Team jsp Project(프론트 구현)|
+|59일차[12/21]|Jsp| chatting · Team jsp Project(프론트 구현)|
+|60일차[12/22]|Jsp| Jsp · Team jsp Project(프론트 구현)|
+
+11/30 : 평가[화면설계]
+12/10 : 평가[화면구현]
+12/17 : 평가[UI테스트]
 
 ### 4개월차 진도 [ Spring · JPA ] 
 |일차|목차|주요내용|
 |------|---|---|
-|61일차[10/28]|Spring| |
-|62일차[10/29]|Spring| |
-|63일차[11/01]|Spring| |
-|64일차[11/02]|Spring| |
-|65일차[11/03]|Spring| |
-|66일차[11/04]|Spring| |
-|67일차[11/05]|Spring| |
-|68일차[11/08]|Spring| |
-|69일차[11/09]|Spring| |
-|70일차[11/10]|Spring| |
-|71일차[11/11]|Spring| |
-|72일차[11/12]|Spring| |
-|73일차[11/15]|Spring| |
-|74일차[11/16]|Spring| |
-|75일차[11/17]|Spring| |
-|76일차[11/18]|Spring| |
-|77일차[11/19]|Spring| |
-|78일차[11/22]|Spring| |
-|79일차[11/21]|Spring| |
-|80일차[11/22]|Spring| |
+|61일차[12/23]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
+|62일차[12/24]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
+|63일차[12/27]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
+|64일차[12/28]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
+|65일차[12/29]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
+|66일차[12/30]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
+|67일차[12/31]|Spring| Team jsp Project 발표 |
+|68일차[01/04]|Spring| Spring |
+|69일차[01/05]|Spring| Spring |
+|70일차[01/06]|Spring| Spring |
+|71일차[01/07]|Spring| Spring |
+|72일차[01/10]|Spring| Spring |
+|73일차[01/11]|Spring| Spring |
+|74일차[01/12]|Spring| Spring |
+|75일차[01/13]|Spring| Spring |
+|76일차[01/14]|Spring| Spring |
+|77일차[01/17]|Spring| Spring · Team Spring Project( 주제 선정 )|
+|78일차[01/18]|Spring| Spring · Team Spring Project( 프론트 설계 )|
+|79일차[01/19]|Spring| Spring · Team Spring Project( DB 설계 )|
+|80일차[01/20]|Spring| Spring · Team Spring Project( 컨트롤러 설계 )|
 
 ### 5개월차 진도 [ Spring Project · AWS ] 
 |일차|목차|주요내용|
 |------|---|---|
-|81일차[10/28]|Project|  |
-|82일차[10/29]|Project|  |
-|83일차[11/01]|Project| |
-|84일차[11/02]|Project|  |
-|85일차[11/03]|Project|  |
-|86일차[11/04]|Project|  |
-|87일차[11/05]|Project| |
-|88일차[11/08]|Project|  |
-|89일차[11/09]|Project|  |
-|90일차[11/10]|Project|  |
-|91일차[11/11]|Project|  |
-|92일차[11/12]|Project|  |
-|93일차[11/15]|Project| |
-|94일차[11/16]|Project|  |
-|95일차[11/17]|Project| |
-|96일차[11/18]|Project| |
-|97일차[11/19]|Project|  |
-|98일차[11/22]|Project|  |
-|99일차[11/21]|Project|  |
-|100일차[11/22]|Project|  |
+|81일차[01/21]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|82일차[01/24]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|83일차[01/25]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|84일차[01/26]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|85일차[01/27]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|86일차[02/03]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|87일차[02/04]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|88일차[02/07]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|89일차[02/08]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|90일차[02/09]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|91일차[02/10]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|92일차[02/11]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|93일차[02/14]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|94일차[02/15]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|95일차[02/16]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|96일차[02/17]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|97일차[02/18]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|98일차[02/22]|Project| Team Spring Project 발표|
+|99일차[02/21]|Project| Team Spring Project 보완|
+|100일차[02/23]|Project| 과정 정리 |
 
 
 
