@@ -21,7 +21,6 @@
 		#contents{
 			width: 1150px;
 			margin: 0 auto;
-			height: 300px;
 		}
 		#sub_menu{
 			width: 240px;
@@ -49,14 +48,8 @@
 				<!--  세션 태그 [ div 처럼 구역 나누기 ] -->
 	<%@include file="3.mainimage.jsp" %>
 	
-	<section id="contents">			<!--  세션 태그 -->
-		<nav id="sub_menu">			<!--  메뉴 태그 [ div 사용 해도 무관 ] --> 
-			서브 메뉴 
-		</nav>
-		<div id="main_contents">			
-			메인 콘텐츠
-		</div>
-	</section>
+	<%@include file="4.main.jsp" %>
+	
 	<footer>			<!-- 푸터 태그 [ div 사용 해도 무관 ] -->
 		하단 푸터
 	</footer>
