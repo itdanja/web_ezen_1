@@ -10,8 +10,8 @@
 		*{ border:  solid 1px red;}
 		header{ height: 150px;  }
 		.box{ width: 1100px; margin: 0 auto; }
-		aside{ width: 200px; float:left; height: 300px;}
-		#main{ width: 840px; float:right; height: 300px; }
+		aside{ width: 220px; float:left; }
+		#main{ width: 840px; float:right; }
 		footer{ clear: both; height: 150px;}
 	</style>
 
@@ -22,12 +22,8 @@
 	<%@include file="3.mainimage.jsp" %>
 	
 	<div class="box">	
-		<aside>
-			사이드바
-		</aside>
-		<section id="main">
-			메인 섹션
-		</section>
+		<%@include file="4.sidebar.jsp" %>
+		<%@include file="5.main.jsp" %>
 	</div>
 	
 	<footer>
