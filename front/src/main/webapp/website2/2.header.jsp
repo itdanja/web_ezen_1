@@ -9,6 +9,8 @@
 
 	<style type="text/css">
 		*{ padding: 0; margin: 0;}
+		header{ height: 150px;  }
+		.box{ width: 1100px; margin: 0 auto; }
 		li{ list-style-type: none; }
 		#logo{ float: left; margin: 45px 0 0 60px; }
 		#menus{ float: right; text-align: right; margin-right: 45px;}

@@ -8,6 +8,9 @@
 
 	<style type="text/css">
 	
+		aside{ width: 220px; float:left; }
+		#main{ width: 840px; float:right; }
+		
 		#main1{
 			width: 400px;
 			float: left;
@@ -47,87 +50,89 @@
 
 </head>
 <body>
-
-	<section id="main">
-		<div id="main1"> <!-- 게시물 구역 -->
+	<div class="box">
 		
-			<h3 class="title1"> 알림</h3>
-			<ul class="boardul">
-				<li class="items"> <!-- 하나의 게시물 -->
-					<div class="subject"> 쿠키 클래스 연기합니다.</div>
-					<div class="date"> 09.30 </div>
-				</li>
-				<li class="items"> <!-- 하나의 게시물 -->
-					<div class="subject"> 쿠키 클래스 연기합니다.</div>
-					<div class="date"> 09.30 </div>
-				</li>
-				<li class="items"> <!-- 하나의 게시물 -->
-					<div class="subject"> 쿠키 클래스 연기합니다.</div>
-					<div class="date"> 09.30 </div>
-				</li>
-				<li class="items"> <!-- 하나의 게시물 -->
-					<div class="subject"> 쿠키 클래스 연기합니다.</div>
-					<div class="date"> 09.30 </div>
-				</li>
-				<li class="items"> <!-- 하나의 게시물 -->
-					<div class="subject"> 쿠키 클래스 연기합니다.</div>
-					<div class="date"> 09.30 </div>
-				</li>
-			</ul>
-			
-			<h3 class="title2"> 게시판 </h3>
-			<ul class="boardul">
-				<li class="items"> <!-- 하나의 게시물 -->
-					<div class="subject"> 안녕하세요. 반갑습니다. </div>
-					<div class="date"> 09.30 </div>
-				</li>
-				<li class="items"> <!-- 하나의 게시물 -->
-					<div class="subject"> 안녕하세요. 반갑습니다. </div>
-					<div class="date"> 09.30 </div>
-				</li>
-				<li class="items"> <!-- 하나의 게시물 -->
-					<div class="subject"> 안녕하세요. 반갑습니다. </div>
-					<div class="date"> 09.30 </div>
-				</li>
-				<li class="items"> <!-- 하나의 게시물 -->
-					<div class="subject"> 안녕하세요. 반갑습니다. </div>
-					<div class="date"> 09.30 </div>
-				</li>
-				<li class="items"> <!-- 하나의 게시물 -->
-					<div class="subject"> 안녕하세요. 반갑습니다. </div>
-					<div class="date"> 09.30 </div>
-				</li>
-			</ul>
-		</div>
+		<%@include file="4.sidebar.jsp" %>
 		
-		<div id="main2"> <!-- 제품 구역 -->
-			<h3 class="title1">제빵 클래스</h3>
-			<ul class="item1">
-				<li><img src="img/bread1.png"></li>
-				<li class="subject">도너츠 만들기[3] </li>
-				<li class="date">21.09.30</li>
-			</ul>
+		<section id="main">
+			<div id="main1"> <!-- 게시물 구역 -->
+				<h3 class="title1"> 알림</h3>
+				<ul class="boardul">
+					<li class="items"> <!-- 하나의 게시물 -->
+						<div class="subject"> 쿠키 클래스 연기합니다.</div>
+						<div class="date"> 09.30 </div>
+					</li>
+					<li class="items"> <!-- 하나의 게시물 -->
+						<div class="subject"> 쿠키 클래스 연기합니다.</div>
+						<div class="date"> 09.30 </div>
+					</li>
+					<li class="items"> <!-- 하나의 게시물 -->
+						<div class="subject"> 쿠키 클래스 연기합니다.</div>
+						<div class="date"> 09.30 </div>
+					</li>
+					<li class="items"> <!-- 하나의 게시물 -->
+						<div class="subject"> 쿠키 클래스 연기합니다.</div>
+						<div class="date"> 09.30 </div>
+					</li>
+					<li class="items"> <!-- 하나의 게시물 -->
+						<div class="subject"> 쿠키 클래스 연기합니다.</div>
+						<div class="date"> 09.30 </div>
+					</li>
+				</ul>
+				
+				<h3 class="title2"> 게시판 </h3>
+				<ul class="boardul">
+					<li class="items"> <!-- 하나의 게시물 -->
+						<div class="subject"> 안녕하세요. 반갑습니다. </div>
+						<div class="date"> 09.30 </div>
+					</li>
+					<li class="items"> <!-- 하나의 게시물 -->
+						<div class="subject"> 안녕하세요. 반갑습니다. </div>
+						<div class="date"> 09.30 </div>
+					</li>
+					<li class="items"> <!-- 하나의 게시물 -->
+						<div class="subject"> 안녕하세요. 반갑습니다. </div>
+						<div class="date"> 09.30 </div>
+					</li>
+					<li class="items"> <!-- 하나의 게시물 -->
+						<div class="subject"> 안녕하세요. 반갑습니다. </div>
+						<div class="date"> 09.30 </div>
+					</li>
+					<li class="items"> <!-- 하나의 게시물 -->
+						<div class="subject"> 안녕하세요. 반갑습니다. </div>
+						<div class="date"> 09.30 </div>
+					</li>
+				</ul>
+			</div>
 			
-			<ul class="item1">
-				<li><img src="img/bread2.png"></li>
-				<li class="subject">도너츠 만들기[3] </li>
-				<li class="date">21.09.30</li>
-			</ul>
-			
-			<ul class="item1">
-				<li><img src="img/bread3.png"></li>
-				<li class="subject">도너츠 만들기[3] </li>
-				<li class="date">21.09.30</li>
-			</ul>
-			
-			<ul class="item1">
-				<li><img src="img/bread4.png"></li>
-				<li class="subject">도너츠 만들기[3] </li>
-				<li class="date">21.09.30</li>
-			</ul>
-		</div>
-	</section>
-
+			<div id="main2"> <!-- 제품 구역 -->
+				<h3 class="title1">제빵 클래스</h3>
+				<ul class="item1">
+					<li><img src="img/bread1.png"></li>
+					<li class="subject">도너츠 만들기[3] </li>
+					<li class="date">21.09.30</li>
+				</ul>
+				
+				<ul class="item1">
+					<li><img src="img/bread2.png"></li>
+					<li class="subject">도너츠 만들기[3] </li>
+					<li class="date">21.09.30</li>
+				</ul>
+				
+				<ul class="item1">
+					<li><img src="img/bread3.png"></li>
+					<li class="subject">도너츠 만들기[3] </li>
+					<li class="date">21.09.30</li>
+				</ul>
+				
+				<ul class="item1">
+					<li><img src="img/bread4.png"></li>
+					<li class="subject">도너츠 만들기[3] </li>
+					<li class="date">21.09.30</li>
+				</ul>
+			</div>
+		</section>
+	</div>
 </body>
 </html>
 
