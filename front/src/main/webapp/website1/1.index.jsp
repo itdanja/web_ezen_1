@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 
 	<style type="text/css">
-	
-		*{ border: solid 1px red; /* 테두리 : 레이아웃용 */  }
 		header{	/*헤더 태그 */
 			width: 1150px;	/* 가로길이 */
 			margin: 0 auto;	/* 박스권 가운데정렬 [ 컨트롤 : text-align ] */
@@ -20,7 +18,7 @@
 		}
 		#contents{
 			width: 1150px;
-			margin: 0 auto;
+			margin: 0 auto;s
 		}
 		#sub_menu{
 			width: 240px;
@@ -44,15 +42,12 @@
 	<!-- 1. 레이아웃( display : block => 한칸 차지 ) -->
 				<!--  헤더 태그 [ div 사용 해도 무관 ] -->
 	<%@include file="2.header.jsp" %>
-	
 				<!--  세션 태그 [ div 처럼 구역 나누기 ] -->
 	<%@include file="3.mainimage.jsp" %>
-	
+
 	<%@include file="4.main.jsp" %>
 	
-	<footer>			<!-- 푸터 태그 [ div 사용 해도 무관 ] -->
-		하단 푸터
-	</footer>
+	<%@include file="5.footer.jsp" %>
 	
 </body>
 </html>
