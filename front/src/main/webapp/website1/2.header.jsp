@@ -5,11 +5,22 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+
+	<style type="text/css">
+		*{ padding: 0; margin: 0; } 	/* ul태그 기본값 제거* /
+		
+		#logo{
+			float: left;
+		}	
+		
+		
+	</style>
+
 </head>
 <body>
 	
 	<header>
-		<div>
+		<div id="logo">
 			<img alt="" src="">
 		</div>
 		
@@ -29,3 +40,13 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

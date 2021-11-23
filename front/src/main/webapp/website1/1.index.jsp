@@ -54,9 +54,9 @@
 <body>
 
 	<!-- 1. 레이아웃( display : block => 한칸 차지 ) -->
-	<header>			<!--  헤더 태그 [ div 사용 해도 무관 ] -->
-		<%@include file="2.header.jsp" %>
-	</header>
+				<!--  헤더 태그 [ div 사용 해도 무관 ] -->
+	<%@include file="2.header.jsp" %>
+	
 	<section id="main_img">			<!--  세션 태그 [ div 처럼 구역 나누기 ] -->
 		메인 이미지
 	</section>
