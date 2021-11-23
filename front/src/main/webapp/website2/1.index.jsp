@@ -10,35 +10,16 @@
 		*{ border:  solid 1px red;}
 		header{ height: 150px;  }
 		.box{ width: 1100px; margin: 0 auto; }
-		#main_img{ height: 200px;}
 		aside{ width: 200px; float:left; height: 300px;}
 		#main{ width: 840px; float:right; height: 300px; }
 		footer{ clear: both; height: 150px;}
 	</style>
 
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body>
-	<header>
-		<div class="box">
-			헤더
-		</div>
-	</header>
-	
-	<section id="main_img">
-		메인 이미지
-	</section>
+
+	<%@include file="2.header.jsp" %>
+	<%@include file="3.mainimage.jsp" %>
 	
 	<div class="box">	
 		<aside>
