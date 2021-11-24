@@ -35,17 +35,17 @@
 	<section class="banners">
 		<div class="box">
 		
-			<div class="banner col_6">	<!--  첫번째 배너 -->
+			<div class="banner col_6 col_m_6">	<!--  첫번째 배너 -->
 				<ul>
-					<li class="col_3"> <img alt="" src="img/icon1.png"> </li>
-					<li class="col_9"> 
+					<li class="col_s_3"> <img alt="" src="img/icon1.png"> </li>
+					<li class="col_s_9"> 
 						<h3> 예약 안내 </h3>
 						<p> 스튜디오 대여는 사전에 인터넷 예약을 하셔아 합니다. 예약은 1일 이전까지 가능합니다.</p>
 					</li>
 				</ul>
 			</div>
 			
-			<div class="banner col_6">	<!--  두번째 배너 -->
+			<div class="banner col_6 col_m_6">	<!--  두번째 배너 -->
 				<ul>
 					<li class="col_3"> <img alt="" src="img/icon2.png"> </li>
 					<li class="col_9"> 
@@ -60,7 +60,7 @@
 	
 	<section class="items">
 		<div class="box">
-			<div class="item col_3">
+			<div class="item col_3 col_m_6">
 				<ul>
 					<li> <img alt="" src="img/image1.jpg"> </li>
 					<li> <h3>촬영 스튜디오</h3></li>
@@ -68,7 +68,7 @@
 				</ul>
 			</div>
 			
-			<div class="item col_3">
+			<div class="item col_3 col_m_6">
 				<ul>
 					<li> <img alt="" src="img/image2.jpg"> </li>
 					<li> <h3>촬영 스튜디오</h3></li>
@@ -76,7 +76,7 @@
 				</ul>
 			</div>
 			
-			<div class="item col_3">
+			<div class="item col_3 col_m_6">
 				<ul>
 					<li> <img alt="" src="img/image3.jpg"> </li>
 					<li> <h3>촬영 스튜디오</h3></li>
@@ -84,7 +84,7 @@
 				</ul>
 			</div>
 			
-			<div class="item col_3">
+			<div class="item col_3 col_m_6">
 				<ul>
 					<li> <img alt="" src="img/image4.jpg"> </li>
 					<li> <h3>촬영 스튜디오</h3></li>
