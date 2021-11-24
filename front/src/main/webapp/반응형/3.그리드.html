@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+	<style type="text/css">
+		*{ margin: 0; padding: 0; box-sizing: border-box; }
+		.row{ height: 60px; }
+		.row div{ background-color: blue; border: solid 1px white; height: 100%; }
+		[class*="col_"]{ float: left; padding: 15px;  } 	/* 와일드카드 */
+		.col_1{ width: 8.33%; }
+		.col_2{ width: 16.66%;}
+		.col_3{ width: 25%; }
+		.col_4{ width: 33.33%;}
+		.col_5{ width: 41.66%; }
+		.col_6{ width: 50%; }
+		.col_7{ width: 58.33%; }
+		.col_8{ width: 66.66%; }
+		.col_9{ width: 75%; }
+		.col_10{ width: 83.33%; }
+		.col_11{ width: 91.66%; }
+		.col_12{ width: 100%; }
+	</style>
+
+</head>
+<body>
+	<h3> 그리드 : 화면 비율 [ 열 12조각 => 100% -> 1조각 : 8.33% ]</h3>
+	<div class="row">
+		<div class="col_3"></div>
+		<div class="col_9"></div>
+	</div>
+	<div class="row">
+		<div class="col_6"></div>
+		<div class="col_6"></div>
+	</div>
+	
+	<div class="row">
+		<div class="col_6"></div>
+		<div class="col_3"></div>
+		<div class="col_3"></div>
+	</div>
+	
+	<div class="row">
+		<div class="col_4"></div>
+		<div class="col_4"></div>
+		<div class="col_4"></div>
+	</div>
+	
+	<div class="row">
+		<div class="col_3"></div>
+		<div class="col_3"></div>
+		<div class="col_3"></div>
+		<div class="col_3"></div>
+	</div>
+	
+
+
+
+</body>
+</html>
+
+
+
+
+
+
