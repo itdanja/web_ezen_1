@@ -19,7 +19,31 @@
 			display: inline; margin-left: 20px;
 		}
 		a{ text-decoration: none; color: black;}
-		.box{ position: relative; }
+
+		/* 그리드 */
+		[class*="col_"]{ float: left; padding: 15px;  } 	/* 와일드카드 */
+		.col_1{ width: 8.33%; }.col_2{ width: 16.66%;}.col_3{ width: 25%; }
+		.col_4{ width: 33.33%;}.col_5{ width: 41.66%; }.col_6{ width: 50%; }
+		.col_7{ width: 58.33%; }.col_8{ width: 66.66%; }.col_9{ width: 75%; }
+		.col_10{ width: 83.33%; }.col_11{ width: 91.66%; }.col_12{ width: 100%; }
+		/* 미디어 쿼리 */
+		@media only screen and( min-width : 770px; )  { 		/* 테블릿 css */
+			.col_m_1{ width: 8.33%; }.col_m_2{ width: 16.66%;}.col_m_3{ width: 25%; }
+			.col_m_4{ width: 33.33%;}.col_m_5{ width: 41.66%; }.col_m_6{ width: 50%; }
+			.col_m_7{ width: 58.33%; }.col_m_8{ width: 66.66%; }.col_m_9{ width: 75%; }
+			.col_m_10{ width: 83.33%; }.col_m_11{ width: 91.66%; }.col_m_12{ width: 100%; }
+			.box{ max-width: 1200px; margin: 0 auto; position: relative; }
+		}
+		@media only screen and( min-width : 1200px; ){ 			/* 데스크탑 css */
+			.col_1{ width: 8.33%; }.col_2{ width: 16.66%;}.col_3{ width: 25%; }
+			.col_4{ width: 33.33%;}.col_5{ width: 41.66%; }.col_6{ width: 50%; }
+			.col_7{ width: 58.33%; }.col_8{ width: 66.66%; }.col_9{ width: 75%; }
+			.col_10{ width: 83.33%; }.col_11{ width: 91.66%; }.col_12{ width: 100%; }
+			.box{ max-width: 1200px; margin: 0 auto; position: relative; }	
+		}
+		
+		
+		
 	</style>	
 
 </head>
