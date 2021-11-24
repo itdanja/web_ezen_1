@@ -24,7 +24,10 @@
 		.banner p{ margin-top: 10px; line-height: 150%; }
 		
 		/* 아이템 */
-		
+		.items{ padding: 15px; background-color: #f9f9f9; }
+		.items img{ max-width: 100%; }
+		.items ul{ margin-bottom: 15px;}
+		.ttems item li{ padding: 10px; }
 		
 	</style>
 
@@ -62,7 +65,39 @@
 	</section>
 	
 	<section class="items">
-		<div class="box">아이템</div>
+		<div class="box">
+			<div class="item col_3">
+				<ul>
+					<li> <img alt="" src="img/image1.jpg"> </li>
+					<li> <h3>촬영 스튜디오</h3></li>
+					<li> 카메라, 조명 등 촬영 장비 완비 </li>
+				</ul>
+			</div>
+			
+			<div class="item col_3">
+				<ul>
+					<li> <img alt="" src="img/image2.jpg"> </li>
+					<li> <h3>촬영 스튜디오</h3></li>
+					<li> 카메라, 조명 등 촬영 장비 완비 </li>
+				</ul>
+			</div>
+			
+			<div class="item col_3">
+				<ul>
+					<li> <img alt="" src="img/image3.jpg"> </li>
+					<li> <h3>촬영 스튜디오</h3></li>
+					<li> 카메라, 조명 등 촬영 장비 완비 </li>
+				</ul>
+			</div>
+			
+			<div class="item col_3">
+				<ul>
+					<li> <img alt="" src="img/image4.jpg"> </li>
+					<li> <h3>촬영 스튜디오</h3></li>
+					<li> 카메라, 조명 등 촬영 장비 완비 </li>
+				</ul>
+			</div>
+		</div>
 	</section>
 
 </body>
