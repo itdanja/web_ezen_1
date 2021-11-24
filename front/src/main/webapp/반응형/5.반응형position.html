@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+	<style type="text/css">
+	
+		*{ margin: 0; padding: 0; } /* 여백 초기값 제거 */
+		header , footer{ 
+			height: 70px; 	width: 100%;
+			background-color: skyblue; padding-top: 25px;
+			text-align: center; box-sizing: border-box;
+			position: fixed; /* 위치 고정 */
+			z-index: 100;	/* 겹쳤을때(float) 우선순위 */
+		}
+		#main{ padding: 80px 20px; line-height: 1.5rem;	/* 글자 배율 */ }
+		footer{ 
+			bottom : 0;		/* position 사용할경우 아래에서 간격 */
+			background-color:pink; 
+		}
+		img{
+			width: 50%;
+			max-width: 350px; /* 비율=> 최대 크기 */
+			float: left;	/* p문단과 같은 라인 배치 */
+			margin: 5px 15px 5px 0px;	/* 사진 주변 바깥여백*/
+		}
+		/* 플로팅 박스 */
+		.divbox{
+			width: 250px;	height: 150px;
+			border: solid 1px red;	background-color: red; 
+			position: absolute;	right: 50px; top : 150px;
+			opacity: 0.9;	/*투명도 */
+			color: white; text-align: center; box-sizing: border-box;
+			z-index: 10;	/* 겹쳤을때(float) 우선순위 */
+		}
+		.divbox .close{ float: right; margin: 10px; }
+		
+		.divbox .close:hover{ cursor: pointer; } /* hover : 마우스 올렸을때 마우스 모양 변경 */
+		.divbox p{ margin-top: 50px; }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</style>
+
+</head>
+<body>
+
+	<header> 여기는 헤더 부분 </header>
+	<div id="main">
+		<p>개(영어: Dog)는 중형 동물이자 가장 널리 분포하며 개체 수가 가장 많은 지상 동물 중 하나이며, 학명은 Canis lupus familiaris이다.[1][2][3][4][5] 개는 인류가 최초로 가축으로 삼은 동물로 알려져 있으며[6], 역사적으로 애완견, 사냥견으로서 길러 왔다. </p>
+		<p>미토콘드리아 DNA 분석 결과 현대의 개와 회색늑대는 대략 10만 년 전에 종분화된 것으로 추정되어 왔는데, 2013년 개의 화석을 이용한 분석에서는 33,000 - 36,000년 전 사이에 분화가 이루어졌을 것으로 보고 있다.[6][7] </p>
+		<img alt="" src="강아지.jpg">
+		<p>개는 여러모로 유용하였기 때문에 대부분 모든 원시 인류 사회가 개를 길렀다.[8] 개는 사냥, 목축, 운송, 경비와 같은 일에 사용되고 있으며, 반려동물로 기르기도 한다. 사람들은 이러한 일들에 적합하도록 오래전부터 개를 다양한 품종으로 육종하였다.[9] </p>
+		<p>대한민국을 비롯한 여러 소수 문화에서 개고기를 먹지만[10], 다른 여러 문화에서는 개고기를 먹는 것을 금한다. 고대 로마 시기의 역사가인 유스티누스는 페르시아의 왕 다리우스가 카르타고에게 개고기와 인신 공양을 금지하는 포고를 내렸다고 기록하고 있고, 서구의 거의 대부분 문화에서 개고기를 먹는 것은 금기로 취급된다.[10] 이슬람에서는 재난이 닥친 특별한 상황이 아니라면 개고기가 금지된다.[11] 오늘날에도 개고기를 먹는 문제는 문화적 논란의 대상이다.[12] 청나라 만주족은 태조 누르하치가 개한테서 구해진 적이 있다는 전설로 인해 개를 먹지 않는다고 한다.[13] </p>
+		<p>개의 수명은 보통 12 - 16년 정도이지만, 최근 장수하는 개가 늘어나는 추세이다.[14] 2001년 생물학자 레이 쿠니퍼는 전 세계 개의 개체 수를 약 4억 마리 정도로 추정했고[15], 2013년 하지홍은 10억 마리 이상으로 추정했다.[16] </p>
+	</div>
+	<!--  플로팅 박스  -->
+	<div class="divbox">
+		<div class="close">X</div>
+		<p> 여기는 플로팅 박스 </p>
+	</div>
+	
+	<footer> 여기는 푸터 </footer>
+
+<!-- 최신버전 jquery 불러오기 -->
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--  js 사용  -->
+	<script type="text/javascript">
+		$(".close").on("click" , function(){
+			
+			$(".divbox").fadeOut();
+			
+		} )
+		// 자바스크립트 주석
+		// $(".클래스명")
+			// .on : 이벤트 
+			// ( "클릭" , 함수(){ 실행문 } )
+				// $(".클래스명").fadeOut() : 해당 태그 숨김
+				
+	
+	</script>
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
