@@ -49,7 +49,8 @@
 		    
 		    header .menu_btn { display: none; } 
 		    header .menu { display: block; } 
-		    header .menu li { display: inline; margin: 5px 0 0 50px;}
+		    header .menu li { display: inline; margin: 5px 0 0 50px;
+		}
 		   
 		}
 	</style>	
