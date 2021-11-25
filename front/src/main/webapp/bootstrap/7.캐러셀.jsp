@@ -11,8 +11,8 @@
 	<style type="text/css">
 	
 		.carousel-item{
-			width : 1110px;
-			height: 580px;
+			width : 100%;
+			height: 100%;
 		}
 		
 	</style>
