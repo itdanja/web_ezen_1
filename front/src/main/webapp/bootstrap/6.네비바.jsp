@@ -11,8 +11,9 @@
 	<%@include file="1.부트스트랩시작.jsp" %> <!-- 부트스트랩 css, js -->
 	
 	<div class="container">  <!--  박스권 -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">  			<!-- navbar : 메뉴 박스권 --> 	<!-- navbar-expand-lg : 1200px 이상 일때 -->
-			
+		<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: yellow;">  			<!-- navbar : 메뉴 박스권 --> 	<!-- navbar-expand-lg : 1200px 이상 일때 -->
+												<!-- fixed-top : 위 메뉴 고정		fixed-bottom : 아래 메뉴 고정 -->
+									
 		  	<a class="navbar-brand" href="#"> 로고 </a>		<!-- navbar-brand : 로고[ 진하게 ] -->
 		  	
 		  	<!-- 메뉴 없어질경우 버튼 -->
