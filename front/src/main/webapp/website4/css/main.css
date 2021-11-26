@@ -19,4 +19,35 @@ header{
 .header-topmenu{
 	font-size: 0.25rem;	
 }
+.carousel-item img{
+	width: 100%;
+}
+.item{
+	font-size: 0.75rem;
+	line-height: 150%;
+}
+.price{
+	text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
