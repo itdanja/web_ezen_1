@@ -14,8 +14,8 @@
 		
 		<h3> QnA </h3>
 		<p> 질문 게시판 </p>
-		<div class="col-md-6 offset-6 input-group my-3">
-			<select class="custom-select"> <!-- 검색 키워드  -->
+		<div class="col-md-5 offset-7 input-group my-3">
+			<select class="custom-select col-md-3" > <!-- 검색 키워드  -->
 				<option>키워드</option>
 				<option>번호</option>
 				<option>제목</option>
