@@ -29,8 +29,12 @@ header{
 .price{
 	text-decoration: line-through;
 }
-
-
+.main-footer{
+	
+	font-size: 0.75rem;
+	border-top: solid 1px #eeeeee;
+	padding: 3rem;
+}
 
 
 

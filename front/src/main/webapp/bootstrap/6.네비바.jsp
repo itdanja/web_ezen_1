@@ -22,15 +22,14 @@
     		<span class="navbar-toggler-icon"></span>
   			</button>
 		  
-		  	<div class="collapse navbar-collapse" id="navbarcontents">	 
-		    <ul class="navbar-nav mr-auto">			<!-- 메뉴박스권 메뉴  -->	
+		  	<div class="collapse navbar-collapse" id="navbarcontents">	 <!-- 메뉴 [ 접기(숨기기) ] -->
+		    <ul class="navbar-nav">			<!-- 메뉴박스권 메뉴  -->	
 		      <li class="nav-item active"> <a href="#" class="nav-link"> 메뉴1 </a>  </li>	<!-- nav-item: 메뉴 아이템  -->	
 		      <li class="nav-item"> <a href="#" class="nav-link"> 메뉴2 </a> </li>		<!-- nav-link : 하이퍼 링크 -->
 		      <li class="nav-item"> <a href="#" class="nav-link"> 메뉴3 </a> </li>
 		      
 		      <li class="nav-item dropdown">		<!--  드랍다운  -->
-		        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" 
-		        	aria-haspopup="true" aria-expanded="false">	<!--   dropdown-toggle : 아래화살표 -->
+		        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">	<!--   dropdown-toggle : 아래화살표 -->
 		          드랍다운
 		        </a>
 		        <div class="dropdown-menu">			<!-- 드랍다운 메뉴  -->

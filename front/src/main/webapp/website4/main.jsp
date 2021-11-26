@@ -125,12 +125,48 @@
 				</div>
 			</div>
 			
+			<div class="col-md-4 col-sm-6 my-5"> <!-- col-md-4 : 700~900	col-sm-6 : 500~700  my: 위아래 마진-->
+				<div class="card"> <!-- 카드 -->
+					<img class="card-img-top" src="img/item1.gif">	<!-- 카드 상단 이미지 -->
+					<div class="card-body">	<!-- 카드 내용 -->
+						<p class="card-text"> 엑티브 웰론 패딩 </p>
+						<hr>
+						<p class="item p-1">
+							프리미엄 웰론충전재를 빵빵하게 채워넣은
+							훌륭한 보온성의 트랜디한 패딩입니다. <br> <br>
+						<span class="price mr-2">79,900원 </span>  75,900원 <br>
+						
+						<span class="badge badge-pill badge-warning my-2"> 주문폭주 </span>
+						<span class="badge badge-pill badge-danger my-2"> 품절임박 </span>
+						</p>
+					</div>
+				</div>
+			</div>
 			
+			<div class="col-md-4 col-sm-6 my-5"> <!-- col-md-4 : 700~900	col-sm-6 : 500~700  my: 위아래 마진-->
+				<div class="card"> <!-- 카드 -->
+					<img class="card-img-top" src="img/item1.gif">	<!-- 카드 상단 이미지 -->
+					<div class="card-body">	<!-- 카드 내용 -->
+						<p class="card-text"> 엑티브 웰론 패딩 </p>
+						<hr>
+						<p class="item p-1">
+							프리미엄 웰론충전재를 빵빵하게 채워넣은
+							훌륭한 보온성의 트랜디한 패딩입니다. <br> <br>
+						<span class="price mr-2">79,900원 </span>  75,900원 <br>
+						
+						<span class="badge badge-pill badge-warning my-2"> 주문폭주 </span>
+						<span class="badge badge-pill badge-danger my-2"> 품절임박 </span>
+						</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</dIV>
 	
-	
 	<!-- 아이템 : 제품 end -->
+	
+	<%@include file="footer.jsp" %>
 	
 </body>
 </html>
