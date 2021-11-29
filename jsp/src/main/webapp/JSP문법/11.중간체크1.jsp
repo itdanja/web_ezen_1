@@ -11,7 +11,6 @@
 
 	<%
 		int year = 2021; 	int month = 11;	// 검색이 없을경우에 해당하는 연도,월 초기값
-		
 		// 검색이 있을경우[ request 요청 존재 ]
 		if( request.getParameter("year") != null && request.getParameter("month") != null ){
 			year = Integer.parseInt( request.getParameter("year") ) ;
