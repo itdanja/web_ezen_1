@@ -17,10 +17,13 @@
 		int sweek = calendar.get( Calendar.DAY_OF_WEEK );		// 요일찾기 2 : 월요일
 		int eday = calendar.getActualMaximum( calendar.DAY_OF_MONTH );	// 현재 월의 마지막 => 30
 	%>
-
 	<h1> <%=year %>년  <%=month %>월 달력 [ day12-5 ] </h1>
-
-	<table border="1">
+	
+	<form style="margin: 30px;">
+		<input type="text" name="year" placeholder="연도"> 
+		<input type="text" name="month" placeholder="월">  <input type="submit" value="검색">
+	</form>
+	<table border="1" style="margin: 30px;">
 		<thead>
 			<tr>
 				<th> 일요일 </th> <th> 월요일 </th>  <th> 화요일 </th>  
@@ -28,14 +31,19 @@
 			</tr>
 		</thead>
 		<tbody>
-			<!-- for 구역 -->
 			<tr>
-				<% for( int i = 1 ;  i<sweek ; i++ ){ %>
+				<% for( int i = 1 ;  i<sweek ; i++ ){ %> <!-- for 구역 : 1일 전까지 공백찍기 -->
 					<td> </td>
 				<%} %>
-				<% for( int i = 1 ; i<=eday ; i++ ){ %>
+				<% for( int i = 1 ; i<=eday ; i++ ){ %>	<!-- for 구역 : 1일부터 마지막날까지 출력 -->
 					<td> <%=i %> </td>
-				<% } %>
+				<% if( sweek % 7 == 0){ // 요일이 토요일마다 tr 닫고 다시 tr 시작 %>
+					</tr> <tr>
+				<%
+					}
+					sweek++;
+				} 
+				%>
 			</tr>
 		</tbody>	
 	</table>
