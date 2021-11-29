@@ -27,13 +27,10 @@
 				while(true){
 					Random random = new Random();
 					int com = random.nextInt(9);
-					
 					if( 게임판[com].equals(" ") ){ 게임판[com] = "X"; break; }
 				}
 			}
 		}
-		// 승리조건 
-		
 	%>
 	<form action="11.중간체크2.jsp" method="get">
 		<% for( int i = 0 ; i<게임판.length; i++){ %>	<!-- 0부터 9까지 1씩증가 -->
@@ -46,7 +43,7 @@
 			
 		<%} %>
 	</form>
-
+	
 </body>
 </html>
 
