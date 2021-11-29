@@ -1,0 +1,46 @@
+
+
+@font-face {
+    font-family: 'SBAggroM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{ 
+	font-family: 'SBAggroM';
+
+}
+
+.an-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.an-header-logo {
+  font-size: 2.25rem;
+}
+
+a:hover{ text-shadow: 1px 1px 1px gray; text-decoration: none;}
+
+/*
+ * Footer
+ */
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+  font-size: 0.70rem;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
