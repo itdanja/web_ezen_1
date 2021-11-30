@@ -41,8 +41,11 @@
 		<% } %>
 		<li> <a href="login.jsp">로그인</a> </li>
 		<li> <a href="signup.jsp">회원가입</a> </li>
-		<li> 게시판 </li>
+		<li> <a href="boardlist.jsp">게시판</a> </li>
 	</ul>
-
+	
 </body>
 </html>
+
+
+
