@@ -20,7 +20,33 @@
 		<tr>
 			<th> 번호 </th> <th> 제목 </th> <th>작성자</th>
 		</tr>
+		
+		<%
+			for( int i = 0 ; i<boards.size() ;i++ ){ %>
+				<tr>
+					<td> <%=(i+1) %> </td>
+					<td> 
+						<a href="boardview.jsp?bnum=<%=i%>"> 
+						<%=boards.get(i).getTitle() %>
+						</a> 
+					</td>
+					<td> <%=boards.get(i).getContents() %> </td>
+				</tr>
+				
+		<%	} %>
+		
+		
+		
 	</table>
 	
 </body>
 </html>
+
+
+
+
+
+
+
+
+
