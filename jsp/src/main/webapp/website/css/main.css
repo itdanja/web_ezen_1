@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+
+/* 외부 폰트 */
+@font-face {
+    font-family: 'GongGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+	font-family: 'GongGothicBold';
+}
+
+
