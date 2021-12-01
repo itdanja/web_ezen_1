@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	
 	<%
 		request.setCharacterEncoding("UTF-8");	// 한글 인코딩
 		String id =request.getParameter("id");
@@ -22,26 +22,51 @@
 		String address = 
 				request.getParameter("address1")+","+ request.getParameter("address2")+","+
 				request.getParameter("address3")+","+request.getParameter("address4");
-		
 		// 유효성검사 
-		if( id.length() <5 ){  }
-		if( password.length() <5  ){  }
-		if( !password.equals(passwordconfirm) ){  }
-		if( name == null ){}
-		if( birth== null ){}
-		if( sex == null ){}
-		if( phone.length() != 11 ){}
-		if( request.getParameter("address4").indexOf(",") > 0 ){}
-		
-		// 객체화
-		Member member = new Member( id , password , name , birth , sex , phone , address );
-		// DB처리
-		boolean result =  MemberDao.getmemberDao().membersignup(member);
-		if( result ){	// 회원가입 성공
-			response.sendRedirect("../view/member/signupsuccess.jsp");
-		}else{	// 회원가입 실패
-			response.sendRedirect("../view/member/signup.jsp");
+		if( id.length() <5 ){
+			out.print("<script>alert('아이디 5~15 사이로 입력해주세요');</script>");
+			out.println("<script>location.href='../view/member/signup.jsp';</script>");
 		}
+		else if( password.length() <5  ){ 
+			out.print("<script>alert('비밀번호는 5~15 사이로 입력해주세요');</script>");
+			out.println("<script>location.href='../view/member/signup.jsp';</script>");
+		}
+		else if( !password.equals(passwordconfirm) ){ 
+			out.print("<script>alert('비밀번호가 동일하지 않습니다');</script>");
+			out.println("<script>location.href='../view/member/signup.jsp';</script>");
+		}
+		else if( name == null ){
+			out.print("<script>alert('이름을 입력해주세요');</script>");
+			out.println("<script>location.href='../view/member/signup.jsp';</script>");
+		}
+		else if( birth== null ){
+			out.print("<script>alert('생년월일을 선택해주세요');</script>");
+			out.println("<script>location.href='../view/member/signup.jsp';</script>");
+		}
+		else if( sex == null ){
+			out.print("<script>alert('성별을 선택해주세요');</script>");
+			out.println("<script>location.href='../view/member/signup.jsp';</script>");
+		}
+		else if( phone.length() != 11 ){
+			out.print("<script>alert('연락처는 - 제외 한 11 자리로 입력해주세요');</script>");
+			out.println("<script>location.href='../view/member/signup.jsp';</script>");
+		}
+		else if( request.getParameter("address4").indexOf(",") > 0 ){
+			out.print("<script>alert('상세주소는 , 제외한 입력해주세요');</script>");
+			out.println("<script>location.href='../view/member/signup.jsp';</script>");
+		}
+		else {
+			// 객체화
+			Member member = new Member( id , password , name , birth , sex , phone , address );
+			// DB처리
+			boolean result =  MemberDao.getmemberDao().membersignup(member);
+			if( result ){	// 회원가입 성공
+				response.sendRedirect("../view/member/signupsuccess.jsp");
+			}else{	// 회원가입 실패
+				response.sendRedirect("../view/member/signup.jsp");
+			}
+		}
+		
 		
 	%>
 
