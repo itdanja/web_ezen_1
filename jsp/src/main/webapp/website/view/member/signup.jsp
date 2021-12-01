@@ -13,8 +13,13 @@
 	<%@include file = "../header.jsp" %> <!-- 헤더 페이지 -->
 	
 	<div class="container"> <!-- 박스권  -->
-		<div class="row"> <!-- 가로 박스 -->
 		
+		<div class="text-center">
+			<h3 style="border-bottom: solid 1px #eeeee;"> 회원 가입 </h3>
+			<br>
+			<p style="color: orange;"> · 벤츠에 가입하시면 다양한 이벤트를 제공 받을수 있습니다. · </p>
+		</div>
+		<div class="row m-3"> <!-- 가로 박스 -->
 			<div class="col-md-6">	<!-- 6:6 -->
 				<img src="../../img/signuplogo.png" width="100%">
 			</div>
