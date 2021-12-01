@@ -59,10 +59,21 @@
 		<li> <a href="login.jsp">로그인</a> </li>
 		<li> <a href="signup.jsp">회원가입</a> </li>
 		<li> <a href="boardlist.jsp">게시판</a> </li>
+		<li> <a href="book.jsp">도서검색 </a> </li>
+		<li> <a href="lotto.jsp">로또구매 </a> </li>
+		
 	</ul>
-	
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
 

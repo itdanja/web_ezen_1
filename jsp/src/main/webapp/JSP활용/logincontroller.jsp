@@ -19,7 +19,7 @@
 					member.getPassword().equals(password)){
 				// 로그인 성공 
 				logincheck = true;
-					// 세션 생성
+					// 세션 생성 [ 세션이름 , 데이터 ]
 					session.setAttribute("loginid", member.getId() );
 					// 세션 유지시간 
 					//session.setMaxInactiveInterval(10);	// 초당 세션 유지시간
