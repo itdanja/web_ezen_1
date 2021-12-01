@@ -11,6 +11,7 @@
 <body>
 
 	<%
+		request.setCharacterEncoding("UTF-8");	// 한글 인코딩
 		String id =request.getParameter("id");
 		String password =request.getParameter("password");
 		String passwordconfirm =request.getParameter("passwordconfirm");
@@ -37,11 +38,10 @@
 		// DB처리
 		boolean result =  MemberDao.getmemberDao().membersignup(member);
 		if( result ){	// 회원가입 성공
-			
+			response.sendRedirect("../view/member/signupsuccess.jsp");
 		}else{	// 회원가입 실패
-			
+			response.sendRedirect("../view/member/signup.jsp");
 		}
-		
 		
 	%>
 
