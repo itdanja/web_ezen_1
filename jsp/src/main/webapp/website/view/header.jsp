@@ -25,11 +25,30 @@
 	
 	<h3> 헤더부문</h3>
 	
+	<%
+		String loginid = (String)session.getAttribute("loginid");
+	%>
 	<div> <a href="/jsp/website/view/main.jsp"> 로고 </a>  </div>
-	
 	<ul>
-		<li> <a href="/jsp/website/view/member/signup.jsp"> 회원가입 </a> </li>
-		<li> <a href="/jsp/website/view/member/login.jsp"> 로그인 </a>  </li>
+		<%
+			if( loginid !=null ){	// 로그인이 되어 있는경우 
+				if( loginid.equals("admin") ){ // 로그인 되어 있으면서 관리자 이면
+		%>
+				<li><a href="/jsp/website/view/admin/adminmain.jsp"> 관리자 </a> </li>
+		<%			
+				} 
+		%>
+			<li>  <a href="/jsp/website/view/member/memberinfo.jsp"> 회원정보 </a> </li>
+			<li>  <a href="/jsp/website/controller/logoutcontroller.jsp"> 로그아웃 </a> </li>
+		<%
+			}else{	// 로그이 안되어 있는 경우
+		%>
+			<li> <a href="/jsp/website/view/member/signup.jsp"> 회원가입 </a> </li>
+			<li> <a href="/jsp/website/view/member/login.jsp"> 로그인 </a>  </li>
+		<% 	
+			}
+		%>
+		
 	</ul>
 	
 	
