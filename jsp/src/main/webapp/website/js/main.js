@@ -55,6 +55,28 @@ function sample4_execDaumPostcode() {
 }
 /* 다음주소 api end */
 
+/* 아이디 중복체크 [ ajax ] */
+	$( function(){
+		// $("id명").이벤트명( 함수명(){ 실행코드; } );
+		$("#id").change( function() { 
+			// 비동기식 : $.ajax({ 속성명 : "값" , 속성명 : "값" , 속석명 : "값" });
+			$.ajax({ 
+				url : "idchek.jsp" ,	/* 통신할 경로 페이지 */ 
+				data :{userid:document.getElementById("signupform").id.value} , 	/* 이동할 데이터 */
+				success : function( result ){ /* 통신이 성공했을때*/
+					if( result == 1 ){ 
+						alert("중복");
+					}else{
+						alert("미중복");
+					}
+				}
+			});
+		});
+	});
+	
+/* 아이디 중복체크 end */
+
+
 /* 회원가입 유효성검사 */
   
 	function signupcheck(){

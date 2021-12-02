@@ -43,6 +43,18 @@ public class MemberDao {
 		catch (Exception e) {System.out.println(e);}
 		return false;
 	}
+	// 아이디 체크 메소드 
+	public boolean idcheck(String userid) {
+		
+		String sql = "select m_id from member where m_id = ?";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, userid );
+			rs = ps.executeQuery();
+			if( rs.next() ) { return true; }	// 아이디 존재함
+		}catch (Exception e) {} 
+		return false; // 아이디 존재하지 않음
+	}
 
 }
 
