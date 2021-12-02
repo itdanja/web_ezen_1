@@ -61,7 +61,7 @@ function sample4_execDaumPostcode() {
 		$("#id").change( function() { 
 			// 비동기식 : $.ajax({ 속성명 : "값" , 속성명 : "값" , 속석명 : "값" });
 			$.ajax({ 
-				url : "idchek.jsp" ,	
+				url : "idcheck.jsp" ,	
 				/* url : 통신할 경로 페이지 */ 
 				data :{userid:document.getElementById("signupform").id.value} , 	
 				/* 이동할 데이터 */
