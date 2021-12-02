@@ -39,7 +39,7 @@
 					</div>
 					<div class="text-right m-2">
 						<!-- text-center : 가운데정렬 text-right: 오른쪽정렬 text-left: 왼쪽 -->
-						<a href="#" class="btn text-dark"> ·아이디 찾기 </a> <a href="#" class="btn text-dark"> ·비밀번호 찾기 </a>
+						<a href="signup.jsp" class="btn text-dark"> ·회원가입 </a> <a href="#" class="btn text-dark"> ·아이디 찾기 </a> <a href="#" class="btn text-dark"> ·비밀번호 찾기 </a>
 					</div>
 				</form>
 			</div>

@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
 	<%@include file = "../header.jsp" %> <!-- 헤더 페이지 -->
 	
 	<div class="container"> <!-- 박스권  -->
@@ -25,19 +26,25 @@
 			</div>
 			<div class="col-md-6"> 	
 			
-				<form action="../../controller/signupcontroller.jsp" method="post">
+				<form id="signupform" action="../../controller/signupcontroller.jsp" method="post">
 					<div class="row">	<!-- 3:8 -->
 						<div class="col-md-3 m-2"> <label>아이디</label> </div>
-						<div class="col-md-8"> <input type="text" name="id" class="form-control" maxlength="15"> </div>
+						<div class="col-md-8"> <input id="id" onchange="signupcheck();" type="text" name="id" class="form-control" maxlength="15"> </div>
 					</div>
+						<div>
+							<span id="idresult"></span>
+						</div>
 					<div class="row">	<!-- 3:8 -->
 						<div class="col-md-3 m-2"> <label>비밀번호</label> </div>
-						<div class="col-md-8"> <input type="password" name="password" class="form-control" maxlength="15"> </div>
+						<div class="col-md-8"> <input id="password" onchange="signupcheck();" type="password" name="password" class="form-control" maxlength="15"> </div>
 					</div>
 					<div class="row">	<!-- 3:8 -->
 						<div class="col-md-3 m-2"> <label>비밀번호확인</label> </div>
-						<div class="col-md-8"> <input type="password" name="passwordconfirm" class="form-control" maxlength="15"> </div>
+						<div class="col-md-8"> <input id="passwordconfirm" onchange="signupcheck();" type="password" name="passwordconfirm" class="form-control" maxlength="15"> </div>
 					</div>
+						<div>
+							<span id="pwresult"></span>
+						</div>
 					<div class="row">	<!-- 3:8 -->
 						<div class="col-md-3 m-2"> <label>이름</label> </div>
 						<div class="col-md-8"> <input type="text" name="name" class="form-control" maxlength="15"> </div>
@@ -59,7 +66,10 @@
 					<div class="row">	<!-- 3:8 -->
 						<div class="col-md-3 m-2"> <label>연락처</label> </div>
 						<div class="col-md-8">
-							<input type="text" name="phone" class="form-control" placeholder=" -제외 한 11자리 " maxlength="11">
+							<input type="text" id ="phone" onchange="signupcheck();" name="phone" class="form-control" placeholder="000-0000-0000">
+						</div>
+						<div>
+							<span id="phoneresult"></span>
 						</div>
 					</div>
 					

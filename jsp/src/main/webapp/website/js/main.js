@@ -54,25 +54,111 @@ function sample4_execDaumPostcode() {
     }).open();
 }
 /* 다음주소 api end */
-$(document).ready(function(){
- 
-  query = {userid:$('#userid').val()}
-  $.ajax({
-     url:'ajax_test.jsp',
-     type:'post',
-     data: query
-  }).done(function(data){
-     obj = JSON.parse(data);
-     
-     if(obj.result == 'ok'){
-        $('#result').text(obj.username + "," + obj.email);
-     }else {
-        $('#result').text("존재하지 않는 사용자입니다.");
-     }
-     
-  });
 
-});
+/* 회원가입 유효성검사 */
+  
+	function signupcheck(){
+	
+		// 1. 폼 가져오기 [ 폼에 id 존재 ]
+			//	document.getElementById("signupform")
+		// 2. 폼내 아이디 입력 input 가져오기
+		var id = document.getElementById("signupform").id.value;
+			// alert( id );
+		// 3. 유효성검사 [ 정규표현식 : 텍스트 패턴 검사 ]
+			// 정규표현식 
+		var idj = /^[a-z0-9]{5,15}$/;		// 아이디 정규표현식	[ 소문자 숫자 5~15]
+		var pwj = /^[A-Za-z0-9]{5,15}$/;	// 비밀번호 정규표현식[ 대,소문자 숫자 5~15]
+		var phonej = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
+
+			/*
+				/^ : 정규표현식 시작
+				$/ : 정규표현식 끝
+				[ ] : 문자 패턴
+					[ a-z ] : 소문자 a-z 만 가능
+					[ A-Z ] : 대문자 A-Z 만 가능
+					[ 0-9 ]	: 숫자 0-9 만 가능
+					[가-힣]	: 한글 만 가능
+				{ } : 문자 개수
+					{ 최소길이 , 최대길이 }
+					{ 5 , 15 }	: 5~12 길이만 가능
+				( ) : 문자 하나로 인식
+					([0|1|6|7|8|9]?) : 중 하나
+				와일드 카드 
+					* : 문자 없거나 혹은 여러개 존재
+					? : 문자 있거나 혹은 하나있음[ ? 당 문자 1개 ]
+				
+			*/
+		if( !idj.test( id ) ){
+			//alert("가능");
+			document.getElementById("idresult").innerHTML="아이디는 소문자와 숫자 조합 5~15 사이만 가능 합니다";
+			document.getElementById("idresult").style.color = "red";
+		}else{
+			document.getElementById("idresult").innerHTML="사용가능한 아이디 입니다."
+			document.getElementById("idresult").style.color = "green";
+		}
+		
+		// 패스워드 [ 두 패스워드 동일한지 검사 ]
+		var password = document.getElementById("signupform").password.value;
+		var passwordconfirm = document.getElementById("signupform").passwordconfirm.value;
+		if( !pwj.test(password) || !pwj.test(passwordconfirm) ){
+			document.getElementById("pwresult").innerHTML="대소문자 조합 5~15 사이만 가능합니다."
+			
+		}else if( !password == passwordconfirm){
+			document.getElementById("pwresult").innerHTML="패스워드가 동일하지 않습니다."
+		}else{
+			document.getElementById("pwresult").innerHTML="사용가능한 패스워드 입니다."
+		}
+		
+		// 전화번호 
+		var phone = document.getElementById("signupform").phone.value;
+		if( !phonej.test( phone ) ){
+			document.getElementById("phoneresult").innerHTML="전화번호 형식으로 입력해주세요.";
+		}else{
+			document.getElementById("phoneresult").innerHTML="가능합니다";
+		}
+		
+	}
+
+
+
+/* 회원가입 유효성검사 end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

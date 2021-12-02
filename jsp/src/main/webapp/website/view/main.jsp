@@ -11,9 +11,6 @@
 	<%@include file = "header.jsp" %>
 	
 	<h3> 메인부문</h3>
-	<%
-		MemberDao.getmemberDao();
-	%>
 	<p> 하하하 폰트적용 </p>
 
 	<%@include file = "footer.jsp" %>

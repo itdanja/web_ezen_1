@@ -20,8 +20,8 @@
 	<h3> for 배열 활용</h3>
 	<ul id="list2"></ul>
 
-	<button onclick="start2()">js시작</button>
-	<button onclick="cancel()">지우기</button>
+	<button onclick="start2();">js시작</button>
+	<button onclick="cancel();">지우기</button>
 	
 </body>
 </html>
