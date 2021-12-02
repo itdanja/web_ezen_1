@@ -117,7 +117,7 @@ function sample4_execDaumPostcode() {
 		if( !phonej.test( phone ) ){
 			document.getElementById("phoneresult").innerHTML="전화번호 형식으로 입력해주세요."; return false;
 		}else{
-			document.getElementById("phoneresult").innerHTML="가능합니다";
+			document.getElementById("phoneresult").innerHTML="";
 		}
 	}
 
