@@ -90,12 +90,11 @@ function sample4_execDaumPostcode() {
 		
 		if( !pwj.test(password) || !pwj.test(passwordconfirm) ){
 			document.getElementById("pwresult").innerHTML="대소문자 조합 5~15 사이만 가능합니다."; return false;
-		}else if( !password == passwordconfirm){
+		}else if( password != passwordconfirm){
 			document.getElementById("pwresult").innerHTML="패스워드가 동일하지 않습니다.";	return false;
 		}else{
 			document.getElementById("pwresult").innerHTML="사용가능한 패스워드 입니다.";
 		}
-		
 		// 이름
 		if( !namej.test(name) ){
 			document.getElementById("nameresult").innerHTML="이름을 입력해주세요.[특수문자는 제외]"; return false;
