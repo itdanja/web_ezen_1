@@ -10,7 +10,15 @@
 </head>
 <body>
 
-
+	<!-- 만약에 로그인이 되어있는경우 -->
+	<%
+		// 로그인[세션]이 되어 있는경우
+		if( session.getAttribute("loginid") != null ){
+			out.print("<script>alert('로그인이 되어있습니다.');</script>");
+			out.println("<script>location.href='../main.jsp';</script>");
+		}
+	%>
+	
 	<%@include file = "../header.jsp" %> <!-- 헤더 페이지 -->
 	
 	<div class="container"> <!-- 박스권  -->

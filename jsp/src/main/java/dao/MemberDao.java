@@ -55,6 +55,16 @@ public class MemberDao {
 		}catch (Exception e) {} 
 		return false; // 아이디 존재하지 않음
 	}
+	
+	// 로그인 체크 메소드 
+	public boolean login(String id , String password) {
+		String sql = "select * from member where m_id =? and m_password = ? ";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, id); 		ps.setString(2, password);
+			rs = ps.executeQuery(); 	if( rs.next() ) { return true; }
+		}catch (Exception e) {}  return false;
+	}
 
 }
 
