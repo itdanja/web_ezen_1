@@ -26,7 +26,7 @@
 			</div>
 			<div class="col-md-6"> 	
 			
-				<form id="signupform" action="../../controller/signupcontroller.jsp" method="post">
+				<form id="signupform" action="../../controller/signupcontroller.jsp" method="post" onsubmit="return signupcheck()">
 					<div class="row">	<!-- 3:8 -->
 						<div class="col-md-3 m-2"> <label>아이디</label> </div>
 						<div class="col-md-8"> <input id="id" onchange="signupcheck();" type="text" name="id" class="form-control" maxlength="15"> </div>
@@ -47,19 +47,26 @@
 						</div>
 					<div class="row">	<!-- 3:8 -->
 						<div class="col-md-3 m-2"> <label>이름</label> </div>
-						<div class="col-md-8"> <input type="text" name="name" class="form-control" maxlength="15"> </div>
+						<div class="col-md-8"> <input id="name" onchange="signupcheck();" type="text" name="name" class="form-control" maxlength="15"> </div>
 					</div>
+						<div>
+							<span id="nameresult"></span>
+						</div>
 					<div class="row">	<!-- 3:8 -->
 						<div class="col-md-3 m-2"> <label>생년월일</label> </div>
-						<div class="col-md-8"> <input type="date" name="birth" class="form-control"> </div>
+						<div class="col-md-8"> <input id="birth" onchange="signupcheck();"  type="date" name="birth" class="form-control"> </div>
 					</div>
+						<div>
+							<span id="birthresult"></span>
+						</div>
 					<div class="row">	<!-- 3:8 -->
 						<div class="col-md-3 m-2"> <label>성별</label> </div>
 						<div class="col-md-8 text-center"> 
-						
-							<input type="radio" name="sex" value="man"> 남
-							<input type="radio" name="sex" value="woman"> 여
-							
+							<input type="radio" name="sex" value="man" id="sex1" onchange="signupcheck();" > 남
+							<input type="radio" name="sex" value="woman" id="sex2" onchange="signupcheck();" > 여
+						</div>
+						<div>
+							<span id="sexresult"></span>
 						</div>
 					</div>
 					
