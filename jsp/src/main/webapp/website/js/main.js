@@ -108,9 +108,14 @@ function sample4_execDaumPostcode() {
 	});
 /* 아이디 중복체크 end */
 
+function namechange(){ 
+	alert("클릭");
+	document.getElementById("tdname").innerHTML = "<input type='text' id='name' class='form-control'> <button id='namechangebtn' class='form-control'>확인</button>"
+}
+
+
 
 /* 회원가입 유효성검사 */
-  
 	function signupcheck(){
 	
 		// 1. 폼 가져오기 [ 폼에 id 존재 ]	//	document.getElementById("signupform")

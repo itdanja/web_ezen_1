@@ -66,7 +66,10 @@
 										<td> 포인트 </td> <td colspan="2"> <%=member.getM_point() %> </td>
 									</tr>
 									<tr>
-										<td> 회원명 </td> <td> <%=member.getM_name() %> </td>  	<td> <button class="form-control">수정</button> </td>
+									
+										<td> 회원명 </td> 
+										<td id="tdname"> <%=member.getM_name() %> </td>
+										<td> <button onclick="namechange();" class="form-control">수정</button> </td>
 									</tr>
 									<tr>
 										<td> 성별 </td> <td> <%=member.getM_sex() %> </td>  	<td> <button class="form-control">수정</button> </td>
