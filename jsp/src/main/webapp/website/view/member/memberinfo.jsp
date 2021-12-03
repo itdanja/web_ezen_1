@@ -12,12 +12,14 @@
 	
 	<div class="container">
 	
-		<div class="text-center">
+		<br><br>
+		
+		<div style="margin: 10px">
 			<h3 style="border-bottom: solid 1px #eeeee;"> 회원 정보 </h3>
 			<br>
-			<p style="color: orange;"> · 벤츠에 가입하시면 다양한 이벤트를 제공 받을수 있습니다. · </p>
+			<p style="color: orange;"> · 공지사항을 참고해주세요 · </p>
 		</div>
-				
+			<br><br>
 		<div class="row">
 			<div class="col-md-3">	<!-- 사이드바 -->
 				<div class="nav flex-column nav-pills">	<!-- flex-column : 세로 메뉴 	// nav-pills : 액티브[클릭] 색상  -->
@@ -62,16 +64,20 @@
 			
 			
 					<div class="tab-pane fade" id="pills-memberdelete">
-						<h3> 회원 탈퇴 </h3>
 						<div class="container">
-							하하하하하하ㅏ하하하하하
+							<div class="col-md-6 offset-3">
+								<h3> 회원탈퇴 하시겠습니까?</h3>
+								<form action="../../controller/memberdeletecontroller.jsp" method="post">
+									<br>
+									<input type="password" name="password" class="form-control" placeholder="패스워드"> 
+									<br>
+									<input type="submit"  value="탈퇴" class="form-control">
+								</form>
+							</div>
 						</div>
 					</div>
 			
-			
-			
 				</div>
-				
 			</div>
 		</div>
 	</div>

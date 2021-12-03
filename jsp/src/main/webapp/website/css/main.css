@@ -8,7 +8,9 @@
     font-weight: normal;
     font-style: normal;
 }
-
+h1,h2,h3,h4,h5,h6{
+	font-family: 'GongGothicBold';
+}
 *{
 	font-family: '맑은고딕';
 }

@@ -65,7 +65,26 @@ public class MemberDao {
 			rs = ps.executeQuery(); 	if( rs.next() ) { return true; }
 		}catch (Exception e) {}  return false;
 	}
+	
+	// 회원 탈퇴 메소드 
+	public boolean delete( String id , String password ) {
+		String sql = "delete from member where m_id=? and m_password=?";
+		try {
+			
+			ps = con.prepareStatement(sql);
+			ps.setString(1, id); 
+			ps.setString(2, password);
+			ps.executeUpdate(); 
+			
+			return true;
+			
+		}catch (Exception e) { System.out.println(e);  } return false;
+		
+	}
+	
+	
 
+	
 }
 
 
