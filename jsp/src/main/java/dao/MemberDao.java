@@ -84,6 +84,32 @@ public class MemberDao {
 					ps2.executeUpdate(); return true;
 				}
 		}catch (Exception e) { System.out.println(e);  } return false;
+	}
+	// 회원 정보 출력 메소드
+	public Member getmember( String id ) {
+		
+		String sql = "select * from member where m_id =? ";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, id);
+			rs = ps.executeQuery();
+			if( rs.next() ) {
+				// 동일한 아이디의 레코드를 비밀번호를 제외한 객체화
+				Member member = new Member(
+							rs.getInt(1) ,
+							rs.getString(2) ,
+							null ,
+							rs.getString(4) ,
+							rs.getString(5) ,
+							rs.getString(6) ,
+							rs.getString(7) ,
+							rs.getString(8) ,
+							rs.getInt(9) ,
+							rs.getString(10) 
+						);
+				return member;
+			}
+		}catch (Exception e) {} return null;
 		
 	}
 	

@@ -1,3 +1,5 @@
+<%@page import="dao.MemberDao"%>
+<%@page import="dto.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -41,10 +43,49 @@
 						</div>
 					</div>
 					
+					<%
+						// 로그인된 아이디[세션]의 정보 호출
+						Member member = MemberDao.getmemberDao().getmember(loginid);
+					%>
 					<div class="tab-pane fade" id="pills-memberinfo">
-						<h3> 회원 정보 </h3>
 						<div class="container">
-							하하하하하하ㅏ하하하하하
+							<table class="table text-center">	<!-- class="table" : 부트스트랩 테이블 --> 
+								<thead>
+									<tr>
+										<th colspan="3" > 회원 개인 정보 </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> 아이디 </td> <td colspan="2"> <%=member.getM_id() %> </td>	
+									</tr>
+									<tr>
+										<td> 패스워드 </td> <td> ···· </td>  	<td> <button class="form-control">수정</button> </td>
+									</tr>
+									<tr>
+										<td> 포인트 </td> <td colspan="2"> <%=member.getM_point() %> </td>
+									</tr>
+									<tr>
+										<td> 회원명 </td> <td> <%=member.getM_name() %> </td>  	<td> <button class="form-control">수정</button> </td>
+									</tr>
+									<tr>
+										<td> 성별 </td> <td> <%=member.getM_sex() %> </td>  	<td> <button class="form-control">수정</button> </td>
+									</tr>
+									<tr>
+										<td> 생년월일 </td> <td> <%=member.getM_brith() %> </td>  	<td> <button class="form-control">수정</button> </td>
+									</tr>
+									<tr>
+										<td> 연락처 </td> <td> <%=member.getM_phone() %> </td>  	<td> <button class="form-control">수정</button> </td>
+									</tr>
+									<tr>
+										<td> 주소 </td> <td> <%=member.getM_address() %> </td>  	<td> <button class="form-control">수정</button> </td>
+									</tr>
+									<tr>
+										<td> 가입일 </td> <td colspan="2">  <%=member.getM_sdate() %> </td> 
+									</tr>
+								</tbody>
+							</table>
+							
 						</div>
 					</div>
 					
