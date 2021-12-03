@@ -68,16 +68,21 @@ public class MemberDao {
 	
 	// 회원 탈퇴 메소드 
 	public boolean delete( String id , String password ) {
-		String sql = "delete from member where m_id=? and m_password=?";
+		
+		String sql1 = "select * from member where m_id =? and m_password=?";	// 회원검사
+		String sql2 = "delete from member where m_id=? and m_password=?";		// 회원삭제
 		try {
-			
-			ps = con.prepareStatement(sql);
-			ps.setString(1, id); 
-			ps.setString(2, password);
-			ps.executeUpdate(); 
-			
-			return true;
-			
+				ps = con.prepareStatement(sql1);	
+				ps.setString(1, id); 
+				ps.setString(2, password);
+				rs = ps.executeQuery();
+				
+				if( rs.next() ) { // 아이디와 비밀번호가 동일한경우에 결과가 있는경우에만 회원삭제 
+					PreparedStatement ps2 = con.prepareStatement(sql2);
+					ps2.setString(1, id); 
+					ps2.setString(2, password);
+					ps2.executeUpdate(); return true;
+				}
 		}catch (Exception e) { System.out.println(e);  } return false;
 		
 	}

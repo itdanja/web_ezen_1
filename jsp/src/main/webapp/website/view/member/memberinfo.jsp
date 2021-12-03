@@ -66,18 +66,19 @@
 					<div class="tab-pane fade" id="pills-memberdelete">
 						<div class="container">
 							<div class="col-md-6 offset-3">
-								<h3> 회원탈퇴 하시겠습니까?</h3>
-								<form action="../../controller/memberdeletecontroller.jsp" method="post">
+								<h3 id="deleteresult" > 회원탈퇴 하시겠습니까?</h3>
+								<form id="deleteform">
 									<br>
-									<input type="password" name="password" class="form-control" placeholder="패스워드"> 
+									<input type="password" id="password"  name="password" class="form-control" placeholder="패스워드"> 
 									<br>
-									<input type="submit"  value="탈퇴" class="form-control">
+									<input type="button" id="delete" value="탈퇴" class="form-control">
 								</form>
 							</div>
 						</div>
 					</div>
 			
 				</div>
+				
 			</div>
 		</div>
 	</div>
