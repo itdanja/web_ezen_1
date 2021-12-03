@@ -45,6 +45,7 @@
 								<%			
 										} 
 								%>
+									<li> <span  class="header_menu"> <%=loginid %>님 </span> </li>
 									<li>  <a href="/jsp/website/view/member/memberinfo.jsp" class="header_menu"> 회원정보 </a> </li>
 									<li>  <a href="/jsp/website/controller/logoutcontroller.jsp" class="header_menu"> 로그아웃 </a> </li>
 								<%
