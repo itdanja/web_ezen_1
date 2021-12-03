@@ -66,7 +66,6 @@
 										<td> 포인트 </td> <td colspan="2"> <%=member.getM_point() %> </td>
 									</tr>
 									<tr>
-									
 										<td> 회원명 </td> 
 										<td id="tdname"> <%=member.getM_name() %> </td>
 										<td> <button onclick="namechange();" class="form-control">수정</button> </td>
@@ -82,6 +81,24 @@
 									</tr>
 									<tr>
 										<td> 주소 </td> <td> <%=member.getM_address() %> </td>  	<td> <button class="form-control">수정</button> </td>
+									</tr>
+									<tr style="display: none;" id="traddress">	<!-- css 숨기기 -->
+										<td colspan="3">
+										<div class="row">	<!-- 3:8 -->
+											<div class="col-md-3 m-2"> <label>주소</label> </div>
+											<div class="col-md-8"> 
+												<div class="row">
+													<div class="col-md-6"> <input type="text" name="address1" id="sample4_postcode" placeholder="우편번호" class="form-control"> </div>
+													<div class="col-md-6"> <input type="button"  onclick="sample4_execDaumPostcode()" value="우편번호 찾기" class="form-control"><br> </div>
+												</div>
+												<div class="row">
+													<div class="col-md-6"> <input type="text" name="address2" id="sample4_roadAddress" placeholder="도로명주소" class="form-control"> </div>
+													<div class="col-md-6"> <input type="text" name="address3" id="sample4_jibunAddress" placeholder="지번주소" class="form-control"> </div>
+												</div>
+												<input type="text" id="sample4_detailAddress" name="address4" placeholder="상세주소" class="form-control">
+											</div>
+										</div>
+										<td>
 									</tr>
 									<tr>
 										<td> 가입일 </td> <td colspan="2">  <%=member.getM_sdate() %> </td> 

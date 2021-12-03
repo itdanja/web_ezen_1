@@ -112,6 +112,15 @@ public class MemberDao {
 		}catch (Exception e) {} return null;
 		
 	}
+	// 회원수정
+	public boolean update( String type , String newdata , String id ) {
+		String sql = "update member set "+type+" = ? where m_id = ?";
+		try {
+			ps =con.prepareStatement(sql);
+			ps.setString(1, newdata);	ps.setString(2, id);
+			ps.executeUpdate(); return true;
+		}catch (Exception e) {} return false;
+	}
 	
 	
 

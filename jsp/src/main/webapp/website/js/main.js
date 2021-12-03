@@ -108,11 +108,35 @@ function sample4_execDaumPostcode() {
 	});
 /* 아이디 중복체크 end */
 
-function namechange(){ 
-	alert("클릭");
-	document.getElementById("tdname").innerHTML = "<input type='text' id='name' class='form-control'> <button id='namechangebtn' class='form-control'>확인</button>"
-}
 
+
+	function namechange(){ 
+		
+		// 1. 클릭했을때 html 수정
+		document.getElementById("tdname").innerHTML = "<input type='text' id='name' class='form-control'> <button id='namechangebtn' class='form-control'>확인</button>";
+	
+		$( function(){
+			// $("id명").이벤트명( 함수명(){ 실행코드; } );
+			$("#namechangebtn").click( function() { 
+				$.ajax({ 
+					url : "../../controller/memberupdate.jsp" ,	
+					/* url : 통신할 경로 페이지 */ 
+					data :{ newname:document.getElementById("name").value} , 	
+					/* 이동할 데이터 */
+					success : function( result ){ 
+					/* 통신이 성공했을때*/
+						if( result == 1 ){ 	// js 변수는 자료형 없다
+							document.getElementById("tdname").innerHTML =  document.getElementById("name").value;
+						}else{
+							alert("[ 수정 오류 : 관리자에게문의]");
+						}
+					}
+				});
+			});
+		});
+		
+	}
+	
 
 
 /* 회원가입 유효성검사 */
