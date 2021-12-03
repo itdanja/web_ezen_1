@@ -10,7 +10,18 @@
 }
 
 *{
-	font-family: 'GongGothicBold';
+	font-family: '맑은고딕';
 }
+
+.header_logo{
+	font-family: 'GongGothicBold';
+	font-size: 2rem;
+}
+.header_menu{
+	margin-left: 20px;
+	color: #999;
+}
+.carousel-item img{ width: 100%;}
+
 
 
