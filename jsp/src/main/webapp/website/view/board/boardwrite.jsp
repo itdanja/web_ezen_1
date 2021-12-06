@@ -12,7 +12,9 @@
 	
 	<!-- 글쓰기 페이지  -->
 	<div class="container">
-		<form action="../../controller/boardwritecontroller.jsp" method="post">
+		<form action="../../controller/boardwritecontroller.jsp" method="post" enctype="multipart/form-data" >
+			<!-- form 전송데이터 기본타입 : text(String) : enctype="application/x-www-form-urlencoded" -->
+			<!-- form 파일데이터 타입 : multipart/form-data -->
 			제목 : <input type="text" name="title"> <br>
 			내용 : <textarea rows="10" cols="20" name="contents"></textarea> <br>
 			첨부파일 : <input type="file" name="file"> <br>
