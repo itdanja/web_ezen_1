@@ -23,7 +23,7 @@
 		if( file.isFile() ){	//file.isFile() : 파일이 있는지 없는지 유무 확인
 			// 3.입력스트림 [ 파일을 바이트형으로 읽어오기 ]
 			BufferedInputStream inputStream = new BufferedInputStream( new FileInputStream(file));
-			byte[] bytes = new byte[ (int)file.length() ];	// file.legnth : 파일내 바이트 길이 메소드
+			byte[] bytes = new byte[ (int)file.length() ];	// file.legnth : 파일 바이트 길이 호출 메소드
 			inputStream.read( bytes );
 			
 			// 3.출력스트림 [ 읽어온 바이트형 파일을 내보내기 ] // response.getOutputStream() : 클라이언트에게 바이트 전송
