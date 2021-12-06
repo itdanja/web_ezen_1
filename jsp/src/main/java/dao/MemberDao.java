@@ -121,6 +121,18 @@ public class MemberDao {
 		}catch (Exception e) {} return false;
 	}
 	
+	// 회원번호 검색 메소드 
+	public int getmembernum( String id) {
+		
+		String sql ="select m_num from member where m_id=?";
+		try {
+			ps =con.prepareStatement(sql); ps.setString(1, id);
+			rs = ps.executeQuery(); 
+			if( rs.next() ) { return rs.getInt(1); }
+		}catch (Exception e) {} return 0;
+		
+	}
+	
 	
 
 	

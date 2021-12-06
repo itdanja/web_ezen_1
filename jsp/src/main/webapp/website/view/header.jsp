@@ -1,3 +1,4 @@
+<%@page import="dto.Login"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,7 +26,10 @@
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	
 	<%
-		String loginid = (String)session.getAttribute("loginid");
+		Login login = (Login)session.getAttribute("login");
+		String loginid = null; 
+		// 세션이 있을경우
+		if( login != null ) {	loginid = login.getM_id();	}
 	%>
 	<!-- 헤더 start -->
 	
@@ -39,7 +43,7 @@
 						<div class="col-md-4 d-flex justify-content-end">	<!-- 상단 메뉴 -->
 							<ul class="nav">
 								<%
-									if( loginid !=null ){	// 로그인이 되어 있는경우 
+									if( loginid != null ){	// 로그인이 되어 있는경우 
 										if( loginid.equals("admin") ){ // 로그인 되어 있으면서 관리자 이면
 								%>
 										<li><a href="/jsp/website/view/admin/adminmain.jsp" class="header_menu"> 관리자 </a> </li>

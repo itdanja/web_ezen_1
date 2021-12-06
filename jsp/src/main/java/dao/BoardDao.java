@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import dto.Board;
+
 public class BoardDao {
 	
 	private Connection con;
@@ -23,4 +25,25 @@ public class BoardDao {
 	public static BoardDao boarddao = new BoardDao() ; 	// 3. Dao 객체 생성
 	public static BoardDao gemboarddao() { return boarddao; } // 4. Dao 객체 반환
 	
+	// 
+	public boolean boardwrite( Board board ) {
+		
+		String sql = "insert into board( b_title , b_contents , m_num , b_file) values(?,?,?,?)";
+		try {
+			ps = con.prepareStatement(sql);	
+			ps.setString(1, board.getB_title() ); 	ps.setString(2, board.getB_contents());
+			ps.setInt(3, board.getB_num());			ps.setString(4, board.getB_file());
+			ps.executeUpdate();		return true;
+		}catch (Exception e) { System.out.println(e);}	return false;
+		
+	}
+	
 }
+
+
+
+
+
+
+
+

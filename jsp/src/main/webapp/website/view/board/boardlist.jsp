@@ -11,9 +11,21 @@
 	
 	<%@include file = "../header.jsp" %> <!-- 헤더 페이지 -->
 	
-		<div class="container">
-		
-		</div>
+	<!-- 고객센터 페이지 -->
+	<div class="container">
 	
+		<a href="boardwrite.jsp"><button>글쓰기 </button></a>
+	
+		<table>
+		
+		</table>
+	</div>
+
 </body>
 </html>
+
+
+
+
+
+
