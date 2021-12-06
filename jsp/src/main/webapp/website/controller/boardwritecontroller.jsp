@@ -30,7 +30,7 @@
 	// 객체화
 	Board board = new Board( title , contents , m_num , file);
 	// DB처리
-	BoardDao.gemboarddao().boardwrite( board);
+	BoardDao.getboarddao().boardwrite( board);
 	
 	response.sendRedirect("../view/board/boardlist.jsp");
 	

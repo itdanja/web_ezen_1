@@ -24,7 +24,7 @@ public class BoardDao {
 		catch (Exception e) {System.out.println("[연동 실패]");}
 	}
 	public static BoardDao boarddao = new BoardDao() ; 	// 3. Dao 객체 생성
-	public static BoardDao gemboarddao() { return boarddao; } // 4. Dao 객체 반환
+	public static BoardDao getboarddao() { return boarddao; } // 4. Dao 객체 반환
 	
 	// 게시물 작성
 	public boolean boardwrite( Board board ) {
@@ -60,7 +60,36 @@ public class BoardDao {
 		}catch (Exception e) {} return null;
 	}
 	
+	// 게시물번호의 해당 게시물 가져오기 
+	public Board getboard( int b_num) {
+		String sql = "select * from board where b_num=?";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, b_num);
+			rs = ps.executeQuery();
+			if( rs.next() ) {
+				Board board = new Board( rs.getInt(1), 
+						rs.getString(2), 
+						rs.getString(3),
+						 rs.getInt(4), 
+						 rs.getString(5),
+						 rs.getString(6),
+						 rs.getInt(7),
+						 rs.getInt(8));
+				return board;
+			}
+		}catch (Exception e) {} return null;
+		
+	}
+	
 }
+
+
+
+
+
+
+
 
 
 

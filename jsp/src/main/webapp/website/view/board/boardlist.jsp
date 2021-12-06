@@ -29,13 +29,14 @@
 			</tr>
 			<%
 				ArrayList<Board> boards = 
-					BoardDao.gemboarddao().boardlist();
+					BoardDao.getboarddao().boardlist();
 			
 				for( Board board : boards ){
 			%>
 				<tr>
 					<td><%=board.getB_num() %></td>
-					<td><%=board.getB_title() %></td>
+					<td><a href="boardview.jsp?b_num=<%=board.getB_num()%>"><%=board.getB_title() %></a></td>
+							<!-- 게시물 상세페이지 이동 [ 클릭한 게시물 번호 요청 ] -->
 					<td><%=board.getM_num() %></td>
 					<td><%=board.getB_date() %></td>
 					<td><%=board.getB_view() %></td>
@@ -44,7 +45,6 @@
 			<%
 				}
 			%>
-		
 		</table>
 	</div>
 
