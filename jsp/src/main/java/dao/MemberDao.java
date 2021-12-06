@@ -10,7 +10,6 @@ import dto.Member;
 public class MemberDao {
 	// 1. 빌드 -> 라이브러리 추가
 	// 2. 프로젝트내 WEB-INF -> lib -> 라이브러리 추가
-	
 		//1. 자주 사용하는 인터페이스 
 		private Connection con;
 		private ResultSet rs;
