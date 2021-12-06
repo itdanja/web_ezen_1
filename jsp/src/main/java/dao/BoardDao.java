@@ -32,7 +32,7 @@ public class BoardDao {
 		try {
 			ps = con.prepareStatement(sql);	
 			ps.setString(1, board.getB_title() ); 	ps.setString(2, board.getB_contents());
-			ps.setInt(3, board.getB_num());			ps.setString(4, board.getB_file());
+			ps.setInt(3, board.getM_num());			ps.setString(4, board.getB_file());
 			ps.executeUpdate();		return true;
 		}catch (Exception e) { System.out.println(e);}	return false;
 		
