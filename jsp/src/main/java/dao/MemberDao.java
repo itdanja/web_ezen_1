@@ -133,6 +133,18 @@ public class MemberDao {
 		
 	}
 	
+	// 회원아이디 검색 메소드 
+	public String getmemberid( int m_num) {
+		
+		String sql ="select m_id from member where m_num=?";
+		try {
+			ps =con.prepareStatement(sql); ps.setInt(1, m_num);
+			rs = ps.executeQuery(); 
+			if( rs.next() ) { return rs.getString(1); }
+		}catch (Exception e) {} return null;
+		
+	}
+	
 	
 
 	

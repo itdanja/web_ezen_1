@@ -21,6 +21,7 @@
 	// 내보내기 [ 스트림(바이트) ]
 		// 2. 만약에 파일이 존재하며
 		if( file.isFile() ){	//file.isFile() : 파일이 있는지 없는지 유무 확인
+			
 			// 3.입력스트림 [ 파일을 바이트형으로 읽어오기 ]
 			BufferedInputStream inputStream = new BufferedInputStream( new FileInputStream(file));
 			byte[] bytes = new byte[ (int)file.length() ];	// file.legnth : 파일 바이트 길이 호출 메소드

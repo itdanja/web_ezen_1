@@ -16,10 +16,12 @@
 	String folderpath = request.getSession().getServletContext().getRealPath("website/upload");
 	MultipartRequest multi = new MultipartRequest( request ,  folderpath , 
 			1024*1024*10 ,"UTF-8" , new DefaultFileRenamePolicy() );
+	////////////////////
 	request.setCharacterEncoding("utf-8");	// 요청시[request] 한글 인코딩
 	String title = multi.getParameter("title");
 	String contents = multi.getParameter("contents");
 	String file = multi.getFilesystemName("file");	// getFilesystemName : 파일명 가져오기
+	/////////////////////////
 					/* 	// 요청 [ 일반 form ]
 						String title = request.getParameter("title");
 						String contents = request.getParameter("contents");
