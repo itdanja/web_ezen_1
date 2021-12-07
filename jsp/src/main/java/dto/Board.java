@@ -30,17 +30,19 @@ public class Board {
 		
 		Date today = new Date();
 		
+		SimpleDateFormat datetimeformat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		SimpleDateFormat dateFormat2 = new SimpleDateFormat("hh : mm");
+		SimpleDateFormat timeformat = new SimpleDateFormat("hh:mm");
 		try {
-			Date date =  dateFormat.parse( b_date );	// [문자열]DB -> 날자형 변환
-			
+			Date date =  datetimeformat.parse( b_date );	// [문자열]DB -> 날자형 변환
+	
 			if( dateFormat.format( date ).equals(  dateFormat.format( today ) ) ) {
-				this.b_date = dateFormat2.format(date);
-				System.out.println( b_date );
+				
+				this.b_date = timeformat.format(date);
+				
 			}else {
 				this.b_date = dateFormat.format(date);
-				System.out.println( b_date );
+				
 			}
 		}
 		catch (Exception e) {}

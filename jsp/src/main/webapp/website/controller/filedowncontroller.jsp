@@ -10,9 +10,11 @@
 	// 1. 경로에서 파일명 가져오기 [ 조건 : ../../controller/filedowncontroller.jsp?file=파일명 ]
 	request.setCharacterEncoding("utf-8");
 	String filename = request.getParameter("file");
-	// 2. 서버내 업로드폴더에서 파일 찾기
+	// 2. *서버내 업로드폴더에서 파일 찾기
 	String folderpath = request.getSession().getServletContext().getRealPath("website/upload/"+filename);
 						// request.getSession().getServletContext().getRealPath() : 서버내 경로찾기
+	// 2. *작업폴더 경로에서 파일 찾기 
+	//String folderpath = "C:/Users/505-t/git/web_ezen_1/jsp/src/main/webapp/website/upload/"+filename; 
 	// 3. 파일 객체화
 	File file = new File( folderpath );
 	// 4. 다운로드 형식변경
