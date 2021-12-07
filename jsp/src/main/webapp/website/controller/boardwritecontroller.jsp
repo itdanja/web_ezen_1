@@ -20,12 +20,12 @@
 	request.setCharacterEncoding("utf-8");	// 요청시[request] 한글 인코딩
 	String title = multi.getParameter("title");
 	String contents = multi.getParameter("contents");
-		// <br> ,
-		//contents = contents.replace("\r\n", "<br>" );
-	 	// 프론트 < >태그 제거 ( 입력상자 사용시 )
+		// 1. html < > -> 문자 변환 [ 정규표현식x ]
+		// 2. \n -> <br> 줄바꿈 변환
 	contents = contents.replaceAll("<","&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>");
-	 	
+		// 3. html < > -> 문자 변환 [ 정규표현식 ]
 	title = title.replaceAll("<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\S)*(/)?","");
+	
 	
 	String file = multi.getFilesystemName("file");	// getFilesystemName : 파일명 가져오기
 	/////////////////////////

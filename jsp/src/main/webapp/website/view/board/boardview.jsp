@@ -14,19 +14,16 @@
 <body>
 		
 	<%@include file = "../header.jsp" %> <!-- 헤더 페이지 -->
-	
 		<%
-		
 			int b_num = Integer.parseInt( request.getParameter("b_num")) ; // 전 페이지에서 클릭한 게시물번호	
 
-				String boardviews =  loginid +":"+b_num;
-				if( session.getAttribute( boardviews) == null ){
-					// 조회수 증가
-					BoardDao.getboarddao().boardcount(b_num);
-					// 조회수 증가 방지 [ 세션 생성 : 세션아이디 , 세션값 ]
-					String boardview = loginid +":"+b_num;
-					session.setAttribute( boardview ,  true   );
-					session.setMaxInactiveInterval(60*60*24);	// 세션 유효시간 : 초당 [ 하루 ]
+				String boardviews =  loginid +":"+b_num;			// 1. 현재로그인id + 게시물번호; => 세션이름 사용예정
+				
+				if( session.getAttribute( boardviews) == null ){	// 2. 현재로그인id+게시물 의 세션명이 존재하지 않으면
+					BoardDao.getboarddao().boardcount(b_num);		// 3. DB 호출 [ // 조회수 증가	 ]
+					String boardview = loginid +":"+b_num;			// 4. 세션명 = 현재로그인id + 게시물번호
+					session.setAttribute( boardview ,  true   );	// 5. 조회수 증가 방지 [ 세션 생성 : 세션아이디 , 세션값 ]
+					session.setMaxInactiveInterval(60*60*24);		// *세션 유효시간 : 초당 [ 하루 ]
 				}
 			// 해당 게시물번호의 게시물 가져오기
 			Board board =BoardDao.getboarddao().getboard(b_num);
@@ -36,8 +33,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="m-2"> <a href="boardlist.jsp"><button class="form-control">목록보기</button></a> </div>
-				<div class="m-2"> <a href="#"><button class="form-control">수정하기</button></a> </div>
-				<div class="m-2"> <a href="#"><button class="form-control">삭제하기</button></a> </div>
+				<%if( loginid.equals( board.getB_writer() ) ){ %> <!-- 로그인된 아이디와 작성자와 동일할경우에만 -->
+					<div class="m-2"> <a href="#"><button class="form-control">수정하기</button></a> </div>
+					<div class="m-2"> <a href="#"><button class="form-control">삭제하기</button></a> </div>
+				<%} %>
 			</div>
 			<table class="table">
 				<tr>
@@ -53,11 +52,19 @@
 				</tr>
 				<tr>
 					<td> 첨부파일 다운로드 <br>
-					<a href="../../controller/filedowncontroller.jsp?file=<%=board.getB_file()%>"><%=board.getB_file() %></a> 
+						<% if( board.getB_file() == null){ %>
+						<% }else{%> 
+							<a href="../../controller/filedowncontroller.jsp?file=<%=board.getB_file()%>"><%=board.getB_file() %></a> 
+						<% }%>
 					</td> 
-					
-					<td colspan="2"> 미리보기<br> <img src="../../upload/<%=board.getB_file()%>" width="100%"></td>
-					
+						<% if( board.getB_file() == null){ %>
+							<td colspan="2" height="300px;"> </td>
+						<% }else{%> 
+							<td colspan="2" height="300px;"> 	<!-- 박스권 안에 사진 사이징 : max-width , max-height -->
+							미리보기<br> <img src="../../upload/<%=board.getB_file()%>" style="max-width: 100%; max-height: 100%">
+							</td>
+						<% }%>
+				
 				</tr>
 			</table>
 		</div>

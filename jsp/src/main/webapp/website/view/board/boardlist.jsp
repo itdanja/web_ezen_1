@@ -44,6 +44,22 @@
 		<hr>
 		<br> <br>
 		<h4> ·문의 게시판 </h4>
+				<div class="row">
+					
+				<%
+					if( loginid != null ){ // null값은 equals 불가
+				%>
+					<div class="col-md-2 offset-10" >
+						<a href="boardwrite.jsp"><button type="button" class="form-control">글 등록</button></a>
+					</div>
+				
+				<%	}else{ %>
+					<div class="col-md-3 offset-9" >
+					* 로그인후에 글 등록 가능 합니다.
+					</div>
+				<%}%>
+				</div>
+				<br>
 		<table class="table">
 			<tr>
 				<th> 번호 </th>
@@ -69,15 +85,7 @@
 				}
 			%>
 		</table>
-		<%
-			if( loginid != null ){ // null값은 equals 불가
-		%>
-		<div class="row">
-			<div class="col-md-2 offset-10" >
-			<a href="boardwrite.jsp"><button type="button" class="form-control">글 등록</button></a>
-			</div>
-		</div>
-		<%	} %>
+
 	</div>
 
 </body>
