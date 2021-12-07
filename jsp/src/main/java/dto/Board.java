@@ -18,8 +18,15 @@ public class Board {
 	private int b_activation;
 	private String b_writer; // 작성자
 	
-	// 생성자 [ 1.빈생성자 2.전체생성자 3.등록생성자 ]
+	// 생성자 [ 1.빈생성자 2.전체생성자 3.등록생성자 4.수정생성자 ]
+	
 	public Board() {}
+	public Board(int b_num, String b_title, String b_contents, String b_file) {
+		this.b_num = b_num;
+		this.b_title = b_title;
+		this.b_contents = b_contents;
+		this.b_file = b_file;
+	}
 	public Board(int b_num, String b_title, String b_contents, int m_num, String b_date, String b_file, int b_view,
 			int b_activation) {
 		super();

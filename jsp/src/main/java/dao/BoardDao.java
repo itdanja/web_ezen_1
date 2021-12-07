@@ -100,7 +100,20 @@ public class BoardDao {
 				return true;
 			}catch (Exception e) {} return false;
 		}
-	
+	// 게시물 수정 메소드 
+		public boolean boardupdate( Board board ) {
+			String sql = "update board set b_title=? , b_contents=? , b_file=? "
+						+ "where b_num = ?";
+			try {
+				ps = con.prepareStatement(sql);
+				ps.setString(1, board.getB_title() );  	
+				ps.setString(2, board.getB_contents());
+				ps.setString(3, board.getB_file() );	
+				ps.setInt(4, board.getB_num() );
+				ps.executeUpdate();
+				return true;
+			}catch (Exception e) {} return false;
+		}
 }
 
 
