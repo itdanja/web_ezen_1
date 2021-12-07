@@ -33,9 +33,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="m-2"> <a href="boardlist.jsp"><button class="form-control">목록보기</button></a> </div>
-				<%if( loginid.equals( board.getB_writer() ) ){ %> <!-- 로그인된 아이디와 작성자와 동일할경우에만 -->
+				<%if( loginid !=null && loginid.equals( board.getB_writer() ) ){ %> <!-- 로그인된 아이디와 작성자와 동일할경우에만 -->
 					<div class="m-2"> <a href="#"><button class="form-control">수정하기</button></a> </div>
-					<div class="m-2"> <a href="#"><button class="form-control">삭제하기</button></a> </div>
+					<div class="m-2"> <a href="../../controller/boarddeletecontroller.jsp?b_num=<%=board.getB_num()%>"><button class="form-control">삭제하기</button></a> </div>
 				<%} %>
 			</div>
 			<table class="table">

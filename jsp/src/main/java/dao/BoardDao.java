@@ -90,7 +90,15 @@ public class BoardDao {
 				ps.setInt(1, b_num); 	ps.executeUpdate();
 				return true;
 			}catch (Exception e) {} return false;
-			
+		}
+	// 게시물 삭제 메소드 
+		public boolean boarddelete( int b_num ) {
+			String sql = "delete from board where b_num =?";
+			try {
+				ps = con.prepareStatement(sql);
+				ps.setInt(1, b_num); 	ps.executeUpdate();
+				return true;
+			}catch (Exception e) {} return false;
 		}
 	
 }
