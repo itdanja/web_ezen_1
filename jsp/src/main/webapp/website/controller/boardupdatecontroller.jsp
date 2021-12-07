@@ -16,9 +16,9 @@
 	contents = contents.replaceAll("<","&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>");
 	title = title.replaceAll("<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\S)*(/)?","");
 	
-	String file = multi.getFilesystemName("file");
+	String file = multi.getFilesystemName("file");	// type : file
 	if( file == null ){	// 새로운 첨부가 없을경우 기존 첨부를 DB 저장
-		file = multi.getFilesystemName("oldfile");
+		file = multi.getParameter("oldfile"); // type : hidden
 	}
 	int b_num = Integer.parseInt(multi.getParameter("b_num") ); 
 	Board board = new Board( b_num , title , contents , file  ); // 객체화

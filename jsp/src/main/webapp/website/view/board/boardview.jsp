@@ -64,11 +64,34 @@
 							미리보기<br> <img src="../../upload/<%=board.getB_file()%>" style="max-width: 100%; max-height: 100%">
 							</td>
 						<% }%>
-				
 				</tr>
 			</table>
+			<br><br>
+			<hr>
+			<div class="row">
+				<div class="col-md-2" >
+					<h6>댓글작성 </h6>
+				</div>
+				<div class="col-md-8" >
+					<textarea rows="" cols="" class="form-control" ></textarea> 
+				</div>
+				<div class="col-md-2">
+					<button class="form-control"> 등록 </button>
+				</div>
+			</div>
+			
+			<table class="table">
+				<tr>
+					<th> 작성자 </th> <th> 내용 </th> <th> 작성일 </th>
+				</tr>
+				<tr><th> qweqwe </th> <th> 안녕하세요~~~~~~ </th> <th> 2021-12-07 </th><th><button class="form-control">삭제</button></tr>
+				<tr><th> qweqwe </th> <th> 안녕하세요~~~~~~ </th> <th> 2021-12-07 </th><th><button class="form-control">삭제</button></tr>
+				<tr><th> qweqwe </th> <th> 안녕하세요~~~~~~ </th> <th> 2021-12-07 </th><th><button class="form-control">삭제</button></tr>
+			</table>
+			
 		</div>
-
+		
+		
 </body>
 </html>
 
