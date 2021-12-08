@@ -39,9 +39,35 @@ public class BoardDao {
 		
 	}
 	// 모든 게시물 출력
-	public ArrayList<Board> boardlist( int startrow , int endrow){
+	public ArrayList<Board> boardlist( int startrow , int listsize){
 		ArrayList<Board> boards = new ArrayList<Board>(); 
-		String sql ="select * from board order by b_num DESC limit "+startrow+" , "+endrow;
+		String sql ="select * from board order by b_num DESC limit ? , ?";
+															// limit 시작번호 , 제한개수
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, startrow);  ps.setInt(2, listsize);
+			rs = ps.executeQuery();
+			while( rs.next() ) {
+				
+				Board board = new Board( rs.getInt(1), 
+						rs.getString(2), 
+						rs.getString(3),
+						 rs.getInt(4), 
+						 rs.getString(5),
+						 rs.getString(6),
+						 rs.getInt(7),
+						 rs.getInt(8));
+				boards.add(board);
+			}
+			return boards;
+		}catch (Exception e) {} return null;
+	}
+	
+	// 모든 게시물 출력
+	public ArrayList<Board> boardlist2( String key , String keyword ){
+		ArrayList<Board> boards = new ArrayList<Board>(); 
+		String sql ="select * from board where "+key+" like '%"+keyword+"%' order by b_num desc";
+															// limit 시작번호 , 제한개수
 		try {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
