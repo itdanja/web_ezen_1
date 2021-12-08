@@ -66,8 +66,15 @@ public class BoardDao {
 	// 모든 게시물 출력
 	public ArrayList<Board> boardlist2( String key , String keyword ){
 		ArrayList<Board> boards = new ArrayList<Board>(); 
-		String sql ="select * from board where "+key+" like '%"+keyword+"%' order by b_num desc";
-															// limit 시작번호 , 제한개수
+		String sql = null;
+		if( key.equals("b_writer")  ) {		 //작성자 검색 : 작성자 -> 회원번호
+			int m_num = MemberDao.getmemberDao().getmembernum(keyword);
+			sql ="select * from board where m_num = "+ m_num +" order by b_num desc";
+		}else if( key.equals("b_num") ) {	//번호 검색 : 일치한 값만 검색
+			sql ="select * from board where b_num = "+ keyword +" order by b_num desc";
+		}else {								 // 제목 혹은 내용 검색 : 포함된 값 검색 
+			sql ="select * from board where "+key+" like '%"+keyword+"%' order by b_num desc";
+		}
 		try {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();

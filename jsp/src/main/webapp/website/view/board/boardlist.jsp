@@ -104,7 +104,14 @@
 				<th> 조회수 </th>
 			</tr>
 			<%
-
+				
+				if( boards.size() == 0) {%>
+					<tr>
+						<td colspan="5" class="text-center">검색 결과가 없습니다.</td>
+					</tr>	
+					
+			<% 	}%>
+			<%
 				for( Board board : boards ){
 			%>
 				<tr>
@@ -152,6 +159,7 @@
 			<select class="custom-select col-md-3" name="key">	<!-- key : 필드명 -->
 			
 				<option value="b_title">제목</option>
+				<option value="b_contents">내용</option>
 				<option value="b_num">번호</option>
 				<option value="b_writer">작성자</option>
 				
