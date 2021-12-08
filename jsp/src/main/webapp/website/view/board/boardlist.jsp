@@ -14,9 +14,19 @@
 	
 	<%@include file = "../header.jsp" %> <!-- 헤더 페이지 -->
 	
-	<%
-		//페이징처리
-		int lastrow = BoardDao.getboarddao().boardcount(); // 1. 총 게시물수 
+	<%		
+		// 검색 처리 : 키워드 입력하고 검색 버튼을 눌렀을때 
+	 	String key = request.getParameter("key");
+		String keyword = request.getParameter("keyword");
+		
+		//페이징처리 [ 1.검색이 있을경우 2. 검색이 없을경우 ]
+		String pagenum = request.getParameter("pagenum");	// 4. 클릭한 페이지번호
+		if( pagenum == null){ // 클릭한 페이지번호가 없으면 [ 게시판 첫화면 ]
+			pagenum = "1";	//	1페이지 설정
+		}
+		
+		int lastrow = BoardDao.getboarddao().boardcount( key ,  keyword ); // 1. 총 게시물수 
+		
 		int listsize = 10;		 //2. 페이지당 화면에 표시할 게시물수 
 		
 		int lastpage = 0;					// 3. 마지막페이지
@@ -25,29 +35,16 @@
 		}else{
 			lastpage = lastrow / listsize+1;	// * 총게시물/페이당게시물+1
 		}
-		
-		String pagenum = request.getParameter("pagenum");	// 4. 클릭한 페이지번호
-		if( pagenum == null){ // 클릭한 페이지번호가 없으면 [ 게시판 첫화면 ]
-			pagenum = "1";	//	1페이지 설정
-		}
+	
 		int currentpage = Integer.parseInt(pagenum); // 5. 현재페이지번호
 		int startrow = (currentpage-1)*listsize; // 6. 현재페이지의 시작번호
 				// 1페이지 -> 0*10 -> 0	// 2페이지 -> 1*10 -> 10	// 3페이지 -> 2*10 -> 20
-		int endrow = currentpage*listsize;  // 7. 현재페이지의 마지막번호
-		
-		// 검색 처리
-	 	String key = request.getParameter("key");
-		String keyword = request.getParameter("keyword");
-		
-		ArrayList<Board> boards = null;
-		if( key !=null && keyword !=null ){ // 검색이 있을경우 [ 키 와 키워드가 입력했을때 ]
-			boards = BoardDao.getboarddao().boardlist2( key  , keyword );
-		}else{ // 검색이 없을때
-			boards = BoardDao.getboarddao().boardlist( startrow , listsize );
-		}
-		
-	%>
+		//int endrow = currentpage*listsize;  // 7. 현재페이지의 마지막번호
 
+		ArrayList<Board> boards 
+			= BoardDao.getboarddao().boardlist( startrow , listsize , key  , keyword );
+	
+	%>
 	
 	<!-- 고객센터 페이지 -->
 	<div class="container">
@@ -59,7 +56,6 @@
 		</div>
 		
 		<div class="text-center">
-			
 			<div class="row">
 				<div class="col-md-5  m-2">
 					<h4>·자주 묻는 질문</h4>
@@ -95,6 +91,12 @@
 				<%}%>
 				</div>
 				<br>
+				<!-- 게시물 수  -->
+				<% if( keyword != null){ %>
+					<p> 총 검색 수 : <%=lastrow %> </p>
+				<%}else{ %>
+					<p> 총 게시물 수 :  <%=lastrow %> </p>
+				<%} %>
 		<table class="table">
 			<tr>
 				<th> 번호 </th>
@@ -131,34 +133,40 @@
 		<div class="row">	<!-- 가로 배치 -->
 			<div class="col-md-4 offset-4 my-3">
 				<ul class="pagination">
+				
 						<!-- 첫페이지에서 이전버튼 눌렀을때 첫페이지 고정  -->
 					<% if( currentpage == 1){ %>
-					<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage%>" class="page-link"> 이전 </a> </li>
+						<% if( keyword == null ){ %>
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage%>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 이전 </a> </li>
+						<%}else{%>
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage%>" class="page-link"> 이전 </a> </li>	
+						<%} %>
 					<%}else{ %>
-					<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage-1 %>" class="page-link"> 이전 </a> </li>
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage-1 %>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 이전 </a> </li>
 					<%} %>										<!-- 현재페이지번호 -1  -->
 					
 						<!-- 게시물의 수만큼 페이지 번호 생성 -->
 					<% for( int i = 1 ; i<=lastpage; i++){ %>
-						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=i %>" class="page-link"> <%=i %> </a> </li>
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=i %>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> <%=i %> </a> </li>
 						<!-- i 클릭했을때 현재 페이지 이동 [ 클릭한 페이지번호 ] -->
 					<%} %>
 					
 						<!-- 마지막페이지에서 다음버튼 눌렀을때 마지막페이지 고정 -->
 					<% if( currentpage == lastpage ){ %>
-					<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage %>" class="page-link"> 다음 </a> </li>
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage %>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 다음 </a> </li>
 					<%}else{ %>									<!-- 현재페이지번호 +1  -->
-					<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage+1 %>" class="page-link"> 다음 </a> </li>	
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage+1 %>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 다음 </a> </li>	
 					<%} %>
+					
 				</ul>
 			</div>
 		</div>
 		
 		<!--  검색  -->
-		<form action="boardlist.jsp" method="get" class="col-md-5 offset-3 input-group my-3" >
+		<form action="boardlist.jsp?pagenum=<%=currentpage %>" method="get" class="col-md-5 offset-3 input-group my-3" >
+		
 			<select class="custom-select col-md-3" name="key">	<!-- key : 필드명 -->
-			
-				<option value="b_title">제목</option>
+						<option value="b_title">제목</option>
 				<option value="b_contents">내용</option>
 				<option value="b_num">번호</option>
 				<option value="b_writer">작성자</option>

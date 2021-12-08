@@ -38,62 +38,7 @@ public class BoardDao {
 		}catch (Exception e) { System.out.println(e);}	return false;	
 		
 	}
-	// 모든 게시물 출력
-	public ArrayList<Board> boardlist( int startrow , int listsize){
-		ArrayList<Board> boards = new ArrayList<Board>(); 
-		String sql ="select * from board order by b_num DESC limit ? , ?";
-															// limit 시작번호 , 제한개수
-		try {
-			ps = con.prepareStatement(sql);
-			ps.setInt(1, startrow);  ps.setInt(2, listsize);
-			rs = ps.executeQuery();
-			while( rs.next() ) {
-				
-				Board board = new Board( rs.getInt(1), 
-						rs.getString(2), 
-						rs.getString(3),
-						 rs.getInt(4), 
-						 rs.getString(5),
-						 rs.getString(6),
-						 rs.getInt(7),
-						 rs.getInt(8));
-				boards.add(board);
-			}
-			return boards;
-		}catch (Exception e) {} return null;
-	}
-	
-	// 모든 게시물 출력
-	public ArrayList<Board> boardlist2( String key , String keyword ){
-		ArrayList<Board> boards = new ArrayList<Board>(); 
-		String sql = null;
-		if( key.equals("b_writer")  ) {		 //작성자 검색 : 작성자 -> 회원번호
-			int m_num = MemberDao.getmemberDao().getmembernum(keyword);
-			sql ="select * from board where m_num = "+ m_num +" order by b_num desc";
-		}else if( key.equals("b_num") ) {	//번호 검색 : 일치한 값만 검색
-			sql ="select * from board where b_num = "+ keyword +" order by b_num desc";
-		}else {								 // 제목 혹은 내용 검색 : 포함된 값 검색 
-			sql ="select * from board where "+key+" like '%"+keyword+"%' order by b_num desc";
-		}
-		try {
-			ps = con.prepareStatement(sql);
-			rs = ps.executeQuery();
-			while( rs.next() ) {
-				
-				Board board = new Board( rs.getInt(1), 
-						rs.getString(2), 
-						rs.getString(3),
-						 rs.getInt(4), 
-						 rs.getString(5),
-						 rs.getString(6),
-						 rs.getInt(7),
-						 rs.getInt(8));
-				boards.add(board);
-			}
-			return boards;
-		}catch (Exception e) {} return null;
-	}
-	
+
 	// 게시물번호의 해당 게시물 가져오기 
 	public Board getboard( int b_num) {
 		String sql = "select * from board where b_num=?";
@@ -147,10 +92,61 @@ public class BoardDao {
 				return true;
 			}catch (Exception e) {} return false;
 		}
+
+		// 모든 게시물 출력
+		public ArrayList<Board> boardlist( int startrow , int listsize ,  String key , String keyword ){
+			
+			ArrayList<Board> boards = new ArrayList<Board>(); 
+			String sql = null;
+			
+			if( key ==null && keyword ==null ) { // 1. 검색이 없을경우
+				sql ="select * from board order by b_num DESC limit ? , ?";
+			}else { // 2. 검색이 있을경우
+				if( key.equals("b_writer")  ) {		 //작성자 검색 : 작성자 -> 회원번호
+					int m_num = MemberDao.getmemberDao().getmembernum(keyword);
+					sql ="select * from board where m_num = "+ m_num +" order by b_num desc limit ? , ?";
+				}else if( key.equals("b_num") ) {	//번호 검색 : 일치한 값만 검색
+					sql ="select * from board where b_num = "+ keyword +" order by b_num desc limit ? , ? ";
+				}else {								 // 제목 혹은 내용 검색 : 포함된 값 검색 
+					sql ="select * from board where "+key+" like '%"+keyword+"%' order by b_num desc limit ? , ?";
+				}
+			}
+			try {
+				ps = con.prepareStatement(sql);
+				ps.setInt(1, startrow);  ps.setInt(2, listsize);
+				rs = ps.executeQuery();
+				while( rs.next() ) {
+					
+					Board board = new Board( rs.getInt(1), 
+							rs.getString(2), 
+							rs.getString(3),
+							 rs.getInt(4), 
+							 rs.getString(5),
+							 rs.getString(6),
+							 rs.getInt(7),
+							 rs.getInt(8));
+					boards.add(board);
+				}
+				return boards;
+			}catch (Exception e) {} return null;
+		}
 		
 	// 게시물 총 개수 반환 메소드 
-	public int boardcount() {
-		String sql ="select count(*) from board"; // count(*) : 개수함수 => 레코드 개수
+	public int boardcount( String key , String keyword) {
+		String sql = null;
+		
+		if( key != null && keyword != null ) { // 검색이 있을때 [ 조건 레코드 개수 세기 ]
+			if( key.equals("b_writer")  ) {		 //작성자 검색 : 작성자 -> 회원번호
+				int m_num = MemberDao.getmemberDao().getmembernum(keyword);
+				sql ="select count(*) from board where m_num = "+ m_num ;
+			}else if( key.equals("b_num") ) {	//번호 검색 : 일치한 값만 검색
+				sql ="select count(*) from board where b_num = "+ keyword;
+			}else {								 // 제목 혹은 내용 검색 : 포함된 값 검색 
+				sql ="select count(*) from board where "+key+" like '%"+keyword+"%'";
+			}
+		}else { // 검색이 없을때				[ 조건 없는 모든 레코드 개수 세기 ]
+			sql="select count(*) from board";
+		}
 		try {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();	
