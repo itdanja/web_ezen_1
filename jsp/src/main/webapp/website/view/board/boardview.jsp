@@ -68,17 +68,17 @@
 			</table>
 			<br><br>
 			<hr>
-			<div class="row">
+			<form action="../../replywritecontroller.jsp" method="post" class="row">
 				<div class="col-md-2" >
 					<h6>댓글작성 </h6>
 				</div>
 				<div class="col-md-8" >
-					<textarea rows="" cols="" class="form-control" ></textarea> 
+					<textarea rows="" cols="" class="form-control" name=""></textarea> 
 				</div>
 				<div class="col-md-2">
-					<button class="form-control"> 등록 </button>
+					<input type="submit" value="등록" class="form-control">
 				</div>
-			</div>
+			</form>
 			
 			<table class="table">
 				<tr>

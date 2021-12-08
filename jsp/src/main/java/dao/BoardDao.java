@@ -39,9 +39,9 @@ public class BoardDao {
 		
 	}
 	// 모든 게시물 출력
-	public ArrayList<Board> boardlist(){
+	public ArrayList<Board> boardlist( int startrow , int endrow){
 		ArrayList<Board> boards = new ArrayList<Board>(); 
-		String sql ="select * from board order by b_num DESC";
+		String sql ="select * from board order by b_num DESC limit "+startrow+" , "+endrow;
 		try {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
@@ -114,6 +114,16 @@ public class BoardDao {
 				return true;
 			}catch (Exception e) {} return false;
 		}
+		
+	// 게시물 총 개수 반환 메소드 
+	public int boardcount() {
+		String sql ="select count(*) from board"; // count(*) : 개수함수 => 레코드 개수
+		try {
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();	
+			if( rs.next() ) { return rs.getInt(1); }
+		}catch (Exception e) {} return 0;
+	}
 }
 
 
