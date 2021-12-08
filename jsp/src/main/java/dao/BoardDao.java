@@ -166,9 +166,47 @@ public class BoardDao {
 			ps.setInt(3, reply.getB_num());
 			ps.executeUpdate(); return true;
 		}catch (Exception e) {} return false;
+	}
+	
+	// 현재 게시물의 댓글 출력 
+	public ArrayList<Reply> replylist( int b_num){
 		
+		ArrayList<Reply> replies = new ArrayList<Reply>();
+		try {
+			String sql = "select * from reply where b_num="+b_num;
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while( rs.next() ) {
+				
+				Reply reply = new Reply(
+						rs.getInt(1),
+						rs.getString(2),
+						rs.getString(3),
+						rs.getInt(4),
+						rs.getInt(5));
+				replies.add(reply);
+			}
+			return replies;
+		}catch (Exception e) {} return null;
+	}
+	// 현재 댓글 삭제 메소드 
+	public boolean replydelete( int r_num ) {
+		
+		try {
+			String sql="delete from reply where r_num="+r_num;
+			ps=con.prepareStatement(sql);
+			ps.executeUpdate(); return true;
+		}catch (Exception e) {} return false;
 	}
 }
+
+
+
+
+
+
+
+
 
 
 

@@ -176,7 +176,7 @@
 		<form action="boardlist.jsp?pagenum=<%=currentpage %>" method="get" class="col-md-5 offset-3 input-group my-3" >
 		
 			<select class="custom-select col-md-3" name="key">	<!-- key : 필드명 -->
-						<option value="b_title">제목</option>
+				<option value="b_title">제목</option>
 				<option value="b_contents">내용</option>
 				<option value="b_num">번호</option>
 				<option value="b_writer">작성자</option>

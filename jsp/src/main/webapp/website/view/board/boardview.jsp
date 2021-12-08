@@ -1,3 +1,4 @@
+<%@page import="dto.Reply"%>
 <%@page import="java.io.File"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.BoardDao"%>
@@ -88,9 +89,21 @@
 				<tr>
 					<th> 작성자 </th> <th> 내용 </th> <th> 작성일 </th>
 				</tr>
-				<tr><th> qweqwe </th> <th> 안녕하세요~~~~~~ </th> <th> 2021-12-07 </th><th><button class="form-control">삭제</button></tr>
-				<tr><th> qweqwe </th> <th> 안녕하세요~~~~~~ </th> <th> 2021-12-07 </th><th><button class="form-control">삭제</button></tr>
-				<tr><th> qweqwe </th> <th> 안녕하세요~~~~~~ </th> <th> 2021-12-07 </th><th><button class="form-control">삭제</button></tr>
+				<% 
+					ArrayList<Reply> replies = BoardDao.getboarddao().replylist(b_num);
+					for( Reply reply : replies ){
+				%>
+					<tr>
+						<th> <%=reply.getR_writer() %> </th>
+						<th> <%=reply.getR_contents() %>  </th> 
+						<th> <%=reply.getR_date() %>  </th>
+						<th>
+							<a href="../../controller/replydeletecontroller.jsp?r_num=<%=reply.getR_num()%>&b_num=<%=b_num%>">
+								<button class="form-control">삭제</button>
+							</a> 
+						<!-- 삭제버튼 눌렀을때 댓글번호 이동 -->
+					</tr>
+				<%} %>
 			</table>
 			
 		</div>
