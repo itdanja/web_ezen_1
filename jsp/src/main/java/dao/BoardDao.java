@@ -135,7 +135,9 @@ public class BoardDao {
 	public int boardcount( String key , String keyword) {
 		String sql = null;
 		
-		if( key != null && keyword != null ) { // 검색이 있을때 [ 조건 레코드 개수 세기 ]
+		if( key == null && keyword == null ) { // 검색이 없을때	[ 조건 없는 모든 레코드 개수 세기 ]
+			sql="select count(*) from board";
+		}else {  // 검색이 있을때 [ 조건 레코드 개수 세기 ]
 			if( key.equals("b_writer")  ) {		 //작성자 검색 : 작성자 -> 회원번호
 				int m_num = MemberDao.getmemberDao().getmembernum(keyword);
 				sql ="select count(*) from board where m_num = "+ m_num ;
@@ -144,8 +146,6 @@ public class BoardDao {
 			}else {								 // 제목 혹은 내용 검색 : 포함된 값 검색 
 				sql ="select count(*) from board where "+key+" like '%"+keyword+"%'";
 			}
-		}else { // 검색이 없을때				[ 조건 없는 모든 레코드 개수 세기 ]
-			sql="select count(*) from board";
 		}
 		try {
 			ps = con.prepareStatement(sql);

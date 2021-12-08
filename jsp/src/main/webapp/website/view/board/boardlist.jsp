@@ -137,9 +137,9 @@
 						<!-- 첫페이지에서 이전버튼 눌렀을때 첫페이지 고정  -->
 					<% if( currentpage == 1){ %>
 						<% if( keyword == null ){ %>
-						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage%>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 이전 </a> </li>
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage%>" class="page-link"> 이전 </a> </li>
 						<%}else{%>
-						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage%>" class="page-link"> 이전 </a> </li>	
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage%>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 이전 </a> </li>	
 						<%} %>
 					<%}else{ %>
 						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage-1 %>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 이전 </a> </li>
@@ -147,16 +147,26 @@
 					
 						<!-- 게시물의 수만큼 페이지 번호 생성 -->
 					<% for( int i = 1 ; i<=lastpage; i++){ %>
-						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=i %>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> <%=i %> </a> </li>
-						<!-- i 클릭했을때 현재 페이지 이동 [ 클릭한 페이지번호 ] -->
+					
+						<% if( keyword == null ){ %>
+							<li class="page-item"><a href="boardlist.jsp?pagenum=<%=i %>" class="page-link"> <%=i %> </a> </li>
+									<!-- i 클릭했을때 현재 페이지 이동 [ 클릭한 페이지번호 ] -->
+							<%}else{%>
+							<li class="page-item"><a href="boardlist.jsp?pagenum=<%=i %>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> <%=i %> </a> </li>
+							<%} %>
+						
 					<%} %>
 					
 						<!-- 마지막페이지에서 다음버튼 눌렀을때 마지막페이지 고정 -->
 					<% if( currentpage == lastpage ){ %>
-						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage %>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 다음 </a> </li>
-					<%}else{ %>									<!-- 현재페이지번호 +1  -->
-						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage+1 %>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 다음 </a> </li>	
-					<%} %>
+					<% if( keyword == null ){ %>
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage%>" class="page-link"> 이전 </a> </li>
+						<%}else{%>
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage%>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 이전 </a> </li>	
+						<%} %>
+					<%}else{ %>
+						<li class="page-item"><a href="boardlist.jsp?pagenum=<%=currentpage+1 %>&key=<%=key %>&keyword=<%=keyword %>" class="page-link"> 이전 </a> </li>
+					<%} %>		
 					
 				</ul>
 			</div>
