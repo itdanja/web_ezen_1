@@ -68,12 +68,16 @@
 			</table>
 			<br><br>
 			<hr>
-			<form action="../../replywritecontroller.jsp" method="post" class="row">
+			<form action="../../controller/replywritecontroller.jsp" method="post" class="row">
+				
+				<!-- 댓글 저장시 : 1.댓글내용 2.댓글작성자[세션] 3.게시물번호 -->
+				<input type="hidden" name="b_num" value="<%=b_num%>">
+				
 				<div class="col-md-2" >
 					<h6>댓글작성 </h6>
 				</div>
 				<div class="col-md-8" >
-					<textarea rows="" cols="" class="form-control" name=""></textarea> 
+					<textarea rows="" cols="" class="form-control" name="contents"></textarea> 
 				</div>
 				<div class="col-md-2">
 					<input type="submit" value="등록" class="form-control">
@@ -94,6 +98,16 @@
 		
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 

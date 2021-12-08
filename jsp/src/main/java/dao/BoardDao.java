@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import dto.Board;
+import dto.Reply;
 
 public class BoardDao {
 	
@@ -152,6 +153,20 @@ public class BoardDao {
 			rs = ps.executeQuery();	
 			if( rs.next() ) { return rs.getInt(1); }
 		}catch (Exception e) {} return 0;
+	}
+	
+	// 댓글 등록 메소드 
+	public boolean replywrite( Reply reply ) {
+		
+		try {
+			String sql = "insert into reply(r_contents , m_num , b_num) values(?,?,?)";
+			ps = con.prepareStatement(sql);
+			ps.setString(1, reply.getR_contents());
+			ps.setInt(2, reply.getM_num());
+			ps.setInt(3, reply.getB_num());
+			ps.executeUpdate(); return true;
+		}catch (Exception e) {} return false;
+		
 	}
 }
 
