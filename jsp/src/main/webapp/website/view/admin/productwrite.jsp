@@ -33,7 +33,7 @@
 				</select>  <br>
 			제품재고 : <input type="text" name="p_stock">   <br>
 			제품이미지 : <input type="file" name="p_img">  <br>
-			제품내용 : <textarea rows="" cols=""></textarea>  <br>
+			제품내용 : <textarea rows="" cols="" name="p_contents"></textarea>  <br>
 			<input type="submit" value="제품등록">
 		</form>
 		
