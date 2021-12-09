@@ -54,7 +54,7 @@
 		<div class="row">
 			<%
 				ArrayList<Product> products = 
-				ProductDao.getProductDao().getproductlist();
+				ProductDao.getProductDao().getproductlist( null , null);
 				for( Product product : products ){
 			%>
 			<div class="col-md-4">

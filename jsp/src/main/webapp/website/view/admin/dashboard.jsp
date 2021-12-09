@@ -13,11 +13,15 @@
 
 	<%@include file="../header.jsp" %>
 	<%
-		ArrayList<Product> products = ProductDao.getProductDao().getproductlist();
+		// 검색처리
+		String key = request.getParameter("key");
+		String keyword = request.getParameter("keyword");
+		ArrayList<Product> products = 
+				ProductDao.getProductDao().getproductlist( key , keyword );
 	%>
 	<div class="container">
 		
-		<form action="" method="get" class="col-md-5 offset-3 input-group my-3"> <!-- 검색 -->
+		<form action="dashboard.jsp" method="get" class="col-md-5 offset-3 input-group my-3"> <!-- 검색 -->
 			<select class="custom-select col-md-3" name="key">
 				<option value="p_num">제품번호</option> <option value="p_name">제품명</option>
 				  <option value="p_category">카테고리</option> <option value="p_active">제품상태</option>
@@ -36,7 +40,7 @@
 			 		<tr>
 			 			<td width="100px;" height="100px;"><img src="../../upload/<%=product.getP_img() %>" style="max-width: 100%; max-height: 100%;"> </td>
 			 			<td><%=product.getP_num() %></td> 
-			 			<td><%=product.getP_num() %></td>
+			 			<td><%=product.getP_name() %></td>
 			 			<td><%=product.getP_price() %></td>
 			 			<td><%=product.getP_category() %></td>
 						<td><%=product.getP_active() %></td>

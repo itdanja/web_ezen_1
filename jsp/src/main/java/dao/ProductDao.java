@@ -23,10 +23,16 @@ public class ProductDao extends DB {
 			ps.executeUpdate(); return true;
 		}catch (Exception e) { System.out.println(e);}	return false;
 	}
+	
 	// 2. 제품 모든 출력 메소드 
-	public ArrayList<Product> getproductlist(){
+	public ArrayList<Product> getproductlist( String key , String keyword ){
 		ArrayList<Product> products = new ArrayList<Product>();
-		String sql ="select * from product";
+		String sql = null;
+		if( key != null && keyword !=null ) {
+			 sql ="select * from product where "+key+" = '"+keyword+"'";
+		}else {
+			 sql ="select * from product";
+		}
 		try {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
@@ -46,7 +52,7 @@ public class ProductDao extends DB {
 				products.add(product);
 			}
 			return products;
-		}catch (Exception e) {}return null;
+		}catch (Exception e) { System.out.println(e);}return null;
 	}
 	// 3. 제품 조건[ 검색 / 카데고리 ] 출력 메소드 
 	
