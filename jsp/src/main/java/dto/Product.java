@@ -1,5 +1,7 @@
 package dto;
 
+import java.text.DecimalFormat;
+
 public class Product {
 	
 	private int p_num;
@@ -14,6 +16,17 @@ public class Product {
 	private String p_contents ;
 	private String  p_date;
 	
+	public String getprice( ) { // 천단위 쉼표 메소드
+		DecimalFormat decimalFormat = new DecimalFormat("###,###");	// DecimalFormat : 숫자형식
+		return decimalFormat.format(this.p_price);
+	}
+	public String getactive( ) { // 상태 문자형 변환 메소드
+		if( this.p_active == 1 ) { return "준비중";}
+		if( this.p_active == 2 ) { return "판매중";}
+		if( this.p_active == 3 ) { return "품절";}
+		if( this.p_active == 4 ) { return "인기상품";}
+		return null;
+	}
 	// 1. 빈생성자 2.풀생성자 3.등록생성자
 	public Product() {}
 

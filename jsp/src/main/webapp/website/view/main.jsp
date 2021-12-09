@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="dto.Product"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.ProductDao"%>
@@ -57,15 +58,17 @@
 				for( Product product : products ){
 			%>
 			<div class="col-md-4">
-				<div class="card">
-					<img class="card-img-top" src="../upload/<%=product.getP_img()%>">
+				<div class="card" >
+					<a href="product/productview.jsp?p_num=<%=product.getP_num()%>">
+						<img class="card-img-top pimg" src="../upload/<%=product.getP_img()%>">
+					</a> 
 					<div class="card-body">
 						<p class="card-text"> <h4><%=product.getP_name()%></h4> </p>
 						<hr>
 						<p class="item">
 							<%=product.getP_contents()%> <br><br>
-							<span> <%=product.getP_price()%> </span>
-							<span><%=product.getP_active()%> </span>
+							<span class="price"> <%=product.getprice( )%> 원 </span> <br>
+							<span class="badge badge-pill badge-danger"> <%=product.getactive()%> </span>
 						</p>
 					</div>
 				</div>
