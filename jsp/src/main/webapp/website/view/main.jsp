@@ -1,3 +1,6 @@
+<%@page import="dto.Product"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.ProductDao"%>
 <%@page import="dao.MemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -37,7 +40,40 @@
 		</div>
 	<!-- 캐러셀 end -->
 	
+	<!-- 구분선 -->
+	<hr>
+	<br><br><br>
+	<div class="container text-center">
+		<h3> 신제품 </h3>
+		<p> New ARRIVAL </p>
+	</div>
+	
 	<!-- 제품 목록 -->
+	<div class="container">
+		<div class="row">
+			<%
+				ArrayList<Product> products = 
+				ProductDao.getProductDao().getproductlist();
+				for( Product product : products ){
+			%>
+			<div class="col-md-4">
+				<div class="card">
+					<img class="card-img-top" src="../upload/<%=product.getP_img()%>">
+					<div class="card-body">
+						<p class="card-text"> <h4><%=product.getP_name()%></h4> </p>
+						<hr>
+						<p class="item">
+							<%=product.getP_contents()%> <br><br>
+							<span> <%=product.getP_price()%> </span>
+							<span><%=product.getP_active()%> </span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<% } %>
+		</div>
+	</div>
+	
 	
 	<!-- 제품 목록 end -->
 	<%@include file = "footer.jsp" %>
