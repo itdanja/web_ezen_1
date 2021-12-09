@@ -43,13 +43,13 @@
 			 			<td><%=product.getP_name() %></td>
 			 			<td><%=product.getP_price() %></td>
 			 			<td><%=product.getP_category() %></td>
-						<td><%=product.getP_active() %></td>
+						<td><%=product.getactive() %></td>
 						<td><%=product.getP_size() %></td> 
 						<td><%=product.getP_stock() %></td> 
 						<td><%=product.getP_date() %></td>
 						<td>	<a href="#"> <button class="btn-outline-info">수정</button></a>  
-								<a href="#"> <button class="btn-outline-info">삭제</button></a>  
-								<a href="#"> <button class="btn-outline-info">상태변경</button> </a>  
+								<a href="../../controller/productdeletecontroller.jsp?p_num=<%=product.getP_num() %>"> <button class="btn-outline-info">삭제</button></a>  
+								<a href="#"> <button class="btn-outline-info" onclick="activeupdate(<%=product.getP_num()%>)">상태변경</button> </a>  
 						</td>
 			 		</tr>
 			 <%	} %>

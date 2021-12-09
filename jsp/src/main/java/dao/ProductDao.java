@@ -58,8 +58,30 @@ public class ProductDao extends DB {
 	
 	// 4. 제품 수정 메소드 
 	
+	// 4. 제품 상태 메소드
+	public boolean activeupdate( int p_num ) {
+		try {
+			String sql ="select p_active from product where p_num = "+p_num;// 1. 해당 제품번호의 제품상태 검색
+			ps = con.prepareStatement(sql); rs = ps.executeQuery();
+			if( rs.next() ) {
+				int p_active = rs.getInt(1)+1;				// 2. 검색된 제품상태 + 1 [ 다음 상태 ]
+				if( p_active == 4 ) { p_active = 1; }		// * 만약에 제품상태가 4이면 1로 변경
+				sql = "update product set p_active = "+p_active +" where p_num ="+p_num;
+				ps = con.prepareStatement(sql); ps.executeUpdate(); return true;
+		}
+		}catch (Exception e) {} return false;
+		
+	}
+	
 	// 5. 제품 삭제 메소드 
-
+	public boolean productdelete( int p_num) {
+		String sql = "delete from product where p_num = "+p_num;
+		try {
+			ps = con.prepareStatement(sql);
+			ps.executeUpdate(); return true;
+		}catch (Exception e) {} return false;
+		
+	}
 }
 
 
