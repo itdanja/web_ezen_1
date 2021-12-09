@@ -18,7 +18,7 @@
 			Integer.parseInt(multipartRequest.getParameter("p_active")),
 			multipartRequest.getParameter("p_size"),
 			Integer.parseInt(multipartRequest.getParameter("p_stock")),
-			multipartRequest.getParameter("p_img"),
+			multipartRequest.getFilesystemName("p_img"),
 			multipartRequest.getParameter("p_contents") );
 	// DB 처리 
 	
