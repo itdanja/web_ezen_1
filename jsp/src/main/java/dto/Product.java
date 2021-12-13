@@ -20,6 +20,7 @@ public class Product {
 		DecimalFormat decimalFormat = new DecimalFormat("###,###");	// DecimalFormat : 숫자형식
 		return decimalFormat.format(this.p_price);
 	}
+
 	public String getactive( ) { // 상태 문자형 변환 메소드
 		if( this.p_active == 1 ) { return "준비중";}
 		if( this.p_active == 2 ) { return "판매중";}

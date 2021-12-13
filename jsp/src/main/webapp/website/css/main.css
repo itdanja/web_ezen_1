@@ -27,10 +27,15 @@ h1,h2,h3,h4,h5,h6{
 
 .item .price{
 	font-family: 'GongGothicBold';
-	font-size: 16px;
+	font-size: 1rem;
 }
 .pimg:hover {
 	transform : scale(1.1);
+}
+
+#total{
+	font-family: 'GongGothicBold';
+	font-size: 1.5rem;
 }
 
 

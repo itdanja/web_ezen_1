@@ -58,21 +58,24 @@
 						<div class="col-md-3"> 수량 </div>
 						<div class="col-md-9 row no-gutters">  <!-- no-gutters : 여백 없애기 -->
 						
-								<button class="btn btn-outline-secondary"> + </button>
+								<button class="btn btn-outline-secondary" 
+									onclick="pchange('p' , <%=product.getP_stock() %> , <%=product.getP_price() %>)" > + </button>
 								
 								<div class="col-md-2">
-									<input class="form-control" type="text">
+									<input class="form-control" type="text" id="pcount" value="1" 
+									onchange="pchange('s' , <%=product.getP_stock()%>  , <%=product.getP_price() %>  )">
 								</div>
 								
-								<button class="btn btn-outline-secondary"> - </button>
+								<button class="btn btn-outline-secondary" 
+									onclick="pchange('m' , <%=product.getP_stock()%>  , <%=product.getP_price() %> )"> - </button>
 							
 						</div>
 					</div>
 				<hr>	
 					<div class="row">
 						<div class="col-md-3"> 총 상품 금액 </div>
-						<div class="col-md-9"> 
-							<div>0 원</div>
+						<div class="col-md-9 text-right"> 
+							<div id="total"><%=product.getprice() %></div> 원
 						</div>
 					</div>
 				<hr>	
