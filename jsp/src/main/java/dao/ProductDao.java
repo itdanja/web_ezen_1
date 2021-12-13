@@ -80,7 +80,30 @@ public class ProductDao extends DB {
 			ps = con.prepareStatement(sql);
 			ps.executeUpdate(); return true;
 		}catch (Exception e) {} return false;
-		
+	}
+	
+	// 6. 제품 개별 출력 
+	public Product getproduct(int p_num) {
+		String sql ="select * from product where p_num="+p_num;
+		try {
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			if( rs.next() ) {
+				Product product = new Product(
+						rs.getInt(1), 
+						rs.getString(2), 
+						rs.getInt(3), 
+						rs.getString(4), 
+						rs.getString(5), 
+						rs.getInt(6), 
+						rs.getString(7), 
+						rs.getInt(8), 
+						rs.getString(9), 
+						rs.getString(10), 
+						rs.getString(11) );
+				return product;
+			}
+		}catch (Exception e) {} return null;
 	}
 }
 
