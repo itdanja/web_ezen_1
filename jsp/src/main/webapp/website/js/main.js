@@ -279,16 +279,18 @@ function pchange( type , stock , price ){	// function:  함수 선정 // 인수 
 /* 제품 수량 변경 end */
 
 /* 찜하기 */
-function plike( p_num , m_num){
-	// 비동기식 통신 함수
-	$( function(){
-		$.ajax({
-			url : "../../controller/productlikecontroller.jsp" ,
-			data : { p_num : p_num , m_num : m_num } ,
-			success : function( result  ){
-				alert( result  );
+function plike( p_num , m_num){ // 비동기식 통신 함수
+	if( m_num == 0 ){ alert("로그인후 찜하기 사용가능합니다."); return; }
+	$.ajax({
+		url : "../../controller/productlikecontroller.jsp" ,
+		data : { p_num : p_num , m_num : m_num } ,
+		success : function( result  ){
+			if( result == 1 ){
+				document.getElementById("btnplike").innerHTML="찜하기♡";
+			}else if( result == 2 ){
+				document.getElementById("btnplike").innerHTML="찜하기♥";
 			}
-		});
+		}
 	});
 }
 

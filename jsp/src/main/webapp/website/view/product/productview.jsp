@@ -87,9 +87,19 @@
 						<button class="form-control">장바구니</button>
 					</div>
 					<div class="col-md-6">
-						<button class="form-control" 
-						onclick="plike( <%=p_num%> , <%=login.getM_num()%> )">찜하기♡
-						</button>
+						<% 
+						int m_num = 0;
+						if( login != null )m_num = login.getM_num();
+						if( ProductDao.getProductDao().plikcheck(p_num, m_num) ){ 	// 만약에 좋아요가 존재하면
+						%>
+							<button class="form-control" id="btnplike" onclick="plike( <%=p_num%> , <%=m_num%>)">찜하기♥</button>
+						<%
+						}else{ // 좋아요가 좋재하지 않으며
+						%>
+							<button class="form-control" id="btnplike" onclick="plike( <%=p_num%> , <%=m_num%>)">찜하기♡</button>
+						<%
+						}
+						%>
 					</div>
 				</div>
 				
