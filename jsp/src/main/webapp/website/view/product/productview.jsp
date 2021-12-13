@@ -75,7 +75,7 @@
 					<div class="row">
 						<div class="col-md-3"> 총 상품 금액 </div>
 						<div class="col-md-9 text-right"> 
-							<div id="total"><%=product.getprice() %></div> 원
+							<span id="total"><%=product.getprice() %> </span> 원
 						</div>
 					</div>
 				<hr>	
@@ -87,7 +87,9 @@
 						<button class="form-control">장바구니</button>
 					</div>
 					<div class="col-md-6">
-						<button class="form-control">찜하기♡</button>
+						<button class="form-control" 
+						onclick="plike( <%=p_num%> , <%=login.getM_num()%> )">찜하기♡
+						</button>
 					</div>
 				</div>
 				
