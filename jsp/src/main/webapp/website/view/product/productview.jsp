@@ -24,7 +24,10 @@
 				<img alt="" src="../../upload/<%=product.getP_img()%>" style="max-width: 100%;">
 			</div>
 			
-			<div class="col-md-6">
+			<form action="../../controller/productcartcontroller.jsp" method="get" class="col-md-6">
+				
+				<input type="hidden" name="p_num" value="<%=p_num%>">
+				
 				<p> <%=product.getP_manufacturer() %> </p>
 				<h4> <%=product.getP_name() %> </h4>
 				<hr>
@@ -45,11 +48,11 @@
 					<div class="row">
 						<div class="col-md-3"> 제품 사이즈 </div>
 						<div class="col-md-9"> 
-							<select name="p_active" class="form-control">
+							<select name="p_size" class="form-control">
 								<option> 옵션 선택 </option>
-								<option> M </option>
-								<option> S </option>
-								<option> L </option>
+								<option value="M"> M </option>
+								<option value="S"> S </option>
+								<option value="L"> L </option>
 							</select>
 						</div>
 					</div>
@@ -62,7 +65,7 @@
 									onclick="pchange('p' , <%=product.getP_stock() %> , <%=product.getP_price() %>)" > + </button>
 								
 								<div class="col-md-2">
-									<input class="form-control" type="text" id="pcount" value="1" 
+									<input class="form-control" type="text" id="pcount" value="1" name="p_count" 
 									onchange="pchange('s' , <%=product.getP_stock()%>  , <%=product.getP_price() %>  )">
 								</div>
 								
@@ -84,7 +87,7 @@
 				</div>
 				<div class="row my-3"> <!-- my : 마진[바깥여백] y[세로] -->
 					<div class="col-md-6">
-						<button class="form-control">장바구니</button>
+						<a href="../../controller/productcartcontroller.jsp?"><button class="form-control">장바구니</button></a> 
 					</div>
 					<div class="col-md-6">
 						<% 
@@ -103,9 +106,34 @@
 					</div>
 				</div>
 				
-			</div>
+			</form>
 		</div>
-	</div>
+		<br><br>
+		
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<ul class="navbar-nav col-md-12 text-center">
+				<li class="nav-item col-md-3"><a href="#detail" class="nav-link pview">상품상세</a></li>
+				<li class="nav-item col-md-3"><a href="#guide" class="nav-link pview">상품가이드</a></li>
+				<li class="nav-item col-md-3"><a href="#review" class="nav-link pview">상품리뷰</a></li>
+				<li class="nav-item col-md-3"><a href="#qna" class="nav-link pview">상품문의</a></li>
+			</ul>
+		</nav>
+		
+		<div id="detail">
+			상품상세 위치 <br><br><br><br><br><br><br><br><br><br>
+		</div>
+		<div id="guide">
+			상품가이드 위치 <br><br><br><br><br><br><br><br><br><br>
+		</div>
+		<div id="review">
+			상품리뷰 위치 <br><br><br><br><br><br><br><br><br><br>
+		</div>
+		<div id="qna">
+			상품문의 <br><br><br><br><br><br><br><br><br><br><br><br>
+		</div>
+		
+	</div> <!-- container end -->
+
 
 
 </body>

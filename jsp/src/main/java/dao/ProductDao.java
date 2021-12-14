@@ -126,6 +126,7 @@ public class ProductDao extends DB {
 		}
 		catch (Exception e) {} return 0; // DB 오류 
 	}
+	
 	// 8. 제품 좋아요 확인 메소드 
 	public boolean plikcheck( int p_num , int m_num ) {
 		String sql = "select * from plike where p_num="+p_num+" and m_num="+m_num;
