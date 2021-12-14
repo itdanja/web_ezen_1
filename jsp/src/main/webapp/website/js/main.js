@@ -274,6 +274,8 @@ function pchange( type , stock , price ){	// function:  함수 선정 // 인수 
 														// 3. \d{3} : 숫자 길이 [ 예 : {3} : 숫자길이 123 ]
 														// 4. !\d : 뒤에 숫자가 없을경우
 														// 5. /g : 전역 검색
+	return false;
+
 }
 
 /* 제품 수량 변경 end */
@@ -296,7 +298,48 @@ function plike( p_num , m_num){ // 비동기식 통신 함수
 
 /* 찜하기 end */
 
+/* 장바구니 */
 
+function cartadd(){
+	// 제이쿼리[jquery]를 이용한 값 가져오기
+		// 1. id속성 이용 
+		// var p_num2 = $("#p_num").val();								alert("id속성 : " +  p_num2 );
+		// 2. class속성 이용
+		// var p_num3 = $(".p_num").val(); 								alert("class속성 : " +  p_num3 );
+		// 3. name속성 이용
+		// var p_num4 = $("input[name=p_num]").val(); 					alert("name속성 : " +  p_num4 );
+	// 자바스크립트[js] 를 이용한 값 가져오기 
+		// 1. id속성 이용
+	var p_num = document.getElementById("p_num").value;				//alert("s id속성 : " +  p_num );
+		// 2. class 속성 이용 // class 속성 중복 허용 하기 때문에 배열 이용
+		//var p_num5 = document.getElementsByClassName("p_num")[0].value;	alert("s class속성 : " +  p_num5 );
+		// 3. name속성 이용	// name 속성 중복 허용 하기 때문에 배열 이용
+		//var p_num6 = document.getElementsByName("p_num")[0].value;		alert("s  name속성 : " +  p_num6 );
+	var p_size = document.getElementById("p_size").value;			//alert("s id속성 : " +  p_size );
+		if( p_size == 0 ){ // 만약에 옵션을 선택 안했으면 
+			alert("옵션 선택해주세요");	return;	// 함수 종료 
+		}
+	var p_count = document.getElementById("pcount").value;			//alert("s id속성 : " +  p_count );
+	
+	// 컨트롤러 페이지 이동 [ 1. 하이퍼링크 2.ajax ]
+		// location.href = "../../controller/productcartcontroller.jsp?p_num="+p_num+"&p_size="+p_size+"&p_count="+p_count;
+		
+		$.ajax({ // 페이지 전환이 없음 [ 해당 페이지와 통신 ]
+			
+			url :  "../../controller/productcartcontroller.jsp" ,
+			data : { p_num : p_num , p_size : p_size , p_count : p_count } ,
+			success : function( result ){
+				if( confirm("장바구니에 담았습니다 [ 장바구니로 이동할까요? ]") == true ){
+					location.href="productcart.jsp"
+				} 
+			}
+		});
+		
+		
+}
+
+
+/* 장바구니 end */
 
 
 

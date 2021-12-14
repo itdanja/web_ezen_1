@@ -16,7 +16,9 @@
 	String sname = "cart"+ login.getM_id();
 	ArrayList<Cart> carts = (ArrayList<Cart>)session.getAttribute(sname);
 	
-	out.print( carts.toString() );
+	out.print( carts.get(0).getP_num() );
+	out.print( carts.get(0).getP_size() );
+	out.print( carts.get(0).getP_count() );
 	
 	%>
 

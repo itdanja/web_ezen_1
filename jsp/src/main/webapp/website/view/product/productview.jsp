@@ -24,10 +24,10 @@
 				<img alt="" src="../../upload/<%=product.getP_img()%>" style="max-width: 100%;">
 			</div>
 			
-			<form action="../../controller/productcartcontroller.jsp" method="get" class="col-md-6">
-				
-				<input type="hidden" name="p_num" value="<%=p_num%>">
-				
+			<div class="col-md-6">
+			
+				<input type="hidden" class="p_num" name="p_num" value="<%=p_num%>" id="p_num">
+	
 				<p> <%=product.getP_manufacturer() %> </p>
 				<h4> <%=product.getP_name() %> </h4>
 				<hr>
@@ -48,8 +48,8 @@
 					<div class="row">
 						<div class="col-md-3"> 제품 사이즈 </div>
 						<div class="col-md-9"> 
-							<select name="p_size" class="form-control">
-								<option> 옵션 선택 </option>
+							<select id="p_size" name="p_size" class="form-control">
+								<option value="0"> 옵션 선택 </option>
 								<option value="M"> M </option>
 								<option value="S"> S </option>
 								<option value="L"> L </option>
@@ -87,7 +87,7 @@
 				</div>
 				<div class="row my-3"> <!-- my : 마진[바깥여백] y[세로] -->
 					<div class="col-md-6">
-						<a href="../../controller/productcartcontroller.jsp?"><button class="form-control">장바구니</button></a> 
+						<button class="form-control" onclick="cartadd()">장바구니</button>
 					</div>
 					<div class="col-md-6">
 						<% 
@@ -106,7 +106,7 @@
 					</div>
 				</div>
 				
-			</form>
+			</div>
 		</div>
 		<br><br>
 		
