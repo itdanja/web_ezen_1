@@ -11,16 +11,23 @@
 </head>
 <body>
 
+	<%@include file ="../header.jsp" %>
 	<%
-	Login login =  (Login)session.getAttribute("login");
 	String sname = "cart"+ login.getM_id();
 	ArrayList<Cart> carts = (ArrayList<Cart>)session.getAttribute(sname);
 	
-	out.print( carts.get(0).getP_num() );
-	out.print( carts.get(0).getP_size() );
-	out.print( carts.get(0).getP_count() );
-	
 	%>
-
+	
+	<div class="container">
+		<table class="table">
+			<%for( Cart cart : carts){ %>
+			<tr>
+				<td><%=cart.getP_num() %></td>
+				<td><%=cart.getP_size() %></td>
+				<td><%=cart.getP_count() %></td>
+			</tr>
+			<%} %>
+		</table>
+	</div>
 </body>
 </html>
