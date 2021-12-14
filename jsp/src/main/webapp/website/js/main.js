@@ -341,9 +341,21 @@ function cartadd(){
 
 /* 장바구니 end */
 
+/* 장바구니 삭제 */
 
+function cartdelete( type , p_num , p_size ){
+	// Js<-->jsp 클래스 호환X
+	$.ajax({ // 페이지 전환이 없음 [ 해당 페이지와 통신 ]
+			
+			url :  "../../controller/productcartdeletecontroller.jsp" ,
+			data : { type : type , p_num : p_num , p_size : p_size } ,
+			success : function( result ){
+				location.reload(); // 현재페이지 새로고침
+			}
+	});
+}
 
-
+/* 장바구니 삭제 end */
 
 
 

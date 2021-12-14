@@ -27,7 +27,7 @@
 			// 만약에 기존 카트에 동일한 제품이 있을경우 
 			boolean pcheck = true;	// 중복체크 변수 
 			for( Cart temp : carts ){
-				// 카트에 제품번호와 제품사이즈가 동일하면
+				// 카트에 제품번호와 제품사이즈가 동일하면 [ 중복체크 ]
 				if( temp.getP_num() == p_num 
 						&& temp.getP_size().equals(p_size) ){
 					// 기존 제품에 수량을 추가 
@@ -35,7 +35,7 @@
 					pcheck = false;	// 중복이 있으면 false 
 				}
 			}
-			if( pcheck )carts.add( cart );	// 7.동일한 제품이 없을경우에 카트리스트에 제품 추가 
+			if( pcheck )carts.add( cart );	// 7.중복된 제품이 없을경우에 카트리스트에 제품 추가 
 			session.setAttribute(sname, carts); // 8.세션 생성 [ 업데이트 ]
 		}
 		
