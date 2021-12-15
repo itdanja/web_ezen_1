@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="dto.Product"%>
 <%@page import="dao.ProductDao"%>
 <%@page import="dto.Login"%>
@@ -17,9 +18,15 @@
 	<%
 	String sname = "cart"+ login.getM_id();
 	ArrayList<Cart> carts = (ArrayList<Cart>)session.getAttribute(sname);
+	int totalprice = 0; // 총금액
+	// java 천단위 쉼표 클래스
+	DecimalFormat decimalFormat = new DecimalFormat("###,###");
 	%>
 	
 	<div class="container">
+	
+		<h3 style="border-bottom: solid 1px #eeeee;"> 장바구니 </h3> <br><br>
+		
 		<table class="table">
 			<tr>
 				<th> 이미지 </th> <th> 상품 정보 </th> <th> 수량 </th> <th> 가격 </th> <th> 비고 </th>
@@ -32,7 +39,8 @@
 			}else{
 				int i = 0; // 반복 인덱스 변수
 				for( Cart cart : carts){ 
-				Product product = ProductDao.getProductDao().getproduct(cart.getP_num()); // 제품번호에 해당 하는 제품정보
+					Product product = ProductDao.getProductDao().getproduct(cart.getP_num()); // 제품번호에 해당 하는 제품정보
+					totalprice += cart.getP_count() * product.getP_price(); // 카트내 제품 누적합계 [ 제품수량 * 제품가격 ]
 			%>
 			<tr>
 				<td width="10%" class="align-middle"><img src="../../upload/<%=product.getP_img()%>" style="max-width: 100%;"></td>
@@ -63,9 +71,25 @@
 			</tr>
 			<% i++; }} %>
 		</table>
-		<div>
-			<button onclick="cartdelete('all' , '0' , '0')">모두 삭제</button>	
+		<div class="col-md-3">
+			<button onclick="cartdelete('all' , '0' , '0')" class="form-control">모두 삭제</button>	
 		</div>
+		
+		<div class="text-center totalbox">
+			<p> 총 상품 가격 <span class="carttotal"><%= decimalFormat.format(totalprice) %></span> 
+			+ 총 배송비 <span  class="carttotal">3,000</span> = 총 주문금액 : 
+			<span  class="carttotal"><%= decimalFormat.format( totalprice+3000 ) %></span></p>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3 offset-3">
+				<button class="form-control bg-success text-white p-3"> 주문하기 </button>
+			</div>
+			<div class="col-md-3">
+				<button class="form-control p-3"> 쇼핑하기 </button>
+			</div>
+		</div>
+		<br><br><br><br><br><br><br><br>
 	</div>
 </body>
 </html>
