@@ -30,37 +30,38 @@
 				</tr>
 			<%
 			}else{
+				int i = 0; // 반복 인덱스 변수
 				for( Cart cart : carts){ 
 				Product product = ProductDao.getProductDao().getproduct(cart.getP_num()); // 제품번호에 해당 하는 제품정보
 			%>
 			<tr>
 				<td width="10%" class="align-middle"><img src="../../upload/<%=product.getP_img()%>" style="max-width: 100%;"></td>
-				<td width="55%"> 
+				<td width="50%"> 
 					<div class="px-1">
 						( <%=product.getP_manufacturer() %> ) <%=product.getP_name() %>
 					</div> 
 					<hr>
 					<div class="px-1" style="font-size: 12px;">
-						옵션 :<%=cart.getP_size() %>
+						옵션 :<%=cart.getP_size() %> 
 					</div>
 				</td>
 				<td class="row no-gutters">
 					<button class="btn btn-outline-secondary" 
-						onclick="pchange('p' , <%=product.getP_stock() %> , <%=product.getP_price() %>)" > + </button>
+						onclick="pchange2( <%=i %> , 'p' , <%=product.getP_stock() %> , <%=product.getP_price() %>)" > + </button>
 					
 					<div class="col-md-3">
-						<input class="form-control" type="text" id="pcount" value=<%=cart.getP_count() %> name="p_count" 
-						onchange="pchange('s' , <%=product.getP_stock()%>  , <%=product.getP_price() %>  )">
+						<input class="form-control" type="text" id="pcount<%=i %>" value=<%=cart.getP_count() %> name="p_count" 
+						onchange="pchange2(<%=i %> ,'s' , <%=product.getP_stock()%>  , <%=product.getP_price() %>  )">
 					</div>
 					
 					<button class="btn btn-outline-secondary" 
-						onclick="pchange('m' , <%=product.getP_stock()%>  , <%=product.getP_price() %> )"> - </button>
+						onclick="pchange2(<%=i %> ,'m' , <%=product.getP_stock()%>  , <%=product.getP_price() %> )"> - </button>
 				</td>
-				<td width="15%" class="align-middle" id="total"> <%=product.getprice() %> 원</td>
+				<td width="15%" class="align-middle" id="total<%=i%>"> <%=product.getprice() %> 원</td>
 				<td width="5%"><button class="form-control" 
 						onclick="cartdelete('in' , '<%=cart.getP_num()%>' , '<%=cart.getP_size()%>'   )"> X </button></td>
 			</tr>
-			<%}} %>
+			<% i++; }} %>
 		</table>
 		<div>
 			<button onclick="cartdelete('all' , '0' , '0')">모두 삭제</button>	

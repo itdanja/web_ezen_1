@@ -266,15 +266,7 @@ function pchange( type , stock , price ){	// function:  함수 선정 // 인수 
 	document.getElementById("pcount").value = pcount; // . value 속성 태그 [ 입력상자 input ]
 	var totalprice = pcount * price; // 총가격 = 제품수량 * 제품가격 
 	document.getElementById("total").innerHTML = totalprice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); 	// . innerHTML 속성 태그 [ div ]
-											// 총가격.toString() : 문자열 변환
-												// .replace(기존문자 , 새로운문자);
-													// 정규표현식[문자 패턴찾기] : /\B(?=(\d{3})+(?!\d))/g
-														// 1. / : 시작 
-														// 2. \b : 시작 , 끝 문자 [ 예 : 1234일경우 1 , 4 ]
-														// 3. \d{3} : 숫자 길이 [ 예 : {3} : 숫자길이 123 ]
-														// 4. !\d : 뒤에 숫자가 없을경우
-														// 5. /g : 전역 검색
-	return false;
+											// 5. /g : 전역 검색
 
 }
 
@@ -348,7 +340,7 @@ function cartdelete( type , p_num , p_size ){
 	$.ajax({ // 페이지 전환이 없음 [ 해당 페이지와 통신 ]
 			
 			url :  "../../controller/productcartdeletecontroller.jsp" ,
-			data : { type : type , p_num : p_num , p_size : p_size } ,
+			data : { type : type , p_num : p_num , p_size : p_size , i : -1 } ,
 			success : function( result ){
 				location.reload(); // 현재페이지 새로고침
 			}
@@ -356,6 +348,44 @@ function cartdelete( type , p_num , p_size ){
 }
 
 /* 장바구니 삭제 end */
+
+
+/* 장바구니 수량 변경 */
+function pchange2( i , type , stock , price ){
+	var p_count = document.getElementById("pcount"+i).value*1;
+	if( type=='m'){		p_count -= 1;	
+		if( p_count<1){	
+			alert("수량은 1개 이상만 가능 합니다."); p_count = 1;
+		}
+	}else if( type =="p" ){	p_count += 1;	
+		if( p_count > stock ){
+			alert("죄송합니다. 재고가 부족합니다.");	p_count = stock;
+		}
+	}else{	
+		if( p_count > stock ){
+			alert("죄송합니다. 재고가 부족합니다.");	p_count = stock;
+		}
+		if( p_count<1){	// 만약에 1보다 작아지면
+			alert("수량은 1개 이상만 가능 합니다."); p_count = 1;
+		}
+	}
+	document.getElementById("pcount"+i).value = p_count; 
+	var totalprice = p_count * price; // 총가격 = 제품수량 * 제품가격 
+	document.getElementById("total"+i).innerHTML = totalprice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); 	// . innerHTML 속성 태그 [ div ]
+
+	$.ajax({
+			url :  "../../controller/productcartdeletecontroller.jsp" ,
+			data : { type : type , p_num : -1 , p_size : -1 , i : i } ,
+			success : function( result ){
+				location.reload(); 
+			}
+	});
+	
+}
+
+
+
+/* 장바구니 수량 변경 end */
 
 
 
