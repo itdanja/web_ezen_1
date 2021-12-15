@@ -15,7 +15,8 @@
 	int p_num = Integer.parseInt( request.getParameter("p_num" ) );
 	String p_size = request.getParameter("p_size");
 	int i = Integer.parseInt( request.getParameter("i") );
-	
+	int p_count = Integer.parseInt( request.getParameter("p_count") );
+
 	if( type.equals("all") ){	// 모두 삭제 버튼을 눌렀을때
 		session.setAttribute(sname, null); // 카트 세션 null 초기화
 	}
@@ -29,11 +30,11 @@
 			}
 		}
 	}else if( type.equals("p") ){
-		carts.get(i).setP_count( carts.get(i).getP_count() +1 );
+		carts.get(i).setP_count( p_count );
 		session.setAttribute(sname, carts);
 	}
 	else if( type.equals("m") ){
-		carts.get(i).setP_count( carts.get(i).getP_count() -1 );
+		carts.get(i).setP_count( p_count );
 		session.setAttribute(sname, carts);
 	}
 %>

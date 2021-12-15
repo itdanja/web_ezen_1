@@ -65,7 +65,7 @@
 					<button class="btn btn-outline-secondary" 
 						onclick="pchange2(<%=i %> ,'m' , <%=product.getP_stock()%>  , <%=product.getP_price() %> )"> - </button>
 				</td>
-				<td width="15%" class="align-middle" id="total<%=i%>"> <%=product.getprice() %> 원</td>
+				<td width="15%" class="align-middle" id="total<%=i%>"> <%=decimalFormat.format( cart.getP_count() * product.getP_price() ) %> </td>
 				<td width="5%"><button class="form-control" 
 						onclick="cartdelete('in' , '<%=cart.getP_num()%>' , '<%=cart.getP_size()%>'   )"> X </button></td>
 			</tr>
@@ -83,7 +83,9 @@
 		
 		<div class="row">
 			<div class="col-md-3 offset-3">
-				<button class="form-control bg-success text-white p-3"> 주문하기 </button>
+				<a href="productpayment.jsp" >
+					<button class="form-control bg-success text-white p-3"> 주문하기 </button>
+				</a>
 			</div>
 			<div class="col-md-3">
 				<button class="form-control p-3"> 쇼핑하기 </button>
