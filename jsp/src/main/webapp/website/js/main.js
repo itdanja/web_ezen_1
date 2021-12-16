@@ -454,6 +454,32 @@ $(document).ready( function(){
 /* 회원과 동일 체크 end */
 
 
+/* 결제 정보 */
+
+function pointcheck(mpoint){
+	var point = document.getElementById("point").value*1;
+
+	if( mpoint < point ){
+		alert("포인트 부족");
+		point = 0;
+	}else{
+		document.getElementById("usepoint").innerHTML = point;
+		
+	}
+	var totalprice = document.getElementById("totalprice").innerHTML*1
+	var totaldeliverypay = document.getElementById("totaldeliverypay").innerHTML*1
+	document.getElementById("totalpay").innerHTML = totalprice+totaldeliverypay-point;
+	
+}
+
+
+
+
+/* 결제 정보 end */
+
+
+
+
 
 
 

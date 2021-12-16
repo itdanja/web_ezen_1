@@ -99,10 +99,53 @@
 						</div>
 						<input type="text" id="sample4_detailAddress" name="address4" placeholder="상세주소" class="form-control">
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 border p-3">
 				<h3> 결제 정보 </h3>
-				<input id="totalprice" value="<%=totalprice %>">
-				<button onclick="payment();">카드결제</button>
+				<h6> 결제 내용 </h6>
+				<div class="row">	<!-- 3:8 -->
+					<div class="col-md-3 m-2"> <label>마일리지</label> </div>
+					<div class="col-md-6"> 
+						<input type="text" id="point" placeholder="사용할 포인트" class="form-control"> 
+						<br>사용가능 마일리지 : <%=member.getM_point() %>
+					</div>
+					<div class="col-md-2"> 
+						<button class="btn btn-info" onclick="pointcheck('<%=member.getM_point()%>')">사용</button>
+					</div>
+				</div>
+				<hr>
+					
+				<h6> 결제 금액 </h6>
+					<div class="row">
+						<div class="col-md-3">총 주문금액</div>
+						<div class="col-md-9 text-right payment"> 
+								<span id="totalprice" class="payment"><%=totalprice %></span>
+								( 총 주문상품수 : <%=carts.size() %> )
+						</div>
+						
+						<div class="col-md-3">총 배송비</div>
+						<div class="col-md-9 text-right"> <span id="totaldeliverypay" class="payment">3000</span></div>
+						
+						<div class="col-md-3">사용 포인트</div>
+						<div class="col-md-9 text-right "> <span id="usepoint" class="payment">0</span></div>
+						
+						<div class="col-md-3">최종 결제금액</div>
+						<div class="col-md-9 text-right "> <span id="totalpay" class="payment"><%=totalprice+3000 %></span></div>
+						
+					</div>
+				<hr>
+				<h6> 결제 방식 </h6>
+					<div class="row d-flex justify-content-around">
+						<button onclick="payment();" class="btn btn-outline-danger col-md-2">삼성페이</button>
+						<button onclick="payment();" class="btn btn-outline-danger col-md-2">신용카드</button>
+						<button onclick="payment();" class="btn btn-outline-danger col-md-2">계좌이체</button>
+						<button onclick="payment();" class="btn btn-outline-danger col-md-2">가상계좌</button>
+						<button onclick="payment();" class="btn btn-outline-danger col-md-2">휴대폰</button>
+					</div>
+					
+					<div class="row d-flex justify-content-around my-5">
+						<button class="col-md-5 form-control p-3 bg-success text-white"> 결제하기 </button>
+						<button class="col-md-5 form-control p-3"> 취소하기 </button>
+					</div>
 			</div>
 		</div>
 	</div>
