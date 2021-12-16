@@ -420,12 +420,11 @@ function payment(){
 						order_pay : document.getElementById("totalpay").innerHTML,
 						order_payment : document.getElementById("payselect").innerHTML ,
 						delivery_pay : 3000 ,
-						order_request : document.getElementById("prequest").value
+						order_contents : document.getElementById("prequest").value
 					 } , 
-					success : function( result ){
-						alert(result);
-						// 결제성공 과  db처리 성공시 결제주문 완료 페이지 이동
-						location.href="productpaymentsuccess.jsp";
+					success : function( result ){ // 결제성공 과  db처리 성공시 결제주문 완료 페이지 이동
+						if(result == 1){ location.href="productpaymentsuccess.jsp"; }
+						else{ alert("주문db오류 관리자에게문의");}
 					}
 				})
 		      }
