@@ -385,33 +385,43 @@ function pchange2( i , type , stock , price ){
 
 
 
+/* 결제 방식 선택  */
+function paymentselect( payselect ){
+	document.getElementById("payselect").innerHTML=payselect;
+}
 /* 결제 API 아임포트 */
 function payment(){
-	
+	if( document.getElementById("payselect").innerHTML == "" ){
+		alert("결제방식을 선택해주세요"); return;
+	}
 	var IMP = window.IMP; 
-    IMP.init("imp35631338"); // [본인]관리자 식별코드 
-
-      IMP.request_pay({ // param
-      pg: "html5_inicis",
-      pay_method: "card",
-      merchant_uid: "ORD20180131-0000011",
-      name: "나만의 쇼핑몰", // 결제창에 나오는 결제이름
-      amount: document.getElementById("totalprice").value *1,	// 결제금액
-      buyer_email: "gildong@gmail.com",
-      buyer_name: "홍길동",
-      buyer_tel: "010-4242-4242",
-      buyer_addr: "서울특별시 강남구 신사동",
-      buyer_postcode: "01181"
-
-	  }, function (rsp) { // callback
-	      if (rsp.success) {
-	        // 결제 성공했을때 -> 주문 완료 페이지로 이동 
-			
-	      } else {
-			// 결제 실패 했을때 
-	      }
+	IMP.init("imp35631338"); // [본인]관리자 식별코드 [ 관리자 계정마다 다름] 
+    IMP.request_pay({ // 결제 요청변수 
+	    pg: "html5_inicis",	// pg사 [ 아임포트 관리자페이지에서 선택한 pg사 ]
+	    pay_method: document.getElementById("payselect").innerHTML,	// 결제방식
+	    merchant_uid: "ORD20180131-0000011", // 주문번호[별도]
+	    name: "나만의 쇼핑몰", // 결제창에 나오는 결제이름
+	    amount: document.getElementById("totalpay").innerHTML,	// 결제금액
+	    buyer_email: "gildong@gmail.com",
+	    buyer_name: $("#name").val(),
+	    buyer_tel: $("#phone").val(),
+	    buyer_addr: $("#sample4_roadAddress").val()+","+$("#sample4_jibunAddress").val()+","+$("#sample4_detailAddress").val(),
+	    buyer_postcode: $("#sample4_postcode").val()	// 우편번호
+		  }, function (rsp) { // callback
+		      if (rsp.success) { // 결제 성공했을때 -> 주문 완료 페이지로 이동 []
+		      } else {
+				// 결제 실패 했을때 
+					// 테스트 : 결제 성공
+					$.ajax({
+						url : "../../productpaymentcontroller.jsp" ,
+						data : { } , 
+						success : function( result ){
+							// 결제성공 과  db처리 성공시 결제주문 완료 페이지 이동
+							location.href="productpaymentsuccess.jsp";
+						}
+					})
+		      }
 	  });
-
 }
 /* 결제 API 아임포트 END */
 
@@ -472,11 +482,7 @@ function pointcheck(mpoint){
 	
 }
 
-
-
-
 /* 결제 정보 end */
-
 
 
 

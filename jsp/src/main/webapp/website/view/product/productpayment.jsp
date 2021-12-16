@@ -135,15 +135,15 @@
 				<hr>
 				<h6> 결제 방식 </h6>
 					<div class="row d-flex justify-content-around">
-						<button onclick="payment();" class="btn btn-outline-danger col-md-2">삼성페이</button>
-						<button onclick="payment();" class="btn btn-outline-danger col-md-2">신용카드</button>
-						<button onclick="payment();" class="btn btn-outline-danger col-md-2">계좌이체</button>
-						<button onclick="payment();" class="btn btn-outline-danger col-md-2">가상계좌</button>
-						<button onclick="payment();" class="btn btn-outline-danger col-md-2">휴대폰</button>
+						<button onclick="paymentselect('samsung');" class="btn btn-outline-danger col-md-2">삼성페이</button>
+						<button onclick="paymentselect('card');" class="btn btn-outline-danger col-md-2">신용카드</button>
+						<button onclick="paymentselect('trans');" class="btn btn-outline-danger col-md-2">계좌이체</button>
+						<button onclick="paymentselect('vbank');" class="btn btn-outline-danger col-md-2">가상계좌</button>
+						<button onclick="paymentselect('phone');" class="btn btn-outline-danger col-md-2">휴대폰</button>
 					</div>
-					
+					<div id="payselect"></div>
 					<div class="row d-flex justify-content-around my-5">
-						<button class="col-md-5 form-control p-3 bg-success text-white"> 결제하기 </button>
+						<button class="col-md-5 form-control p-3 bg-success text-white" onclick="payment();"> 결제하기 </button>
 						<button class="col-md-5 form-control p-3"> 취소하기 </button>
 					</div>
 			</div>
