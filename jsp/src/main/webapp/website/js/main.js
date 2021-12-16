@@ -410,16 +410,23 @@ function payment(){
 		  }, function (rsp) { // callback
 		      if (rsp.success) { // 결제 성공했을때 -> 주문 완료 페이지로 이동 []
 		      } else {
-				// 결제 실패 했을때 
-					// 테스트 : 결제 성공
-					$.ajax({
-						url : "../../productpaymentcontroller.jsp" ,
-						data : { } , 
-						success : function( result ){
-							// 결제성공 과  db처리 성공시 결제주문 완료 페이지 이동
-							location.href="productpaymentsuccess.jsp";
-						}
-					})
+				// 결제 실패 했을때  // 테스트 : 결제 성공
+				$.ajax({
+					url : "../../controller/productpaymentcontroller.jsp" ,
+					data : {
+						order_name : 1,
+						order_phone	: 1,
+						order_address : 1 ,
+						order_pay :1,
+						order_payment : 1 ,
+						delivery_pay : 3000
+					 } , 
+					success : function( result ){
+						alert(result);
+						// 결제성공 과  db처리 성공시 결제주문 완료 페이지 이동
+						location.href="productpaymentsuccess.jsp";
+					}
+				})
 		      }
 	  });
 }
