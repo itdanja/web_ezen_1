@@ -12,13 +12,15 @@ public class Porder {
 	private String order_payment ;
 	private int delivery_num;
 	private int delivery_pay;
+	private String order_contents;
 	
 	public Porder() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public Porder(int order_num, int m_num, String order_date, String order_name, String order_phone,
-			String order_address, int order_pay, String order_payment, int delivery_num, int delivery_pay) {
+			String order_address, int order_pay, String order_payment, int delivery_num, int delivery_pay,
+			String order_contents) {
 		super();
 		this.order_num = order_num;
 		this.m_num = m_num;
@@ -30,10 +32,12 @@ public class Porder {
 		this.order_payment = order_payment;
 		this.delivery_num = delivery_num;
 		this.delivery_pay = delivery_pay;
+		this.order_contents = order_contents;
 	}
 
 	public Porder(int m_num, String order_name, String order_phone, String order_address, int order_pay,
-			String order_payment, int delivery_pay) {
+			String order_payment, int delivery_pay, String order_contents) {
+		super();
 		this.m_num = m_num;
 		this.order_name = order_name;
 		this.order_phone = order_phone;
@@ -41,6 +45,7 @@ public class Porder {
 		this.order_pay = order_pay;
 		this.order_payment = order_payment;
 		this.delivery_pay = delivery_pay;
+		this.order_contents = order_contents;
 	}
 
 	public int getOrder_num() {
@@ -122,6 +127,16 @@ public class Porder {
 	public void setDelivery_pay(int delivery_pay) {
 		this.delivery_pay = delivery_pay;
 	}
+
+	public String getOrder_contents() {
+		return order_contents;
+	}
+
+	public void setOrder_contents(String order_contents) {
+		this.order_contents = order_contents;
+	}
+	
+	
 	
 	
 }

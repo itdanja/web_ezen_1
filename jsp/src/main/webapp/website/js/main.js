@@ -414,12 +414,13 @@ function payment(){
 				$.ajax({
 					url : "../../controller/productpaymentcontroller.jsp" ,
 					data : {
-						order_name : 1,
-						order_phone	: 1,
-						order_address : 1 ,
-						order_pay :1,
-						order_payment : 1 ,
-						delivery_pay : 3000
+						order_name :  $("#name").val(),
+						order_phone	:  $("#phone").val(),
+						order_address : $("#sample4_postcode").val()+","+$("#sample4_roadAddress").val()+","+$("#sample4_jibunAddress").val()+","+$("#sample4_detailAddress").val() ,
+						order_pay : document.getElementById("totalpay").innerHTML,
+						order_payment : document.getElementById("payselect").innerHTML ,
+						delivery_pay : 3000 ,
+						order_request : document.getElementById("prequest").value
 					 } , 
 					success : function( result ){
 						alert(result);
