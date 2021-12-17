@@ -48,7 +48,7 @@
 							<section>
 								<%ArrayList<Porder>porders = 
 									PorderDao.getPorderDao().getporderlist( login.getM_num() ); // 1. 주문자의 주문 목록  %> 
-								<% for( int i = 0 ; i<2; i++ ){ %>	<!-- 주문2개  -->
+								<% for( int i = 0 ; i<2; i++ ){ %>	<!-- 기본 주문2개  -->
 								<div class="row mt-5">
 									<div class="col-md-4 border rounded p-3 d-flex align-content-center flex-wrap"> <!-- 주문 정보 -->
 																		<!-- d-flex align-content-center flex-wrap : 아이템들을 가로로 배치 하여 가운데 정렬 -->

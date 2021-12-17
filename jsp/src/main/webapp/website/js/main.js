@@ -512,10 +512,9 @@ function pointcheck(mpoint){
 					 // $("태그명").append(html) : 해당 태그에 html 추가
 				}
 			});
-			item; // 스크롤 바닥에 닿을떄 주문 1씩 증가
+			item++; // 스크롤 바닥에 닿을떄 주문 1씩 증가
 		}
 	});
-	
 /* 스크롤 */
 
 

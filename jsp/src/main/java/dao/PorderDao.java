@@ -14,8 +14,9 @@ public class PorderDao extends DB {
 	public static PorderDao porderDao = new PorderDao() ; 	
 	public static PorderDao getPorderDao() { return porderDao; }
 	
-	//1. 주문 등록 
+	//1. 주문 등록 [ 1.주문등록 2.세부주문 등록 3.재고업데이트 ]
 	public boolean orderwrite( Porder porder , ArrayList<Cart> carts ) {
+		// 1.주문등록
 		String sql = "insert into porder( m_num , order_name , order_phone,"
 				+ "order_address , order_pay , order_payment , delivery_pay,"
 				+ "order_contents)values(?,?,?,?,?,?,?,?)";
@@ -43,6 +44,12 @@ public class PorderDao extends DB {
 					ps=con.prepareStatement(sql);
 					ps.setInt(1, order_num);	ps.setInt(2, cart.getP_num());
 					ps.setInt(3, cart.getP_count() ); ps.setInt(4, 1 ); ps.executeUpdate();
+					
+					// 3. 재고 업데이트 처리 [ 주문시 주문수량 만큼 제품 재고 차감 ]
+					sql = "update product set p_stock = p_stock-? where p_num =?";
+					ps=con.prepareStatement(sql);
+					ps.setInt(1, cart.getP_count() );	ps.setInt(2, cart.getP_num() );
+					ps.executeUpdate();
 				}
 				return true;
 			} 
