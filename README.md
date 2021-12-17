@@ -67,8 +67,6 @@
 |39일차[11/23]|JAVA2 · Front | layout |
 |40일차[11/24]|JAVA2 · Front | layout |
 
-
-
 ### 3개월차 진도 [ Bootstrap · Servlet · JSP · Datavbase · Front ] 
 |일차|목차|주요내용|
 |------|---|---|
@@ -81,38 +79,34 @@
 |47일차[12/03]|Jsp| Board |
 |48일차[12/06]|Jsp| Board |
 |49일차[12/07]|Jsp| Board |
-|50일차[12/08]|Jsp| Product |
-|51일차[12/09]|Jsp| Product |
-|52일차[12/10]|Jsp| Cart · Team jsp Project( 주제 선정 )|
-|53일차[12/13]|Jsp| payment · Team jsp Project( 프론트 설계 )|
-|54일차[12/14]|Jsp| info · Team jsp Project( DB 설계 )| 
-|55일차[12/15]|Jsp| info · Team jsp Project( 컨트롤러 설계 )|
-|56일차[12/16]|Jsp| Chart · Team jsp Project(프론트 구현) |
-|57일차[12/17]|Jsp| Chart · Team jsp Project(프론트 구현) |
-|58일차[12/20]|Jsp| chatting · Team jsp Project(프론트 구현)|
-|59일차[12/21]|Jsp| chatting · Team jsp Project(프론트 구현)|
-|60일차[12/22]|Jsp| Jsp · Team jsp Project(프론트 구현)|
-
-11/30 : 평가[화면설계]
-12/10 : 평가[화면구현]
-12/17 : 평가[UI테스트]
+|50일차[12/08]|Jsp| Product 페이징 검색 댓글 |
+|51일차[12/09]|Jsp| Product 제품등록 제품출력 제품조건출력 제품삭제 제품수정 |
+|52일차[12/10]|Jsp| 평가[화면설계] · 평가[화면구현] · Team jsp Project( 주제 선정 )|
+|53일차[12/13]|Jsp| 제품상세페이지 · Team jsp Project( 프론트 설계 )|
+|54일차[12/14]|Jsp| 장바구니 · Team jsp Project( DB 설계 )| 
+|55일차[12/15]|Jsp| 결제페이지 · Team jsp Project( 컨트롤러 설계 )|
+|56일차[12/16]|Jsp| 결제페이지 · Team jsp Project(프론트 구현) |
+|57일차[12/17]|Jsp| 평가[UI테스트] · info · Team jsp Project(프론트 구현) |
+|58일차[12/20]|Jsp| info · chart · Team jsp Project(프론트 구현)|
+|59일차[12/21]|Jsp| chart · Team jsp Project(프론트 구현)|
+|60일차[12/22]|Jsp| chatting · Team jsp Project(프론트 구현)|
 
 ### 4개월차 진도 [ Spring · JPA ] 
 |일차|목차|주요내용|
 |------|---|---|
-|61일차[12/23]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
-|62일차[12/24]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
-|63일차[12/27]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
-|64일차[12/28]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
-|65일차[12/29]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
-|66일차[12/30]|Spring| spring · Team jsp Project( Controller·Dto·Dao 구현)|
+|61일차[12/23]|Spring| API · Team jsp Project( Controller·Dto·Dao 구현)|
+|62일차[12/24]|Spring| API · Team jsp Project( Controller·Dto·Dao 구현)|
+|63일차[12/27]|Spring| spring(1장:개발환경구축) · Team jsp Project( Controller·Dto·Dao 구현)|
+|64일차[12/28]|Spring| spring(2장: Spring Data Jpa) · Team jsp Project( Controller·Dto·Dao 구현)|
+|65일차[12/29]|Spring| 평가 · spring(2장: Spring Data Jpa) · Team jsp Project( Controller·Dto·Dao 구현)|
+|66일차[12/30]|Spring| spring(2장: Spring Data Jpa) · Team jsp Project( Controller·Dto·Dao 구현)|
 |67일차[12/31]|Spring| Team jsp Project 발표 |
-|68일차[01/04]|Spring| Spring |
-|69일차[01/05]|Spring| Spring |
-|70일차[01/06]|Spring| Spring |
-|71일차[01/07]|Spring| Spring |
-|72일차[01/10]|Spring| Spring |
-|73일차[01/11]|Spring| Spring |
+|68일차[01/04]|Spring| Spring(3장:Thymeleaf) |
+|69일차[01/05]|Spring| Spring(4장:시큐리티) |
+|70일차[01/06]|Spring| Spring(5장:연관관계매핑) |
+|71일차[01/07]|Spring| Spring(6장:상품등록및조회하기) |
+|72일차[01/10]|Spring| Spring(7장:주문) |
+|73일차[01/11]|Spring| Spring(8장:장바구니) |
 |74일차[01/12]|Spring| Spring |
 |75일차[01/13]|Spring| Spring |
 |76일차[01/14]|Spring| Spring |
@@ -136,13 +130,13 @@
 |90일차[02/09]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
 |91일차[02/10]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
 |92일차[02/11]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
-|93일차[02/14]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
-|94일차[02/15]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
-|95일차[02/16]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
-|96일차[02/17]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
-|97일차[02/18]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
-|98일차[02/22]|Project| Team Spring Project 발표|
-|99일차[02/21]|Project| Team Spring Project 보완|
+|93일차[02/14]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )|
+|94일차[02/15]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )|
+|95일차[02/16]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )|
+|96일차[02/17]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )|
+|97일차[02/18]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )|
+|98일차[02/22]|Project| 과정 정리 · Team Spring Project 발표|
+|99일차[02/21]|Project| 과정 정리 · Team Spring Project 보완|
 |100일차[02/23]|Project| 과정 정리 |
 
 
