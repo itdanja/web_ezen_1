@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import dto.Cart;
 import dto.Porder;
+import dto.Porderdetail;
 
 public class PorderDao extends DB {
 	
@@ -50,4 +51,58 @@ public class PorderDao extends DB {
 		return false;
 	}
 	
+	// 주문목록
+	public ArrayList<Porder> getporderlist( int m_num){
+		ArrayList<Porder> porders = new ArrayList<Porder>();
+		String sql ="select * from porder where m_num = "+m_num+" order by order_num desc";
+		try {
+			ps = con.prepareStatement(sql);
+			rs=ps.executeQuery();
+			while( rs.next() ) {
+				Porder porder = new Porder( 
+						rs.getInt(1), rs.getInt(2),
+						rs.getString(3),rs.getString(4),
+						rs.getString(5),rs.getString(6),
+						rs.getInt(7),rs.getString(8),
+						rs.getInt(9),rs.getInt(10),
+						rs.getString(11));
+				porders.add(porder);
+			}
+			return porders;
+		}catch (Exception e) {} return null;
+	}
+	// 상세목록
+	public ArrayList<Porderdetail> getPorderdetaillist( int order_num ){
+		ArrayList< Porderdetail > porderdetails = new ArrayList<Porderdetail>();
+		
+		String sql = "select * from porderdetail where order_num="+order_num;
+		try {
+			ps = con.prepareStatement(sql);
+			rs=ps.executeQuery();
+			while( rs.next() ) {
+				Porderdetail porderdetail = new Porderdetail( 
+						rs.getInt(1), rs.getInt(2),
+						rs.getInt(3), rs.getInt(4), rs.getInt(5));
+				porderdetails.add(porderdetail);
+			}
+			return porderdetails;
+		}catch (Exception e) {} return null;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
+
+
+
+
+
+
+
