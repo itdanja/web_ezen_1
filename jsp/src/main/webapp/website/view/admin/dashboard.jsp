@@ -9,8 +9,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-
+<body>	
 	<%@include file="../header.jsp" %>
 	<%
 		// 검색처리
@@ -29,7 +28,11 @@
 			<input type="text" class="form-control" name="keyword">
 			<input type="submit" class="btn btn-outline-info" value="검색">
 		</form>
+		
+		
 		<a href="productwrite.jsp"><button>제품등록</button></a> 
+		<a href="productchart.jsp"><button>제품통계</button></a> 
+		
 		<h3> 제품 목록 </h3>
 		<table class="table">
 			<tr> 

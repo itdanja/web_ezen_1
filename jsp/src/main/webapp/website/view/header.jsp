@@ -21,15 +21,18 @@
 	<!-- 부스트랩 js 설정 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    	
-	<!-- 본인 js 호출 -->
-	<script src="/jsp/website/js/main.js"></script>
 
 	<!-- 다음 주소 api js 호출 -->
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	
 	<!-- 결제API [ 아임포트 ] 가져오기  -->
 	<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
+	
+	<!--  chart Api  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	
+	<!-- 본인 js 호출 -->
+	<script src="/jsp/website/js/main.js"></script>
 	
 	
 	<% 

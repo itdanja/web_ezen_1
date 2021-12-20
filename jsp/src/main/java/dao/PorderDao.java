@@ -1,6 +1,9 @@
 package dao;
 
 import java.util.ArrayList;
+import java.util.Map;
+
+import org.json.JSONObject;
 
 import dto.Cart;
 import dto.Porder;
@@ -97,15 +100,51 @@ public class PorderDao extends DB {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
+	// 날짜별 주문수 
+	public JSONObject getorderdatecount(){
+		
+		JSONObject jsonObject = new JSONObject();
+		
+		String sql = "select substring_index( order_date , ' ' , 1 ) , count(*) "
+				+ "from porder group by substring_index( order_date , ' ' , 1 )";
+		
+		try {
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery(sql);
+			while( rs.next() ) { // 검색된 레코드 개수만큼 json에 추가 
+				jsonObject.put( rs.getString(1) , rs.getString(2) );
+								// 날짜		, 주문수 	=> 엔트리 저장[ 키 : 값 ]
+			}
+			return jsonObject;
+		}catch (Exception e) {} return null;
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
