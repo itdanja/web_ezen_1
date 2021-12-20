@@ -43,7 +43,6 @@
 
 		ArrayList<Board> boards 
 			= BoardDao.getboarddao().boardlist( startrow , listsize , key  , keyword );
-	
 	%>
 	
 	<!-- 고객센터 페이지 -->
