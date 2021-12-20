@@ -584,7 +584,7 @@ function pointcheck(mpoint){
 							]
 						},
 					options: {	// 차트 옵션 
-				    	cales: {	
+				    	scales: {	
 				       		yAxes: 	// y : 세로축 
 								[
 				            		{
