@@ -1,9 +1,11 @@
 package dao;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Map;
 
-import org.json.JSONObject;
+import org.json.simple.JSONObject;
 
 import dto.Cart;
 import dto.Porder;
@@ -102,12 +104,9 @@ public class PorderDao extends DB {
 	
 	// 날짜별 주문수 
 	public JSONObject getorderdatecount(){
-		
 		JSONObject jsonObject = new JSONObject();
-		
 		String sql = "select substring_index( order_date , ' ' , 1 ) , count(*) "
 				+ "from porder group by substring_index( order_date , ' ' , 1 )";
-		
 		try {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery(sql);
@@ -117,6 +116,27 @@ public class PorderDao extends DB {
 			}
 			return jsonObject;
 		}catch (Exception e) {} return null;
+	}
+	
+	// 제품별 판매량 
+	public JSONObject getpcount() {
+		JSONObject jsonObject = new JSONObject();
+		String sql = "select p_num , sum(p_count) from porderdetail group by p_num";
+		try {
+			ps = con.prepareStatement(sql);
+			rs=ps.executeQuery();
+			while( rs.next() ) {
+				String sql2 = "select p_name from product where p_num = "+rs.getInt(1);
+				PreparedStatement ps2  = con.prepareStatement(sql2);
+				ResultSet rs2 =ps2.executeQuery();
+				if( rs2.next() ) {
+					jsonObject.put( rs2.getString(1) , rs.getInt(2) );
+									// sql2 결과[ 제품명]	// sql 결과[ 제품번호 , 제품총판매수 ] 
+				}
+			}
+			return jsonObject;
+		}catch (Exception e) {} return null;
+		
 	}
 	
 }

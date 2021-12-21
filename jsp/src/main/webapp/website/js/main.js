@@ -541,9 +541,11 @@ function pointcheck(mpoint){
 		alert( "키 : " + key + "   값 : " + test[key] );		// 키 출력
 	}
 	*/
+	
+	// 주문그래프 start 
 	// JSON 형식으로 가져오기 
 	//$.getJSON('경로/파일명' , function(json인수명){ })
-		$.getJSON('../../controller/productchart.jsp' , function(jsonObject){
+		$.getJSON('../../controller/productchart.jsp?type=1' , function(jsonObject){
 			var keyval = [ ];	// 모든 키를 저장하는 배열
 			var valueval = [ ]; // 모든 값을 저장하는 배열 
 			
@@ -553,6 +555,7 @@ function pointcheck(mpoint){
 				valueval[i] = jsonObject[ keyval[i] ]; // i번째 값 저장 
 			}
 				/* 차트 만들기 chart.js */
+				
 				var context = document.getElementById('myChart').getContext('2d');
 	           	var myChart = new Chart( context, {
 	               type: 'bar', // 차트의 형태
@@ -597,18 +600,68 @@ function pointcheck(mpoint){
 				        	}
 					});
 				/* 차트 만들기 end */
+				
 		});
 /* json end */
 
 
 
 
+	$.getJSON("../../controller/productchart.jsp?type=2" , function(jsonObject){
+		// 제품별 판매량 그래프 //
+			var context2 = document.getElementById('productchart').getContext('2d');
+			var myChart2 = new Chart( context2, { 
+				 type: 'line', // 차트의 형태
+		         data: { // 차트에 들어갈 데이터
+			           labels: [1,2,3] ,	// 가로축
+			           datasets: 
+							[
+			                    { // 계열추가 
+			                       	label: '날짜별 주문수', // 계열명 
+			                       	data: [1,2,3] 	// 계열 데이터 
+				                  }
+							]
+						}
+			});
+		// 제품별 판매량 그래프 end  // 
+	});
+		
 
 
 
 
 
 
+
+
+/*test*/
+
+function excelTest() {
+    var form = $('#excelForm')[0];
+
+    // FormData 객체 생성
+    var formData = new FormData(form);
+
+    // 코드로 동적으로 데이터 추가 가능.
+//                formData.append("userId", "testUser!");
+
+    $.ajax({
+        type: "POST",
+        enctype: 'multipart/form-data',
+        url: "/api/playlists/14/2017-07-21/mapper/excel",
+        data: formData,
+        processData: false,
+        contentType: false,
+        cache: false,
+        timeout: 600000,
+        success: function (data) {
+            console.log("SUCCESS : ", data);
+        },
+        error: function (e) {
+            console.log("ERROR : ", e);
+        }
+    });
+}
 
 
 

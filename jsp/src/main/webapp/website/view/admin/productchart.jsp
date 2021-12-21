@@ -12,7 +12,19 @@
 	
 	
 	<div class="container">
-		<canvas id="myChart"></canvas>
+		<div class="row">
+			<div class="col-md-6">
+				<h6> 주문 그래프 </h6>
+				<canvas id="myChart"></canvas>
+			</div>
+			<div class="col-md-6">
+				<h6> 제품별 판매량 </h6>
+				<canvas id="productchart"></canvas>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
+
+
+
