@@ -666,14 +666,7 @@ function pointcheck(mpoint){
 		});
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	

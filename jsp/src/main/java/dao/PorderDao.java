@@ -106,7 +106,7 @@ public class PorderDao extends DB {
 	public JSONObject getorderdatecount(){
 		JSONObject jsonObject = new JSONObject();
 		String sql = "select substring_index( order_date , ' ' , 1 ) , count(*) "
-				+ "from porder group by substring_index( order_date , ' ' , 1 )";
+				+ "from porder group by substring_index( order_date , ' ' , 1 ) order by substring_index( order_date , ' ' , 1 ) asc ";
 		try {
 			PreparedStatement ps4 = con.prepareStatement(sql);
 			ResultSet rs4 = ps4.executeQuery(sql);
@@ -157,7 +157,6 @@ public class PorderDao extends DB {
 		catch (Exception e){ } return null;
 	}
 }
-
 
 
 

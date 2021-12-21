@@ -29,6 +29,11 @@
 	
 	<!--  chart Api  -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+	
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=749d17d87f58307dbad6807627bbca96&libraries=services,clusterer"></script>
+				
 	
 	<!-- 본인 js 호출 -->
 	<script src="/jsp/website/js/main.js"></script>
