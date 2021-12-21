@@ -37,8 +37,7 @@ public class PorderDao extends DB {
 			ps.setString(8, porder.getOrder_contents() );
 			ps.executeUpdate();
 			// 방금 주문한 주문번호 검색
-			sql ="select * from porder where m_num="+porder.getM_num()+
-					" order by order_num desc";
+			sql ="select * from porder where m_num="+porder.getM_num()+" order by order_num desc";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery(); if( rs.next() ) {
 				int order_num = rs.getInt(1); // 주문번호

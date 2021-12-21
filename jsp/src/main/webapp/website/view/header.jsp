@@ -36,6 +36,7 @@
 	<!-- 본인 js 호출 -->
 	<script src="/jsp/website/js/main.js"></script>
 	
+	
 	<% 
 		// 재고가 0일경우 제품의 상태를 품절로 변경
 		ProductDao.getProductDao().stockupdate(); 
