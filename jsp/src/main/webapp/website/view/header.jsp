@@ -21,7 +21,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-	<!-- 다음 주소 api js 호출 -->
+	<!-- 다음 우편주소 api js 호출 -->
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	
 	<!-- 결제API [ 아임포트 ] 가져오기  -->
@@ -30,10 +30,8 @@
 	<!--  chart Api  -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
-
-	
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=749d17d87f58307dbad6807627bbca96&libraries=services,clusterer"></script>
-				
+	<!--  kakao 지도 api -->
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b7c0acb1395b016fc6b2661dad73840f"></script>
 	
 	<!-- 본인 js 호출 -->
 	<script src="/jsp/website/js/main.js"></script>
