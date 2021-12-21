@@ -15,7 +15,10 @@
 	if( type.equals("1") ){
 		jsonObject = PorderDao.getPorderDao().getorderdatecount();
 	}else if( type.equals("2")){
-		
+		jsonObject = PorderDao.getPorderDao().getpcount();
+	}else if( type.equals("3") ){
+		int p_num = Integer.parseInt(request.getParameter("p_num"));
+		jsonObject = PorderDao.getPorderDao().getpdatecount(p_num);
 	}
 	
 %>

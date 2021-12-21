@@ -608,17 +608,27 @@ function pointcheck(mpoint){
 
 
 	$.getJSON("../../controller/productchart.jsp?type=2" , function(jsonObject){
+		
+		var productname = [];	// 제품별 이름 배열
+		var productcount = [];	// 제품별 판매량 배열  
+		
+		var keys2 =  Object.keys(jsonObject);
+		for( var i = 0 ; i < keys2.length ; i++ ){
+			productname[i] = keys2[i];	// json변수명에 있는 모든 키를 이름배열 저장 
+			productcount[i] = jsonObject[productname[i]]; // json변수명에 있는 값을 판매량 배열 저장 
+									// json변수명[ 키 ]	=> 값 
+		}
 		// 제품별 판매량 그래프 //
 			var context2 = document.getElementById('productchart').getContext('2d');
 			var myChart2 = new Chart( context2, { 
 				 type: 'line', // 차트의 형태
 		         data: { // 차트에 들어갈 데이터
-			           labels: [1,2,3] ,	// 가로축
+			           labels: productname ,	// 가로축
 			           datasets: 
 							[
 			                    { // 계열추가 
-			                       	label: '날짜별 주문수', // 계열명 
-			                       	data: [1,2,3] 	// 계열 데이터 
+			                       	label: '제품별 판매량', // 계열명 
+			                       	data: productcount 	// 계열 데이터 
 				                  }
 							]
 						}
@@ -626,42 +636,63 @@ function pointcheck(mpoint){
 		// 제품별 판매량 그래프 end  // 
 	});
 		
+	// 목록상자 데이터 변경되면
+	function pchange(){
+		var p_num = $("#pselect").val(); // 해당 아이디의 값 가져오기
+		$.getJSON('../../controller/productchart.jsp?type=3&p_num='+p_num , function(jsonObject){
+			var productdate = [];
+			var productcount2 = [];
+			var keys3 =  Object.keys(jsonObject);
+			for( var i = 0 ; i < keys3.length ; i++ ){
+				productdate[i] = keys3[i];	// json변수명에 있는 모든 키를 이름배열 저장 
+				productcount2[i] = jsonObject[productdate[i]]; // json변수명에 있는 값을 판매량 배열 저장 
+			}
+			// 제품별 판매량 그래프 //
+			var context3 = document.getElementById('productdatechart').getContext('2d');
+			var myChart3 = new Chart( context3, { 
+				 type: 'line', // 차트의 형태
+		         data: { // 차트에 들어갈 데이터
+			           labels: productdate ,	// 가로축
+			           datasets: 
+							[
+			                    { // 계열추가 
+			                       	label: '제품별 판매추이', // 계열명 
+			                       	data: productcount2 	// 계열 데이터 
+				                  }
+							]
+						}
+			});
+		// 제품별 판매량 그래프 end  // 
+		});
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
-
-
-
-
-
-/*test*/
-
-function excelTest() {
-    var form = $('#excelForm')[0];
-
-    // FormData 객체 생성
-    var formData = new FormData(form);
-
-    // 코드로 동적으로 데이터 추가 가능.
-//                formData.append("userId", "testUser!");
-
-    $.ajax({
-        type: "POST",
-        enctype: 'multipart/form-data',
-        url: "/api/playlists/14/2017-07-21/mapper/excel",
-        data: formData,
-        processData: false,
-        contentType: false,
-        cache: false,
-        timeout: 600000,
-        success: function (data) {
-            console.log("SUCCESS : ", data);
-        },
-        error: function (e) {
-            console.log("ERROR : ", e);
-        }
-    });
-}
 
 
 

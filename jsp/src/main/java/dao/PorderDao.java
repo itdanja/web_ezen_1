@@ -108,10 +108,10 @@ public class PorderDao extends DB {
 		String sql = "select substring_index( order_date , ' ' , 1 ) , count(*) "
 				+ "from porder group by substring_index( order_date , ' ' , 1 )";
 		try {
-			ps = con.prepareStatement(sql);
-			rs = ps.executeQuery(sql);
-			while( rs.next() ) { // 검색된 레코드 개수만큼 json에 추가 
-				jsonObject.put( rs.getString(1) , rs.getString(2) );
+			PreparedStatement ps4 = con.prepareStatement(sql);
+			ResultSet rs4 = ps4.executeQuery(sql);
+			while( rs4.next() ) { // 검색된 레코드 개수만큼 json에 추가 
+				jsonObject.put( rs4.getString(1) , rs4.getString(2) );
 								// 날짜		, 주문수 	=> 엔트리 저장[ 키 : 값 ]
 			}
 			return jsonObject;
@@ -136,9 +136,26 @@ public class PorderDao extends DB {
 			}
 			return jsonObject;
 		}catch (Exception e) {} return null;
-		
 	}
-	
+	// 제품별 날짜 판매량
+	public JSONObject getpdatecount( int p_num) {
+		JSONObject jsonObject = new JSONObject();
+		String sql = "select order_num , p_count from porderdetail where p_num = "+p_num;
+		try {
+			ps = con.prepareStatement(sql);
+			rs=ps.executeQuery();
+			while( rs.next()  ) {
+				sql="select substring_index( order_date , ' ' , 1 ) from porder where order_num="+rs.getInt(1);
+				PreparedStatement ps2  = con.prepareStatement(sql);
+				ResultSet rs2 =ps2.executeQuery();
+				if( rs2.next() ) {
+					jsonObject.put( rs2.getString(1) ,  rs.getInt(2) );
+				}
+			}
+			return jsonObject;
+		}
+		catch (Exception e){ } return null;
+	}
 }
 
 
