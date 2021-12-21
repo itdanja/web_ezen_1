@@ -12,7 +12,5 @@
 	<classpathentry kind="lib" path="C:/Users/505-t/git/web_ezen_1/jsp/src/main/webapp/WEB-INF/lib/cos.jar"/>
 	<classpathentry kind="lib" path="C:/Users/505-t/git/web_ezen_1/jsp/src/main/webapp/WEB-INF/lib/mysql-connector-java-8.0.27.jar"/>
 	<classpathentry kind="lib" path="C:/Users/505-t/git/web_ezen_1/jsp/src/main/webapp/WEB-INF/lib/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/505-t/Downloads/commons-fileupload-1.4-bin/commons-fileupload-1.4-bin/commons-fileupload-1.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/505-t/Downloads/commons-io-2.11.0-bin/commons-io-2.11.0/commons-io-2.11.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

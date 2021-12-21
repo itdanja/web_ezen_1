@@ -15,8 +15,8 @@
 <body>
 	<%@include file ="../header.jsp" %>
 
-	
 		<div class="container">
+			<h3 class="text-center">백신접종센터 목록 </h3><br>
 			<table class="table">
 			<% // api 가져오기 [ json 형식 ]
 			// 1. 요청 URL 가져오기 		
@@ -44,11 +44,11 @@
 					<td><%=content.get("facilityName") %></td>				<!--  json명.get("키")  -->
 					<td><%=content.get("address") %></td>
 					<td><%=content.get("phoneNumber") %></td>
-					<td> <button onclick='map(<%=i%> , <%=content.get("lat") %> , <%=content.get("lng") %>)'> 지도보기 </button>
+					<td> <button class="form-control" onclick='map(<%=i%> , <%=content.get("lat") %> , <%=content.get("lng") %>)'> 지도보기 </button>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="4"> <div id="map<%=i %>" style="width:100%;height:350px;"></div> </td>
+					<td colspan="4"> <div id="map<%=i %>" style="width:100%;height:0px;"></div> </td>
 				</tr>
 			<%
 		}
