@@ -97,7 +97,8 @@
 		function onMessage(event) { 
 			var from = event.data.split(",")[0];	// , 기준으로 문자열 분리해서 첫번째 문자열
 			var time = event.data.split(",")[1];	// , 기준으로 문자열 분리해서 두번째 문자열
-			var msg = event.data.split(",")[3];		// , 기준으로 문자열 분리해서 세번째 문자열
+			var msg = event.data.split(",")[2];		// , 기준으로 문자열 분리해서 세번째 문자열
+			alert( event.data  );
 			msgbox.innerHTML += "<div class='profile mx-2 my-2'>"+from+"</div>"
 			msgbox.innerHTML += "<div class='d-flex justify-content-start mx-2 my-2'><span class='to mx-1'>"+msg+"</span><span class='msgtime d-flex align-items-end'>"+time+"</span></div>"
 			msgbox.scrollTop = msgbox.scrollHeight; // 현 스크롤 위치 =  스크롤 전체높이 [ 바닥 ]
