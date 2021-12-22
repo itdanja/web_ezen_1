@@ -66,25 +66,17 @@
 		function btnsend() {
 			// 1. 입력창에 입력된 데이터를 가져온다
 			var msginput = document.getElementById("msginput").value;
-				// 입력이 없을때 유효성검사 [ 전송 막기 ]
-				if( msginput == ""){  return; }
-			// 날짜 
+				if( msginput == ""){  return; } // 입력이 없을때 유효성검사 [ 전송 막기 ]
 			let today = new Date(); // js에서 현재 날짜/시간 객체 
 			var time = today.toLocaleTimeString(); // 시간만 가져오기 
-			
-			// 누가 보냈는지 메시지에 포함 하기  	// 언제 보냈는지 시간도 메시지에 포함 하기 
-			var msg = loginid +","+time+","+msginput;
-			
+			var msg = loginid +","+time+","+msginput; 	// 누가 보냈는지 메시지에 포함 하기  	// 언제 보냈는지 시간도 메시지에 포함 하기 
 			// 입력된 문자 와 날짜를 채팅발 div 에 추가
 			msgbox.innerHTML += "<div class='d-flex justify-content-end mx-2 my-2'><span class='msgtime d-flex align-items-end'>"+time+"</span><span class='from mx-1'>"+msginput+"</span></div>";
 				
 			webSocket.send( msg );	 // *****************서버로 부터 메시지 전송 
-			
 			document.getElementById("msginput").value = "";	// 전송후 입력창 내용물 지우기 [ 초기화 ]
-			
 			// 스크롤 있을경우 스크롤 위치를 가장 아래로 이동 
 			msgbox.scrollTop = msgbox.scrollHeight; // 현 스크롤 위치 =  스크롤 전체높이[ 바닥 ] */
-			
 		}
 		// 7. 보내는 메소드 
 		function entersend() {
@@ -100,19 +92,15 @@
 				document.getElementById("msginput").value = "";	
 		 		msgbox.scrollTop = msgbox.scrollHeight; 
 			}
-		
 		}
-		
 		// 8. 받는 메소드 
 		function onMessage(event) { 
-
 			var from = event.data.split(",")[0];	// , 기준으로 문자열 분리해서 첫번째 문자열
 			var time = event.data.split(",")[1];	// , 기준으로 문자열 분리해서 두번째 문자열
 			var msg = event.data.split(",")[3];		// , 기준으로 문자열 분리해서 세번째 문자열
 			msgbox.innerHTML += "<div class='profile mx-2 my-2'>"+from+"</div>"
 			msgbox.innerHTML += "<div class='d-flex justify-content-start mx-2 my-2'><span class='to mx-1'>"+msg+"</span><span class='msgtime d-flex align-items-end'>"+time+"</span></div>"
 			msgbox.scrollTop = msgbox.scrollHeight; // 현 스크롤 위치 =  스크롤 전체높이 [ 바닥 ]
-				
 		}
 		
 	</script>
