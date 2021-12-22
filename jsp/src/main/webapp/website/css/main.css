@@ -102,6 +102,10 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 30px;	/* 모서리 곡선 */
 	overflow: auto;	
 }
+.profile{
+	font-family: 'GongGothicBold';
+	font-size: 0.8rem;
+}
 
 
 

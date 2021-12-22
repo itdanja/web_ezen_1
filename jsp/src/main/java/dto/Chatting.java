@@ -4,14 +4,13 @@ import java.io.IOException;
 import java.util.Vector;
 
 import javax.websocket.OnClose;
-import javax.websocket.OnError;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
 // @ : 어노테이션 [ 메타데이터 ] : 미리 만들어진 정보(코드,메모리) 를 제공 받음
-@ServerEndpoint("/chatting2") // 1.서버소켓[종작첨] ( 경로생성 )
+@ServerEndpoint("/chatting") // 1.서버소켓[종작첨] ( 경로생성 )
 public class Chatting {
 	
 	// * 접속된 세션(회원)을 저장하는 리스트 [ Arraylist vs Vector(동기화) ]
@@ -22,7 +21,10 @@ public class Chatting {
 	@OnOpen // 소켓 접속하는 어노테이션 
 	public void onOpen( Session session ) {
 		clients.add(session);	// 리스트에 추가 
+		//System.out.print( session.getId() ); // 세션 번호 확인 
+		//System.out.print("현재 접속한 세션들 : " + clients ); // 현재 접속된 세션들 
 	}
+	
 	// 3. 클라이언트가 서버로부터 접속 해지
 	@OnClose // 소켓 닫는 어노테이션 
 	public void onClose( Session session ) {
@@ -41,10 +43,14 @@ public class Chatting {
 			}
 		}
 	}
-	// 5. 서버가 클라이언트로부터 오류 
-	@OnError // 클라이언트 오류 어노테이션
-	public void onError( Session session  ) {
-		
-	}
+	/*
+	 * 오류 발생시 자동 소켓 닫기 
+	 * // 5. 서버가 클라이언트로부터 오류
+	 * 
+	 * @OnError // 클라이언트 오류 어노테이션 
+	 * public void onError( ) {
+	 * 
+	 * }
+	 */
 
 }
