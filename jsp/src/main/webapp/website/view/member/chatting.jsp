@@ -48,7 +48,8 @@
 		
 		function start( id ) {
 			// 로그인이 안되어 있을때 
-			if(  id == null  ){ 
+			if(  id == "null"  ){ 
+				alert("로그인해주세요");
 			}
 			else{ // 로그인시 
 				// 채팅창 보이기 
