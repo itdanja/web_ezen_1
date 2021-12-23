@@ -18,6 +18,15 @@
 			<button class="form-control col-md-3 offset-3" onclick="start('<%=loginid%>')"> 채팅방 들어가기 </button>
 			<button class="form-control col-md-3" onclick="exit();">채팅방 나가기</button>
 		</div>
+		
+		<!--  채팅방 만들기  -->
+		<div id="roomnum"></div>
+		<ul>
+			<li> <button onclick="roomselect(1);">채팅방1</button> </li>
+			<li> <button onclick="roomselect(2);">채팅방2</button> </li>
+			<li> <button onclick="roomselect(3);">채팅방3</button> </li>
+		</ul>
+	
 		<div class="row" style="display:none;" id="chattingdiv">
 			
 			<div class="col-md-6 offset-2">
@@ -43,6 +52,14 @@
 		/* 전역변수들 : 모든 function 에서 사용되는 변수들 */
 		// 로그인된아이디 // 메시지창 // 웹소켓 
 		var loginid = null;  var msgbox =  null; var webSocket = null;
+		var roomnum = 0; // 방 번호 
+		// 방 번호 
+		function roomselect( num ) {
+			alert(  num + " 선택 되었습니다 " );
+			rooomnum = num;	// 클릭한 인수를 방번호에 대입
+			document.getElementById("roomnum").innerHTML="접속된 방:"+rooomnum;
+			
+		}
 		
 		function start( id ) {
 			// 로그인이 안되어 있을때 
@@ -57,7 +74,7 @@
 				msgbox =  document.getElementById("msgbox");
 				// 4. 웹소켓 [ 웹소켓 메모리 할당[서버소켓과 연결] ]
 				// var webSocket = new WebSocket("ws://ip:http port번호/프로젝트명/경로");
-				webSocket = new WebSocket("ws://localhost:8080/jsp/chatting");
+				webSocket = new WebSocket("ws://localhost:8080/jsp/chatting/"+rooomnum);
 				// 접속객체 		
 				// 5. 웹소켓 이벤트 [ 인수에 현재 세션 정보 WsSession@9d4f4b0 ]
 				webSocket.onopen = function( event ) { onOpen(event) }; // 웹소켓 실행시 메소드 
