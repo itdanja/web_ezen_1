@@ -105,9 +105,7 @@
 				msgbox.innerHTML += "<div class='d-flex justify-content-start mx-2 my-2'><span class='to mx-1'>"+msg+"</span><span class='msgtime d-flex align-items-end'>"+time+"</span></div>"
 				msgbox.scrollTop = msgbox.scrollHeight; // 현 스크롤 위치 =  스크롤 전체높이 [ 바닥 ]	
 			}
-		
 		}
-		
 		// 7. 보내는 메소드 
 		function send( ) {
 			// 1. 입력창에 입력된 데이터를 가져온다

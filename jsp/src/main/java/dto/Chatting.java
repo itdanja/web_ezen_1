@@ -27,7 +27,6 @@ public class Chatting {
 	public void onOpen( Session session , @PathParam("rooomnum") int rooomnum   ) {
 		this.rooomnum = rooomnum;	// 전달받은 인수를 방번호 변수에 저장
 		clients.put(  session , this.rooomnum );	// 리스트에 추가 
-		
 		//System.out.print( rooomnum );
 		//System.out.print( session.getId() ); // 세션 번호 확인 
 		//System.out.print("현재 접속한 세션들 : " + clients ); // 현재 접속된 세션들 
