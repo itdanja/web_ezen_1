@@ -14,9 +14,13 @@
 	
 	<div class="container">
 	
-		<div class="row">
+		<div class="row my-3"> 
+			<button class="form-control col-md-3 offset-3" onclick="start('<%=loginid%>')"> 채팅방 들어가기 </button>
+			<button class="form-control col-md-3" onclick="exit();">채팅방 나가기</button>
+		</div>
+		<div class="row" style="display:none;" id="chattingdiv">
 			
-			<div class="col-md-6">
+			<div class="col-md-6 offset-2">
 				<div id="msgbox">	<!-- 채팅창 -->
 					<!-- 채팅 메시지가 추가 되는 위치 -->
 				</div>
@@ -29,36 +33,48 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
-				보내는 사람 : <input id="loginid" class="form-control" type="text" value="<%=loginid %>" >
-				받는 사람 :  <input class="form-control" type="text" value="all">
-				접속 회원 목록
+			<div class="col-md-2">
 				<div id="mlist">
-				
+					
 				</div>
 			</div>
 		</div>
 	</div>
 	
 	<script type="text/javascript">
+		/* 전역변수들 : 모든 function 에서 사용되는 변수들 */
+		// 로그인된아이디 // 메시지창 // 웹소켓 
+		var loginid = null;  var msgbox =  null; var webSocket = null;
+		
+		function start( id ) {
+			// 로그인이 안되어 있을때 
+			if(  id == null  ){ 
+			}
+			else{ // 로그인시 
+				// 채팅창 보이기 
+				document.getElementById("chattingdiv").style="display:block";	// css 변경
+				loginid = id; // 로그인된 아이디 넣어주기 
+				// 3. 채팅창 가져오기 
+				msgbox =  document.getElementById("msgbox");
+				// 4. 웹소켓 [ 웹소켓 메모리 할당[서버소켓과 연결] ]
+				// var webSocket = new WebSocket("ws://ip:http port번호/프로젝트명/경로");
+				webSocket = new WebSocket("ws://localhost:8080/jsp/chatting");
+				// 접속객체 		
+				// 5. 웹소켓 이벤트 [ 인수에 현재 세션 정보 WsSession@9d4f4b0 ]
+				webSocket.onopen = function( event ) { onOpen(event) }; // 웹소켓 실행시 메소드 
+				webSocket.onclose = function( event ) { onClose(event) }; // 웹소켓 종료시 메소드 
+				webSocket.onmessage = function( event ) { onMessage(event) }; // 웹소켓 메시지전송 메소드 
+				webSocket.onerror = function( event ) { onError(event) }; // 웹소켓 오류 메소드
+			}
+		}
+		function exit() {
+			document.getElementById("chattingdiv").style="display:none";	// css 변경
+			webSocket.close();	
+		}
 	
-		// 2. 현재 회원 아이디 가져오기 
-		var loginid = document.getElementById("loginid").value;	// value 속성이 있는 태그만 가능 
-		// 3. 채팅창 가져오기 
-		var msgbox =  document.getElementById("msgbox");
-		// 4. 웹소켓 
-			// var webSocket = new WebSocket("ws://ip:http port번호/프로젝트명/경로");
-		var webSocket = new WebSocket("ws://localhost:8080/jsp/chatting"); 
-			// 접속객체 									// @ServerEndpoint 이동
-			 
-			// 5. 웹소켓 이벤트 [ 인수에 현재 세션 정보 WsSession@9d4f4b0 ]
-			webSocket.onopen = function( event ) { onOpen(event) }; // 웹소켓 실행시 메소드 
-			webSocket.onclose = function( event ) { onClose(event) }; // 웹소켓 종료시 메소드 
-			webSocket.onmessage = function( event ) { onMessage(event) }; // 웹소켓 메시지전송 메소드 
-			webSocket.onerror = function( event ) { onError(event) }; // 웹소켓 오류 메소드 
-			
+	
 		// 6. 이벤트 메소드 정의
-		function onOpen(event) { alert("접속 되었습니다.");}
+		function onOpen(event) { alert("접속 되었습니다."); }
 		function onClose(event) { alert("퇴장 했습니다.");}
 		function onError(event) { alert( "에러사유 :"+event.data +"[관리자에게문의]" );}
 		
@@ -98,7 +114,6 @@
 			var from = event.data.split(",")[0];	// , 기준으로 문자열 분리해서 첫번째 문자열
 			var time = event.data.split(",")[1];	// , 기준으로 문자열 분리해서 두번째 문자열
 			var msg = event.data.split(",")[2];		// , 기준으로 문자열 분리해서 세번째 문자열
-			alert( event.data  );
 			msgbox.innerHTML += "<div class='profile mx-2 my-2'>"+from+"</div>"
 			msgbox.innerHTML += "<div class='d-flex justify-content-start mx-2 my-2'><span class='to mx-1'>"+msg+"</span><span class='msgtime d-flex align-items-end'>"+time+"</span></div>"
 			msgbox.scrollTop = msgbox.scrollHeight; // 현 스크롤 위치 =  스크롤 전체높이 [ 바닥 ]
