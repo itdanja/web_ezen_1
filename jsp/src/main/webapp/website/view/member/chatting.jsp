@@ -25,17 +25,15 @@
 					<!-- 채팅 메시지가 추가 되는 위치 -->
 				</div>
 				<div class="row no-gutters">	<!-- 채팅입력 창  , 전송버튼 -->
-					<div class="col-md-10"><!-- 채팅입력 창 -->
+					<div class="col-md-2">
+						<input id="toid" class="form-control" type="text" placeholder="공개">
+					</div>
+					<div class="col-md-8"><!-- 채팅입력 창 -->
 						<input id="msginput" class="form-control" type="text" placeholder="내용 입력" onkeyup="entersend();">
 					</div>
 					<div class="col-md-2">	<!-- 전송버튼 -->
 						<button class="form-control" onclick="btnsend()">전송</button>
 					</div>
-				</div>
-			</div>
-			<div class="col-md-2">
-				<div id="mlist">
-					
 				</div>
 			</div>
 		</div>
@@ -79,6 +77,27 @@
 		function onClose(event) { alert("퇴장 했습니다.");}
 		function onError(event) { alert( "에러사유 :"+event.data +"[관리자에게문의]" );}
 		
+		// 8. 받는 메소드 
+		function onMessage(event) { 
+			var from = event.data.split(",")[0];	// , 기준으로 문자열 분리해서 첫번째 문자열
+			var to = event.data.split(",")[1];	// , 기준으로 문자열 분리해서 두번째 문자열
+			var time = event.data.split(",")[2];	// , 기준으로 문자열 분리해서 세번째 문자열
+			var msg = event.data.split(",")[3];		// , 기준으로 문자열 분리해서 네번째 문자열
+			
+			// 현재 로그인된 아이디와 to 와 동일할경우 [ 메시지 받음 ]
+			if( to == loginid ){ // 특정 아이디만 받기
+				msgbox.innerHTML += "<div class='profile mx-2 my-2'>"+from+"</div>"
+				msgbox.innerHTML += "<div class='d-flex justify-content-start mx-2 my-2'><span class='to mx-1'>"+msg+"</span><span class='msgtime d-flex align-items-end'>"+time+"</span></div>"
+				msgbox.scrollTop = msgbox.scrollHeight; // 현 스크롤 위치 =  스크롤 전체높이 [ 바닥 ]
+			}
+			else if( to == "all" ){ // 모든 메시지[ 모든 사람이 받는 메시지 ]
+				msgbox.innerHTML += "<div class='profile mx-2 my-2'>"+from+"</div>"
+				msgbox.innerHTML += "<div class='d-flex justify-content-start mx-2 my-2'><span class='to mx-1'>"+msg+"</span><span class='msgtime d-flex align-items-end'>"+time+"</span></div>"
+				msgbox.scrollTop = msgbox.scrollHeight; // 현 스크롤 위치 =  스크롤 전체높이 [ 바닥 ]	
+			}
+		
+		}
+		
 		// 7. 보내는 메소드 
 		function btnsend() {
 			// 1. 입력창에 입력된 데이터를 가져온다
@@ -86,7 +105,15 @@
 				if( msginput == ""){  return; } // 입력이 없을때 유효성검사 [ 전송 막기 ]
 			let today = new Date(); // js에서 현재 날짜/시간 객체 
 			var time = today.toLocaleTimeString(); // 시간만 가져오기 
-			var msg = loginid +","+time+","+msginput; 	// 누가 보냈는지 메시지에 포함 하기  	// 언제 보냈는지 시간도 메시지에 포함 하기 
+			// 받는 사람 
+			var toid = document.getElementById("toid").value;
+			
+			if( toid == "" ){ // 귓속말 대상이 없으면
+				toid="all";	//모두에게 보내기 
+			}
+			// msg = 보내는사람id , 받는사람 , 보낸시간 , 메시지내용
+			var msg = loginid +","+toid+","+time+","+msginput; 	
+			
 			// 입력된 문자 와 날짜를 채팅발 div 에 추가
 			msgbox.innerHTML += "<div class='d-flex justify-content-end mx-2 my-2'><span class='msgtime d-flex align-items-end'>"+time+"</span><span class='from mx-1'>"+msginput+"</span></div>";
 				
@@ -110,16 +137,7 @@
 		 		msgbox.scrollTop = msgbox.scrollHeight; 
 			}
 		}
-		// 8. 받는 메소드 
-		function onMessage(event) { 
-			var from = event.data.split(",")[0];	// , 기준으로 문자열 분리해서 첫번째 문자열
-			var time = event.data.split(",")[1];	// , 기준으로 문자열 분리해서 두번째 문자열
-			var msg = event.data.split(",")[2];		// , 기준으로 문자열 분리해서 세번째 문자열
-			msgbox.innerHTML += "<div class='profile mx-2 my-2'>"+from+"</div>"
-			msgbox.innerHTML += "<div class='d-flex justify-content-start mx-2 my-2'><span class='to mx-1'>"+msg+"</span><span class='msgtime d-flex align-items-end'>"+time+"</span></div>"
-			msgbox.scrollTop = msgbox.scrollHeight; // 현 스크롤 위치 =  스크롤 전체높이 [ 바닥 ]
-		}
-		
+	
 	</script>
 	
 	
