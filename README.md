@@ -87,15 +87,15 @@
 |55일차[12/15]|Jsp| 결제페이지 · Team jsp Project( 컨트롤러 설계 )|
 |56일차[12/16]|Jsp| 결제페이지 · Team jsp Project(프론트 구현) |
 |57일차[12/17]|Jsp| 평가[UI테스트] · info · Team jsp Project(프론트 구현) |
-|58일차[12/20]|Jsp| info · chart · Team jsp Project(프론트 구현)|
-|59일차[12/21]|Jsp| chart · Team jsp Project(프론트 구현)|
+|58일차[12/20]|Jsp| chart · Team jsp Project(프론트 구현)|
+|59일차[12/21]|Jsp| chart · API Team jsp Project(프론트 구현)|
 |60일차[12/22]|Jsp| chatting · Team jsp Project(프론트 구현)|
 
 ### 4개월차 진도 [ Spring · JPA ] 
 |일차|목차|주요내용|
 |------|---|---|
-|61일차[12/23]|Spring| API · Team jsp Project( Controller·Dto·Dao 구현)|
-|62일차[12/24]|Spring| API · Team jsp Project( Controller·Dto·Dao 구현)|
+|61일차[12/23]|Spring| chatting · Team jsp Project( Controller·Dto·Dao 구현)|
+|62일차[12/24]|Spring| Team jsp Project( Controller·Dto·Dao 구현)|
 |63일차[12/27]|Spring| spring(1장:개발환경구축) · Team jsp Project( Controller·Dto·Dao 구현)|
 |64일차[12/28]|Spring| spring(2장: Spring Data Jpa) · Team jsp Project( Controller·Dto·Dao 구현)|
 |65일차[12/29]|Spring| 평가 · spring(2장: Spring Data Jpa) · Team jsp Project( Controller·Dto·Dao 구현)|
