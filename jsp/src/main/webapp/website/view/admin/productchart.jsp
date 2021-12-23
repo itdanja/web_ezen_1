@@ -12,6 +12,7 @@
 
 	<%@include file="../header.jsp" %>
 	
+	<script src="/jsp/website/js/chart.js"></script>
 	
 	<div class="container">
 		<div class="row">
@@ -42,6 +43,7 @@
 			</div>
 		</div>
 	</div>
+
 	
 </body>
 </html>

@@ -126,7 +126,7 @@
 			// 입력된 문자 와 날짜를 채팅발 div 에 추가
 			msgbox.innerHTML += "<div class='d-flex justify-content-end mx-2 my-2'><span class='msgtime d-flex align-items-end'>"+time+"</span><span class='from mx-1'>"+msginput+"</span></div>";
 				
-			webSocket.send( msg );	 // *****************서버로 부터 메시지 전송 
+			webSocket.send( msg  );	 // *****************서버로 부터 메시지 전송 
 			document.getElementById("msginput").value = "";	// 전송후 입력창 내용물 지우기 [ 초기화 ]
 			// 스크롤 있을경우 스크롤 위치를 가장 아래로 이동 
 			msgbox.scrollTop = msgbox.scrollHeight; // 현 스크롤 위치 =  스크롤 전체높이[ 바닥 ] */

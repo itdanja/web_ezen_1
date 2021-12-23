@@ -24,12 +24,13 @@ public class Chatting {
 	
 	// 2. 클라이언트가 서버로부터 접속 요청
 	@OnOpen // 소켓 접속하는 어노테이션 
-	public void onOpen( Session session , @PathParam("rooomnum") int rooomnum   ) {
+	public void onOpen( Session session , @PathParam("rooomnum") int rooomnum  ) {
+		System.out.println(session);
 		this.rooomnum = rooomnum;	// 전달받은 인수를 방번호 변수에 저장
 		clients.put(  session , this.rooomnum );	// 리스트에 추가 
 		//System.out.print( rooomnum );
 		//System.out.print( session.getId() ); // 세션 번호 확인 
-		//System.out.print("현재 접속한 세션들 : " + clients ); // 현재 접속된 세션들 
+		//System.out.print("현재 접속한 세션들 : " + clients ); // 현재 접속된 세션들 	
 	}
 	
 	// 3. 클라이언트가 서버로부터 접속 해지
@@ -47,6 +48,7 @@ public class Chatting {
 				if( !key.equals(session) ) {	// 본인을 제외한
 					// 본인을 제외한 모든 사람에게 
 					key.getBasicRemote().sendText(msg);
+						// 세션.조작명령어 -> 이벤트실행 -> send -> 클라이언트의 conmessage 실행
 				}
 			}
 		}
