@@ -95,25 +95,25 @@
 |일차|목차|주요내용|
 |------|---|---|
 |61일차[12/23]|Spring| chatting · Team jsp Project( Controller·Dto·Dao 구현)|
-|62일차[12/24]|Spring| Team jsp Project( Controller·Dto·Dao 구현)|
-|63일차[12/27]|Spring| spring(1장:개발환경구축) · Team jsp Project( Controller·Dto·Dao 구현)|
+|62일차[12/24]|Spring| jsp정리 · Team jsp Project( Controller·Dto·Dao 구현)|
+|63일차[12/27]|Spring| spring(1장: 개발환경구축 ) · Team jsp Project( Controller·Dto·Dao 구현)|
 |64일차[12/28]|Spring| spring(2장: Spring Data Jpa) · Team jsp Project( Controller·Dto·Dao 구현)|
 |65일차[12/29]|Spring| 평가 · spring(2장: Spring Data Jpa) · Team jsp Project( Controller·Dto·Dao 구현)|
 |66일차[12/30]|Spring| spring(2장: Spring Data Jpa) · Team jsp Project( Controller·Dto·Dao 구현)|
 |67일차[12/31]|Spring| Team jsp Project 발표 |
-|68일차[01/04]|Spring| Spring(3장:Thymeleaf) |
-|69일차[01/05]|Spring| Spring(4장:시큐리티) |
-|70일차[01/06]|Spring| Spring(5장:연관관계매핑) |
-|71일차[01/07]|Spring| Spring(6장:상품등록및조회하기) |
-|72일차[01/10]|Spring| Spring(7장:주문) |
-|73일차[01/11]|Spring| Spring(8장:장바구니) |
-|74일차[01/12]|Spring| Spring |
-|75일차[01/13]|Spring| Spring |
-|76일차[01/14]|Spring| Spring |
-|77일차[01/17]|Spring| Spring · Team Spring Project( 주제 선정 )|
-|78일차[01/18]|Spring| Spring · Team Spring Project( 프론트 설계 )|
-|79일차[01/19]|Spring| Spring · Team Spring Project( DB 설계 )|
-|80일차[01/20]|Spring| Spring · Team Spring Project( 컨트롤러 설계 )|
+|68일차[01/04]|Spring| Spring(3장: Thymeleaf) |
+|69일차[01/05]|Spring| Spring(3장: Thymeleaf) |
+|70일차[01/06]|Spring| Spring(4장: 시큐리티) |
+|71일차[01/07]|Spring| Spring(4장: 시큐리티) |
+|72일차[01/10]|Spring| Spring(5장: 연관 관계 매핑) |
+|73일차[01/11]|Spring| Spring(5장: 연관 관계 매핑) |
+|74일차[01/12]|Spring| Spring(6장: 상품등록및조회하기) |
+|75일차[01/13]|Spring| Spring(6장: 상품등록및조회하기) |
+|76일차[01/14]|Spring| Spring(7장: 주문) |
+|77일차[01/17]|Spring| Spring(7장: 주문) · Team Spring Project( 주제 선정 )|
+|78일차[01/18]|Spring| Spring(8장: 장바구니) · Team Spring Project( 프론트 설계 )|
+|79일차[01/19]|Spring| Spring(8장: 장바구니) · Team Spring Project( DB 설계 )|
+|80일차[01/20]|Spring| Spring(8장: 장바구니) · Team Spring Project( 컨트롤러 설계 )|
 
 ### 5개월차 진도 [ Spring Project · AWS ] 
 |일차|목차|주요내용|
