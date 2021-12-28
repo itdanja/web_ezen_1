@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 부트스트랩css 설정 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h3>예제1</h3>
+        <p>*컨트롤러[C]에서 타임리프를 이용한 HTML[V] 로 객체[dto] 이동 [ model -> 타임리프문법 ]  </p>
+        <table class="table">
+            <tr>
+                <th>제목</th><th>내용</th><th>작성일</th>
+            </tr>
+            <tr>
+                <td th:text = "${boardDto.b_title}"></td>
+                <!-- th:text   :  태그안에 텍스트 넣기  --> <!-- ${변수명}  -->
+                <td th:text = "${boardDto.b_contents}"></td>
+                <td th:text = "${boardDto.b_date}"></td>
+            </tr>
+        </table> <br> <br>
+
+        <h3> 예제2 </h3>
+        <p>* 폼방식 : HTML[V]에서 컨트롤러[C] 로 객체 이동 </p>
+        <form action="boardwrite" method="get" >
+            <input type="text" name="b_title">  <!-- Dto 필드명과 동일하게 -->
+            <input type="text" name="b_contents">
+            <input type="submit" value="전송">
+        </form>
+        <p>*컨트롤러[C]에서 뷰[V] 리스트로 객체 이동 </p>
+        <table class="table">
+            <tr>
+                <th>제목</th><th>내용</th><th>작성일</th>
+            </tr>
+            <tr th:each = " boardDto : ${boardDtos}">
+                <td th:text = "${boardDto.b_title}"></td>
+                <!-- th:text   :  태그안에 텍스트 넣기  --> <!-- ${변수명}  -->
+                <td th:text = "${boardDto.b_contents}"></td>
+                <td th:text = "${boardDto.b_date}"></td>
+            </tr>
+        </table> <br> <br>
+
+        <h3> 예제3 </h3>
+        <p>* AJAX 방식 : HTML[V]에서 컨트롤러[C] 로 객체 이동 </p>
+            <input type="text" id="b_title">
+            <input type="text" id="b_contents">
+            <button onclick="boardwrite()">전송2</button>
+    </div>
+
+    <!-- jquery[ ajax 필수 ] -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- 부스트랩 js 설정 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- 타임리프에서 개발자js 호출 -->
+    <script th:src="@{js/Day02/boardlist.js}"></script>
+    <!--
+            jsp 에서 개발자js 호출
+            <script src="js/Day02/boardlist.js"></script>
+     -->
+
+</body>
+</html>
