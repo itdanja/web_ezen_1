@@ -17,6 +17,8 @@ dependencies {  // 의존성 [ 라이브러리 추가 하는 공간 ]
     compileOnly 'org.projectlombok:lombok'  // 4. 롬복 라이브러리 제공
     annotationProcessor 'org.projectlombok:lombok' // 4. 롬복 연결 라이브러리 제공
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // 5.타임리프 라이브러리 제공
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  // 6. JPA 라이브러리 제공
+    runtimeOnly 'mysql:mysql-connector-java' // 7.MYSQL 라이브러리 제공
 }
 
 test {
