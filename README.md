@@ -105,13 +105,13 @@
 |69일차[01/05]|Spring| Spring(3장: Thymeleaf) |
 |70일차[01/06]|Spring| Spring(4장: 시큐리티) |
 |71일차[01/07]|Spring| Spring(5장: 연관 관계 매핑) |
-|72일차[01/10]|Spring| Spring(6장: 상품등록및조회하기) |
+|72일차[01/10]|Spring| Spring(6장: 상품등록및조회하기) | 1/10 9.서버프로그램구현
 |73일차[01/11]|Spring| Spring(7장: 주문) |
 |74일차[01/12]|Spring| Spring(8장: 장바구니) |
 |75일차[01/13]|Spring| Spring |
 |76일차[01/14]|Spring| Spring |
 |77일차[01/17]|Spring| Spring · Team Spring Project( 주제 선정 )|
-|78일차[01/18]|Spring| Spring · Team Spring Project( 프론트 설계 )|
+|78일차[01/18]|Spring| Spring · Team Spring Project( 프론트 설계 )| 1/18 10.애플리케이션테스트수행
 |79일차[01/19]|Spring| Spring · Team Spring Project( DB 설계 )|
 |80일차[01/20]|Spring| Spring · Team Spring Project( 컨트롤러 설계 )|
 
@@ -121,21 +121,21 @@
 |81일차[01/21]|Project| Spring · Team Spring Project( 프론트 구현 )|
 |82일차[01/24]|Project| Spring · Team Spring Project( 프론트 구현 )|
 |83일차[01/25]|Project| Spring · Team Spring Project( 프론트 구현 )|
-|84일차[01/26]|Project| Spring · Team Spring Project( 프론트 구현 )|
+|84일차[01/26]|Project| Spring · Team Spring Project( 프론트 구현 )| 1/26 11.애플리케이션테스트관리
 |85일차[01/27]|Project| Spring · Team Spring Project( 프론트 구현 )|
 |86일차[02/03]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
 |87일차[02/04]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
 |88일차[02/07]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
-|89일차[02/08]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
+|89일차[02/08]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )| 2/8 12.제품소프트웨어패키징
 |90일차[02/09]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
 |91일차[02/10]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
 |92일차[02/11]|Project| Spring · Team Spring Project( Controller·Dto·Dao 구현 )|
-|93일차[02/14]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )|
+|93일차[02/14]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )| 2/14 13.애플리케이션배포
 |94일차[02/15]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )|
 |95일차[02/16]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )|
 |96일차[02/17]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )|
 |97일차[02/18]|Project| AWS(배포) · Team Spring Project( Controller·Dto·Dao 구현 )|
-|98일차[02/22]|Project| 과정 정리 · Team Spring Project 발표|
+|98일차[02/22]|Project| 과정 정리 · Team Spring Project 발표| 2/22 14.정보시스템이행
 |99일차[02/21]|Project| 과정 정리 · Team Spring Project 보완|
 |100일차[02/23]|Project| 과정 정리 |
 
