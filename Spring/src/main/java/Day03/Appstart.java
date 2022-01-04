@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-@EnableJpaAuditing
+@EnableJpaAuditing // jpa 변화 감시 기능 주입
 @SpringBootApplication // 스프링부트 사용 주입
 public class Appstart{
     public static void main(String[] args) {
