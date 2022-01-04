@@ -1,11 +1,12 @@
 package Day03.Domain.Dto;
 
+import Day03.Domain.Entity.MemberEntity;
 import lombok.*;
 
 @NoArgsConstructor // 빈생성자
 @AllArgsConstructor // 풀생성자
 @Getter@Setter  // get / set 메소드
-@ToString // 객체 정보 메소드
+@ToString // 객체주소 정보 -> 객체내 필드 값 정보 로 변경 오버라이딩
 public class MemberDto {
     // 필드
     private int m_num;   // 회원번호
@@ -18,4 +19,18 @@ public class MemberDto {
     private String m_address; // 회원주소
     private int m_point; // 회원포인트
     private String m_grade; // 회원등급
+
+    // Dto -> entity
+    public MemberEntity toentity(){
+        MemberEntity memberEntity = new MemberEntity();
+        memberEntity.setM_id( this.m_id );
+        memberEntity.setM_password(this.m_password );
+        memberEntity.setM_name(this.m_name );
+        memberEntity.setM_sex(this.m_sex );
+        memberEntity.setM_phone(this.m_phone );
+        memberEntity.setM_email( this.m_email );
+        memberEntity.setM_address( this.m_address );
+        return memberEntity;
+    }
+
 }
