@@ -9,12 +9,9 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity // DB내 테이블과 연결
-@Table( name = "member") // 테이블속성
-@Builder    // 생성자 안정성 보장
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter@Setter
-@ToString
+@Table( name = "member") // 테이블속성 // db에서 사용할 테이블명
+@AllArgsConstructor@NoArgsConstructor
+@Getter@Setter@ToString@Builder
 public class MemberEntity extends BaseTimeEntity  {
 
     @Id // 기본키 pk

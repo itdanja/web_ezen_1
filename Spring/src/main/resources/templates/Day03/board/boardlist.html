@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div th:replace="Day03/header.html :: header" ></div>
+    <div class="container">
+        <a th:href="@{/board/boardwrite}"><button class="form-control">글쓰기</button></a>
+            <table class="table">
+                    <tr>
+                        <th> 번호 </th><th> 제목 </th><th> 작성자 </th>
+                        <th> 작성일 </th><th> 조회수 </th>
+                    </tr>
+                    <tr>
+                        <td> 1 </td><td> 첫 게시물 입니다 </td><td> 유재석 </td>
+                        <td> 2020-01-04 </td><td> 10 </td>
+                    </tr>
+            </table>
+    </div>
+
+
+</body>
+</html>
