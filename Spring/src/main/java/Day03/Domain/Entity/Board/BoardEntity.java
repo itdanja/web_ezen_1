@@ -21,4 +21,5 @@ public class BoardEntity extends BaseTimeEntity {
     private String b_write;
     @Column
     private int b_view;
+
 }

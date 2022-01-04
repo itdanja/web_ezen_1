@@ -12,7 +12,7 @@ public class BoardDto {
     private String b_title;
     private String b_contetns;
     private String b_write;
-    private LocalDateTime createdDate;
+    private LocalDateTime b_createdDate;
     private int b_view;
 
     // dto -> entity 메소드

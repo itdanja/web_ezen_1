@@ -4,8 +4,11 @@ import Day03.Domain.Dto.BoardDto;
 import Day03.Service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.ArrayList;
 
 @Controller
 public class BoardController {
@@ -15,7 +18,12 @@ public class BoardController {
 
     // http url 연결
     @GetMapping("/board/boardlist")
-    public String boardlist(){
+    public String boardlist( Model model ){
+
+        ArrayList<BoardDto> boardDtos = boardService.boardlist();
+
+        model.addAttribute( "BoardDtos" , boardDtos  );
+
         return "Day03/board/boardlist" ;  // 타임리프 를 통한 html 반환
     }
     @GetMapping("/board/boardwrite")

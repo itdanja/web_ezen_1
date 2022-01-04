@@ -14,9 +14,12 @@
                         <th> 번호 </th><th> 제목 </th><th> 작성자 </th>
                         <th> 작성일 </th><th> 조회수 </th>
                     </tr>
-                    <tr>
-                        <td> 1 </td><td> 첫 게시물 입니다 </td><td> 유재석 </td>
-                        <td> 2020-01-04 </td><td> 10 </td>
+                    <tr th:each="boardDto : ${BoardDtos}">
+                        <td th:text="${boardDto.b_num}">  </td>
+                        <td th:text="${boardDto.b_title}">  </td>
+                        <td th:text="${boardDto.b_write}">  </td>
+                        <td th:text="${boardDto.b_createdDate}">  </td>
+                        <td th:text="${boardDto.b_view}">  </td>
                     </tr>
             </table>
     </div>
