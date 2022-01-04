@@ -8,7 +8,7 @@ import lombok.*;
 @ToString // 객체 정보 메소드
 public class MemberDto {
     // 필드
-    private String m_num;   // 회원번호
+    private int m_num;   // 회원번호
     private String m_id;    // 회원아이디
     private String m_password; // 회원비밀번호
     private String m_name; // 회원이름
