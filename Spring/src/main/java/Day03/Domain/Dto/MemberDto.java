@@ -1,12 +1,13 @@
 package Day03.Domain.Dto;
 
-import Day03.Domain.Entity.MemberEntity;
+import Day03.Domain.Entity.Member.MemberEntity;
 import lombok.*;
 
 @NoArgsConstructor // 빈생성자
 @AllArgsConstructor // 풀생성자
 @Getter@Setter  // get / set 메소드
 @ToString // 객체주소 정보 -> 객체내 필드 값 정보 로 변경 오버라이딩
+@Builder
 public class MemberDto {
     // 필드
     private int m_num;   // 회원번호
@@ -22,15 +23,15 @@ public class MemberDto {
 
     // Dto -> entity
     public MemberEntity toentity(){
-        MemberEntity memberEntity = new MemberEntity();
-        memberEntity.setM_id( this.m_id );
-        memberEntity.setM_password(this.m_password );
-        memberEntity.setM_name(this.m_name );
-        memberEntity.setM_sex(this.m_sex );
-        memberEntity.setM_phone(this.m_phone );
-        memberEntity.setM_email( this.m_email );
-        memberEntity.setM_address( this.m_address );
-        return memberEntity;
+        return MemberEntity.builder()
+                        .m_id( this.m_id )
+                        .m_password(this.m_password)
+                        .m_name( this.m_name)
+                        .m_sex( this.m_sex )
+                        .m_phone( this.m_phone)
+                        .m_email( this.m_email)
+                        .m_point( this.m_point)
+                        .m_grade( this.getM_grade()).build();
     }
 
 }
