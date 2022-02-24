@@ -1,3 +1,4 @@
+<%@page import="DTO.MemberDTO"%>
 <%@page import="DAO.MemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -65,7 +66,8 @@
 	
 	<%
 		MemberDao memberDao = new MemberDao();	// db 객체 선언 
-		int custno = memberDao.getcustno();	// db 객체내 메소드 실행
+		String custno = request.getParameter("custno");
+		MemberDTO dto = memberDao.getmember(custno);
 	
 	%>
 	
@@ -75,38 +77,38 @@
 			<table>
 				<tr>
 					<td> 회원번호(자동발생) </td>
-					<td> <input type="text" name="custno" value="<%=custno%>">
+					<td> <input type="text" name="custno" value="<%= dto.getCustno()%>">
 				</tr>
 				
 				<tr>
 					<td> 회원성명 </td>
-					<td> <input type="text" name="custname">
+					<td> <input type="text" name="custname" value="<%= dto.getCustname()%>">
 				</tr>
 				
 				<tr>
 					<td> 회원전화 </td>
-					<td> <input type="text" name="phone">
+					<td> <input type="text" name="phone" value="<%= dto.getPhone()%>">
 				</tr>
 				
 				
 				<tr>
 					<td> 회원주소 </td>
-					<td> <input type="text" name="address">
+					<td> <input type="text" name="address" value="<%= dto.getAddress()%>">
 				</tr>
 				
 				<tr>
 					<td> 가입일자 </td>
-					<td> <input type="text" name="joindate">
+					<td> <input type="text" name="joindate" value="<%= dto.getJoindate().split(" ")[0]%>">
 				</tr>
 				
 				<tr>
 					<td> 고객등급[ A:VIP , B:일반 , C:직원] </td>
-					<td> <input type="text" name="grade">
+					<td> <input type="text" name="grade" value="<%= dto.getGrade()%>">
 				</tr>
 				
 				<tr>
 					<td> 도시코드 </td>
-					<td> <input type="text" name="city">
+					<td> <input type="text" name="city" value="<%= dto.getCity()%>">
 				</tr>				
 				<tr>
 					<td colspan="2">
