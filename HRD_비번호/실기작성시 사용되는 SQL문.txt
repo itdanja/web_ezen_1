@@ -1,0 +1,113 @@
+1. cmd  [ 명령 프롬프트 ]
+
+2.  sqlplus  [ sql 접속 ] 
+
+3. 로그인 [ system , 1234 ]
+
+4. 테이블 생성
+	1. MEMBER_TBL_02 
+	CREATE TABLE MEMBER_TBL_02(
+		CUSTNO NUMBER(6) NOT NULL, 
+		CUSTNAME VARCHAR2(20) , 
+		PHONE VARCHAR2(13) ,
+		ADDRESS VARCHAR2(60) ,
+		JOINDATE DATE , 
+		GRADE CHAR(1) , 
+		CITY CHAR(2) ,
+		PRIMARY KEY ( SUSTNO )
+	);
+	
+	2. MONEY_TBLE_02
+	CREATE TABLE MONEY_TBL_02(
+		CUSTNO NUMBER(6) NOT NULL,
+		SALENOL NUMBER(8) NOT NULL,
+		PCOST NUMBER(8),
+		AMOUNT NUMBER(4),
+		PRICE NUMBER(8),
+		PCODE VARCHAR2(4),
+		SDATE DATE,
+		PRIMARY KEY(CUSTNO, SALENOL)
+	);
+
+5. 레코드 추가  
+	insert into member_tbl_02 values(100001, '김행복', '010-1111-2222', '서울 동대문구 휘경1동', '20151202', 'A', '01');
+	insert into member_tbl_02 values(100002, '이축복', '010-1111-3333', '서울 동대문구 휘경2동', '20151206', 'B', '01');
+	insert into member_tbl_02 values(100003, '장믿음', '010-1111-4444', '울릉군 울릉읍 독도1리', '20151001', 'B', '30');
+	insert into member_tbl_02 values(100004, '최사랑', '010-1111-5555', '울릉군 울릉읍 독도2리', '20151113', 'A', '30');
+	insert into member_tbl_02 values(100005, '진평화', '010-1111-6666', '제주도 제주시 외나무골', '20151225', 'B', '60');
+	insert into member_tbl_02 values(100006, '차공단', '010-1111-7777', '제주도 제주시 감나무골', '20151211', 'C', '60'); ;
+	commit;
+
+	insert into money_tbl_02 values(100001, 20160001, 500, 5, 2500, 'A001', '20160101');
+	insert into money_tbl_02 values(100001, 20160002, 1000, 4, 4000, 'A002', '20160101');
+	insert into money_tbl_02 values(100001, 20160003, 500, 3, 1500, 'A008', '20160101');
+	insert into money_tbl_02 values(100002, 20160005, 500, 1, 500, 'A001', '20160103');
+	insert into money_tbl_02 values(100003, 20160006, 1500, 2, 3000, 'A003', '20160103');
+	insert into money_tbl_02 values(100004, 20160007, 500, 2, 1000, 'A001', '20160104');
+	insert into money_tbl_02 values(100004, 20160008, 300, 1, 300, 'A005', '20160104');
+	insert into money_tbl_02 values(100004, 20160009, 600, 1, 600, 'A006', '20160104');
+	insert into money_tbl_02 values(100004, 20160010, 3000, 1, 3000, 'A007', '20160106');
+	commit;
+
+6. 테이블 확인
+	SELECT * FROM MEMBER_TBL_02;
+	SELECT * FROM MONEY_TBL_02;
+	
+[주의]
+	1. 대소문자 구별X
+	2. ; 기준으로 실행처리
+[참고]
+	1. set linesize 6000;  [ 화면에 보이는 가로 길이 설정 ] 
+[ 중요 ] 
+	1. sql 작성후에 commit;   [ 완료 ] 
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+1. 워크스페이스 설정
+
+2. 메뉴 -> window -> preferences -> enco 검색
+	1. workspace
+	2. html
+	3. css
+	4.jsp
+3. 웹 프로젝트 생성 [ HRD_비번호 ]
+	1. DB 라이브러리 추가 [ 1. build path , 2.web-inf ->lib ]
+
+4. DAO / DTO 생성 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

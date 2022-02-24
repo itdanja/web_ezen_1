@@ -52,7 +52,7 @@
 				return false; // 폼 전송 불가 
 			}
 			// 모두 다 입력했으면 
-			alert("회원등록이 완료되었습니다.");
+			alert("회원수정이 완료되었습니다.");
 			document.join.submit(); // 폼 전송 
 			
 		}

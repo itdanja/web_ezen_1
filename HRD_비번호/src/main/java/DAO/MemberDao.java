@@ -121,6 +121,27 @@ public class MemberDao {	// 1. db 연동 클래스
 		}catch (Exception e) {} return null;
 	}
 	
+	// 5.회원 수정 [ 조건 : 회원번호 ] 
+	public boolean update( MemberDTO memberDTO) {
+		
+		String sql ="update member_tbl_02 set custname=?,phone=?,"
+				+ "address=?,joindate=?,grade=?,city=? "
+				+ "where custno = ?";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(7, memberDTO.getCustno());
+			ps.setString(1, memberDTO.getCustname());
+			ps.setString(2, memberDTO.getPhone());
+			ps.setString(3, memberDTO.getAddress());
+			ps.setString(4, memberDTO.getJoindate());
+			ps.setString(5, memberDTO.getGrade());
+			ps.setString(6, memberDTO.getCity());
+			
+			ps.executeUpdate(); // sql 실행
+			
+			return true;
+		}catch (Exception e) {} return false;
+	}
 	
 	
 	
