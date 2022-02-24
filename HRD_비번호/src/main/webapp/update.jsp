@@ -72,7 +72,7 @@
 	%>
 	
 	<center>
-		<form action="joinController.jsp" method="post" name="join">
+		<form action="updateController.jsp" method="post" name="join">
 		
 			<table>
 				<tr>
