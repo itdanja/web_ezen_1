@@ -70,6 +70,7 @@
 	%>
 	
 	<center>
+		<h2> 쇼핑몰 회원 등록</h2>
 		<form action="joinController.jsp" method="post" name="join">
 		
 			<table>

@@ -143,6 +143,33 @@ public class MemberDao {	// 1. db 연동 클래스
 		}catch (Exception e) {} return false;
 	}
 	
+	// 6. 매출 조회 [ 조건 x , 조인 , 그룹 ] 
+	public ArrayList<MemberDTO> getmoneylist(){
+		
+		ArrayList<MemberDTO> list = new ArrayList(); // 리스트 선언 
+		
+		String sql ="select A.custno , A.custname , A.grade , SUM(B.PRICE)  from member_tbl_02 A join money_tbl_02 B on A.custno = B.custno GROUP BY (A.CUSTNO , A.CUSTNAME , A.GRADE) ORDER BY SUM(B.PRICE) DESC";
+	
+		try {
+			ps = con.prepareStatement(sql); 
+			rs = ps.executeQuery();
+			
+			while( rs.next() ) {
+				
+				MemberDTO memberDTO = new MemberDTO(); // 빈생성자 => 빈객체 
+				
+				memberDTO.setCustno( rs.getString(1) );
+				memberDTO.setCustname(rs.getString(2));
+				memberDTO.setGrade(rs.getString(3));
+				// dto money 필드 추가 
+				memberDTO.setMoney( rs.getString(4));
+					
+				list.add(memberDTO); // dto를 리스트에 저장 
+			}
+			return list; // while 종료시 리스트 반환
+		}catch (Exception e) {} return null; // 오류시 null 반환
+	}
+	
 	
 	
 	

@@ -9,6 +9,7 @@ public class MemberDTO {
 	private String joindate;
 	private String grade;
 	private String city;
+	private String money;
 	
 	public MemberDTO() {
 		// TODO Auto-generated constructor stub
@@ -23,7 +24,15 @@ public class MemberDTO {
 		this.grade = grade;
 		this.city = city;
 	}
+	
+	
 
+	public String getMoney() {
+		return money;
+	}
+	public void setMoney(String money) {
+		this.money = money;
+	}
 	public String getCustno() {
 		return custno;
 	}

@@ -72,6 +72,7 @@
 	%>
 	
 	<center>
+		<h2> 홈쇼핑 회원 정보 수정</h2>
 		<form action="updateController.jsp" method="post" name="join">
 		
 			<table>
